@@ -1,75 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { ChangeLanguage, ChangeLanguageLi, ChangeLanguageUl, Header, Navigator, NavigatorLi, StyledLink } from "./Header.styled";
 
 export const HeaderEN = () => {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleSvgClick = () => {
+    if (!isClicked) setIsClicked(true);
+    else setIsClicked(false)
+  };
+
   return (
-    <header>
-      {/* <div>
-        <a href="/en/home">
-          <img  src="/img/logo.svg" alt="logo" />
-        </a>
-      </div> */}
-      <ul>
-        <li>
-          <Link to="/en/home#projects">Projects</Link>
-        </li>
-        <li>
-          <Link to="/en/home#services">Services</Link>
-        </li>
-        <li>
-          <Link to="/en/home#ourTeam">Team</Link>
-        </li>
-        <li>
-          <Link to="/en/home#contentUs">Contact us</Link>
-        </li>
-      </ul>
-      <div>
-        <ul>
-          <li>EN</li>
-          <li>
-            <Link to="/de/home">DE</Link>
-          </li>
-        </ul>
-        <img src="/img/Arrow.svg" alt="" />
-      </div>
-      <div>
-        <img src="/img/HamburgerMenu.svg" alt="svg" />
-        <div class="HamburgerMenuNav">
-          <img
-            class="HamburgerMenuButtonClose"
-            src="/img/closeAction.svg"
-            alt=""
-          />
-          <ul>
-            <li>
-              <Link to="/en/home#">Hero</Link>
-            </li>
-            <li>
-              <Link to="/en/home#projects">Projects</Link>
-            </li>
-            <li>
-              <Link to="/en/home#services">Services</Link>
-            </li>
-            <li>
-              <Link to="/en/home#ourTeam">Team</Link>
-            </li>
-            <li>
-              <Link to="/en/home#contentUs">Contact</Link>
-            </li>
-            <li>
-              <div>
-                <button>
-                  <Link to="/">EN</Link>
-                </button>
-                <div></div>
-                <button>
-                  <Link to="/de/home">DE</Link>
-                </button>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
-  );
+		<Header>
+			<div>
+				<StyledLink to='/'>
+					<img src='/img/logo.svg' alt='logo' />
+				</StyledLink>
+			</div>
+			<Navigator>
+				<NavigatorLi>
+					<StyledLink className='active' to='/en/home#projects'>
+						Projects
+					</StyledLink>
+				</NavigatorLi>
+				<NavigatorLi>
+					<StyledLink to='/en/home#services'>Services</StyledLink>
+				</NavigatorLi>
+				<NavigatorLi>
+					<StyledLink to='/en/home#ourTeam'>Team</StyledLink>
+				</NavigatorLi>
+				<NavigatorLi>
+					<StyledLink to='/en/home#contentUs'>Contact us</StyledLink>
+				</NavigatorLi>
+			</Navigator>
+			<ChangeLanguage>
+				<ChangeLanguageUl>
+					<ChangeLanguageLi>
+						<Link to='/'>EN</Link>
+					</ChangeLanguageLi>
+					<ChangeLanguageLi className={isClicked ? 'show' : 'hide'}>
+						<Link to='/de/home'>DE</Link>
+					</ChangeLanguageLi>
+				</ChangeLanguageUl>
+				<svg
+					xmlns='http://www.w3.org/2000/svg'
+					width='24'
+					height='24'
+					viewBox='0 0 24 24'
+					fill='none'
+					onClick={handleSvgClick}
+					className={isClicked ? 'open' : 'close'}
+				>
+					<path
+						d='M19 13L12 7L5 13'
+						stroke='#FCFCFC'
+						stroke-width='1.5'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+				</svg>
+			</ChangeLanguage>
+		</Header>
+	)
 };
