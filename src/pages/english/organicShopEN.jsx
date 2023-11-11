@@ -1,7 +1,9 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 import { HeaderEN } from "../../components/header/HeaderEN";
-// import ImgPictire from "../../assets/img/organicShop/Background.png";
+import ImgPictire from "../../assets/img/organicShop/Background.png";
+import OrganicSvg from "../../assets/svg/organicShop/organicLogo.svg";
+import OptimisatorImg from "../../technical/OptimisatorImg";
 import {
   FirstSection,
   SecondSection,
@@ -11,12 +13,13 @@ import {
   TitleHThree,
   TitleHTwo,
   TitleSpan,
-  ImageFirst,
+  // ImageFirst,
   ParagraphAbProject,
   ParagraphGoals,
   List,
   Li,
-  NumberOfList
+  NumberOfList,
+  Line,
 } from "../styles/organicShop.styled";
 
 export const OrganicShopEN = () => {
@@ -31,18 +34,23 @@ export const OrganicShopEN = () => {
         </TitleHTwo>
       </FirstSection>
 
-      {/* <ImageFirst src={ImgPictire} alt="aa" /> */}
+      <OptimisatorImg src={ImgPictire} alt="aa" />
 
       <SecondSection>
-        <TitleHTwo>
-          About <TitleSpan>Project</TitleSpan>
-        </TitleHTwo>
-        <ParagraphAbProject>
-          Organick is an online store of organic fruits, vegetables and berries.
-          The customer is a farmer from England. Organick has its farms in
-          Sheffield. The total amount of fields is more than 27770m&sup2 and
-          more than 5 thousand satisfied customers annually.
-        </ParagraphAbProject>
+        <div>
+          <TitleHTwo>
+            About <TitleSpan>Project</TitleSpan>
+          </TitleHTwo>
+          <ParagraphAbProject>
+            Organick is an online store of organic fruits, vegetables and
+            berries. The customer is a farmer from England. Organick has its
+            farms in Sheffield. The total amount of fields is more than
+            27770m&sup2 and more than 5 thousand satisfied customers annually.
+          </ParagraphAbProject>
+        </div>
+
+        <Line />
+        <img src={OrganicSvg} alt="" />
       </SecondSection>
 
       <ThirdSection>
@@ -57,19 +65,19 @@ export const OrganicShopEN = () => {
             </ParagraphGoals>
           </Li>
           <Li>
-          <NumberOfList>2</NumberOfList>
+            <NumberOfList>2</NumberOfList>
             <ParagraphGoals>
               Increase the number of new clients using the website.
             </ParagraphGoals>
           </Li>
           <Li>
-          <NumberOfList>3</NumberOfList>
+            <NumberOfList>3</NumberOfList>
             <ParagraphGoals>
               Emphasize the high level of the brand using the website
             </ParagraphGoals>
           </Li>
           <Li>
-          <NumberOfList>4</NumberOfList>
+            <NumberOfList>4</NumberOfList>
             <ParagraphGoals>
               Develop an adapted version for ordering from a smartphone.
             </ParagraphGoals>

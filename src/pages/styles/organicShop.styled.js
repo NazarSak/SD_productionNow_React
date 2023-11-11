@@ -17,7 +17,7 @@ export const TitleSpan = styled.span`
 
 export const ImageFirst = styled.img`
   width: 100%;
-  height: 514px;
+  max-height: 514px;
 `;
 
 export const ParagraphAbProject = styled.p`
@@ -49,7 +49,7 @@ export const NumberOfList = styled.span`
   -webkit-text-fill-color: #000;
   -webkit-text-stroke: 1.5px #fff;
   font-weight: 600;
-margin-right: 21px;
+  margin-right: 16px;
   &:after {
     content: ".";
     text-align: center;
@@ -57,7 +57,7 @@ margin-right: 21px;
     font-size: 64px;
     font-style: normal;
     font-weight: 600;
-    margin-left: 8px;
+    margin-left: 4px;
     line-height: normal;
     background: var(
       --purple-linear,
@@ -67,4 +67,14 @@ margin-right: 21px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+`;
+
+export const Line = styled.div`
+  width: 1px;
+  height: 200px;
+  background: radial-gradient(
+    4979852.87% 58.76% at 50% 49.67%,
+    rgba(163, 163, 163, 0.7) 0%,
+    rgba(117, 117, 117, 0) 89.9%
+  );
 `;

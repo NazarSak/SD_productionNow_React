@@ -7,6 +7,9 @@ export const FirstSection = styled.section`
 export const SecondSection = styled.section`
   margin-top: 122px;
   margin-bottom: 144px;
+  display: flex;
+  align-items: center;
+  gap: 113px;
 `;
 
 export const ThirdSection = styled.section`
