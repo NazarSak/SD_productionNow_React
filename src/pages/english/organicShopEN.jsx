@@ -1,7 +1,7 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 import { HeaderEN } from "../../components/header/HeaderEN";
-import ImgPictire from "../../assets/img/organicShop/Background.png";
+// import ImgPictire from "../../assets/img/organicShop/Background.png";
 import {
   FirstSection,
   SecondSection,
@@ -31,7 +31,7 @@ export const OrganicShopEN = () => {
         </TitleHTwo>
       </FirstSection>
 
-      <ImageFirst src={ImgPictire} alt="aa" />
+      {/* <ImageFirst src={ImgPictire} alt="aa" /> */}
 
       <SecondSection>
         <TitleHTwo>
