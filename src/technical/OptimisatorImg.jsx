@@ -1,11 +1,10 @@
-import React from 'react';
-import LazyLoad from 'react-lazyload';
-import { ImageFirst } from '../pages/styles/organicShop.styled';
+import React from "react";
+import LazyLoad from "react-lazyload";
 
-const OptimisatorImg = ({ src, alt }) => {
+const OptimisatorImg = ({ src, alt, ImageType }) => {
   return (
     <LazyLoad height={200} offset={100}>
-      <ImageFirst src={src} alt={alt} />
+      <ImageType src={src} alt={alt} />
     </LazyLoad>
   );
 };

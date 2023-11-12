@@ -4,22 +4,45 @@ import { HeaderEN } from "../../components/header/HeaderEN";
 import ImgPictire from "../../assets/img/organicShop/Background.png";
 import OrganicSvg from "../../assets/svg/organicShop/organicLogo.svg";
 import OptimisatorImg from "../../technical/OptimisatorImg";
+import handshake from "../../assets/img/organicShop/Photo.png";
+import PageOne from "../../assets/img/organicShop/pageOne.png";
+import PageTwo from "../../assets/img/organicShop/pageTwo.png";
+import VideoOrgainc from "../../assets/video/organic_shop.mp4";
+import InternalOne from "../../assets/img/organicShop/InternalOne.png";
+import InternalTwo from "../../assets/img/organicShop/InternalTwo.png";
+import InternalThree from "../../assets/img/organicShop/InternalThree.png";
+import InternalFour from "../../assets/img/organicShop/InternalFour.png";
+import InternalFive from "../../assets/img/organicShop/InternalFive.png";
+
+
+
 import {
   FirstSection,
   SecondSection,
   ThirdSection,
+  FourthSection,
+  FifthSection,
 } from "../styles/General/section.styled";
 import {
   TitleHThree,
   TitleHTwo,
   TitleSpan,
-  // ImageFirst,
+  ImageFirst,
   ParagraphAbProject,
   ParagraphGoals,
   List,
   Li,
   NumberOfList,
   Line,
+  NaturalFoodImg,
+  SecondNaturalFoodImg,
+  ConatinerImg,
+  FirstConatinerInternalImg,
+  InternalImgOne,
+  InternalImgSecond,
+  InternalImg,
+  SecondConatinerInternalImg,
+  InternalImgLast,
 } from "../styles/organicShop.styled";
 
 export const OrganicShopEN = () => {
@@ -34,7 +57,7 @@ export const OrganicShopEN = () => {
         </TitleHTwo>
       </FirstSection>
 
-      <OptimisatorImg src={ImgPictire} alt="aa" />
+      <OptimisatorImg src={ImgPictire} alt="image" ImageType={ImageFirst} />
 
       <SecondSection>
         <div>
@@ -50,7 +73,8 @@ export const OrganicShopEN = () => {
         </div>
 
         <Line />
-        <img src={OrganicSvg} alt="" />
+
+        <OptimisatorImg src={OrganicSvg} alt="image" ImageType="img" />
       </SecondSection>
 
       <ThirdSection>
@@ -84,6 +108,67 @@ export const OrganicShopEN = () => {
           </Li>
         </List>
       </ThirdSection>
+
+      <OptimisatorImg src={handshake} alt="image" ImageType={ImageFirst} />
+
+      <FourthSection>
+        <TitleHTwo>
+          Main <TitleSpan>Page</TitleSpan>
+        </TitleHTwo>
+        <ConatinerImg>
+          <OptimisatorImg
+            src={PageOne}
+            alt="image"
+            ImageType={NaturalFoodImg}
+          />
+          <OptimisatorImg
+            src={PageTwo}
+            alt="image"
+            ImageType={SecondNaturalFoodImg}
+          />
+        </ConatinerImg>
+      </FourthSection>
+
+      <video width="100%" autoplay muted loop>
+        <source src={VideoOrgainc} type="video/mp4" />
+      </video>
+
+      <FifthSection>
+        <FirstConatinerInternalImg>
+          <TitleHTwo>
+            Internal <TitleSpan>Pages</TitleSpan>
+          </TitleHTwo>
+
+          <OptimisatorImg
+            src={InternalOne}
+            alt="image"
+            ImageType={InternalImgOne}
+          />
+          <OptimisatorImg
+            src={InternalTwo}
+            alt="image"
+            ImageType={InternalImgSecond}
+          />
+        </FirstConatinerInternalImg>
+
+        <SecondConatinerInternalImg>
+          <OptimisatorImg
+            src={InternalThree}
+            alt="image"
+            ImageType={InternalImg}
+          />
+            <OptimisatorImg
+            src={InternalFour}
+            alt="image"
+            ImageType={InternalImg}
+          />
+            <OptimisatorImg
+            src={InternalFive}
+            alt="image"
+            ImageType={InternalImgLast}
+          />
+        </SecondConatinerInternalImg>
+      </FifthSection>
     </main>
   );
 };

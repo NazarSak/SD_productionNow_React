@@ -54,9 +54,9 @@ export const HeaderEN = () => {
 					<path
 						d='M19 13L12 7L5 13'
 						stroke='#FCFCFC'
-						stroke-width='1.5'
-						stroke-linecap='round'
-						stroke-linejoin='round'
+						strokeWidth='1.5'
+						strokeLinecap='round'
+						strokeLinejoin='round'
 					/>
 				</svg>
 			</ChangeLanguage>

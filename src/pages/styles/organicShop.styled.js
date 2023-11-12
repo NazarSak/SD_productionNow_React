@@ -17,7 +17,8 @@ export const TitleSpan = styled.span`
 
 export const ImageFirst = styled.img`
   width: 100%;
-  max-height: 514px;
+  max-height: 583px;
+  object-fit: cover;
 `;
 
 export const ParagraphAbProject = styled.p`
@@ -32,6 +33,7 @@ export const ParagraphGoals = styled.p`
 
 export const List = styled.ul`
   display: flex;
+  justify-content: center;
   gap: 27px;
   padding: 0;
 `;
@@ -77,4 +79,76 @@ export const Line = styled.div`
     rgba(163, 163, 163, 0.7) 0%,
     rgba(117, 117, 117, 0) 89.9%
   );
+`;
+
+export const NaturalFoodImg = styled.img`
+  width: 1180px;
+  height: 677px;
+  margin-top: 56px;
+  margin-bottom: -4px;
+  flex-shrink: 0;
+  border-radius: 40px;
+  border: 10px solid var(--grey-B, #595959);
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+`;
+
+export const SecondNaturalFoodImg = styled.img`
+  width: 815px;
+  height: 4116px;
+  flex-shrink: 0;
+  border-radius: 0px 0px 40px 40px;
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+`;
+
+export const ConatinerImg = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const FirstConatinerInternalImg = styled.div``;
+
+export const SecondConatinerInternalImg = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 180px;
+`;
+
+export const InternalImgOne = styled.img`
+  width: 500px;
+  height: 1020px;
+  flex-shrink: 0;
+  border-radius: 40px;
+  margin-top: 121px;
+  border: 5px solid var(--grey-B, #595959);
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+`;
+
+export const InternalImgSecond = styled.img`
+  width: 500px;
+  height: 1020px;
+  flex-shrink: 0;
+  margin-top: 180px;
+  border-radius: 40px;
+  border: 5px solid var(--grey-B, #595959);
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+`;
+
+export const InternalImg = styled.img`
+  width: 500px;
+  height: 1020px;
+  flex-shrink: 0;
+  border-radius: 40px;
+  border: 5px solid var(--grey-B, #595959);
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+`;
+
+export const InternalImgLast = styled.img`
+  width: 500px;
+  height: 455px;
+  flex-shrink: 0;
+  border-radius: 40px;
+  border: 5px solid var(--grey-B, #595959);
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
 `;
