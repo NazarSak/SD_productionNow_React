@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const TitleHThree = styled.h3`
   color: #50d13b;
@@ -82,7 +83,7 @@ export const Line = styled.div`
 `;
 
 export const NaturalFoodImg = styled.img`
-  width: 1180px;
+  width: 1160px;
   height: 677px;
   margin-top: 56px;
   margin-bottom: -4px;
@@ -116,7 +117,7 @@ export const SecondConatinerInternalImg = styled.div`
 `;
 
 export const InternalImgOne = styled.img`
-  width: 500px;
+  width: 490px;
   height: 1020px;
   flex-shrink: 0;
   border-radius: 40px;
@@ -126,7 +127,7 @@ export const InternalImgOne = styled.img`
 `;
 
 export const InternalImgSecond = styled.img`
-  width: 500px;
+  width: 490px;
   height: 1020px;
   flex-shrink: 0;
   margin-top: 180px;
@@ -136,7 +137,7 @@ export const InternalImgSecond = styled.img`
 `;
 
 export const InternalImg = styled.img`
-  width: 500px;
+  width: 490px;
   height: 1020px;
   flex-shrink: 0;
   border-radius: 40px;
@@ -145,10 +146,28 @@ export const InternalImg = styled.img`
 `;
 
 export const InternalImgLast = styled.img`
-  width: 500px;
+  width: 490px;
   height: 455px;
   flex-shrink: 0;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
   background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+`;
+
+export const Arrow = styled.img`
+  margin-top: 2px;
+  width: 20px;
+  height: 20px;
+`;
+
+export const LinkArrow = styled(Link)`
+  display: flex;
+  gap: 16px;
+  text-decoration: auto;
+  color: var(--grey-C, #cfcfcf);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
 `;

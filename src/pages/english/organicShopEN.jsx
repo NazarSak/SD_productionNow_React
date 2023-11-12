@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { HeaderEN } from "../../components/header/HeaderEN";
 import ImgPictire from "../../assets/img/organicShop/Background.png";
 import OrganicSvg from "../../assets/svg/organicShop/organicLogo.svg";
@@ -13,8 +13,8 @@ import InternalTwo from "../../assets/img/organicShop/InternalTwo.png";
 import InternalThree from "../../assets/img/organicShop/InternalThree.png";
 import InternalFour from "../../assets/img/organicShop/InternalFour.png";
 import InternalFive from "../../assets/img/organicShop/InternalFive.png";
-
-
+import RightArrow from "../../assets/img/rightArrow.png";
+import LeftArrow from "../../assets/img/leftArrow.png";
 
 import {
   FirstSection,
@@ -22,6 +22,7 @@ import {
   ThirdSection,
   FourthSection,
   FifthSection,
+  SixthSection,
 } from "../styles/General/section.styled";
 import {
   TitleHThree,
@@ -43,6 +44,8 @@ import {
   InternalImg,
   SecondConatinerInternalImg,
   InternalImgLast,
+  Arrow,
+  LinkArrow,
 } from "../styles/organicShop.styled";
 
 export const OrganicShopEN = () => {
@@ -157,18 +160,30 @@ export const OrganicShopEN = () => {
             alt="image"
             ImageType={InternalImg}
           />
-            <OptimisatorImg
+          <OptimisatorImg
             src={InternalFour}
             alt="image"
             ImageType={InternalImg}
           />
-            <OptimisatorImg
+          <OptimisatorImg
             src={InternalFive}
             alt="image"
             ImageType={InternalImgLast}
           />
         </SecondConatinerInternalImg>
       </FifthSection>
+
+      <SixthSection>
+        <LinkArrow>
+            <OptimisatorImg src={LeftArrow} alt="image" ImageType={Arrow} />
+            Previous
+        </LinkArrow>
+
+        <LinkArrow>
+            Next
+            <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
+        </LinkArrow>
+      </SixthSection>
     </main>
   );
 };
