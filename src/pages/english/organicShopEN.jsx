@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { HeaderEN } from "../../components/header/HeaderEN";
 import ImgPictire from "../../assets/img/organicShop/Background.png";
 import OrganicSvg from "../../assets/svg/organicShop/organicLogo.svg";
@@ -49,9 +48,13 @@ import {
 } from "../styles/organicShop.styled";
 
 export const OrganicShopEN = () => {
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <main>
-      <HeaderEN />
+      <HeaderEN name={"/de/organicShop"}/>
 
       <FirstSection>
         <TitleHThree>Online Shop</TitleHThree>
@@ -132,7 +135,7 @@ export const OrganicShopEN = () => {
         </ConatinerImg>
       </FourthSection>
 
-      <video width="100%" autoplay muted loop>
+      <video width="100%" autoPlay muted loop>
         <source src={VideoOrgainc} type="video/mp4" />
       </video>
 
@@ -174,14 +177,14 @@ export const OrganicShopEN = () => {
       </FifthSection>
 
       <SixthSection>
-        <LinkArrow>
-            <OptimisatorImg src={LeftArrow} alt="image" ImageType={Arrow} />
-            Previous
+        <LinkArrow to="/en/pagesShop" onClick={handleClick}>
+          <OptimisatorImg src={LeftArrow} alt="image" ImageType={Arrow} />
+          Previous
         </LinkArrow>
 
-        <LinkArrow>
-            Next
-            <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
+        <LinkArrow to="/en/whiteCollar" onClick={handleClick}>
+          Next
+          <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
         </LinkArrow>
       </SixthSection>
     </main>

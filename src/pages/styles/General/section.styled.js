@@ -26,10 +26,11 @@ export const FifthSection = styled.section`
   margin-top: 136px;
   display: flex;
   gap: 180px;
-  margin-bottom: 140px;
+  /* margin-bottom: 140px; */
 `;
 
 export const SixthSection = styled.section`
+  margin-top: 140px ;
   margin-bottom: 140px ;
   display: flex;
   width: 940px;

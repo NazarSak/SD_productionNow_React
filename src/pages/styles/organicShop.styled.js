@@ -41,6 +41,7 @@ export const List = styled.ul`
 
 export const Li = styled.li`
   display: flex;
+  align-items: center;
 `;
 
 export const NumberOfList = styled.span`
