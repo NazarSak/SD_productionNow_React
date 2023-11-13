@@ -153,7 +153,7 @@ export const AbiEN = () => {
           Previous
         </LinkArrow>
 
-        <LinkArrow to="/en/whiteCollar" onClick={handleClick}>
+        <LinkArrow to="/en/pagesShop" onClick={handleClick}>
           Next
           <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
         </LinkArrow>
