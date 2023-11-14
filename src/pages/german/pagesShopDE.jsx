@@ -170,7 +170,7 @@ export const PagesShopDE = () => {
             src={InternalFour}
             alt="image"
             ImageType={InternalImgFour}
-          />
+          /> 
           <OptimisatorImg
             src={InternalFive}
             alt="image"

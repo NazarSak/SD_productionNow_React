@@ -1,5 +1,16 @@
-import React, { useState } from "react";
-import { TitleHTwo, TitleSpan, Paragraph } from "./modalka.styled";
+import React, { useState,useEffect } from "react";
+import ButtonClose from "../../assets/svg/emailPage/Close.svg";
+import {
+  TitleHTwo,
+  TitleSpan,
+  Paragraph,
+  Input,
+  InputComment,
+  List,
+  SubmitButton,
+  ImgContainer,
+  CloseButton,
+} from "./modalka.styled";
 
 export const ModalkaEN = () => {
   const [formData, setFormData] = useState({
@@ -7,6 +18,10 @@ export const ModalkaEN = () => {
     email: "",
     comment: "",
   });
+
+  useEffect(() => {
+
+  },[formData])
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -16,59 +31,86 @@ export const ModalkaEN = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Perform actions with form data (e.g., send to backend, etc.)
-    console.log("Form data:", formData);
-    // Clear form fields after submission
-    setFormData({
-      name: "",
-      email: "",
-      comment: "",
-    });
+
+    try {
+      const response = await fetch('http://iasasc.centralindia.cloudapp.azure.com:8088/api/contact-us', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        const userData = await response.json();
+        console.log('Form data:', userData);
+
+        setFormData({
+          name: '',
+          email: '',
+          comment: '',
+        });
+      } else {
+        console.error('Error:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
 
   return (
     <main>
-      <TitleHTwo>
-        Contact <TitleSpan>Us</TitleSpan>
-      </TitleHTwo>
-      <Paragraph>
-        We'll help you find the right plan and pricing for your business.
-      </Paragraph>
-      return (
-      <form onSubmit={handleSubmit} style={{ width: "545px" }}>
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleInputChange}
-          required
-        />
-
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleInputChange}
-          required
-        />
-
-        <label htmlFor="comment">Comment:</label>
-        <textarea
-          id="comment"
-          name="comment"
-          value={formData.comment}
-          onChange={handleInputChange}
-          required
-        ></textarea>
-
-        <button type="submit">Submit</button>
-      </form>
+      <ImgContainer>
+        <CloseButton>
+          <img src={ButtonClose} alt="Button" />
+        </CloseButton>
+        <TitleHTwo>
+          Contact <TitleSpan>Us</TitleSpan>
+        </TitleHTwo>
+        <Paragraph>
+          We'll help you find the right plan and pricing for your business.
+        </Paragraph>
+        return (
+        <form onSubmit={handleSubmit} style={{ width: "545px" }}>
+          <List>
+            <li>
+              <Input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name *"
+                value={formData.name}
+                onChange={handleInputChange}
+                required
+              />
+            </li>
+            <li>
+              <Input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email *"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+              />
+            </li>
+            <li>
+              <InputComment
+                id="comment"
+                name="comment"
+                placeholder="Comment"
+                value={formData.comment}
+                onChange={handleInputChange}
+                required
+              />
+            </li>
+          </List>
+          <SubmitButton type="submit">Send</SubmitButton>
+        </form>
+      </ImgContainer>
     </main>
   );
 };
