@@ -7,6 +7,7 @@ import { WhiteCollarEN } from "../pages/english/whiteCollarEN";
 import { BriliniStudioEN } from "../pages/english/briliniStudioEN";
 import { AbiEN } from "../pages/english/abiEN";
 import { PagesShopEN } from "../pages/english/pagesShopEN";
+import { ModalkaEN } from "./modalka/Modalka";
 // DEUTCHLAND
 import { OrganicShopDE } from "../pages/german/organicShopDE";
 import { WhiteCollarDE } from "../pages/german/whiteCollarDE";
@@ -20,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeEN />} />
         <Route path="/de" element={<HomeDE />} />
-        <Route path="/en/organicShop" element={<OrganicShopEN />} />
+        <Route path="/en/organicShop" element={<ModalkaEN />} />
         <Route path="/en/whiteCollar" element={<WhiteCollarEN />} />
         <Route path="/en/briliniStudio" element={<BriliniStudioEN />} />
         <Route path="/en/abi" element={<AbiEN />} />
