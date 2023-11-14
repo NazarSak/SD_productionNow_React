@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Logo from '../../assets/svg/logo.svg'
 import { Link } from "react-router-dom";
 import { ChangeLanguage, ChangeLanguageLi, ChangeLanguageUl, Header, Navigator, NavigatorLi, StyledLink } from "./Header.styled";
 
@@ -14,7 +15,7 @@ export const HeaderEN = () => {
 		<Header>
 			<div>
 				<StyledLink to='/'>
-					<img src='/img/logo.svg' alt='logo' />
+					<img src={Logo} alt='logo' />
 				</StyledLink>
 			</div>
 			<Navigator>
