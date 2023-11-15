@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { HeaderEN } from "../../components/header/HeaderEN";
+import { ModalkaEN } from "../../components/modalka/ModalkaEN";
 import ImgPictire from "../../assets/img/organicShop/Background.png";
 import OrganicSvg from "../../assets/svg/organicShop/organicLogo.svg";
 import OptimisatorImg from "../../technical/OptimisatorImg";
@@ -48,13 +49,20 @@ import {
 } from "../styles/organicShop.styled";
 
 export const OrganicShopEN = () => {
+  const [openModal, setOpenModal] = useState(false);
+
+  
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
 
   return (
     <main>
-      <HeaderEN name={"/de/organicShop"}/>
+      <HeaderEN name={"/de/organicShop"} />
 
       <FirstSection>
         <TitleHThree>Online Shop</TitleHThree>
@@ -187,6 +195,8 @@ export const OrganicShopEN = () => {
           <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
         </LinkArrow>
       </SixthSection>
+      <button onClick={handleOpenModal}>Open modal</button>
+      { openModal && <ModalkaEN/> }
     </main>
   );
 };

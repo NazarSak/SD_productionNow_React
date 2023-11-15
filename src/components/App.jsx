@@ -1,14 +1,14 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+// PAGES
 import { HomeEN } from "../pages/english/homeEN";
-import { HomeDE } from "../pages/german/homeDE";
 import { OrganicShopEN } from "../pages/english/organicShopEN";
 import { WhiteCollarEN } from "../pages/english/whiteCollarEN";
 import { BriliniStudioEN } from "../pages/english/briliniStudioEN";
 import { AbiEN } from "../pages/english/abiEN";
 import { PagesShopEN } from "../pages/english/pagesShopEN";
-import { ModalkaEN } from "./modalka/Modalka";
 // DEUTCHLAND
+import { HomeDE } from "../pages/german/homeDE";
 import { OrganicShopDE } from "../pages/german/organicShopDE";
 import { WhiteCollarDE } from "../pages/german/whiteCollarDE";
 import { BriliniStudioDE } from "../pages/german/briliniStudioDE";
@@ -21,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeEN />} />
         <Route path="/de" element={<HomeDE />} />
-        <Route path="/en/organicShop" element={<ModalkaEN />} />
+        <Route path="/en/organicShop" element={<OrganicShopEN />} />
         <Route path="/en/whiteCollar" element={<WhiteCollarEN />} />
         <Route path="/en/briliniStudio" element={<BriliniStudioEN />} />
         <Route path="/en/abi" element={<AbiEN />} />

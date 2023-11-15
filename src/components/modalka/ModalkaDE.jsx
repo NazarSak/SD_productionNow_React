@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ButtonClose from "../../assets/svg/emailPage/Close.svg";
 import {
   TitleHTwo,
@@ -12,16 +12,14 @@ import {
   CloseButton,
 } from "./modalka.styled";
 
-export const ModalkaEN = () => {
+export const ModalkaDE = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     comment: "",
   });
 
-  useEffect(() => {
-
-  },[formData])
+  useEffect(() => {}, [formData]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -35,42 +33,46 @@ export const ModalkaEN = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://iasasc.centralindia.cloudapp.azure.com:8088/api/contact-us', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "http://iasasc.centralindia.cloudapp.azure.com:8088/api/contact-us",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (response.ok) {
         const userData = await response.json();
-        console.log('Form data:', userData);
+        console.log("Form data:", userData);
 
         setFormData({
-          name: '',
-          email: '',
-          comment: '',
+          name: "",
+          email: "",
+          comment: "",
         });
       } else {
-        console.error('Error:', response.statusText);
+        console.error("Error:", response.statusText);
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
     }
   };
 
   return (
     <main>
       <ImgContainer>
-        <CloseButton>
+        <CloseButton to="/de">
           <img src={ButtonClose} alt="Button" />
         </CloseButton>
         <TitleHTwo>
-          Contact <TitleSpan>Us</TitleSpan>
+          Kontaktiere <TitleSpan>Uns</TitleSpan>
         </TitleHTwo>
         <Paragraph>
-          We'll help you find the right plan and pricing for your business.
+          Wir helfen Ihnen, den richtigen Plan und Preis für Ihr Unternehmen zu
+          finden.
         </Paragraph>
         return (
         <form onSubmit={handleSubmit} style={{ width: "545px" }}>
@@ -108,7 +110,7 @@ export const ModalkaEN = () => {
               />
             </li>
           </List>
-          <SubmitButton type="submit">Send</SubmitButton>
+          <SubmitButton type="submit">Schicken</SubmitButton>
         </form>
       </ImgContainer>
     </main>

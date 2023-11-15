@@ -1,5 +1,32 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import BackgroundCircle from "../../assets/img/backgroundCircle.png";
+
+
+export const ModalWrapper = styled.div`
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: #000;
+  display: flex;
+  justify-content: center;
+`; 
+
+export const ModalContent = styled.div`
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+`;
+
 
 export const TitleHThree = styled.h3`
   color: #50d13b;
@@ -86,7 +113,7 @@ export const SubmitButton = styled.button`
 `;
 
 export const ImgContainer = styled.div`
-      margin-top: 98px;
+  margin-top: 98px;
   background-image: url(${BackgroundCircle});
   display: flex;
   flex-direction: column;
@@ -97,7 +124,10 @@ export const ImgContainer = styled.div`
   height: 800px;
 `;
 
-export const CloseButton = styled.button`
+export const CloseButton = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: transparent;
   transition: border-color 0.3s ease;
   width: 56px;
