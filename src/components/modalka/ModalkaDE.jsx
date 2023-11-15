@@ -10,6 +10,7 @@ import {
   SubmitButton,
   ImgContainer,
   CloseButton,
+  ModalWrapper,
 } from "./modalka.styled";
 
 export const ModalkaDE = () => {
@@ -63,56 +64,58 @@ export const ModalkaDE = () => {
 
   return (
     <main>
-      <ImgContainer>
-        <CloseButton to="/de">
-          <img src={ButtonClose} alt="Button" />
-        </CloseButton>
-        <TitleHTwo>
-          Kontaktiere <TitleSpan>Uns</TitleSpan>
-        </TitleHTwo>
-        <Paragraph>
-          Wir helfen Ihnen, den richtigen Plan und Preis für Ihr Unternehmen zu
-          finden.
-        </Paragraph>
-        return (
-        <form onSubmit={handleSubmit} style={{ width: "545px" }}>
-          <List>
-            <li>
-              <Input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Name *"
-                value={formData.name}
-                onChange={handleInputChange}
-                required
-              />
-            </li>
-            <li>
-              <Input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Email *"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-              />
-            </li>
-            <li>
-              <InputComment
-                id="comment"
-                name="comment"
-                placeholder="Comment"
-                value={formData.comment}
-                onChange={handleInputChange}
-                required
-              />
-            </li>
-          </List>
-          <SubmitButton type="submit">Schicken</SubmitButton>
-        </form>
-      </ImgContainer>
+      <ModalWrapper>
+        <ImgContainer>
+          <CloseButton to="/de">
+            <img src={ButtonClose} alt="Button" />
+          </CloseButton>
+          <TitleHTwo>
+            Kontaktiere <TitleSpan>Uns</TitleSpan>
+          </TitleHTwo>
+          <Paragraph>
+            Wir helfen Ihnen, den richtigen Plan und Preis für Ihr Unternehmen
+            zu finden.
+          </Paragraph>
+          return (
+          <form onSubmit={handleSubmit} style={{ width: "545px" }}>
+            <List>
+              <li>
+                <Input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Name *"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                />
+              </li>
+              <li>
+                <Input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email *"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                />
+              </li>
+              <li>
+                <InputComment
+                  id="comment"
+                  name="comment"
+                  placeholder="Comment"
+                  value={formData.comment}
+                  onChange={handleInputChange}
+                  required
+                />
+              </li>
+            </List>
+            <SubmitButton type="submit">Schicken</SubmitButton>
+          </form>
+        </ImgContainer>
+      </ModalWrapper>
     </main>
   );
 };
