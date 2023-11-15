@@ -8,7 +8,9 @@ export const HomeEN = () => {
       <HeaderEN />
       <button>
         <Link to="/en/organicShop">Organic</Link>
-        
+      </button>
+      <button>
+        <Link to="/en/privacy">to privacy</Link>
       </button>
     </>
   );
