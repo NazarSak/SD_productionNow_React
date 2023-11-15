@@ -1,6 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+::-webkit-scrollbar {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: linear-gradient(119deg, #bd00ff 21.38%, #3604c3 129.88%);
+}
+
 html {
   background: #000;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 body {
@@ -46,4 +56,9 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
 }

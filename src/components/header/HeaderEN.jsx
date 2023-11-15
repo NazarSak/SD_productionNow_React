@@ -3,7 +3,7 @@ import Logo from '../../assets/svg/logo.svg'
 import { Link } from "react-router-dom";
 import { ChangeLanguage, ChangeLanguageLi, ChangeLanguageUl, Header, Navigator, NavigatorLi, StyledLink } from "./Header.styled";
 
-export const HeaderEN = () => {
+export const HeaderEN = ({name}) => {
   const [isClicked, setIsClicked] = useState(false);
 
   const handleSvgClick = () => {
@@ -37,10 +37,10 @@ export const HeaderEN = () => {
 			<ChangeLanguage>
 				<ChangeLanguageUl>
 					<ChangeLanguageLi>
-						<Link to='/'>EN</Link>
+						<Link>EN</Link>
 					</ChangeLanguageLi>
 					<ChangeLanguageLi className={isClicked ? 'show' : 'hide'}>
-						<Link to='/de/home'>DE</Link>
+						<Link to={name}>DE</Link>
 					</ChangeLanguageLi>
 				</ChangeLanguageUl>
 				<svg
