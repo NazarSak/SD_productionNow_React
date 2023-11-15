@@ -5,6 +5,12 @@ import ImageHero from '../../assets/svg/deviderLine.svg'
 import Ellipse from '../../assets/svg/Ellipse.svg'
 import CrlectImg from '../../assets/svg/Close.svg'
 import OrganicImg from '../../assets/img/5093ef757e18607302ebe57407fd1129.png'
+import WhiteImg1 from '../../assets/img/page2.png'
+import BriliniImg1 from '../../assets/img/page-3.png'
+import BriliniImg2 from '../../assets/img/page-4.png'
+import AbiImg1 from '../../assets/img/page4.png'
+import AbiImg2 from '../../assets/img/page4-1.png'
+import LeftPurple from '../../assets/svg/left.svg'
 import {
 	ButtonHeader,
 	HeroBackground,
@@ -18,6 +24,33 @@ import {
   ProjectsFragmentInfo1,
   ButtonProject1,
   ProjectImage1,
+  ProjectContainer,
+  ProjectsFragment2,
+  ProjectsFragmentInfo2,
+  ButtonProject2,
+  ProjectImage2,
+  ProjectImageContainer1,
+  ProjectImage21,
+  ProjectImage22,
+  ProjectsFragmentInfo3,
+  ProjectsFragment3,
+  ButtonProject3,
+  ProjectImage31,
+  ProjectImage32,
+  ProjectContainer2,
+  ProjectsFragment4,
+  ProjectsFragmentInfo4,
+  ButtonProject4,
+  ProjectImage41,
+  ProjectImage42,
+  Services,
+  ServicesCards,
+  ToEmailLink,
+  ServicesFragment,
+  ServiceHeader1,
+  ServiceButton,
+  ServiceHeader2,
+  ServiceHeader3,
 } from './../styles/home.styled'
 
 export const HomeEN = () => {
@@ -44,24 +77,26 @@ export const HomeEN = () => {
 					Check our some of <span class='borderText'>our projects</span>
 				</h2>
 				<ProjectsCards>
-					<ProjectsFragment1>
-						<ProjectsFragmentInfo1>
-							<h4>Online Shop</h4>
-							<h3>Organic</h3>
-							<p>
-								Online store with organic fruits, vegetables and berries. A
-								England farmer wanted to sell organically grown produce.
-							</p>
-							<ButtonProject1 to='/en/organicShop'>View</ButtonProject1>
-						</ProjectsFragmentInfo1>
+					<ProjectContainer>
+						<ProjectsFragment1>
+							<ProjectsFragmentInfo1>
+								<h4>Online Shop</h4>
+								<h3>Organic</h3>
+								<p>
+									Online store with organic fruits, vegetables and berries. A
+									England farmer wanted to sell organically grown produce.
+								</p>
+								<ButtonProject1 to='/en/organicShop'>View</ButtonProject1>
+							</ProjectsFragmentInfo1>
+						</ProjectsFragment1>
 						<ProjectImage1 src={OrganicImg} />
-					</ProjectsFragment1>
-					<div class='projectsFragment2'>
-						<div class='projectImageX'>
-							<div class='projectImage2-1'></div>
-							<div class='projectImage2-2'></div>
-						</div>
-						<div class='projectsFragmentInfo2'>
+					</ProjectContainer>
+					<ProjectsFragment2>
+						<ProjectImageContainer1>
+							<ProjectImage21 src={WhiteImg1} />
+							<ProjectImage22 src={WhiteImg1} />
+						</ProjectImageContainer1>
+						<ProjectsFragmentInfo2>
 							<h4>Business website</h4>
 							<h3>WhiteCollor</h3>
 							<p>
@@ -69,45 +104,138 @@ export const HomeEN = () => {
 								of a corporation to ensure flexibility and adaptation to a
 								rapidly changing business environment.
 							</p>
-							<a class='buttonProject2' href='./whiteCollar.html'>
-								View
-							</a>
-						</div>
-					</div>
-					<div class='projectsFragment3'>
-						<div class='projectImage3'></div>
-						<div class='projectImage3-1'></div>
-						<div class='projectsFragmentInfo3'>
-							<h4>Landing page</h4>
-							<h3>Brilini Studio</h3>
-							<p>
-								Studio of interior designers specializing in the furnishing and
-								design of rooms, apartments and houses in a modern and austere
-								style.
-							</p>
-							<a class='buttonProject3' href='./briliniStudio.html'>
-								View
-							</a>
-						</div>
-					</div>
-					<div class='projectsFragment4'>
-						<div class='projectImage4'></div>
-						<div class='projectImage4-1'></div>
-						<div class='projectsFragmentInfo4'>
-							<h4>Mobile App</h4>
-							<h3>Abi</h3>
-							<p>
-								Mobile application for creating presentations with ready-made
-								templates based on artificial intelligence. The application is
-								available on Play Market and App Store.
-							</p>
-							<a class='buttonProject4' href='./abi.html'>
-								View
-							</a>
-						</div>
-					</div>
+							<ButtonProject2 to='/en/whiteCollar'>View</ButtonProject2>
+						</ProjectsFragmentInfo2>
+					</ProjectsFragment2>
+
+					<ProjectContainer2>
+						<ProjectsFragment3>
+							<ProjectImage31 src={BriliniImg1} />
+							<ProjectImage32 src={BriliniImg2} />
+							<ProjectsFragmentInfo3>
+								<h4>Landing page</h4>
+								<h3>Brilini Studio</h3>
+								<p>
+									Studio of interior designers specializing in the furnishing
+									and design of rooms, apartments and houses in a modern and
+									austere style.
+								</p>
+								<ButtonProject3 to='/en/briliniStudio'>View</ButtonProject3>
+							</ProjectsFragmentInfo3>
+						</ProjectsFragment3>
+
+						<ProjectsFragment4>
+							<ProjectImage41 src={AbiImg1} />
+							<ProjectImage42 src={AbiImg2} />
+							<ProjectsFragmentInfo4>
+								<h4>Mobile App</h4>
+								<h3>Abi</h3>
+								<p>
+									Mobile application for creating presentations with ready-made
+									templates based on artificial intelligence. The application is
+									available on Play Market and App Store.
+								</p>
+								<ButtonProject4 to='en/abi'>View</ButtonProject4>
+							</ProjectsFragmentInfo4>
+						</ProjectsFragment4>
+					</ProjectContainer2>
 				</ProjectsCards>
 			</Project>
+
+			<Services>
+				<h2 class='servicesSection'>
+					Our <span>Services</span>
+				</h2>
+				<ServicesCards>
+					<ToEmailLink to='en/email'>
+						<ServicesFragment>
+							<ServiceHeader1>Design</ServiceHeader1>
+							<ul>
+								<li>Motion Design</li>
+								<li>Logotype</li>
+								<li>Video Editing</li>
+								<li>3D models</li>
+								<li>Advertising Banners</li>
+							</ul>
+							<ServiceButton>
+								<p>Order service</p>
+								<svg
+									xmlns='http://www.w3.org/2000/svg'
+									width='16'
+									height='10'
+									viewBox='0 0 16 10'
+									fill='none'
+								>
+									<path
+										d='M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1'
+										stroke='#FCFCFC'
+										stroke-width='2'
+										stroke-linecap='round'
+										stroke-linejoin='round'
+									/>
+								</svg>
+							</ServiceButton>
+						</ServicesFragment>
+					</ToEmailLink>
+					<ToEmailLink to='en/email'>
+						<ServicesFragment>
+							<ServiceHeader2>Development</ServiceHeader2>
+							<ul>
+								<li>Landing Page</li>
+								<li>Corporate Website</li>
+								<li>Online Shop</li>
+								<li>Mobile App</li>
+								<li>Redesign Website</li>
+							</ul>
+							<ServiceButton>
+								<p>Order service</p>
+								<svg
+									xmlns='http://www.w3.org/2000/svg'
+									width='16'
+									height='10'
+									viewBox='0 0 16 10'
+									fill='none'
+								>
+									<path
+										d='M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1'
+										stroke='#FCFCFC'
+										stroke-width='2'
+										stroke-linecap='round'
+										stroke-linejoin='round'
+									/>
+								</svg>
+							</ServiceButton>
+						</ServicesFragment>
+					</ToEmailLink>
+					<ToEmailLink to='en/email'>
+						<ServicesFragment>
+							<ServiceHeader3>Update</ServiceHeader3>
+							<ul>
+								<li>SEO optimisation</li>
+								<li>Multilingual</li>
+							</ul>
+							<ServiceButton>
+								<p>Order service</p>
+								<svg
+									xmlns='http://www.w3.org/2000/svg'
+									width='16'
+									height='10'
+									viewBox='0 0 16 10'
+									fill='none'
+								>
+									<path
+										d='M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1'
+										stroke='#FCFCFC'
+										stroke-width='2'
+										stroke-linecap='round'
+										stroke-linejoin='round'
+									/>
+								</svg>
+							</ServiceButton>
+						</ServicesFragment>
+					</ToEmailLink>
+				</ServicesCards>
+			</Services>
 		</>
 	)
 };
