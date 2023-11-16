@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/SD_productionNow_React/static/css/main.e23438a1.css",
-    "main.js": "/SD_productionNow_React/static/js/main.693e2dca.js",
+    "main.css": "/SD_productionNow_React/static/css/main.e09092da.css",
+    "main.js": "/SD_productionNow_React/static/js/main.a95e6fdc.js",
     "static/js/787.b701888c.chunk.js": "/SD_productionNow_React/static/js/787.b701888c.chunk.js",
     "static/media/white_collar.mp4": "/SD_productionNow_React/static/media/white_collar.dd30a22afb37e1ba6151.mp4",
     "static/media/abi.mp4": "/SD_productionNow_React/static/media/abi.12f51e17669cd803fd67.mp4",
@@ -37,6 +37,7 @@
     "static/media/internalFive.png": "/SD_productionNow_React/static/media/internalFive.43cc77fef9f435369609.png",
     "static/media/internalFour.png": "/SD_productionNow_React/static/media/internalFour.8ea84378acff9fb5d154.png",
     "static/media/imageOne.png": "/SD_productionNow_React/static/media/imageOne.71f6e2a86da2e0f5c129.png",
+    "static/media/deviderLine.svg": "/SD_productionNow_React/static/media/deviderLine.5aa0beca9ad3829d420ed99aea794885.svg",
     "static/media/leftArrow.png": "/SD_productionNow_React/static/media/leftArrow.a5119931ac45e51f7168.png",
     "static/media/rightArrow.png": "/SD_productionNow_React/static/media/rightArrow.273e1d2933c9ee4f6410.png",
     "static/media/organicLogo.svg": "/SD_productionNow_React/static/media/organicLogo.9dd1631360ba4d87e239f7ff87b1348c.svg",
@@ -45,12 +46,12 @@
     "index.html": "/SD_productionNow_React/index.html",
     "static/media/Close.svg": "/SD_productionNow_React/static/media/Close.27cbcedcf8842c061e909829c52141c2.svg",
     "static/media/ArrowLeft.svg": "/SD_productionNow_React/static/media/ArrowLeft.ea8d8bb8bb7cbfb1a49cde1020ec3b2f.svg",
-    "main.e23438a1.css.map": "/SD_productionNow_React/static/css/main.e23438a1.css.map",
-    "main.693e2dca.js.map": "/SD_productionNow_React/static/js/main.693e2dca.js.map",
+    "main.e09092da.css.map": "/SD_productionNow_React/static/css/main.e09092da.css.map",
+    "main.a95e6fdc.js.map": "/SD_productionNow_React/static/js/main.a95e6fdc.js.map",
     "787.b701888c.chunk.js.map": "/SD_productionNow_React/static/js/787.b701888c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e23438a1.css",
-    "static/js/main.693e2dca.js"
+    "static/css/main.e09092da.css",
+    "static/js/main.a95e6fdc.js"
   ]
 }
