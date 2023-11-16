@@ -1,5 +1,6 @@
 import React from "react";
 import { HeaderEN } from "../../components/header/HeaderEN";
+import { handleClickTop } from "../../helperFunction/ScrollTop";
 import homeOne from "../../assets/img/pagesShop/homeOne.png";
 import homeTwo from "../../assets/img/pagesShop/homeTwo.png";
 import Logo from "../../assets/svg/pagesShop/Logo.svg";
@@ -49,9 +50,6 @@ import {
 } from "../styles/pagesShop.styled";
 
 export const PagesShopDE = () => {
-  const handleClick = () => {
-    window.scrollTo(0, 0);
-  };
 
   return (
     <main>
@@ -180,12 +178,12 @@ export const PagesShopDE = () => {
       </FifthSection>
 
       <SixthSection>
-        <LinkArrow to="/de/abi" onClick={handleClick}>
+        <LinkArrow to="/de/abi" onClick={handleClickTop}>
           <OptimisatorImg src={LeftArrow} alt="image" ImageType={Arrow} />
           Vorherige
         </LinkArrow>
 
-        <LinkArrow to="/de/organicShop" onClick={handleClick}>
+        <LinkArrow to="/de/organicShop" onClick={handleClickTop}>
           Weiter
           <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
         </LinkArrow>

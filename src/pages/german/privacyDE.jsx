@@ -1,5 +1,6 @@
 import React from "react";
 import { HeaderDE } from "../../components/header/HeaderDE";
+import { FooterDE } from "../../components/footer/FooterDE";
 import ArrowLeft from "../../assets/svg/ArrowLeft.svg";
 import {
   TitleHTwo,
@@ -332,6 +333,7 @@ export const PrivacyDE = () => {
             </Li>
           </List>
         </Section>
+        <FooterDE showImg/>
       </Container>
     </>
   );

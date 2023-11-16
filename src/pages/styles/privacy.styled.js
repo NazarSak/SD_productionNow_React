@@ -16,6 +16,7 @@ export const Container = styled.section`
 
 export const Section = styled.section`
   margin-top: 100px;
+  margin-bottom: 150px;
 `;
 export const Line = styled.div`
   width: 12px;
