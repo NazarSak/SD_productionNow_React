@@ -12,7 +12,7 @@ import AbiImg1 from '../../assets/img/page4.png'
 import AbiImg2 from '../../assets/img/page4-1.png'
 import LeftPurple from '../../assets/svg/left.svg'
 import Prev from '../../assets/svg/left1.svg'
-import Next from '../../assets/svg/right1.svg'
+// import Next from '../../assets/svg/right1.svg'
 import Social from '../../assets/svg/teams/socials.svg'
 import ImageBWTimur from '../../assets/img/ourTeam/picturePNG/timur_bw.png'
 import ImageCTimur from '../../assets/img/ourTeam/picturePNG/timur_c.png'
@@ -345,7 +345,7 @@ export const HomeEN = () => {
 							<SwiperButtonPrev src={Prev} onClick={nextSlide} />
 						</SwiperImgContainer>
 						<SwiperImgContainer>
-							<SwiperButtonNext src={Next} onClick={prevSlide} />
+							{/* <SwiperButtonNext src={Next} onClick={prevSlide} /> */}
 						</SwiperImgContainer>
 					</SwiperButtonContainer>
 				</SliderName>
