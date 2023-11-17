@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import ButtonClose from "../../assets/svg/emailPage/Close.svg";
 import {
   TitleHTwo,
@@ -11,6 +12,7 @@ import {
   ImgContainer,
   CloseButton,
   ModalWrapper,
+  ModalContent,
 } from "./modalka.styled";
 
 export const ModalkaEN = () => {

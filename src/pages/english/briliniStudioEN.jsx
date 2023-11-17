@@ -1,6 +1,5 @@
 import React from "react";
 import { HeaderEN } from "../../components/header/HeaderEN";
-import { handleClickTop } from "../../helperFunction/ScrollTop";
 import house from "../../assets/img/briliniStudio/house.png";
 import Logo from "../../assets/svg/briliniStudio/Logo.svg";
 import OptimisatorImg from "../../technical/OptimisatorImg";
@@ -37,6 +36,10 @@ import {
 } from "../styles/briliniStudio.styled";
 
 export const BriliniStudioEN = () => {
+
+    const handleClick = () => {
+        window.scrollTo(0, 0);
+      };
 
   return (
     <main>
@@ -124,12 +127,12 @@ export const BriliniStudioEN = () => {
       </video>
 
       <SixthSection >
-        <LinkArrow to="/en/whiteCollar" onClick={handleClickTop}>
+        <LinkArrow to="/en/whiteCollar" onClick={handleClick}>
           <OptimisatorImg src={LeftArrow} alt="image" ImageType={Arrow} />
           Previous
         </LinkArrow>
 
-        <LinkArrow to="/en/abi" onClick={handleClickTop}>
+        <LinkArrow to="/en/abi" onClick={handleClick}>
           Next
           <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
         </LinkArrow>

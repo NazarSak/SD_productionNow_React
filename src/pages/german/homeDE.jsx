@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FooterDE } from "../../components/footer/FooterDE";
 
 export const HomeDE = () => {
   return (
@@ -13,7 +12,6 @@ export const HomeDE = () => {
       <button>
         <Link to="/de/organicShop">to organicShopDE</Link>
       </button>
-      <FooterDE />
     </>
   );
 };

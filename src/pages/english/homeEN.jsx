@@ -85,7 +85,10 @@ import {
 	Contend,
 	ImageBW,
 	ImageC,
+  ContainerImageBW,
+  ContainerImg,
 } from './../styles/home.styled'
+import { FooterEN } from '../../components/footer/FooterEN';
 
 const sliderData = [
 	{
@@ -138,19 +141,51 @@ const sliderData = [
 	},
 ]
 
+const ImgBWData = [
+	{
+		imgBW: ImageBWTimur,
+  },
+  {
+    imgBW: ImageBWAnd,
+  },
+  {
+    imgBW: ImageBWBog,
+  },
+  {
+    imgBW: ImageBWNat,
+  },
+  {
+    imgBW: ImageBWNaz,
+  },
+  {
+    imgBW: ImageBWSer,
+  },
+  {
+    imgBW: ImageBWRomP,
+  },
+  {
+    imgBW: ImageBWDm,
+  },
+]
+
 export const HomeEN = () => {
 
- const [currentSlide, setCurrentSlide] = useState(0)
+const [currentSlide, setCurrentSlide] = useState(0)
+const [containerClass, setContainerClass] = useState(0)
 
- const nextSlide = () => {
-		setCurrentSlide(prevSlide => (prevSlide + 1) % sliderData.length)
- }
+const nextSlide = () => {
+	setCurrentSlide(prevSlide => (prevSlide + 1) % sliderData.length)
+  const res = containerClass + 256
+	setContainerClass(res) 
+}
 
- const prevSlide = () => {
-		setCurrentSlide(prevSlide =>
-			prevSlide === 0 ? sliderData.length - 1 : prevSlide - 1
-		)
- }
+const prevSlide = () => {
+	setCurrentSlide(prevSlide =>
+		prevSlide === 0 ? sliderData.length - 1 : prevSlide - 1
+	)
+  const res = containerClass - 256
+	setContainerClass(res) 
+}
 
   
   return (
@@ -350,7 +385,6 @@ export const HomeEN = () => {
 					</SwiperButtonContainer>
 				</SliderName>
 
-				<SwiperBox></SwiperBox>
 				<MySwiperBox>
 					<SwiperWrapper>
 						{sliderData.map((slider, index) => (
@@ -362,14 +396,21 @@ export const HomeEN = () => {
 									<SocialImg src={Social} />
 									<h2>{slider.name}</h2>
 									<h3>{slider.description}</h3>
-									{/* <ImageBW src={slider.img} /> */}
 								</Contend>
 								<ImageC src={slider.img} />
 							</SwiperSlide>
 						))}
 					</SwiperWrapper>
 				</MySwiperBox>
+        <ContainerImg>
+				  <ContainerImageBW style={{marginLeft: `${containerClass === 0 ? 56 : containerClass + 56}px`}}>
+				  	{ImgBWData.map((img, index) => (
+				  			<ImageBW src={img.imgBW} />
+				  	))}
+				  </ContainerImageBW>
+        </ContainerImg>
 			</OurTeam>
+			<FooterEN />
 		</>
 	)
 };
