@@ -1,5 +1,6 @@
 import React from "react";
 import { HeaderDE } from "../../components/header/HeaderDE";
+import { handleClickTop } from "../../helperFunction/ScrollTop";
 import ImgPictire from "../../assets/img/organicShop/Background.png";
 import OrganicSvg from "../../assets/svg/organicShop/organicLogo.svg";
 import OptimisatorImg from "../../technical/OptimisatorImg";
@@ -48,9 +49,6 @@ import {
 } from "../styles/organicShop.styled";
 
 export const OrganicShopDE = () => {
-  const handleClick = () => {
-    window.scrollTo(0, 0);
-  };
 
   return (
     <main>
@@ -179,12 +177,12 @@ export const OrganicShopDE = () => {
       </FifthSection>
 
       <SixthSection>
-        <LinkArrow to="/de/pagesShop" onClick={handleClick}>
+        <LinkArrow to="/de/pagesShop" onClick={handleClickTop}>
           <OptimisatorImg src={LeftArrow} alt="image" ImageType={Arrow} />
           Vorherige
         </LinkArrow>
 
-        <LinkArrow to="/de/whiteCollar" onClick={handleClick}>
+        <LinkArrow to="/de/whiteCollar" onClick={handleClickTop}>
         Weiter
           <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
         </LinkArrow>

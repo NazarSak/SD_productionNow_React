@@ -16,18 +16,6 @@ export const ModalWrapper = styled.div`
   justify-content: center;
 `; 
 
-export const ModalContent = styled.div`
-  background-color: white;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-`;
-
-
 export const TitleHThree = styled.h3`
   color: #50d13b;
 `;

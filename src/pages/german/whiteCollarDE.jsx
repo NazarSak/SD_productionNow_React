@@ -4,10 +4,7 @@ import handshakes from "../../assets/img/whiteCollar/handshakes.png";
 import Logo from "../../assets/svg/whiteCollar/Logo.svg";
 import OptimisatorImg from "../../technical/OptimisatorImg";
 import ImagePeople from "../../assets/img/whiteCollar/ImagePeople.png";
-// import handshake from "../../assets/img/organicShop/Photo.png";
-// import PageOne from "../../assets/img/organicShop/pageOne.png";
-// import PageTwo from "../../assets/img/organicShop/pageTwo.png";
-
+import { handleClickTop } from "../../helperFunction/ScrollTop";
 import Banner from "../../assets/img/whiteCollar/Banner.png";
 import screnshot from "../../assets/img/whiteCollar/screnshot.png";
 import Video from "../../assets/video/white_collar.mp4";
@@ -53,9 +50,6 @@ import {
 } from "../styles/whiteCollar.styled";
 
 export const WhiteCollarDE = () => {
-  const handleClick = () => {
-    window.scrollTo(0, 0);
-  };
 
   return (
     <main>
@@ -182,12 +176,12 @@ export const WhiteCollarDE = () => {
       </FifthSection>
 
       <SixthSection>
-        <LinkArrow to="/de/organicShop" onClick={handleClick}>
+        <LinkArrow to="/de/organicShop" onClick={handleClickTop}>
           <OptimisatorImg src={LeftArrow} alt="image" ImageType={Arrow} />
           Vorherige
         </LinkArrow>
 
-        <LinkArrow to="/de/briliniStudio" onClick={handleClick}>
+        <LinkArrow to="/de/briliniStudio" onClick={handleClickTop}>
           Weiter
           <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
         </LinkArrow>
