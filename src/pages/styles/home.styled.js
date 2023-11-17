@@ -673,6 +673,7 @@ export const SliderName = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 140px;
 `
 
 export const SwiperButtonContainer = styled.div`
@@ -704,33 +705,24 @@ export const SwiperButtonNext = styled.img`
 	height: 24px;
 `;
 
-export const SwiperBox = styled.div`
-	top: 218px;
-	right: 0;
-	position: absolute;
-	z-index: 1;
-	width: 430px;
-	height: 320px;
+export const MySwiperBox = styled.div`
+	margin-left: auto;
+	z-index: 10;
+	width: 374px;
+	height: 240px;
 	display: flex;
 	border-radius: 32px;
 	background: linear-gradient(119deg, #bd00ff 21.38%, #3604c3 129.88%);
-`;
-
-export const MySwiperBox = styled.div`
-	position: absolute;
-	z-index: 2;
-	top: 218px;
-	right: 0;
-	width: 374px;
-	height: 240px;
 	padding: 40px 28px;
-`;
+`
 
 export const SocialImg = styled.img`
   
 `
 
 export const SwiperWrapper = styled.div`
+  position: relative;
+  display: flex;
 `
 
 export const SwiperSlide = styled.div`
@@ -766,17 +758,32 @@ export const Contend = styled.div`
 		font-weight: 500;
 		line-height: 140%;
 	}
+  `
+export const ContainerImageBW = styled.div`
+  display: flex;
+  position: absolute;
+  width: 100%;
+  top: 300px;
+  margin-left: -100px;
+  z-index: 2;
 `
 
 export const ImageBW = styled.img`
-	width: 0;
-	height: 0;
+	width: 256px;
+	height: 256px;
+  /* position: absolute;
+  z-index: 1; */
 `
 
 export const ImageC = styled.img`
-	z-index: 100;
 	margin-top: -63px;
   margin-left: -60px;
 	width: 343px;
 	height: 343px;
+`
+ 
+export const ContainerImg = styled.div`
+  width: 1280px;
+  height: 20px;
+  overflow: hidden;
 `

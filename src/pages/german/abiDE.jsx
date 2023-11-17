@@ -1,6 +1,5 @@
 import React from "react";
 import { HeaderEN } from "../../components/header/HeaderEN";
-import { handleClickTop } from "../../helperFunction/ScrollTop";
 import BackgroundOne from "../../assets/img/abi/BackgroundOne.png";
 import BackgroundTwo from "../../assets/img/abi/BackgroundTwo.png";
 import Logo from "../../assets/svg/abi/logo.svg";
@@ -45,6 +44,9 @@ import {
 } from "../styles/abi.styled";
 
 export const AbiDE = () => {
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <main>
@@ -153,12 +155,12 @@ export const AbiDE = () => {
       </VideoContainer>
 
       <SixthSection>
-        <LinkArrow to="/de/briliniStudio" onClick={handleClickTop}>
+        <LinkArrow to="/de/briliniStudio" onClick={handleClick}>
           <OptimisatorImg src={LeftArrow} alt="image" ImageType={Arrow} />
           Vorherige
         </LinkArrow>
 
-        <LinkArrow to="/de/pagesShop" onClick={handleClickTop}>
+        <LinkArrow to="/de/pagesShop" onClick={handleClick}>
           Weiter
           <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
         </LinkArrow>
