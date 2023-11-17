@@ -643,3 +643,140 @@ export const ServiceHeader3 = styled.h3`
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 `
+
+export const OurTeam = styled.section`
+  position: relative;
+	margin-top: 314px;
+	width: 100%;
+	background: #000;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	& h2 {
+		color: #fcfcfc;
+		text-align: center;
+		font-size: 64px;
+		font-style: normal;
+		font-weight: 700;
+	}
+	& span {
+		font-weight: 800;
+		font-family: 'Poppins', sans-serif;
+		-webkit-text-fill-color: #000;
+		-webkit-text-stroke: 1.5px #fff;
+		letter-spacing: 2.5px;
+	}
+`
+
+export const SliderName = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+`
+
+export const SwiperButtonContainer = styled.div`
+  display: flex;
+  gap: 44px;
+`
+
+export const SwiperImgContainer = styled.div`
+	width: 56px;
+	height: 56px;
+	border-radius: 1000px;
+	border: 2px solid var(--grey-B, #595959);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.5s;
+	cursor: pointer;
+	&:hover {
+		border-color: #fcfcfc;
+	}
+`
+
+export const SwiperButtonPrev = styled.img`
+  width: 24px;
+  height: 24px;
+`
+export const SwiperButtonNext = styled.img`
+	width: 24px;
+	height: 24px;
+`;
+
+export const SwiperBox = styled.div`
+	top: 218px;
+	right: 0;
+	position: absolute;
+	z-index: 1;
+	width: 430px;
+	height: 320px;
+	display: flex;
+	border-radius: 32px;
+	background: linear-gradient(119deg, #bd00ff 21.38%, #3604c3 129.88%);
+`;
+
+export const MySwiperBox = styled.div`
+	position: absolute;
+	z-index: 2;
+	top: 218px;
+	right: 0;
+	width: 374px;
+	height: 240px;
+	padding: 40px 28px;
+`;
+
+export const SocialImg = styled.img`
+  
+`
+
+export const SwiperWrapper = styled.div`
+`
+
+export const SwiperSlide = styled.div`
+	display: none;
+	border-radius: 100px;
+  &.active {
+    display: flex;
+  }
+`
+
+export const Contend = styled.div`
+	display: block;
+	& h2 {
+		margin-right: auto;
+		margin-top: 72px;
+		width: 100px;
+		color: #fff;
+		font-family: Montserrat;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 140%;
+		text-align: left;
+	}
+
+	& h3 {
+    margin-top: 16px;
+		width: 158px;
+		color: var(--02-dark-color-white, #fff);
+		font-family: Montserrat;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 140%;
+	}
+`
+
+export const ImageBW = styled.img`
+	width: 0;
+	height: 0;
+`
+
+export const ImageC = styled.img`
+	z-index: 100;
+	margin-top: -63px;
+  margin-left: -60px;
+	width: 343px;
+	height: 343px;
+`
