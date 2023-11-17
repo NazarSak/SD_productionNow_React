@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 import { HeaderEN } from "../../components/header/HeaderEN";
 import ImageHero from '../../assets/svg/deviderLine.svg'
@@ -11,6 +11,26 @@ import BriliniImg2 from '../../assets/img/page-4.png'
 import AbiImg1 from '../../assets/img/page4.png'
 import AbiImg2 from '../../assets/img/page4-1.png'
 import LeftPurple from '../../assets/svg/left.svg'
+import Prev from '../../assets/svg/left1.svg'
+import Next from '../../assets/svg/right1.svg'
+import Social from '../../assets/svg/teams/socials.svg'
+import ImageBWTimur from '../../assets/img/ourTeam/picturePNG/timur_bw.png'
+import ImageCTimur from '../../assets/img/ourTeam/picturePNG/timur_c.png'
+import ImageBWAnd from '../../assets/img/ourTeam/picturePNG/andrey_bw.png'
+import ImageCAnd from '../../assets/img/ourTeam/picturePNG/andrey_c.png'
+import ImageBWBog from '../../assets/img/ourTeam/picturePNG/bohdan_bw.png'
+import ImageCBog from '../../assets/img/ourTeam/picturePNG/bohdan_c.png'
+import ImageBWNat from '../../assets/img/ourTeam/picturePNG/natalia_bw.png'
+import ImageCNat from '../../assets/img/ourTeam/picturePNG/natalia_c.png'
+import ImageBWNaz from '../../assets/img/ourTeam/picturePNG/nazar_bw.png'
+import ImageCNaz from '../../assets/img/ourTeam/picturePNG/nazar_c.png'
+import ImageBWSer from '../../assets/img/ourTeam/picturePNG/serhii_bw.png'
+import ImageCSer from '../../assets/img/ourTeam/picturePNG/serhii_c.png'
+import ImageBWRomP from '../../assets/img/ourTeam/picturePNG/roma_bw.png'
+import ImageCRomP from '../../assets/img/ourTeam/picturePNG/roma_c.png'
+import ImageBWDm from '../../assets/img/ourTeam/picturePNG/dima_bw.png'
+import ImageCDm from '../../assets/img/ourTeam/picturePNG/dima_c.png'
+
 import {
 	ButtonHeader,
 	HeroBackground,
@@ -18,42 +38,121 @@ import {
 	HeroContend,
 	SectionHero,
 	ImgHero,
-  Project,
-  ProjectsCards,
-  ProjectsFragment1,
-  ProjectsFragmentInfo1,
-  ButtonProject1,
-  ProjectImage1,
-  ProjectContainer,
-  ProjectsFragment2,
-  ProjectsFragmentInfo2,
-  ButtonProject2,
-  ProjectImage2,
-  ProjectImageContainer1,
-  ProjectImage21,
-  ProjectImage22,
-  ProjectsFragmentInfo3,
-  ProjectsFragment3,
-  ButtonProject3,
-  ProjectImage31,
-  ProjectImage32,
-  ProjectContainer2,
-  ProjectsFragment4,
-  ProjectsFragmentInfo4,
-  ButtonProject4,
-  ProjectImage41,
-  ProjectImage42,
-  Services,
-  ServicesCards,
-  ToEmailLink,
-  ServicesFragment,
-  ServiceHeader1,
-  ServiceButton,
-  ServiceHeader2,
-  ServiceHeader3,
+	Project,
+	ProjectsCards,
+	ProjectsFragment1,
+	ProjectsFragmentInfo1,
+	ButtonProject1,
+	ProjectImage1,
+	ProjectContainer,
+	ProjectsFragment2,
+	ProjectsFragmentInfo2,
+	ButtonProject2,
+	ProjectImage2,
+	ProjectImageContainer1,
+	ProjectImage21,
+	ProjectImage22,
+	ProjectsFragmentInfo3,
+	ProjectsFragment3,
+	ButtonProject3,
+	ProjectImage31,
+	ProjectImage32,
+	ProjectContainer2,
+	ProjectsFragment4,
+	ProjectsFragmentInfo4,
+	ButtonProject4,
+	ProjectImage41,
+	ProjectImage42,
+	Services,
+	ServicesCards,
+	ToEmailLink,
+	ServicesFragment,
+	ServiceHeader1,
+	ServiceButton,
+	ServiceHeader2,
+	ServiceHeader3,
+	OurTeam,
+	SwiperButtonContainer,
+	SwiperButtonPrev,
+	SwiperButtonNext,
+	SwiperImgContainer,
+	SliderName,
+	SwiperBox,
+	MySwiperBox,
+	SocialImg,
+	SwiperWrapper,
+	SwiperSlide,
+	Contend,
+	ImageBW,
+	ImageC,
 } from './../styles/home.styled'
 
+const sliderData = [
+	{
+    id: '1',
+		name: 'Roman Stepaniuk',
+		description: 'Front-End Developer',
+		img: ImageCTimur,
+	},
+	{
+    id: '2',
+		name: 'Andrey Alaverdian',
+		description: 'Front-End Developer',
+		img: ImageCAnd,
+	},
+	{
+    id: '3',
+		name: 'Bohdan Kovalenko',
+		description: 'Back-End Developer',
+		img: ImageCBog,
+	},
+	{
+    id: '4',
+		name: 'Natalia Larina',
+		description: 'Marketer',
+		img: ImageCNat,
+	},
+	{
+    id: '5',
+		name: 'Sakhanda Nazar',
+		description: 'Front-End Developer',
+		img: ImageCNaz,
+	},
+	{
+    id: '6',
+		name: 'Serhii Lusgar ',
+		description: 'Web Designer',
+		img: ImageCSer,
+	},
+	{
+    id: '7',
+		name: 'Roman Platonov ',
+		description: 'Video Editor',
+		img: ImageCRomP,
+	},
+	{
+    id: '8',
+		name: 'Dmytro Shevchenko ',
+		description: 'Web Designer, Team Leader',
+		img: ImageCDm,
+	},
+]
+
 export const HomeEN = () => {
+
+ const [currentSlide, setCurrentSlide] = useState(0)
+
+ const nextSlide = () => {
+		setCurrentSlide(prevSlide => (prevSlide + 1) % sliderData.length)
+ }
+
+ const prevSlide = () => {
+		setCurrentSlide(prevSlide =>
+			prevSlide === 0 ? sliderData.length - 1 : prevSlide - 1
+		)
+ }
+
+  
   return (
 		<>
 			<HeaderEN />
@@ -236,6 +335,41 @@ export const HomeEN = () => {
 					</ToEmailLink>
 				</ServicesCards>
 			</Services>
+			<OurTeam>
+				<SliderName>
+					<h2>
+						Our <span>Team</span>
+					</h2>
+					<SwiperButtonContainer>
+						<SwiperImgContainer>
+							<SwiperButtonPrev src={Prev} onClick={nextSlide} />
+						</SwiperImgContainer>
+						<SwiperImgContainer>
+							<SwiperButtonNext src={Next} onClick={prevSlide} />
+						</SwiperImgContainer>
+					</SwiperButtonContainer>
+				</SliderName>
+
+				<SwiperBox></SwiperBox>
+				<MySwiperBox>
+					<SwiperWrapper>
+						{sliderData.map((slider, index) => (
+							<SwiperSlide
+								key={index}
+								className={index === currentSlide ? 'active' : ''}
+							>
+								<Contend>
+									<SocialImg src={Social} />
+									<h2>{slider.name}</h2>
+									<h3>{slider.description}</h3>
+									{/* <ImageBW src={slider.img} /> */}
+								</Contend>
+								<ImageC src={slider.img} />
+							</SwiperSlide>
+						))}
+					</SwiperWrapper>
+				</MySwiperBox>
+			</OurTeam>
 		</>
 	)
 };
