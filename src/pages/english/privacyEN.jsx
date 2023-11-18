@@ -1,6 +1,7 @@
 import React from "react";
 import { HeaderEN } from "../../components/header/HeaderEN";
-import ArrowLeft from "../../assets/svg/ArrowLeft.svg";
+import { FooterEN } from "../../components/footer/FooterEN";
+import ArrowLeft from "../../assets/svg/Arrow.svg";
 import {
   TitleHTwo,
   TitleSpan,
@@ -13,6 +14,7 @@ import {
   Line,
   ParagraphSpanWithUnderLine,
   Li,
+  FooterContainer
 } from "../styles/privacy.styled";
 
 export const PrivacyEN = () => {
@@ -208,10 +210,13 @@ export const PrivacyEN = () => {
             <Li>
               <Paragraph>
                 The website reserves the right to exchange data with state
-                authorities in accordance with the requirements <ParagraphSpan>of the current
-                legislation of Ukraine</ParagraphSpan> to prevent fraud on the website, settle
-                disputes and clarify circumstances that may lead to a violation
-                of the current legislation of Ukraine.
+                authorities in accordance with the requirements{" "}
+                <ParagraphSpan>
+                  of the current legislation of Ukraine
+                </ParagraphSpan>{" "}
+                to prevent fraud on the website, settle disputes and clarify
+                circumstances that may lead to a violation of the current
+                legislation of Ukraine.
               </Paragraph>
             </Li>
           </List>
@@ -288,9 +293,9 @@ export const PrivacyEN = () => {
             <Li>
               <Paragraph>
                 The user may not use the{" "}
-                <ParagraphSpan>sdproduction.org</ParagraphSpan>{" "}
-                website if they do not agree to the terms of the privacy policy
-                and must stop using the website.
+                <ParagraphSpan>sdproduction.org</ParagraphSpan> website if they
+                do not agree to the terms of the privacy policy and must stop
+                using the website.
               </Paragraph>
             </Li>
             <Li>
@@ -306,6 +311,9 @@ export const PrivacyEN = () => {
             </Li>
           </List>
         </Section>
+        <FooterContainer>
+          <FooterEN showImg/>
+        </FooterContainer>
       </Container>
     </>
   );

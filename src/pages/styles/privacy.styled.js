@@ -89,3 +89,7 @@ export const BackButton = styled(Link)`
   display: flex;
   gap: 8px;
 `;
+
+export const FooterContainer = styled.div`
+  margin-top: 100px;
+`;

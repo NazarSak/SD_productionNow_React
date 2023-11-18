@@ -1,6 +1,7 @@
 import React from "react";
 import { HeaderDE } from "../../components/header/HeaderDE";
-import ArrowLeft from "../../assets/svg/ArrowLeft.svg";
+import { FooterDE } from "../../components/footer/FooterDE";
+import ArrowLeft from "../../assets/svg/Arrow.svg";
 import {
   TitleHTwo,
   TitleSpan,
@@ -13,6 +14,7 @@ import {
   Line,
   ParagraphSpanWithUnderLine,
   Li,
+  FooterContainer,
 } from "../styles/privacy.styled";
 
 export const PrivacyDE = () => {
@@ -312,10 +314,9 @@ export const PrivacyDE = () => {
             <Li>
               <Paragraph>
                 Der Nutzer darf die Website{" "}
-                <ParagraphSpan>sdproduction.org</ParagraphSpan>{" "}
-                nicht nutzen, wenn er mit den Bedingungen der
-                Datenschutzrichtlinie nicht einverstanden ist, und muss die
-                Nutzung der Website einstellen.
+                <ParagraphSpan>sdproduction.org</ParagraphSpan> nicht nutzen,
+                wenn er mit den Bedingungen der Datenschutzrichtlinie nicht
+                einverstanden ist, und muss die Nutzung der Website einstellen.
               </Paragraph>
             </Li>
             <Li>
@@ -332,6 +333,9 @@ export const PrivacyDE = () => {
             </Li>
           </List>
         </Section>
+        <FooterContainer>
+          <FooterDE showImg />
+        </FooterContainer>
       </Container>
     </>
   );
