@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 import { HeaderEN } from "../../components/header/HeaderEN";
 import ImageHero from '../../assets/svg/deviderLine.svg'
@@ -30,6 +30,14 @@ import ImageBWRomP from '../../assets/img/ourTeam/picturePNG/roma_bw.png'
 import ImageCRomP from '../../assets/img/ourTeam/picturePNG/roma_c.png'
 import ImageBWDm from '../../assets/img/ourTeam/picturePNG/dima_bw.png'
 import ImageCDm from '../../assets/img/ourTeam/picturePNG/dima_c.png'
+import CursorBlue from '../../assets/svg/contactUs/CursorBlue.svg'
+import CursorRed from '../../assets/svg/contactUs/CursorRed.svg'
+import CursorGreen from '../../assets/svg/contactUs/CursorGreen.svg'
+import CursorPink from '../../assets/svg/contactUs/CursorPink.svg'
+import CursorBLigh from '../../assets/svg/contactUs/CursorBlueLight.svg'
+import CursorLPink from '../../assets/svg/contactUs/CursorLightPink.svg'
+import CursorYellow from '../../assets/svg/contactUs/CursorYellow.svg'
+import CursorOrange from '../../assets/svg/contactUs/CursorOrange.svg'
 
 import {
 	ButtonHeader,
@@ -87,6 +95,18 @@ import {
 	ImageC,
   ContainerImageBW,
   ContainerImg,
+  ContentUs,
+  AdoutUs,
+  ContentUsBtn,
+  Peoples,
+  PeopleBlue,
+  PeopleRed,
+  PeopleGreen,
+  PeoplePink,
+  PeopleBlueLight,
+  PeopleOrange,
+  PeopleLightPink,
+  PeopleYellow,
 } from './../styles/home.styled'
 import { FooterEN } from '../../components/footer/FooterEN';
 
@@ -172,22 +192,30 @@ export const HomeEN = () => {
 
 const [currentSlide, setCurrentSlide] = useState(0)
 const [containerClass, setContainerClass] = useState(0)
+  const slideCount = sliderData.length
 
 const nextSlide = () => {
 	setCurrentSlide(prevSlide => (prevSlide + 1) % sliderData.length)
-  const res = containerClass + 256
-	setContainerClass(res) 
+  setContainerClass(prevClass => prevClass + 256)
 }
 
 const prevSlide = () => {
 	setCurrentSlide(prevSlide =>
 		prevSlide === 0 ? sliderData.length - 1 : prevSlide - 1
 	)
-  const res = containerClass - 256
-	setContainerClass(res) 
+ setContainerClass((prevClass) => prevClass - 256);
 }
 
-  
+ useEffect(() => {
+		const interval = setInterval(() => {
+			setCurrentSlide(prevSlide => (prevSlide + 1) % sliderData.length)
+      // setContainerClass(prevClass => prevClass - 256)
+		}, 3000)
+
+		return () => clearInterval(interval)
+ }, [])
+
+ const ImgBWDataExtended = [...ImgBWData, ...ImgBWData]
   return (
 		<>
 			<HeaderEN />
@@ -402,14 +430,61 @@ const prevSlide = () => {
 						))}
 					</SwiperWrapper>
 				</MySwiperBox>
-        <ContainerImg>
-				  <ContainerImageBW style={{marginLeft: `${containerClass === 0 ? 56 : containerClass + 56}px`}}>
-				  	{ImgBWData.map((img, index) => (
-				  			<ImageBW src={img.imgBW} />
-				  	))}
-				  </ContainerImageBW>
-        </ContainerImg>
+				<ContainerImg>
+					<ContainerImageBW style={{ marginLeft: `${containerClass}px` }}>
+						{ImgBWDataExtended.map((slider, index) => (
+							<ImageBW key={index} src={slider.imgBW} />
+						))}
+					</ContainerImageBW>
+				</ContainerImg>
 			</OurTeam>
+			<ContentUs>
+				<AdoutUs>
+					<h2>
+						Order <span>Your</span> Project Now
+					</h2>
+					<p>
+						We are a multi-disciplinary team creating the best websites for our
+						clients. Trust the future of your business to us and we will show
+						you how your business will grow!
+					</p>
+					<ContentUsBtn to='en/email'>Contact</ContentUsBtn>
+				</AdoutUs>
+				<Peoples>
+					<PeopleBlue>
+						<img src={CursorBlue} alt='' />
+						<p>Dmytro</p>
+					</PeopleBlue>
+					<PeopleRed>
+						<img src={CursorRed} alt='' />
+						<p>Roman</p>
+					</PeopleRed>
+					<PeopleGreen>
+						<img src={CursorGreen} alt='' />
+						<p>Serhii</p>
+					</PeopleGreen>
+					<PeoplePink>
+						<img src={CursorPink} alt='' />
+						<p>Roman</p>
+					</PeoplePink>
+					<PeopleBlueLight>
+						<img src={CursorBLigh} alt='' />
+						<p>Matvej</p>
+					</PeopleBlueLight>
+					<PeopleOrange>
+						<img src={CursorOrange} alt='' />
+						<p>Natasha</p>
+					</PeopleOrange>
+					<PeopleLightPink>
+						<img src={CursorLPink} alt='' />
+						<p>Nazar</p>
+					</PeopleLightPink>
+					<PeopleYellow>
+						<img src={CursorYellow} alt='' />
+						<p>Bohdan</p>
+					</PeopleYellow>
+				</Peoples>
+			</ContentUs>
 			<FooterEN />
 		</>
 	)
