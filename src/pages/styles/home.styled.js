@@ -11,31 +11,37 @@ const fadeIn = keyframes`
     transform: translateY(0);
   }
 `;
-export const SectionHero = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  &::before {
-    position: absolute;
-    margin-top: -75px;
-    margin-left: 350px;
-    content: "";
-    display: block;
-    width: 75px;
-    height: 75px;
-    border-radius: 75px;
-    border: 1.5px solid #fff;
-    background: rgba(217, 217, 217, 0.2);
-    backdrop-filter: blur(10px);
-    animation-name: leftRight;
 
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+const sectionHeroAnimation = keyframes`
+  0% {
+		margin-left: 400px;
+
   }
-`;
+  100% {
+		margin-left: 300px;
+  }
+`
+
+export const SectionHero = styled.section`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&::before {
+		position: absolute;
+		margin-top: -75px;
+		margin-left: 350px;
+		content: '';
+		display: block;
+		width: 75px;
+		height: 75px;
+		border-radius: 75px;
+		border: 1.5px solid #fff;
+		background: rgba(217, 217, 217, 0.2);
+		backdrop-filter: blur(10px);
+		animation: 2s ease-in-out 2s infinite alternate ${sectionHeroAnimation};
+	}
+`
 
 export const HeroBackground = styled.img`
   position: absolute;
@@ -84,7 +90,7 @@ export const HeroContend = styled.div`
     letter-spacing: 2.5px;
   }
 `;
-export const ButtonHeader = styled.a`
+export const ButtonHeader = styled(Link)`
   text-decoration: none;
   padding: 16px 91px;
   border-radius: 1000px;
