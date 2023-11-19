@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Logo from '../../assets/svg/logo.svg'
 import { Link } from "react-router-dom";
 import { ChangeLanguage, ChangeLanguageLi, ChangeLanguageUl, Header, Navigator, NavigatorLi, StyledLink } from "./Header.styled";
 
@@ -13,8 +14,8 @@ export const HeaderDE = ({name}) => {
   return (
 		<Header>
 			<div>
-				<StyledLink to='/de'>
-					<img src='/img/logo.svg' alt='logo' />
+			<StyledLink to='/de'>
+					<img src={Logo} alt='logo' />
 				</StyledLink>
 			</div>
 			<Navigator>
@@ -45,7 +46,7 @@ export const HeaderDE = ({name}) => {
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
 					width='24'
-					height='24'
+					height='24' 
 					viewBox='0 0 24 24'
 					fill='none'
 					onClick={handleSvgClick}

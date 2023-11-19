@@ -1,5 +1,7 @@
 import React from "react";
 import { HeaderEN } from "../../components/header/HeaderEN";
+import { ConectUsDE } from "../../components/conectUs/conectUsDE";
+import { FooterDE } from "../../components/footer/FooterDE";
 import BackgroundOne from "../../assets/img/abi/BackgroundOne.png";
 import BackgroundTwo from "../../assets/img/abi/BackgroundTwo.png";
 import Logo from "../../assets/svg/abi/logo.svg";
@@ -55,9 +57,7 @@ export const AbiDE = () => {
         <TitleHThree>Mobile App</TitleHThree>
         <TitleHTwo>Abi</TitleHTwo>
       </FirstSection>
-
       <OptimisatorImg src={BackgroundOne} alt="image" ImageType={ImageFirst} />
-
       <SecondSection>
         <div>
           <TitleHTwo>
@@ -76,7 +76,6 @@ export const AbiDE = () => {
 
         <OptimisatorImg src={Logo} alt="image" ImageType="img" />
       </SecondSection>
-
       <ThirdSection>
         <TitleHTwo>
           Ziele und <TitleSpan>Zielsetzungen</TitleSpan>
@@ -108,9 +107,7 @@ export const AbiDE = () => {
           </Li>
         </List>
       </ThirdSection>
-
       <OptimisatorImg src={BackgroundTwo} alt="image" ImageType={ImageFirst} />
-
       <FifthSection>
         <FirstConatinerInternalImg>
           <TitleHTwo>
@@ -147,13 +144,11 @@ export const AbiDE = () => {
           />
         </SecondConatinerInternalImg>
       </FifthSection>
-
       <VideoContainer>
         <video width="100%" autoPlay muted loop>
           <source src={Video} type="video/mp4" />
         </video>
       </VideoContainer>
-
       <SixthSection>
         <LinkArrow to="/de/briliniStudio" onClick={handleClick}>
           <OptimisatorImg src={LeftArrow} alt="image" ImageType={Arrow} />
@@ -165,6 +160,8 @@ export const AbiDE = () => {
           <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
         </LinkArrow>
       </SixthSection>
+      <ConectUsDE />
+      <FooterDE />
     </main>
   );
 };

@@ -53,9 +53,9 @@ export const StyledLink = styled(Link)`
 	&:hover {
 		color: #7d3bd1;
 	}
-	&.active {
+	/* &.active {
 		font-weight: 700;
-	}
+	} */
 `
 
 export const ChangeLanguage = styled.div`

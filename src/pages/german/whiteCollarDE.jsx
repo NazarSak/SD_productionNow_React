@@ -1,13 +1,11 @@
 import React from "react";
 import { HeaderEN } from "../../components/header/HeaderEN";
+import { ConectUsDE } from "../../components/conectUs/conectUsDE";
+import { FooterDE } from "../../components/footer/FooterDE";
 import handshakes from "../../assets/img/whiteCollar/handshakes.png";
 import Logo from "../../assets/svg/whiteCollar/Logo.svg";
 import OptimisatorImg from "../../technical/OptimisatorImg";
 import ImagePeople from "../../assets/img/whiteCollar/ImagePeople.png";
-// import handshake from "../../assets/img/organicShop/Photo.png";
-// import PageOne from "../../assets/img/organicShop/pageOne.png";
-// import PageTwo from "../../assets/img/organicShop/pageTwo.png";
-
 import Banner from "../../assets/img/whiteCollar/Banner.png";
 import screnshot from "../../assets/img/whiteCollar/screnshot.png";
 import Video from "../../assets/video/white_collar.mp4";
@@ -192,6 +190,8 @@ export const WhiteCollarDE = () => {
           <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
         </LinkArrow>
       </SixthSection>
+      <ConectUsDE />
+      <FooterDE />
     </main>
   );
 };

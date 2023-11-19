@@ -1,5 +1,7 @@
 import React from "react";
 import { HeaderDE } from "../../components/header/HeaderDE";
+import { ConectUsDE } from "../../components/conectUs/conectUsDE";
+import { FooterDE } from "../../components/footer/FooterDE";
 import ImgPictire from "../../assets/img/organicShop/Background.png";
 import OrganicSvg from "../../assets/svg/organicShop/organicLogo.svg";
 import OptimisatorImg from "../../technical/OptimisatorImg";
@@ -16,7 +18,7 @@ import RightArrow from "../../assets/img/rightArrow.png";
 import LeftArrow from "../../assets/img/leftArrow.png";
 
 import {
-  FirstSection,
+  FirstSection, 
   SecondSection,
   ThirdSection,
   FourthSection,
@@ -189,6 +191,8 @@ export const OrganicShopDE = () => {
           <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
         </LinkArrow>
       </SixthSection>
+      <ConectUsDE />
+      <FooterDE />
     </main>
   );
 };

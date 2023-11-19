@@ -7,7 +7,7 @@ export const HeaderEN = ({name}) => {
   const [isClicked, setIsClicked] = useState(false);
 
   const handleSvgClick = () => {
-    if (!isClicked) setIsClicked(true);
+    if (!isClicked) setIsClicked(true); 
     else setIsClicked(false)
   };
 

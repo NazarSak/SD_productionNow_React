@@ -1,5 +1,7 @@
 import React from "react";
 import { HeaderEN } from "../../components/header/HeaderEN";
+import { FooterEN } from "../../components/footer/FooterEN";
+import { ConectUsEN } from "../../components/conectUs/conectUsEN";
 import homeOne from "../../assets/img/pagesShop/homeOne.png";
 import homeTwo from "../../assets/img/pagesShop/homeTwo.png";
 import Logo from "../../assets/svg/pagesShop/Logo.svg";
@@ -186,7 +188,9 @@ export const PagesShopEN = () => {
           Next
           <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
         </LinkArrow>
-      </SixthSection>
+      </SixthSection>      
+      <ConectUsEN />
+      <FooterEN />
     </main>
   );
 };

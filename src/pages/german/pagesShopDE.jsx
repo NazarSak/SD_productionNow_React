@@ -1,5 +1,7 @@
 import React from "react";
 import { HeaderEN } from "../../components/header/HeaderEN";
+import { ConectUsDE } from "../../components/conectUs/conectUsDE";
+import { FooterDE } from "../../components/footer/FooterDE";
 import homeOne from "../../assets/img/pagesShop/homeOne.png";
 import homeTwo from "../../assets/img/pagesShop/homeTwo.png";
 import Logo from "../../assets/svg/pagesShop/Logo.svg";
@@ -56,16 +58,13 @@ export const PagesShopDE = () => {
   return (
     <main>
       <HeaderEN name={"/en/pagesShop"} />
-
       <FirstSection>
         <TitleHThree>Online Geschäft</TitleHThree>
         <TitleHTwo>
           Pages <TitleSpan>shop</TitleSpan>
         </TitleHTwo>
       </FirstSection>
-
       <OptimisatorImg src={homeOne} alt="image" ImageType={ImageFirst} />
-
       <SecondSection>
         <div>
           <TitleHTwo>
@@ -83,7 +82,6 @@ export const PagesShopDE = () => {
 
         <OptimisatorImg src={Logo} alt="image" ImageType="img" />
       </SecondSection>
-
       <ThirdSection>
         <TitleHTwo>
           Ziele und <TitleSpan>Zielsetzungen</TitleSpan>
@@ -117,9 +115,7 @@ export const PagesShopDE = () => {
           </Li>
         </List>
       </ThirdSection>
-
       <OptimisatorImg src={homeTwo} alt="image" ImageType={ImageFirst} />
-
       <FourthSection>
         <TitleHTwo>
           Haupt <TitleSpan>Seite</TitleSpan>
@@ -137,11 +133,9 @@ export const PagesShopDE = () => {
           />
         </ConatinerImg>
       </FourthSection>
-
       <video width="100%" autoPlay muted loop>
         <source src={Video} type="video/mp4" />
       </video>
-
       <FifthSection>
         <FirstConatinerInternalImg>
           <TitleHTwo>
@@ -170,7 +164,7 @@ export const PagesShopDE = () => {
             src={InternalFour}
             alt="image"
             ImageType={InternalImgFour}
-          /> 
+          />
           <OptimisatorImg
             src={InternalFive}
             alt="image"
@@ -178,7 +172,6 @@ export const PagesShopDE = () => {
           />
         </SecondConatinerInternalImg>
       </FifthSection>
-
       <SixthSection>
         <LinkArrow to="/de/abi" onClick={handleClick}>
           <OptimisatorImg src={LeftArrow} alt="image" ImageType={Arrow} />
@@ -189,7 +182,9 @@ export const PagesShopDE = () => {
           Weiter
           <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
         </LinkArrow>
-      </SixthSection>
+      </SixthSection>{" "}
+      <ConectUsDE />
+      <FooterDE />
     </main>
   );
 };

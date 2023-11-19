@@ -1,5 +1,7 @@
 import React from "react";
 import { HeaderEN } from "../../components/header/HeaderEN";
+import { FooterEN } from "../../components/footer/FooterEN";
+import { ConectUsEN } from "../../components/conectUs/conectUsEN";
 import BackgroundOne from "../../assets/img/abi/BackgroundOne.png";
 import BackgroundTwo from "../../assets/img/abi/BackgroundTwo.png";
 import Logo from "../../assets/svg/abi/logo.svg";
@@ -158,6 +160,8 @@ export const AbiEN = () => {
           <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
         </LinkArrow>
       </SixthSection>
+      <ConectUsEN />
+      <FooterEN />
     </main>
   );
 };

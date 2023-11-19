@@ -1,15 +1,13 @@
 import React from "react";
 import { HeaderEN } from "../../components/header/HeaderEN";
+import { FooterEN } from "../../components/footer/FooterEN";
+import { ConectUsEN } from "../../components/conectUs/conectUsEN";
 import handshakes from "../../assets/img/whiteCollar/handshakes.png";
 import Logo from "../../assets/svg/whiteCollar/Logo.svg";
 import OptimisatorImg from "../../technical/OptimisatorImg";
-import ImagePeople from '../../assets/img/whiteCollar/ImagePeople.png'
-// import handshake from "../../assets/img/organicShop/Photo.png";
-// import PageOne from "../../assets/img/organicShop/pageOne.png";
-// import PageTwo from "../../assets/img/organicShop/pageTwo.png";
-
-import Banner from '../../assets/img/whiteCollar/Banner.png'
-import screnshot from '../../assets/img/whiteCollar/screnshot.png'
+import ImagePeople from "../../assets/img/whiteCollar/ImagePeople.png";
+import Banner from "../../assets/img/whiteCollar/Banner.png";
+import screnshot from "../../assets/img/whiteCollar/screnshot.png";
 import Video from "../../assets/video/white_collar.mp4";
 import InternalOne from "../../assets/img/whiteCollar/internalOne.png";
 import InternalTwo from "../../assets/img/whiteCollar/internalTwo.png";
@@ -47,21 +45,19 @@ import {
   InternalImgThree,
   InternalImgFour,
   InternalImgFive,
-  
   SecondConatinerInternalImg,
   Arrow,
   LinkArrow,
 } from "../styles/whiteCollar.styled";
 
 export const WhiteCollarEN = () => {
-
-    const handleClick = () => {
-        window.scrollTo(0, 0);
-      };
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <main>
-      <HeaderEN name={"/de/whiteCollar"}/>
+      <HeaderEN name={"/de/whiteCollar"} />
 
       <FirstSection>
         <TitleHThree>Business website</TitleHThree>
@@ -131,11 +127,7 @@ export const WhiteCollarEN = () => {
           Main <TitleSpan>Page</TitleSpan>
         </TitleHTwo>
         <ConatinerImg>
-          <OptimisatorImg
-            src={Banner}
-            alt="image"
-            ImageType={NaturalFoodImg}
-          />
+          <OptimisatorImg src={Banner} alt="image" ImageType={NaturalFoodImg} />
           <OptimisatorImg
             src={screnshot}
             alt="image"
@@ -186,16 +178,18 @@ export const WhiteCollarEN = () => {
       </FifthSection>
 
       <SixthSection>
-        <LinkArrow to='/en/organicShop' onClick={handleClick}>
+        <LinkArrow to="/en/organicShop" onClick={handleClick}>
           <OptimisatorImg src={LeftArrow} alt="image" ImageType={Arrow} />
           Previous
         </LinkArrow>
 
-        <LinkArrow to='/en/briliniStudio' onClick={handleClick}>
+        <LinkArrow to="/en/briliniStudio" onClick={handleClick}>
           Next
           <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
         </LinkArrow>
       </SixthSection>
+      <ConectUsEN />
+      <FooterEN />
     </main>
   );
 };

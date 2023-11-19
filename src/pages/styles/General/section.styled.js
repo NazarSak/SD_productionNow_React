@@ -29,7 +29,7 @@ export const FifthSection = styled.section`
 
 export const SixthSection = styled.section`
   margin-top: 140px;
-  margin-bottom: 140px;
+  margin-bottom: 300px;
   display: flex;
   width: 940px;
   padding: 10px 120px;

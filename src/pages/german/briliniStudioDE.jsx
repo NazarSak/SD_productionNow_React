@@ -1,5 +1,7 @@
 import React from "react";
 import { HeaderEN } from "../../components/header/HeaderEN";
+import { ConectUsDE } from "../../components/conectUs/conectUsDE";
+import { FooterDE } from "../../components/footer/FooterDE";
 import house from "../../assets/img/briliniStudio/house.png";
 import Logo from "../../assets/svg/briliniStudio/Logo.svg";
 import OptimisatorImg from "../../technical/OptimisatorImg";
@@ -131,10 +133,12 @@ export const BriliniStudioDE = () => {
         </LinkArrow>
 
         <LinkArrow to="/de/abi" onClick={handleClick}>
-        Weiter
+          Weiter
           <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
         </LinkArrow>
       </SixthSection>
+      <ConectUsDE />
+      <FooterDE />
     </main>
   );
 };

@@ -12,7 +12,7 @@ import {
   CloseButton,
 } from "./modalka.styled";
 
-export const ModalkaDE = () => {
+export const ModalkaDE = ({ setOpenModal }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,6 +20,11 @@ export const ModalkaDE = () => {
   });
 
   useEffect(() => {}, [formData]);
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+    window.scrollTo(0, 0);
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -64,7 +69,7 @@ export const ModalkaDE = () => {
   return (
     <main>
       <ImgContainer>
-        <CloseButton to="/de">
+        <CloseButton to="/de" onClick={handleCloseModal}>
           <img src={ButtonClose} alt="Button" />
         </CloseButton>
         <TitleHTwo>

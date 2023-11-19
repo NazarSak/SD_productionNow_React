@@ -1,11 +1,13 @@
 import React from "react";
 import { HeaderEN } from "../../components/header/HeaderEN";
+import { FooterEN } from "../../components/footer/FooterEN";
+import { ConectUsEN } from "../../components/conectUs/conectUsEN";
 import house from "../../assets/img/briliniStudio/house.png";
 import Logo from "../../assets/svg/briliniStudio/Logo.svg";
 import OptimisatorImg from "../../technical/OptimisatorImg";
-import cafe from '../../assets/img/briliniStudio/cafe.png'
-import Group from '../../assets/img/briliniStudio/Group.png'
-import landing from '../../assets/img/briliniStudio/landing.png'
+import cafe from "../../assets/img/briliniStudio/cafe.png";
+import Group from "../../assets/img/briliniStudio/Group.png";
+import landing from "../../assets/img/briliniStudio/landing.png";
 import Video from "../../assets/video/brilini_studio.mp4";
 import RightArrow from "../../assets/img/rightArrow.png";
 import LeftArrow from "../../assets/img/leftArrow.png";
@@ -36,24 +38,20 @@ import {
 } from "../styles/briliniStudio.styled";
 
 export const BriliniStudioEN = () => {
-
-    const handleClick = () => {
-        window.scrollTo(0, 0);
-      };
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <main>
-      <HeaderEN name={"/de/briliniStudio"}/>
-
+      <HeaderEN name={"/de/briliniStudio"} />
       <FirstSection>
         <TitleHThree>Landing page</TitleHThree>
         <TitleHTwo>
           Brilini <TitleSpan>Studio</TitleSpan>
         </TitleHTwo>
       </FirstSection>
-
       <OptimisatorImg src={house} alt="image" ImageType={ImageFirst} />
-
       <SecondSection>
         <div>
           <TitleHTwo>
@@ -72,7 +70,6 @@ export const BriliniStudioEN = () => {
 
         <OptimisatorImg src={Logo} alt="image" ImageType="img" />
       </SecondSection>
-
       <ThirdSection>
         <TitleHTwo>
           Goals and <TitleSpan>Objectives</TitleSpan>
@@ -105,9 +102,7 @@ export const BriliniStudioEN = () => {
           </Li>
         </List>
       </ThirdSection>
-
       <OptimisatorImg src={cafe} alt="image" ImageType={ImageFirst} />
-
       <FourthSection>
         <TitleHTwo>
           Main <TitleSpan>Page</TitleSpan>
@@ -121,12 +116,10 @@ export const BriliniStudioEN = () => {
           />
         </ConatinerImg>
       </FourthSection>
-
       <video width="100%" autoPlay muted loop>
         <source src={Video} type="video/mp4" />
       </video>
-
-      <SixthSection >
+      <SixthSection>
         <LinkArrow to="/en/whiteCollar" onClick={handleClick}>
           <OptimisatorImg src={LeftArrow} alt="image" ImageType={Arrow} />
           Previous
@@ -136,7 +129,9 @@ export const BriliniStudioEN = () => {
           Next
           <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
         </LinkArrow>
-      </SixthSection>
+      </SixthSection>{" "}
+      <ConectUsEN />
+      <FooterEN />
     </main>
   );
 };
