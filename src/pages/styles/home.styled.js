@@ -371,7 +371,7 @@ export const ProjectsFragmentInfo3 = styled.div`
     font-weight: 400;
     line-height: 160%;
     letter-spacing: -0.4px;
-    margin: 32px 0;
+    margin: 32px 0 50px 0;
   }
 `;
 
@@ -430,39 +430,39 @@ export const ProjectsFragment4 = styled.div`
 `;
 
 export const ProjectsFragmentInfo4 = styled.div`
-  width: 420px;
-  margin-right: auto;
-  margin-top: -41px;
+	width: 420px;
+	margin-right: auto;
+	margin-top: -41px;
 
-  & h4 {
-    color: #4d83f0;
-    font-family: Montserrat;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
+	& h4 {
+		color: #4d83f0;
+		font-family: Montserrat;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
 
-  & h3 {
-    color: var(--white, #fcfcfc);
-    font-family: Montserrat;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
+	& h3 {
+		color: var(--white, #fcfcfc);
+		font-family: Montserrat;
+		font-size: 32px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+	}
 
-  & p {
-    color: var(--grey-C, #cfcfcf);
-    font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%;
-    letter-spacing: -0.4px;
-    margin: 32px 0;
-  }
-`;
+	& p {
+		color: var(--grey-C, #cfcfcf);
+		font-family: Montserrat;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 160%;
+		letter-spacing: -0.4px;
+		margin: 32px 0 50px 0;
+	}
+`
 
 export const ButtonProject4 = styled(Link)`
   width: 41px;
@@ -560,6 +560,7 @@ export const ServicesFragment = styled.div`
     flex-direction: column;
     align-items: center;
     margin-right: auto;
+    gap: 5px;
   }
   & li {
     margin: 0;
