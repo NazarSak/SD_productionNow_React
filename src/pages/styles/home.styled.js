@@ -510,7 +510,7 @@ export const Services = styled.section`
     color: #fff;
     text-align: center;
     font-family: Montserrat;
-    font-size: 32px;
+    font-size: 64px;
     font-style: normal;
     font-weight: 700;
   }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Logo from '../../assets/svg/logo.svg'
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 import { ChangeLanguage, ChangeLanguageLi, ChangeLanguageUl, Header, Navigator, NavigatorLi, StyledLink } from "./Header.styled";
 
 export const HeaderEN = ({name}) => {
@@ -20,12 +20,10 @@ export const HeaderEN = ({name}) => {
 			</div>
 			<Navigator>
 				<NavigatorLi>
-					<StyledLink className='active' to='/en/home#projects'>
-						Projects
-					</StyledLink>
+					<StyledLink to='/#projects'>Projects</StyledLink>
 				</NavigatorLi>
 				<NavigatorLi>
-					<StyledLink to='/en/home#services'>Services</StyledLink>
+					<StyledLink to='/services'>Services</StyledLink>
 				</NavigatorLi>
 				<NavigatorLi>
 					<StyledLink to='/en/home#ourTeam'>Team</StyledLink>
