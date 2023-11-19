@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 //
 import NotFound from "../pages/NotFound/NotFoundPage";
+import NotFoundDE from "../pages/NotFound/NotFoundPageDE";
 // PAGES
 import { HomeEN } from "../pages/english/homeEN";
 import { OrganicShopEN } from "../pages/english/organicShopEN";
@@ -39,6 +40,8 @@ function App() {
         <Route path="/de/pagesShop" element={<PagesShopDE />} />
         <Route path="/de/privacy" element={<PrivacyDE />} />
         <Route path="/*" element={<NotFound />} />
+        <Route path="/de/*" element={<NotFoundDE />} />
+
       </Routes>
     </>
   );

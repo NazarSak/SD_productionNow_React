@@ -1,18 +1,18 @@
 import React from "react";
 import ErorImg from "../../assets/img/notFound/eror.png";
-import { HeaderEN } from "../../components/header/HeaderEN";
+import { HeaderDE } from "../../components/header/HeaderDE";
 import { Container, Button } from "./notFound.styled";
 
-const NotFound = () => {
+const NotFoundDE = () => {
   return (
     <>
-      <HeaderEN name="/de/*" />
+      <HeaderDE name='/*'/>
       <Container>
         <img src={ErorImg} alt="ErorImg" />
-        <Button to="/">Back to main</Button>
+        <Button to="/de">Zurück zum Thema</Button>
       </Container>
     </>
   );
 };
 
-export default NotFound;
+export default NotFoundDE;

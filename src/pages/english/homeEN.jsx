@@ -107,13 +107,13 @@ export const HomeEN = () => {
     <>
       <HeaderEN />
       <SectionHero>
-        <HeroBackground class="heroBackground" src={Ellipse} alt="" />
+        <HeroBackground  src={Ellipse} alt="" />
         <HeroBlock>
           <HeroContend>
             <h2>
-              Built the future <span class="borderText">together</span> with us!
+              Built the future <span>together</span> with us!
             </h2>
-            <img class="crlectImg" src="../img/select.svg" alt="" />
+            <img  src="../img/select.svg" alt="" />
             <p>Your goals are our execution</p>
           </HeroContend>
           <ButtonHeader to="/en/contactUs">Lets go!</ButtonHeader>
@@ -123,7 +123,7 @@ export const HomeEN = () => {
 
       <Project>
         <h2>
-          Check our some of <span class="borderText">our projects</span>
+          Check our some of <span >our projects</span>
         </h2>
         <ProjectsCards>
           <ProjectContainer>
@@ -192,9 +192,21 @@ export const HomeEN = () => {
       </Project>
 
       <Services>
-        <h2 class="servicesSection">
+
+
+
+
+        <h2 >
           Our <span>Services</span>
         </h2>
+
+
+
+
+
+
+
+        
         <ServicesCards>
           <ToEmailLink to="en/email">
             <ServicesFragment>
@@ -218,9 +230,9 @@ export const HomeEN = () => {
                   <path
                     d="M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1"
                     stroke="#FCFCFC"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </ServiceButton>
@@ -248,9 +260,9 @@ export const HomeEN = () => {
                   <path
                     d="M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1"
                     stroke="#FCFCFC"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </ServiceButton>
@@ -275,9 +287,9 @@ export const HomeEN = () => {
                   <path
                     d="M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1"
                     stroke="#FCFCFC"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </ServiceButton>

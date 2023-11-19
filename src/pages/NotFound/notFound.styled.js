@@ -13,7 +13,7 @@ export const Container = styled.div`
 export const Button = styled(Link)`
   margin-top: 8px;
   display: flex;
-  width: 199px;
+  width: 207px;
   height: 24px;
   padding: 16px 32px;
   justify-content: center;
