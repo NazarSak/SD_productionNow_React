@@ -15,7 +15,7 @@ import AbiImg1 from '../../assets/img/page4.png'
 import AbiImg2 from '../../assets/img/page4-1.png'
 import LeftPurple from '../../assets/svg/left.svg'
 import Prev from '../../assets/svg/left1.svg'
-// import Next from '../../assets/svg/right1.svg'
+import Next from '../../assets/svg/right1.svg'
 import Social from '../../assets/svg/teams/socials.svg'
 import CursorBlue from '../../assets/svg/contactUs/CursorBlue.svg'
 import CursorRed from '../../assets/svg/contactUs/CursorRed.svg'
@@ -137,7 +137,7 @@ const prevSlide = () => {
 						<img class='crlectImg' src='../img/select.svg' alt='' />
 						<p>Your goals are our execution</p>
 					</HeroContend>
-					<ButtonHeader href='./email.html'>Lets go!</ButtonHeader>
+					<ButtonHeader to='/en/contactUs'>Lets go!</ButtonHeader>
 				</HeroBlock>
 			</SectionHero>
 			<ImgHero src={ImageHero} alt='' />
@@ -316,7 +316,7 @@ const prevSlide = () => {
 							<SwiperButtonPrev src={Prev} onClick={nextSlide} />
 						</SwiperImgContainer>
 						<SwiperImgContainer>
-							{/* <SwiperButtonNext src={Next} onClick={prevSlide} /> */}
+							<SwiperButtonNext src={Next} onClick={prevSlide} />
 						</SwiperImgContainer>
 					</SwiperButtonContainer>
 				</SliderName>
