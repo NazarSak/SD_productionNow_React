@@ -35,7 +35,6 @@ export const FourthSection = styled.section`
   margin-bottom: 132px;
   @media screen and (max-width: 1199px) {
     margin-bottom: 120px;
-  
   }
 `;
 
@@ -59,4 +58,12 @@ export const SixthSection = styled.section`
   border-radius: 40px;
   background: #181818;
   align-items: center;
+
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    width: 672px;
+    padding: 10px var(--Spacing---xl, 16px);
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 `;
