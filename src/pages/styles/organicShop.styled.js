@@ -80,33 +80,34 @@ export const Li = styled.li`
 `;
 
 export const NumberOfList = styled.span`
-  text-align: center;
-  font-family: Montserrat;
-  font-size: 64px;
-  font-style: normal;
-  font-family: "Poppins", sans-serif;
-  -webkit-text-fill-color: #000;
-  -webkit-text-stroke: 1.5px #fff;
-  font-weight: 600;
-  margin-right: 16px;
-  &:after {
-    content: ".";
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 600;
-    margin-left: 4px;
-    line-height: normal;
-    background: var(
-      --purple-linear,
-      linear-gradient(90deg, #bd00ff -1.03%, #4200ff 98.22%)
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-`;
+	text-align: center;
+	font-family: Montserrat;
+	font-size: 64px;
+	font-style: normal;
+	font-family: 'Poppins', sans-serif;
+	-webkit-text-fill-color: #000;
+	-webkit-text-stroke: 1.5px #fff;
+	font-weight: 600;
+	margin-right: 16px;
+	&:after {
+		content: '.';
+		text-align: center;
+		font-family: Montserrat;
+		font-size: 64px;
+		font-style: normal;
+		font-weight: 600;
+		margin-left: 4px;
+		line-height: normal;
+		background: var(
+			--purple-linear,
+			linear-gradient(90deg, #bd00ff -1.03%, #4200ff 98.22%)
+		);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke: transparent;
+	}
+`
 
 export const Line = styled.div`
   width: 1px;
