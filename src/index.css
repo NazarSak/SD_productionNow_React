@@ -63,3 +63,14 @@ button {
   cursor: pointer;
   outline: none;
 }
+
+
+
+@media screen and (max-width: 1199px) {
+  section {
+    width: 672px; 
+  }
+  h2 {
+    font-size: 40px;
+  }
+}
