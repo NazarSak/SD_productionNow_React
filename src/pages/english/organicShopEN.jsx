@@ -77,7 +77,7 @@ export const OrganicShopEN = () => {
             Organick is an online store of organic fruits, vegetables and
             berries. The customer is a farmer from England. Organick has its
             farms in Sheffield. The total amount of fields is more than
-            27770m&sup2 and more than 5 thousand satisfied customers annually.
+            27770m <sup>2</sup> and more than 5 thousand satisfied customers annually.
           </ParagraphAbProject>
         </div>
 
