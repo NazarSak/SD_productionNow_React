@@ -20,11 +20,13 @@ import {
   SixthSection,
 } from "../styles/General/section.styled";
 import {
-  TitleHThree,
+  TitleHThree, 
+  TitlePage,
   TitleHTwo,
   TitleSpan,
   ImageFirst,
   ParagraphAbProject,
+  SvgImg,
   ParagraphGoals,
   List,
   Li,
@@ -48,9 +50,9 @@ export const BriliniStudioDE = () => {
 
       <FirstSection>
         <TitleHThree>Landing page</TitleHThree>
-        <TitleHTwo>
+        <TitlePage>
           Brilini <TitleSpan>Studio</TitleSpan>
-        </TitleHTwo>
+        </TitlePage>
       </FirstSection>
 
       <OptimisatorImg src={house} alt="image" ImageType={ImageFirst} />
@@ -71,7 +73,7 @@ export const BriliniStudioDE = () => {
 
         <Line />
 
-        <OptimisatorImg src={Logo} alt="image" ImageType="img" />
+        <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
       </SecondSection>
 
       <ThirdSection>

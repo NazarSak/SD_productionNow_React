@@ -27,10 +27,12 @@ import {
 } from "../styles/General/section.styled";
 import {
   TitleHThree,
+  TitlePage,
   TitleHTwo,
   TitleSpan,
   ImageFirst,
   ParagraphAbProject,
+  SvgImg,
   ParagraphGoals,
   List,
   Li,
@@ -43,6 +45,7 @@ import {
   InternalImgOne,
   InternalImgSecond,
   InternalImg,
+  InternalImgFour,
   SecondConatinerInternalImg,
   InternalImgLast,
   Arrow,
@@ -60,9 +63,9 @@ export const OrganicShopDE = () => {
 
       <FirstSection>
         <TitleHThree>Online Geschäft</TitleHThree>
-        <TitleHTwo>
-          Bio<TitleSpan>Laden</TitleSpan>
-        </TitleHTwo>
+        <TitlePage>
+          Bio <TitleSpan>Laden</TitleSpan>
+        </TitlePage>
       </FirstSection>
 
       <OptimisatorImg src={ImgPictire} alt="image" ImageType={ImageFirst} />
@@ -82,7 +85,7 @@ export const OrganicShopDE = () => {
 
         <Line />
 
-        <OptimisatorImg src={OrganicSvg} alt="image" ImageType="img" />
+        <OptimisatorImg src={OrganicSvg} alt="image" ImageType={SvgImg} />
       </SecondSection>
 
       <ThirdSection>
@@ -170,7 +173,7 @@ export const OrganicShopDE = () => {
           <OptimisatorImg
             src={InternalFour}
             alt="image"
-            ImageType={InternalImg}
+            ImageType={InternalImgFour}
           />
           <OptimisatorImg
             src={InternalFive}

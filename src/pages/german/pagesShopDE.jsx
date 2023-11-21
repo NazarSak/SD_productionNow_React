@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderEN } from "../../components/header/HeaderEN";
+import { HeaderDE } from "../../components/header/HeaderDE";
 import { ConectUsDE } from "../../components/conectUs/conectUsDE";
 import { FooterDE } from "../../components/footer/FooterDE";
 import homeOne from "../../assets/img/pagesShop/homeOne.png";
@@ -28,6 +28,8 @@ import {
 import {
   TitleHThree,
   TitleHTwo,
+  TitlePage,
+  SvgImg,
   TitleSpan,
   ImageFirst,
   ParagraphAbProject,
@@ -57,12 +59,12 @@ export const PagesShopDE = () => {
 
   return (
     <main>
-      <HeaderEN name={"/en/pagesShop"} />
+      <HeaderDE name={"/en/pagesShop"} />
       <FirstSection>
         <TitleHThree>Online Geschäft</TitleHThree>
-        <TitleHTwo>
+        <TitlePage>
           Pages <TitleSpan>shop</TitleSpan>
-        </TitleHTwo>
+        </TitlePage>
       </FirstSection>
       <OptimisatorImg src={homeOne} alt="image" ImageType={ImageFirst} />
       <SecondSection>
@@ -80,7 +82,7 @@ export const PagesShopDE = () => {
 
         <Line />
 
-        <OptimisatorImg src={Logo} alt="image" ImageType="img" />
+        <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
       </SecondSection>
       <ThirdSection>
         <TitleHTwo>

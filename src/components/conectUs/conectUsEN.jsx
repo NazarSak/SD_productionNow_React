@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 import { ModalkaEN } from "../modalka/ModalkaEN";
 import CursorBlue from "../../assets/svg/contactUs/CursorBlue.svg";
 import CursorRed from "../../assets/svg/contactUs/CursorRed.svg";
@@ -24,13 +24,11 @@ import {
 } from "./conectUs.styled";
 
 export const ConectUsEN = () => {
-
   const [openModal, setOpenModal] = useState(false);
 
   const handleOpenModal = () => {
     setOpenModal(true);
   };
-
 
   return (
     <ContentUs>
@@ -43,8 +41,12 @@ export const ConectUsEN = () => {
           clients. Trust the future of your business to us and we will show you
           how your business will grow!
         </p>
+        <h4>
+          We are a multi-disciplinary team creating the best websites for our
+          clients.
+        </h4>
         <ContentUsBtn onClick={handleOpenModal}>Contact</ContentUsBtn>
-        {openModal && <ModalkaEN setOpenModal={setOpenModal}/>}
+        {openModal && <ModalkaEN setOpenModal={setOpenModal} />}
       </AdoutUs>
       <Peoples>
         <PeopleBlue>

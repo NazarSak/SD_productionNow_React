@@ -26,11 +26,13 @@ import {
   SixthSection,
 } from "../styles/General/section.styled";
 import {
-  TitleHThree,
+  TitleHThree, 
+  TitlePage,
   TitleHTwo,
   TitleSpan,
   ImageFirst,
   ParagraphAbProject,
+  SvgImg,
   ParagraphGoals,
   List,
   Li,
@@ -61,9 +63,9 @@ export const WhiteCollarEN = () => {
 
       <FirstSection>
         <TitleHThree>Business website</TitleHThree>
-        <TitleHTwo>
+        <TitlePage>
           White <TitleSpan>Collar</TitleSpan>
-        </TitleHTwo>
+        </TitlePage>
       </FirstSection>
 
       <OptimisatorImg src={handshakes} alt="image" ImageType={ImageFirst} />
@@ -84,7 +86,7 @@ export const WhiteCollarEN = () => {
 
         <Line />
 
-        <OptimisatorImg src={Logo} alt="image" ImageType="img" />
+        <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
       </SecondSection>
 
       <ThirdSection>

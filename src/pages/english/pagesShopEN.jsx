@@ -28,6 +28,8 @@ import {
 import {
   TitleHThree,
   TitleHTwo,
+  TitlePage,
+  SvgImg,
   TitleSpan,
   ImageFirst,
   ParagraphAbProject,
@@ -61,9 +63,9 @@ export const PagesShopEN = () => {
 
       <FirstSection>
         <TitleHThree>Online Shop</TitleHThree>
-        <TitleHTwo>
+        <TitlePage>
           Pages <TitleSpan>shop</TitleSpan>
-        </TitleHTwo>
+        </TitlePage>
       </FirstSection>
 
       <OptimisatorImg src={homeOne} alt="image" ImageType={ImageFirst} />
@@ -82,7 +84,7 @@ export const PagesShopEN = () => {
 
         <Line />
 
-        <OptimisatorImg src={Logo} alt="image" ImageType="img" />
+        <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg}/>
       </SecondSection>
 
       <ThirdSection>
@@ -184,11 +186,11 @@ export const PagesShopEN = () => {
           Previous
         </LinkArrow>
 
-        <LinkArrow  to='/en/organicShop' onClick={handleClick}>
+        <LinkArrow to="/en/organicShop" onClick={handleClick}>
           Next
           <OptimisatorImg src={RightArrow} alt="image" ImageType={Arrow} />
         </LinkArrow>
-      </SixthSection>      
+      </SixthSection>
       <ConectUsEN />
       <FooterEN />
     </main>

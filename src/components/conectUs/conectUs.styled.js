@@ -23,6 +23,9 @@ export const AdoutUs = styled.div`
     font-weight: 700;
     line-height: normal;
     text-align: center;
+    @media (max-width: 1199px) {
+      font-size: 56px;
+    }
     & span {
       font-weight: 800;
       font-family: "Poppins", sans-serif;
@@ -40,6 +43,26 @@ export const AdoutUs = styled.div`
     font-weight: 400;
     line-height: 160%; /* 25.6px */
     letter-spacing: -0.4px;
+    @media (max-width: 1199px) {
+      display: none;
+    }
+  }
+
+  & h4 {
+    display: none;
+    @media (max-width: 1199px) {
+      color: var(--grey-C, #cfcfcf);
+      display: block;
+      text-align: center;
+      width: 316px;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      letter-spacing: -0.4px;
+      margin: 0;
+    }
   }
 `;
 
@@ -109,17 +132,27 @@ export const PeopleBlue = styled.div`
     width: 25px;
     height: 25px;
   }
+  @media (max-width: 1199px) {
+    margin-left: -252px;
+  }
 `;
 
 const peopleRed = keyframes`
   0% {
 	margin-top: -125px;
 	margin-left: -595px;
-
+  @media (max-width: 1199px) {
+    margin-top: -220px;
+    margin-left: -427px;
+  }
   }
   100% {
 	margin-top: -115px;
-	margin-left: -585px;
+  margin-left: -585px; 
+    @media (max-width: 1199px) {
+    margin-top: -200px;
+    margin-left: -427px;
+  }
   }
 `;
 

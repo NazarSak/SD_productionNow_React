@@ -49,7 +49,7 @@ export const ParagraphAbProject = styled.p`
 export const SvgImg = styled.img`
   @media screen and (max-width: 1199px) {
     width: 285px;
-    height: 80px;
+    height: 80px; 
   }
 `;
 

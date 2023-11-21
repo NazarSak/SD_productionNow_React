@@ -34,8 +34,8 @@ export const HeaderEN = ({name}) => {
 			</Navigator>
 			<ChangeLanguage>
 				<ChangeLanguageUl>
-					<ChangeLanguageLi>
-						<Link>EN</Link>
+					<ChangeLanguageLi> 
+						<p>EN</p>
 					</ChangeLanguageLi>
 					<ChangeLanguageLi className={isClicked ? 'show' : 'hide'}>
 						<Link to={name}>DE</Link>

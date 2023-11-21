@@ -170,7 +170,7 @@ export const OrganicShopEN = () => {
             ImageType={InternalImg}
           />
           <OptimisatorImg
-            src={InternalFour}
+            src={InternalFour} 
             alt="image"
             ImageType={InternalImgFour}
           />
@@ -179,7 +179,7 @@ export const OrganicShopEN = () => {
             alt="image"
             ImageType={InternalImgLast}
           />
-        </SecondConatinerInternalImg>
+        </SecondConatinerInternalImg> 
       </FifthSection>
 
       <SixthSection>
