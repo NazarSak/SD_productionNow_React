@@ -80,7 +80,7 @@ import {
 export const HomeEN = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [containerClass, setContainerClass] = useState(0);
-  const slideCount = sliderData.length;
+  let ImgBWDataExtended = [...ImgBWData];
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % sliderData.length);
@@ -103,7 +103,6 @@ export const HomeEN = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const ImgBWDataExtended = [...ImgBWData, ...ImgBWData];
   return (
 		<>
 			<HeaderEN />
@@ -294,7 +293,7 @@ export const HomeEN = () => {
 					</ToEmailLink>
 				</ServicesCards>
 			</Services>
-			<OurTeam>
+			<OurTeam id='team'>
 				<SliderName>
 					<h2>
 						Our <span>Team</span>
@@ -328,9 +327,11 @@ export const HomeEN = () => {
 				</MySwiperBox>
 				<ContainerImg>
 					<ContainerImageBW style={{ marginLeft: `${containerClass}px` }}>
-						{ImgBWDataExtended.map((slider, index) => (
-							<ImageBW key={index} src={slider.imgBW} />
-						))}
+					{ImgBWDataExtended.map((slider, index) => (
+            <ImageBW key={index} src={slider.imgBW}/>
+          ))
+
+          }
 					</ContainerImageBW>
 				</ContainerImg>
 			</OurTeam>

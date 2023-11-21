@@ -21,7 +21,7 @@ export const HeaderDE = ({name}) => {
 			<Navigator>
 				<NavigatorLi>
 					<StyledLink className='active' to='/en/home#projects'>
-                    Projekte
+            Projekte
 					</StyledLink>
 				</NavigatorLi>
 				<NavigatorLi>
@@ -37,10 +37,10 @@ export const HeaderDE = ({name}) => {
 			<ChangeLanguage>
 				<ChangeLanguageUl>
 					<ChangeLanguageLi>
-						<Link>DE</Link>
+						<Link className="active">DE</Link>
 					</ChangeLanguageLi>
 					<ChangeLanguageLi className={isClicked ? 'show' : 'hide'}>
-						<Link to={name}>EN</Link>
+						<Link to='/'>EN</Link>
 					</ChangeLanguageLi>
 				</ChangeLanguageUl>
 				<svg

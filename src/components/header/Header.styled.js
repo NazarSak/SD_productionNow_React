@@ -5,7 +5,7 @@ export const Header = styled.header`
 	display: flex;
 	width: 940px;
 	height: 100px;
-  margin: 40px auto 0;
+	margin: 40px auto 0;
 	padding: 10px 120px;
 	justify-content: space-between;
 	flex-shrink: 0;
@@ -15,7 +15,7 @@ export const Header = styled.header`
 	border-radius: 40px;
 	background: #181818;
 	box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
-  position: relative;
+	position: relative;
 `
 
 export const Navigator = styled.ul`
@@ -37,7 +37,7 @@ export const NavigatorLi = styled.li`
 	list-style: none;
 `
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled.a`
 	text-decoration: none;
 	color: inherit;
 	transition: all 0.9s;
@@ -53,9 +53,7 @@ export const StyledLink = styled(Link)`
 	&:hover {
 		color: #7d3bd1;
 	}
-	/* &.active {
-		font-weight: 700;
-	} */
+
 `
 
 export const ChangeLanguage = styled.div`
@@ -77,7 +75,7 @@ export const ChangeLanguage = styled.div`
 `
 
 export const ChangeLanguageUl = styled.ul`
-  margin: 0;
+	margin: 0;
 	display: flex;
 	padding: 12px 24px;
 	gap: 16px;
@@ -87,7 +85,7 @@ export const ChangeLanguageUl = styled.ul`
 	justify-content: center;
 	align-items: flex-start;
 	background: #000;
-	transition: all 0.9s;	
+	transition: all 0.9s;
 `
 
 export const ChangeLanguageLi = styled.li`
@@ -104,7 +102,7 @@ export const ChangeLanguageLi = styled.li`
 
 		display: none;
 	}
-
+  
 	& a {
 		transition: 800ms;
 		text-decoration: none;
@@ -116,9 +114,12 @@ export const ChangeLanguageLi = styled.li`
 		font-family: Montserrat;
 		font-size: 16px;
 		font-style: normal;
-    cursor: pointer;
-	}
-	& a:hover {
-		color: #7d3bd1;
+		cursor: pointer;
+		&:hover {
+			color: #7d3bd1;
+		}
+    &.active:hover {
+      color: #fcfcfc;
+    }
 	}
 `

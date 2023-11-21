@@ -20,25 +20,33 @@ export const HeaderEN = ({name}) => {
 			</div>
 			<Navigator>
 				<NavigatorLi>
-					<StyledLink to='/#projects'>Projects</StyledLink>
+					<StyledLink href='../../SD_productionNow_React/#projects'>
+						Projects
+					</StyledLink>
 				</NavigatorLi>
 				<NavigatorLi>
-					<StyledLink to='/services'>Services</StyledLink>
+					<StyledLink href='../../SD_productionNow_React/#services'>
+						Services
+					</StyledLink>
 				</NavigatorLi>
 				<NavigatorLi>
-					<StyledLink to='/en/home#ourTeam'>Team</StyledLink>
+					<StyledLink href='../../SD_productionNow_React/#team'>
+						Team
+					</StyledLink>
 				</NavigatorLi>
 				<NavigatorLi>
-					<StyledLink to='/en/home#contentUs'>Contact us</StyledLink>
+					<StyledLink href='../../SD_productionNow_React/#contactus'>
+						Contact us
+					</StyledLink>
 				</NavigatorLi>
 			</Navigator>
 			<ChangeLanguage>
 				<ChangeLanguageUl>
 					<ChangeLanguageLi>
-						<Link>EN</Link>
+						<Link className='active'>EN</Link>
 					</ChangeLanguageLi>
 					<ChangeLanguageLi className={isClicked ? 'show' : 'hide'}>
-						<Link to={name}>DE</Link>
+						<Link to='/de'>DE</Link>
 					</ChangeLanguageLi>
 				</ChangeLanguageUl>
 				<svg
