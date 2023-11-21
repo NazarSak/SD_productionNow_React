@@ -131,7 +131,7 @@ export const SecondConatinerInternalImg = styled.div`
 
 export const InternalImgOne = styled.img`
   width: 490px;
-  height: 875px;
+  height: 2546px;
   flex-shrink: 0;
   border-radius: 40px;
   margin-top: 121px;
@@ -174,7 +174,7 @@ export const InternalImgThree = styled.img`
 
 export const InternalImgFour = styled.img`
   width: 490px;
-  height: 435px;
+  height: 976px;
   flex-shrink: 0;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
@@ -186,7 +186,7 @@ export const InternalImgFour = styled.img`
 
 export const InternalImgFive = styled.img`
   width: 490px;
-  height: 682px;
+  height: 1012px;
   flex-shrink: 0;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);

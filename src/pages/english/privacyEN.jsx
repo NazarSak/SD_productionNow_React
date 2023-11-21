@@ -1,7 +1,7 @@
 import React from "react";
 import { HeaderEN } from "../../components/header/HeaderEN";
 import { FooterEN } from "../../components/footer/FooterEN";
-import ArrowLeft from "../../assets/svg/Arrow.svg";
+import LeftArrowPrivacy from '../../assets/svg/LeftArrowPrivacy.svg'
 import {
   TitleHTwo,
   TitleSpan,
@@ -23,7 +23,7 @@ export const PrivacyEN = () => {
       <HeaderEN name={"/de/privacy"} />
       <Container>
         <BackButton to="/">
-          <img src={ArrowLeft} alt="arrow" />
+          <img src={LeftArrowPrivacy} alt="arrow" />
           Back to home screen
         </BackButton>
 

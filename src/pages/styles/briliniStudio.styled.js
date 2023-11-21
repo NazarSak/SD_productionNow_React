@@ -137,7 +137,7 @@ export const NaturalFoodImg = styled.img`
 
 export const SecondNaturalFoodImg = styled.img`
   width: 815px;
-  height: 4116px;
+  height: 2667px;
   flex-shrink: 0;
   border-radius: 0px 0px 40px 40px;
 

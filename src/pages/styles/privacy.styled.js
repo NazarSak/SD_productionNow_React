@@ -12,7 +12,11 @@ export const TitleHTwo = styled.h2`
 export const Container = styled.section`
   width: 1180px;
   margin-top: 48px;
-`;
+  @media screen and (max-width: 1199px) {
+    width: 672px;
+  padding: 0 48px;
+  }
+`; 
 
 export const Section = styled.section`
   margin-top: 100px;
@@ -87,9 +91,15 @@ export const BackButton = styled(Link)`
   letter-spacing: -0.4px;
   text-decoration: none;
   display: flex;
+  align-items: center;
   gap: 8px;
 `;
 
 export const FooterContainer = styled.div`
   margin-top: 100px;
+`;
+
+export const ArrowL = styled.img`
+  width: 14px;
+  height: 8px;
 `;
