@@ -92,22 +92,22 @@ export const HeaderEN = ({ name }) => {
                 </CloseButton>
                 <MenuList>
                   <li>
-                    <StyledLink href="../../SD_productionNow_React/#projects">
+                    <StyledLink href="../../SD_productionNow_React/#projects" onClick={handleMenuClose}>
                       Projects
                     </StyledLink>
                   </li>
                   <li>
-                    <StyledLink href="../../SD_productionNow_React/#services">
+                    <StyledLink href="../../SD_productionNow_React/#services" onClick={handleMenuClose}>
                       Services
                     </StyledLink>
                   </li>
                   <li>
-                    <StyledLink href="../../SD_productionNow_React/#team">
+                    <StyledLink href="../../SD_productionNow_React/#team" onClick={handleMenuClose}>
                       Team
                     </StyledLink>
                   </li>
                   <li>
-                    <StyledLink href="../../SD_productionNow_React/#contactus">
+                    <StyledLink href="../../SD_productionNow_React/#contactus" onClick={handleMenuClose}>
                       Contact us
                     </StyledLink>
                   </li>

@@ -46,7 +46,7 @@ export const NavigatorLi = styled.li`
   }
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled.a`
   text-decoration: none;
   color: inherit;
   transition: all 0.9s;

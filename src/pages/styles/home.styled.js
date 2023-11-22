@@ -524,70 +524,161 @@ export const Services = styled.section`
 `;
 
 export const ServicesCards = styled.div`
-  margin: 0;
-  margin-top: 100px;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-`;
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	margin-top: 100px;
+	padding: 0;
+  gap: 60px;
+	@media screen and (max-width: 1199px) {
+		flex-direction: column;
+    gap: 20px;
+	}
+`
+
+export const ServicesCardsContainer = styled.div`
+	display: flex;
+  gap: 60px;
+	@media screen and (max-width: 1199px) {
+    gap: 20px;
+	}
+`
 
 export const ToEmailLink = styled(Link)`
   text-decoration: none;
 `;
 
 export const ServicesFragment = styled.div`
-  margin: 0;
-  padding: 0;
-  padding: 56px 65px;
+	margin: 0;
+	padding: 0;
+	padding: 56px 65px;
 
-  width: 223px;
-  min-height: 273px;
-  display: flex;
-  flex-direction: column;
-  transition: 0.5s;
-  border-radius: 40px;
-  border: 1px solid transparent;
-  background: #181818;
-  &:hover {
-    border: 1px solid #bd00ff;
-  }
-  & ul {
-    margin: 0;
-    padding: 0;
-    margin-top: 32px;
+	width: 223px;
+	height: 339px;
+	display: flex;
+	flex-direction: column;
+	transition: 0.5s;
+	border-radius: 40px;
+	border: 1px solid transparent;
+	background: #181818;
+	&:hover {
+		border: 1px solid #bd00ff;
+	}
+	& ul {
+		margin: 0;
+		padding: 0;
+		margin-top: 32px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: auto;
-    gap: 5px;
-  }
-  & li {
-    margin: 0;
-    padding: 0;
-    width: 220px;
-    height: 29px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-right: auto;
+		gap: 14px;
+	}
+	& li {
+		margin: 0;
+		padding: 0;
+		width: 220px;
+		height: 29px;
 
-    color: #cfcfcf;
-    list-style-type: none;
-    font-family: Montserrat;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 0;
-    letter-spacing: 0;
-    display: flex;
-    align-items: center;
-    &::before {
-      content: "";
-      display: inline-block;
-      width: 15px;
-      height: 1px;
-      background: #cfcfcf;
-      margin-right: 8px;
-    }
-  }
-`;
+		color: #cfcfcf;
+		list-style-type: none;
+		font-family: Montserrat;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 0;
+		letter-spacing: 0;
+		display: flex;
+		align-items: center;
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 15px;
+			height: 1px;
+			background: #cfcfcf;
+			margin-right: 8px;
+		}
+	}
+
+	@media screen and (max-width: 1199px) {
+		width: 223px;
+		padding: 56px 51.5px;
+		& li {
+			font-size: 16px;
+		}
+	}
+`
+
+export const ServicesFragment3 = styled.div`
+	margin: 0;
+	padding: 0;
+	padding: 56px 65px;
+	position: relative;
+	width: 223px;
+	height: 339px;
+	display: flex;
+	flex-direction: column;
+	transition: 0.5s;
+	border-radius: 40px;
+	border: 1px solid transparent;
+	background: #181818;
+	&:hover {
+		border: 1px solid #bd00ff;
+	}
+	& ul {
+		margin: 0;
+		padding: 0;
+		margin-top: 32px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-right: auto;
+		gap: 14px;
+	}
+	& li {
+		margin: 0;
+		padding: 0;
+		width: 220px;
+		height: 29px;
+
+		color: #cfcfcf;
+		list-style-type: none;
+		font-family: Montserrat;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 0;
+		letter-spacing: 0;
+		display: flex;
+		align-items: center;
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 15px;
+			height: 1px;
+			background: #cfcfcf;
+			margin-right: 8px;
+		}
+	}
+	@media screen and (max-width: 1199px) {
+		display: flex;
+		width: 572px;
+		height: 97px;
+		padding: 56px 50px;
+		flex-direction: column;
+		align-items: flex-start;
+		& ul {
+			flex-direction: row;
+			gap: 80px;
+		}
+		& li {
+			width: auto;
+			font-size: 16px;
+		}
+	}
+`
 
 export const ServiceButton = styled.div`
 	margin-right: auto;
@@ -626,6 +717,49 @@ export const ServiceButton = styled.div`
 			stroke: #bd00ff;
 		}
 	}
+`
+export const ServiceButton3 = styled.div`
+	margin-right: auto;
+	display: flex;
+	margin-top: auto;
+	align-items: center;
+	& p {
+		padding: 0;
+		margin: 0;
+		color: #ffffff;
+		list-style: none;
+		text-decoration: none;
+		font-size: 16px;
+		font-weight: 600;
+		font-family: 'Montserrat', sans-serif;
+		transition: all 0.5s;
+	}
+
+	& svg {
+		margin-left: 12px;
+		height: 8px;
+		width: 20px;
+		transition: all 0.5s;
+	}
+	path {
+		transition: transform 0.5s, stroke 0.5s;
+	}
+
+	&:hover {
+		& p {
+			color: #bd00ff;
+		}
+
+		& svg path {
+			transform: translateX(5px);
+			stroke: #bd00ff;
+		}
+	}
+  @media screen and (max-width: 1199px) {
+    position: absolute;
+    margin-top: 61.5px;
+    right: 53px;
+  }
 `
 
 export const ServiceHeader1 = styled.h3`
