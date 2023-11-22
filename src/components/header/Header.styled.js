@@ -85,6 +85,13 @@ export const ChangeLanguage = styled.div`
   }
   @media (max-width: 1199px) {
     width: 180px;
+    & svg {
+      margin: 15px 0 0 60px;
+    }
+    & svg.open {
+      transform: rotate(180deg);
+      margin: 8px 0 0 60px;
+    }
   }
 `;
 
@@ -132,6 +139,18 @@ export const ChangeLanguageLi = styled.li`
   }
   & a:hover {
     color: #7d3bd1;
+  }
+  & h3 {
+    transition: 800ms;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    text-align: center;
+    align-items: center;
+    color: #fcfcfc;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
   }
   & p {
     text-decoration: none;

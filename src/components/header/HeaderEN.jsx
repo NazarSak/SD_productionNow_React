@@ -6,7 +6,7 @@ import ButtonClose from "../../assets/svg/emailPage/Close.svg";
 
 import {
   ChangeLanguage,
-  ChangeLanguageLi,
+  ChangeLanguageLi, 
   ChangeLanguageUl,
   Header,
   Navigator,
@@ -71,10 +71,10 @@ export const HeaderEN = ({ name }) => {
       <ChangeLanguage>
         <ChangeLanguageUl>
           <ChangeLanguageLi>
-            <Link className="active">EN</Link>
+            <h3>EN</h3>
           </ChangeLanguageLi>
           <ChangeLanguageLi className={isClicked ? "show" : "hide"}>
-            <Link to="/de">DE</Link>
+            <Link to={name}>DE</Link>
           </ChangeLanguageLi>
         </ChangeLanguageUl>
         <HamburgerMenuNav>
