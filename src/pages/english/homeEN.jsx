@@ -75,6 +75,9 @@ import {
   ImageC,
   ContainerImageBW,
   ContainerImg,
+  ServicesCardsContainer,
+  ServicesFragment3,
+  ServiceButton3,
 } from "./../styles/home.styled";
 
 export const HomeEN = () => {
@@ -232,6 +235,8 @@ export const HomeEN = () => {
 					Our <span>Services</span>
 				</h2>
 				<ServicesCards>
+          <ServicesCardsContainer>
+
 					<ToEmailLink to='en/email'>
 						<ServicesFragment>
 							<ServiceHeader1>Design</ServiceHeader1>
@@ -292,14 +297,15 @@ export const HomeEN = () => {
 							</ServiceButton>
 						</ServicesFragment>
 					</ToEmailLink>
+          </ServicesCardsContainer>
 					<ToEmailLink to='en/email'>
-						<ServicesFragment>
+						<ServicesFragment3>
 							<ServiceHeader3>Update</ServiceHeader3>
 							<ul>
 								<li>SEO optimisation</li>
 								<li>Multilingual</li>
 							</ul>
-							<ServiceButton>
+							<ServiceButton3>
 								<p>Order service</p>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -316,8 +322,8 @@ export const HomeEN = () => {
 										stroke-linejoin='round'
 									/>
 								</svg>
-							</ServiceButton>
-						</ServicesFragment>
+							</ServiceButton3>
+						</ServicesFragment3>
 					</ToEmailLink>
 				</ServicesCards>
 			</Services>
