@@ -170,7 +170,9 @@ export const HamburgerMenuNavImg = styled.img`
 `;
 
 export const HamburgerMenuWrapper = styled.div`
+  display: none;
   @media (max-width: 1199px) {
+    display: block;
     position: fixed;
     z-index: 999;
     left: 0;
