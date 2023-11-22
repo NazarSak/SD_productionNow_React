@@ -590,43 +590,43 @@ export const ServicesFragment = styled.div`
 `;
 
 export const ServiceButton = styled.div`
-  margin-right: auto;
-  display: flex;
-  margin-top: auto;
-  align-items: center;
-  & p {
-    padding: 0;
-    margin: 0;
-    color: #ffffff;
-    list-style: none;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    font-family: "Montserrat", sans-serif;
-    transition: all 0.5s;
-  }
+	margin-right: auto;
+	display: flex;
+	margin-top: auto;
+	align-items: center;
+	& p {
+		padding: 0;
+		margin: 0;
+		color: #ffffff;
+		list-style: none;
+		text-decoration: none;
+		font-size: 16px;
+		font-weight: 600;
+		font-family: 'Montserrat', sans-serif;
+		transition: all 0.5s;
+	}
 
-  & svg {
-    margin-left: 12px;
-    height: 8px;
-    width: 20px;
-    transition: all 0.5s;
-  }
-  path {
-    transition: transform 0.5s, stroke 0.5s;
-  }
+	& svg {
+		margin-left: 12px;
+		height: 8px;
+		width: 20px;
+		transition: all 0.5s;
+	}
+	path {
+		transition: transform 0.5s, stroke 0.5s;
+	}
 
-  &:hover {
-    & p {
-      color: #bd00ff;
-    }
+	&:hover {
+		& p {
+			color: #bd00ff;
+		}
 
-    & svg path {
-      transform: translateX(5px);
-      stroke: #bd00ff;
-    }
-  }
-`;
+		& svg path {
+			transform: translateX(5px);
+			stroke: #bd00ff;
+		}
+	}
+`
 
 export const ServiceHeader1 = styled.h3`
   margin-right: auto;

@@ -80,30 +80,56 @@ import {
 export const HomeEN = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [containerClass, setContainerClass] = useState(0);
-  const slideCount = sliderData.length;
+  const [displayImg, setDisplayImg] = useState(3)
+  const [displayImgPrev, setDisplayImgPrev] = useState(7)
+  const [imgArr, setImgArr] = useState([])
+  let ImgBWDataExtended = ImgBWData.slice(0, 3)
+  useEffect(() => {
+		setImgArr(ImgBWDataExtended)
+	}, [])
+  
+  const addImg = () => {
+    if (displayImg >= 7) {
+      setDisplayImg(0)
+    }
+    setDisplayImg(preveCount => preveCount + 1)
+    imgArr.shift()
+		setImgArr(prevArr => [...prevArr, ImgBWData[displayImg]])
+  }
 
+  const nextImg = () => {
+    if (displayImgPrev <= 0) {
+  		setDisplayImgPrev(7)
+  	}
+    setDisplayImgPrev(preveCount => preveCount - 1)
+    imgArr.pop()
+    setImgArr(prevArr => [ImgBWData[displayImgPrev], ...prevArr])
+    console.log(displayImg);
+  }
+ 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % sliderData.length);
-    setContainerClass((prevClass) => prevClass + 256);
+    // setContainerClass((prevClass) => prevClass + 256);
+    nextImg()
   };
-
+  
   const prevSlide = () => {
     setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? sliderData.length - 1 : prevSlide - 1
+    prevSlide === 0 ? sliderData.length - 1 : prevSlide - 1
     );
-    setContainerClass((prevClass) => prevClass - 256);
+    // setContainerClass((prevClass) => prevClass - 256);
+    addImg()
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % sliderData.length);
-      // setContainerClass(prevClass => prevClass - 256)
+      // addImg()
     }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
-  const ImgBWDataExtended = [...ImgBWData, ...ImgBWData];
   return (
 		<>
 			<HeaderEN />
@@ -295,7 +321,7 @@ export const HomeEN = () => {
 					</ToEmailLink>
 				</ServicesCards>
 			</Services>
-			<OurTeam>
+			<OurTeam id='team'>
 				<SliderName>
 					<h2>
 						Our <span>Team</span>
@@ -329,8 +355,11 @@ export const HomeEN = () => {
 				</MySwiperBox>
 				<ContainerImg>
 					<ContainerImageBW style={{ marginLeft: `${containerClass}px` }}>
-						{ImgBWDataExtended.map((slider, index) => (
-							<ImageBW key={index} src={slider.imgBW} />
+						{imgArr.map((slider, index) => (
+							<ImageBW
+								key={index}
+								src={slider.imgBW}
+							/>
 						))}
 					</ContainerImageBW>
 				</ContainerImg>
