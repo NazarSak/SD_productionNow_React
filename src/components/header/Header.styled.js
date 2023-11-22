@@ -150,21 +150,87 @@ export const ChangeLanguageLi = styled.li`
   }
 `;
 
-export const HamburgerMenuNav = styled.div`
+export const HamburgerMenuNav = styled.div``;
+
+export const HamburgerMenuNavButton = styled.button`
   display: none;
 
   @media (max-width: 1199px) {
     display: block;
+    background: transparent;
+    outline: none;
+    border: none;
     margin-left: 30px;
-    & button {
-      background: transparent;
-      outline: none;
-      border: none;
-    }
+  }
+`;
 
-    & button img {
-      width: 48px;
-      height: 48px;
+export const HamburgerMenuNavImg = styled.img`
+  width: 48px;
+  height: 48px;
+`;
+
+export const HamburgerMenuWrapper = styled.div`
+  @media (max-width: 1199px) {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: #000;
+    transform: ${(props) =>
+      props.isOpen ? "translateX(0)" : "translateX(100%)"};
+    transition: transform 1s ease-in-out;
+  }
+`;
+
+export const HamburgerMenuContent = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 64px;
+  margin-top: 126px;
+`;
+
+export const MenuList = styled.ul`
+  @media (max-width: 1199px) {
+    list-style: none;
+    padding: 0;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin: 0;
+  }
+`;
+
+export const CloseButton = styled.button`
+  @media (max-width: 1199px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    transition: border-color 0.3s ease;
+    border-radius: 100px;
+    border: 1px solid var(--grey-C, #cfcfcf);
+    position: absolute;
+    top: 64px;
+    right: 64px;
+    &:hover {
+      border-color: white;
     }
+  }
+`;
+
+export const ImgClose = styled.img`
+  @media (max-width: 1199px) {
+    width: 24px;
+    height: 24px;
   }
 `;

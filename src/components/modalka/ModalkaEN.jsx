@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { handleClickTop } from "../../helperFunction/ScrollTop";
 import ButtonClose from "../../assets/svg/emailPage/Close.svg";
 import {
@@ -73,7 +72,7 @@ export const ModalkaEN = ({ setOpenModal }) => {
   return (
     <main>
       <ModalWrapper>
-        <ImgContainer>
+        <ImgContainer> 
           <CloseButton to="/" onClick={handleCloseModal}>
             <img src={ButtonClose} alt="Button" />
           </CloseButton>

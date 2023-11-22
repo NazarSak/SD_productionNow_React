@@ -32,10 +32,6 @@ export const ImageFirst = styled.img`
   width: 100%;
   max-height: 583px;
   object-fit: cover;
-
-  @media screen and (max-width: 1199px) {
-    max-height: 200px;
-  }
 `;
 
 export const ParagraphAbProject = styled.p`
