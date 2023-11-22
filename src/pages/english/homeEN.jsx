@@ -144,6 +144,7 @@ export const HomeEN = () => {
 						<p>Your goals are our execution</p>
 					</HeroContend>
 					<ButtonHeader to='/en/contactUs'>Lets go!</ButtonHeader>
+					
 				</HeroBlock>
 			</SectionHero>
 			<ImgHero src={ImageHero} alt='' />
@@ -363,7 +364,7 @@ export const HomeEN = () => {
 					</ContainerImageBW>
 				</ContainerImg>
 			</OurTeam>
-			<ConectUsEN />
+			<ConectUsEN name="ConnectUS"/>
 			<FooterEN />
 		</>
 	)

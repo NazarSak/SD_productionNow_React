@@ -1,7 +1,7 @@
 import React from "react";
 import { HeaderDE } from "../../components/header/HeaderDE";
 import { FooterDE } from "../../components/footer/FooterDE";
-import ArrowLeft from "../../assets/svg/Arrow.svg";
+import LeftArrowPrivacy from '../../assets/svg/LeftArrowPrivacy.svg'
 import {
   TitleHTwo,
   TitleSpan,
@@ -15,6 +15,7 @@ import {
   ParagraphSpanWithUnderLine,
   Li,
   FooterContainer,
+  ArrowL,
 } from "../styles/privacy.styled";
 
 export const PrivacyDE = () => {
@@ -23,7 +24,7 @@ export const PrivacyDE = () => {
       <HeaderDE name={"/en/privacy"} />
       <Container>
         <BackButton to="/">
-          <img src={ArrowLeft} alt="arrow" />
+          <ArrowL src={LeftArrowPrivacy} alt="arrow" />
           Zurück zum Startbildschirm
         </BackButton>
 
@@ -43,9 +44,8 @@ export const PrivacyDE = () => {
           </Li>
           <Li>
             <Paragraph>
-              <ParagraphSpan class="colorSpan">Daten</ParagraphSpan> sind alle
-              Informationen, die sich direkt oder indirekt auf die Nutzer der
-              Website beziehen.
+              <ParagraphSpan>Daten</ParagraphSpan> sind alle Informationen, die
+              sich direkt oder indirekt auf die Nutzer der Website beziehen.
             </Paragraph>
           </Li>
         </List>
@@ -112,26 +112,26 @@ export const PrivacyDE = () => {
           <List>
             <Li>
               <Paragraph>
-                <ParagraphSpan class="colorSpan">Cookies</ParagraphSpan> oder
-                <ParagraphSpan class="colorSpan"> Kekse</ParagraphSpan> sind
-                kleine Dateneinheiten, die an den Computer des Nutzers gesendet
-                werden, wenn Sie eine Webseite besuchen oder ein Werbemodul auf
-                einer Webseite ansehen, und die auf dem Computer oder Mobilgerät
-                des Nutzers gespeichert werden.
+                <ParagraphSpan>Cookies</ParagraphSpan> oder
+                <ParagraphSpan> Kekse</ParagraphSpan> sind kleine
+                Dateneinheiten, die an den Computer des Nutzers gesendet werden,
+                wenn Sie eine Webseite besuchen oder ein Werbemodul auf einer
+                Webseite ansehen, und die auf dem Computer oder Mobilgerät des
+                Nutzers gespeichert werden.
               </Paragraph>
             </Li>
             <Li>
               <Paragraph>
-                <ParagraphSpan class="colorSpan">Pixel</ParagraphSpan> oder{" "}
-                <ParagraphSpan class="colorSpan">Zählpixel</ParagraphSpan> sind
-                digitale Bilder, ein Element der Anzeigenmatrix, die das Bild
-                bilden. Sie können verwendet werden, um zu verfolgen, wie oft
-                ein Nutzer eine Webseite nutzt, um den Browser des Nutzers zu
-                identifizieren und um Dienste anzubieten. So werden z. B. Daten
-                im Einkaufswagen zwischen den Besuchen gespeichert und vom
-                Benutzer ausgelöste Website-Fehler verhindert, wobei alle
-                Informationen "wie sie sind" verarbeitet und während der
-                Datenerfassung nicht verändert werden.
+                <ParagraphSpan>Pixel</ParagraphSpan> oder{" "}
+                <ParagraphSpan>Zählpixel</ParagraphSpan> sind digitale Bilder,
+                ein Element der Anzeigenmatrix, die das Bild bilden. Sie können
+                verwendet werden, um zu verfolgen, wie oft ein Nutzer eine
+                Webseite nutzt, um den Browser des Nutzers zu identifizieren und
+                um Dienste anzubieten. So werden z. B. Daten im Einkaufswagen
+                zwischen den Besuchen gespeichert und vom Benutzer ausgelöste
+                Website-Fehler verhindert, wobei alle Informationen "wie sie
+                sind" verarbeitet und während der Datenerfassung nicht verändert
+                werden.
               </Paragraph>
             </Li>
           </List>

@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderEN } from "../../components/header/HeaderEN";
+import { HeaderDE } from "../../components/header/HeaderDE";
 import { ConectUsDE } from "../../components/conectUs/conectUsDE";
 import { FooterDE } from "../../components/footer/FooterDE";
 import BackgroundOne from "../../assets/img/abi/BackgroundOne.png";
@@ -23,17 +23,19 @@ import {
   SixthSection,
 } from "../styles/General/section.styled";
 import {
-  TitleHThree,
+  TitleHThree, 
+  TitlePage,
   TitleHTwo,
   TitleSpan,
   ImageFirst,
   ParagraphAbProject,
+  SvgImg,
   ParagraphGoals,
   List,
   Li,
   NumberOfList,
   Line,
-  FirstConatinerInternalImg,
+FirstConatinerInternalImg,
   InternalImgOne,
   InternalImgSecond,
   InternalImgThree,
@@ -52,10 +54,10 @@ export const AbiDE = () => {
 
   return (
     <main>
-      <HeaderEN name={"/en/abi"} />
+      <HeaderDE name={"/en/abi"} />
       <FirstSection>
         <TitleHThree>Mobile App</TitleHThree>
-        <TitleHTwo>Abi</TitleHTwo>
+        <TitlePage>Abi</TitlePage>
       </FirstSection>
       <OptimisatorImg src={BackgroundOne} alt="image" ImageType={ImageFirst} />
       <SecondSection>
@@ -74,7 +76,7 @@ export const AbiDE = () => {
 
         <Line />
 
-        <OptimisatorImg src={Logo} alt="image" ImageType="img" />
+        <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
       </SecondSection>
       <ThirdSection>
         <TitleHTwo>

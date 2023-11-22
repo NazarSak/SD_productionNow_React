@@ -5,6 +5,18 @@ export const TitleHThree = styled.h3`
   color: #50d13b;
 `;
 
+export const TitlePage = styled.h2`
+  color: var(--02-dark-color-white, #fff);
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+`;
+
 export const TitleHTwo = styled.h2`
   color: var(--02-dark-color-white, #fff);
 `;
@@ -20,16 +32,33 @@ export const ImageFirst = styled.img`
   width: 100%;
   max-height: 583px;
   object-fit: cover;
+
+  @media screen and (max-width: 1199px) {
+    max-height: 200px;
+  }
 `;
 
 export const ParagraphAbProject = styled.p`
   width: 480px;
   color: var(--grey-C, #cfcfcf);
+  @media screen and (max-width: 1199px) {
+    width: 285px;
+  }
+`;
+
+export const SvgImg = styled.img`
+  @media screen and (max-width: 1199px) {
+    width: 285px;
+    height: 80px; 
+  }
 `;
 
 export const ParagraphGoals = styled.p`
   width: 200px;
   color: var(--grey-C, #cfcfcf);
+  @media screen and (max-width: 1199px) {
+    width: 227px;
+  }
 `;
 
 export const List = styled.ul`
@@ -37,11 +66,17 @@ export const List = styled.ul`
   justify-content: center;
   gap: 27px;
   padding: 0;
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const Li = styled.li`
   display: flex;
   align-items: center;
+  @media screen and (max-width: 1199px) {
+    width: 320px;
+  }
 `;
 
 export const NumberOfList = styled.span`
@@ -82,6 +117,10 @@ export const Line = styled.div`
     rgba(163, 163, 163, 0.7) 0%,
     rgba(117, 117, 117, 0) 89.9%
   );
+  @media screen and (max-width: 1199px) {
+    width: 1px;
+    height: 250px;
+  }
 `;
 
 export const NaturalFoodImg = styled.img`
@@ -92,7 +131,13 @@ export const NaturalFoodImg = styled.img`
   flex-shrink: 0;
   border-radius: 40px;
   border: 10px solid var(--grey-B, #595959);
-  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+
+  @media screen and (max-width: 1199px) {
+    width: 672px;
+    height: 385px;
+    border-radius: 40px;
+    border: 5px solid var(--grey-B, #595959);
+  }
 `;
 
 export const SecondNaturalFoodImg = styled.img`
@@ -100,7 +145,12 @@ export const SecondNaturalFoodImg = styled.img`
   height: 4116px;
   flex-shrink: 0;
   border-radius: 0px 0px 40px 40px;
-  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+
+  @media screen and (max-width: 1199px) {
+    width: 464px;
+    height: 2344px;
+    border-radius: 0px 0px 40px 40px;
+  }
 `;
 
 export const ConatinerImg = styled.div`
@@ -116,6 +166,9 @@ export const SecondConatinerInternalImg = styled.div`
   display: flex;
   flex-direction: column;
   gap: 180px;
+  @media screen and (max-width: 1199px) {
+    gap: 48px;
+  }
 `;
 
 export const InternalImgOne = styled.img`
@@ -125,7 +178,12 @@ export const InternalImgOne = styled.img`
   border-radius: 40px;
   margin-top: 121px;
   border: 5px solid var(--grey-B, #595959);
-  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+
+  @media screen and (max-width: 1199px) {
+    width: 312px;
+    height: 636px;
+    margin-top: 24px;
+  }
 `;
 
 export const InternalImgSecond = styled.img`
@@ -135,7 +193,11 @@ export const InternalImgSecond = styled.img`
   margin-top: 180px;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
-  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+  @media screen and (max-width: 1199px) {
+    width: 312px;
+    height: 636px;
+    margin-top: 48px;
+  }
 `;
 
 export const InternalImg = styled.img`
@@ -144,7 +206,23 @@ export const InternalImg = styled.img`
   flex-shrink: 0;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
-  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+  @media screen and (max-width: 1199px) {
+    width: 312px;
+    height: 604px;
+    margin-top: 80px;
+  }
+`;
+
+export const InternalImgFour = styled.img`
+  width: 490px;
+  height: 1020px;
+  flex-shrink: 0;
+  border-radius: 40px;
+  border: 5px solid var(--grey-B, #595959);
+  @media screen and (max-width: 1199px) {
+    width: 312px;
+    height: 604px;
+  }
 `;
 
 export const InternalImgLast = styled.img`
@@ -153,7 +231,10 @@ export const InternalImgLast = styled.img`
   flex-shrink: 0;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
-  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+  @media screen and (max-width: 1199px) {
+    width: 312px;
+    height: 283px;
+  }
 `;
 
 export const Arrow = styled.img`

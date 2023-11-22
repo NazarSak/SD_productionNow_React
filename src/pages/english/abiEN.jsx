@@ -23,17 +23,19 @@ import {
   SixthSection,
 } from "../styles/General/section.styled";
 import {
-  TitleHThree,
+  TitleHThree, 
+  TitlePage,
   TitleHTwo,
   TitleSpan,
   ImageFirst,
   ParagraphAbProject,
+  SvgImg,
   ParagraphGoals,
   List,
   Li,
   NumberOfList,
   Line,
-  FirstConatinerInternalImg,
+FirstConatinerInternalImg,
   InternalImgOne,
   InternalImgSecond,
   InternalImgThree,
@@ -55,7 +57,7 @@ export const AbiEN = () => {
       <HeaderEN name={"/de/abi"} />
       <FirstSection>
         <TitleHThree>Mobile App</TitleHThree>
-        <TitleHTwo>Abi</TitleHTwo>
+        <TitlePage>Abi</TitlePage>
       </FirstSection>
 
       <OptimisatorImg src={BackgroundOne} alt="image" ImageType={ImageFirst} />
@@ -75,7 +77,7 @@ export const AbiEN = () => {
 
         <Line />
 
-        <OptimisatorImg src={Logo} alt="image" ImageType="img" />
+        <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
       </SecondSection>
 
       <ThirdSection>
