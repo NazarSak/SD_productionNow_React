@@ -84,7 +84,7 @@ export const ChangeLanguage = styled.div`
     transform: rotate(180deg);
   }
   @media (max-width: 1199px) {
-    width: 106px;
+    width: 180px;
   }
 `;
 
@@ -147,5 +147,24 @@ export const ChangeLanguageLi = styled.li`
     font-style: normal;
     font-weight: 500;
     margin: 0;
+  }
+`;
+
+export const HamburgerMenuNav = styled.div`
+  display: none;
+
+  @media (max-width: 1199px) {
+    display: block;
+    margin-left: 30px;
+    & button {
+      background: transparent;
+      outline: none;
+      border: none;
+    }
+
+    & button img {
+      width: 48px;
+      height: 48px;
+    }
   }
 `;

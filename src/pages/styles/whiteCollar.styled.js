@@ -175,7 +175,7 @@ export const InternalImgOne = styled.img`
   margin-top: 121px;
   border: 5px solid var(--grey-B, #595959);
   @media screen and (max-width: 1199px) {
-    width: 312px;
+    width: 302px;
     height: 611.52px;
     border-radius: 40px;
     margin-top: 24px;
@@ -191,7 +191,7 @@ export const InternalImgSecond = styled.img`
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
   @media screen and (max-width: 1199px) {
-    width: 312px;
+    width: 302px;
     height: 636px;
     margin-top: 48px;
   }
@@ -204,7 +204,7 @@ export const InternalImgThree = styled.img`
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
   @media screen and (max-width: 1199px) {
-    width: 312px;
+    width: 302px;
     height: 800px;
     margin-top: 80px;
   }
@@ -217,7 +217,7 @@ export const InternalImgFour = styled.img`
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
   @media screen and (max-width: 1199px) {
-    width: 312px;
+    width: 302px;
     height: 283px;
   }
 `;
@@ -229,7 +229,7 @@ export const InternalImgFive = styled.img`
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
   @media screen and (max-width: 1199px) {
-    width: 312px;
+    width: 302px;
     height: 418px;
   }
 `;
