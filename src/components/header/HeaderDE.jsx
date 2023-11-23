@@ -6,7 +6,7 @@ import ButtonClose from "../../assets/svg/emailPage/Close.svg";
 
 import {
   ChangeLanguage,
-  ChangeLanguageLi, 
+  ChangeLanguageLi,
   ChangeLanguageUl,
   Header,
   Navigator,
@@ -31,10 +31,12 @@ export const HeaderDE = ({ name }) => {
   };
 
   const handleMenuClose = () => {
-    setIsOpen(false);
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 0);
   };
 
-console.log(isOpen);
+  console.log(isOpen);
 
   const handleSvgClick = () => {
     if (!isClicked) setIsClicked(true);
@@ -51,12 +53,12 @@ console.log(isOpen);
       <Navigator>
         <NavigatorLi>
           <StyledLink href="../../SD_productionNow_React/#projects">
-		  Projekte
+            Projekte
           </StyledLink>
         </NavigatorLi>
         <NavigatorLi>
           <StyledLink href="../../SD_productionNow_React/#services">
-		  Dienste
+            Dienste
           </StyledLink>
         </NavigatorLi>
         <NavigatorLi>
@@ -66,7 +68,7 @@ console.log(isOpen);
         </NavigatorLi>
         <NavigatorLi>
           <StyledLink href="../../SD_productionNow_React/#contactus">
-		  Kontakt
+            Kontakt
           </StyledLink>
         </NavigatorLi>
       </Navigator>
@@ -83,40 +85,54 @@ console.log(isOpen);
           <HamburgerMenuNavButton onClick={handleMenuOpen}>
             <HamburgerMenuNavImg src={HamburgerMenu} alt="" />
           </HamburgerMenuNavButton>
-         
-            <HamburgerMenuWrapper onClick={handleMenuClose} isopen={isOpen ? "true" : "false"} >
-              <HamburgerMenuContent>
-                <StyledLink to="/">
-                  <img src={Logo} alt="logo" />
-                </StyledLink>
-                <CloseButton onClick={handleMenuClose}>
-                  <ImgClose src={ButtonClose} alt="Button" />
-                </CloseButton>
-                <MenuList>
-                  <li>
-                    <StyledLink href="../../SD_productionNow_React/#projects" onClick={handleMenuClose}>
-                      Projekte
-                    </StyledLink>
-                  </li>
-                  <li>
-                    <StyledLink href="../../SD_productionNow_React/#services" onClick={handleMenuClose}>
-                      Dienste
-                    </StyledLink>
-                  </li>
-                  <li>
-                    <StyledLink href="../../SD_productionNow_React/#team" onClick={handleMenuClose}>
-                      Team
-                    </StyledLink>
-                  </li>
-                  <li>
-                    <StyledLink href="../../SD_productionNow_React/#contactus" onClick={handleMenuClose}>
-                      Kontakt
-                    </StyledLink>
-                  </li>
-                </MenuList>
-              </HamburgerMenuContent>
-            </HamburgerMenuWrapper>
-          
+
+          <HamburgerMenuWrapper
+            onClick={handleMenuClose}
+            isopen={isOpen ? "true" : "false"}
+          >
+            <HamburgerMenuContent>
+              <StyledLink to="/">
+                <img src={Logo} alt="logo" />
+              </StyledLink>
+              <CloseButton onClick={handleMenuClose}>
+                <ImgClose src={ButtonClose} alt="Button" />
+              </CloseButton>
+              <MenuList>
+                <li>
+                  <StyledLink
+                    href="../../SD_productionNow_React/#projects"
+                    onClick={handleMenuClose}
+                  >
+                    Projekte
+                  </StyledLink>
+                </li>
+                <li>
+                  <StyledLink
+                    href="../../SD_productionNow_React/#services"
+                    onClick={handleMenuClose}
+                  >
+                    Dienste
+                  </StyledLink>
+                </li>
+                <li>
+                  <StyledLink
+                    href="../../SD_productionNow_React/#team"
+                    onClick={handleMenuClose}
+                  >
+                    Team
+                  </StyledLink>
+                </li>
+                <li>
+                  <StyledLink
+                    href="../../SD_productionNow_React/#contactus"
+                    onClick={handleMenuClose}
+                  >
+                    Kontakt
+                  </StyledLink>
+                </li>
+              </MenuList>
+            </HamburgerMenuContent>
+          </HamburgerMenuWrapper>
         </HamburgerMenuNav>
         <svg
           xmlns="http://www.w3.org/2000/svg"

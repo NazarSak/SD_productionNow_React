@@ -8,12 +8,19 @@ export const TitleHThree = styled.h3`
 export const TitlePage = styled.h2`
   color: var(--02-dark-color-white, #fff);
   @media screen and (max-width: 1199px) {
-    text-align: center;
-    font-family: Montserrat;
     font-size: 64px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+  }
+`;
+
+export const TitleInTwoLine = styled.h2`
+  color: var(--02-dark-color-white, #fff);
+
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+    width: min-content;
   }
 `;
 
@@ -45,7 +52,10 @@ export const ParagraphAbProject = styled.p`
 export const SvgImg = styled.img`
   @media screen and (max-width: 1199px) {
     width: 285px;
-    height: 80px; 
+    height: 80px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 343px;
   }
 `;
 
@@ -65,6 +75,10 @@ export const List = styled.ul`
   @media screen and (max-width: 1199px) {
     flex-wrap: wrap;
   }
+  @media screen and (max-width: 767px) {
+    gap: 24px;
+    justify-content: start;
+  }
 `;
 
 export const Li = styled.li`
@@ -73,37 +87,40 @@ export const Li = styled.li`
   @media screen and (max-width: 1199px) {
     width: 320px;
   }
+  @media screen and (max-width: 767px) {
+    height: 78px;
+  }
 `;
 
 export const NumberOfList = styled.span`
-	text-align: center;
-	font-family: Montserrat;
-	font-size: 64px;
-	font-style: normal;
-	font-family: 'Poppins', sans-serif;
-	-webkit-text-fill-color: #000;
-	-webkit-text-stroke: 1.5px #fff;
-	font-weight: 600;
-	margin-right: 16px;
-	&:after {
-		content: '.';
-		text-align: center;
-		font-family: Montserrat;
-		font-size: 64px;
-		font-style: normal;
-		font-weight: 600;
-		margin-left: 4px;
-		line-height: normal;
-		background: var(
-			--purple-linear,
-			linear-gradient(90deg, #bd00ff -1.03%, #4200ff 98.22%)
-		);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		-webkit-text-stroke: transparent;
-	}
-`
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 64px;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+  -webkit-text-fill-color: #000;
+  -webkit-text-stroke: 1.5px #fff;
+  font-weight: 600;
+  margin-right: 16px;
+  &:after {
+    content: ".";
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    margin-left: 4px;
+    line-height: normal;
+    background: var(
+      --purple-linear,
+      linear-gradient(90deg, #bd00ff -1.03%, #4200ff 98.22%)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: transparent;
+  }
+`;
 
 export const Line = styled.div`
   width: 1px;
@@ -116,6 +133,15 @@ export const Line = styled.div`
   @media screen and (max-width: 1199px) {
     width: 1px;
     height: 250px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 343px;
+    height: 1px;
+    background: radial-gradient(
+      circle,
+      rgba(163, 163, 163, 0.7) 0%,
+      rgba(0, 0, 0, 0) 89.9%
+    );
   }
 `;
 
@@ -131,21 +157,31 @@ export const NaturalFoodImg = styled.img`
   @media screen and (max-width: 1199px) {
     width: 672px;
     height: 385px;
-    border-radius: 40px;
     border: 5px solid var(--grey-B, #595959);
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 343px;
+    height: 197px;
+    border-radius: 20px;
+    border: 3px solid var(--grey-B, #595959);
   }
 `;
 
 export const SecondNaturalFoodImg = styled.img`
   width: 815px;
   height: 4116px;
-  flex-shrink: 0;
   border-radius: 0px 0px 40px 40px;
 
   @media screen and (max-width: 1199px) {
     width: 464px;
     height: 2344px;
     border-radius: 0px 0px 40px 40px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 237px;
+    height: 1196px;
+    border-radius: 0px 0px 40px 20px;
   }
 `;
 
@@ -165,6 +201,10 @@ export const SecondConatinerInternalImg = styled.div`
   @media screen and (max-width: 1199px) {
     gap: 48px;
   }
+  @media screen and (max-width: 767px) {
+    gap: 32px;
+  
+  }
 `;
 
 export const InternalImgOne = styled.img`
@@ -180,6 +220,12 @@ export const InternalImgOne = styled.img`
     height: 636px;
     margin-top: 24px;
   }
+  @media screen and (max-width: 767px) {
+    width: 157px;
+    height: 321px;
+    border-radius: 20px;
+    border: 1px solid var(--grey-B, #595959);
+  }
 `;
 
 export const InternalImgSecond = styled.img`
@@ -194,6 +240,14 @@ export const InternalImgSecond = styled.img`
     height: 636px;
     margin-top: 48px;
   }
+  @media screen and (max-width: 767px) {
+    width: 157px;
+    height: 308px;
+    border-radius: 20px;
+    margin-top: 32px;
+
+    border: 1px solid var(--grey-B, #595959);
+  }
 `;
 
 export const InternalImg = styled.img`
@@ -207,6 +261,13 @@ export const InternalImg = styled.img`
     height: 604px;
     margin-top: 80px;
   }
+  @media screen and (max-width: 767px) {
+    width: 157px;
+    height: 308px;
+    margin-top: 132px;
+    border-radius: 20px;
+    border: 1px solid var(--grey-B, #595959);
+  }
 `;
 
 export const InternalImgFour = styled.img`
@@ -219,6 +280,12 @@ export const InternalImgFour = styled.img`
     width: 312px;
     height: 604px;
   }
+  @media screen and (max-width: 767px) {
+    width: 157px;
+    height: 276px;
+    border-radius: 20px;
+    border: 1px solid var(--grey-B, #595959);
+  }
 `;
 
 export const InternalImgLast = styled.img`
@@ -230,6 +297,12 @@ export const InternalImgLast = styled.img`
   @media screen and (max-width: 1199px) {
     width: 312px;
     height: 283px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 157px;
+    height: 143px;
+    border-radius: 20px;
+    border: 1px solid var(--grey-B, #595959);
   }
 `;
 

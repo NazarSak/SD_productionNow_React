@@ -22,6 +22,10 @@ export const Header = styled.header`
     padding: 0 48px;
     margin: 0;
   }
+  @media (max-width: 767px) {
+    width: 334px;
+  
+  }
 `;
 
 export const Navigator = styled.ul`

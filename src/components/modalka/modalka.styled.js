@@ -140,4 +140,9 @@ export const CloseButton = styled(Link)`
   &:hover {
     border-color: white;
   }
+  @media (max-width: 1199px) {
+    top: 48px;
+    margin: 0;
+    right: 48px;
+  }
 `;

@@ -21,6 +21,13 @@ export const SecondSection = styled.section`
   @media screen and (max-width: 1199px) {
     gap: 50px;
   }
+  @media screen and (max-width: 767px) {
+    margin-top: 48px;
+    margin-bottom: 36px;
+    flex-direction: column-reverse;
+    gap: 24px;
+    align-items: start;
+  }
 `;
 
 export const ThirdSection = styled.section`
@@ -28,13 +35,18 @@ export const ThirdSection = styled.section`
   @media screen and (max-width: 1199px) {
     margin-bottom: 120px;
   }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 `;
 
 export const FourthSection = styled.section`
-  margin-top: 132px;
-  margin-bottom: 132px;
+  margin: 132px 0;
   @media screen and (max-width: 1199px) {
     margin-bottom: 120px;
+  }
+  @media screen and (max-width: 767px) {
+    margin: 48px 0;
   }
 `;
 
@@ -44,6 +56,10 @@ export const FifthSection = styled.section`
   gap: 180px;
   @media screen and (max-width: 1199px) {
     gap: 48px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 48px;
+    gap: 15px;
   }
 `;
 
@@ -60,10 +76,11 @@ export const SixthSection = styled.section`
   align-items: center;
 
   @media screen and (max-width: 1199px) {
-    display: flex;
     width: 672px;
     padding: 10px var(--Spacing---xl, 16px);
-    justify-content: space-between;
-    align-items: flex-start;
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 48px;
+    width: 343px;
   }
 `;

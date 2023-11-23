@@ -5,11 +5,12 @@ export const ContentUs = styled.section`
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-  display: none;
+
 `;
 
 export const AdoutUs = styled.div`
   display: flex;
+  
   max-width: 640px;
   justify-content: center;
   align-items: center;
@@ -91,7 +92,7 @@ export const ContentUsBtn = styled(Link)`
   }
 `;
 
-export const Peoples = styled.div``;
+export const Peoples = styled.div`display: none;`;
 
 const peopleBlue = keyframes`
   0% {

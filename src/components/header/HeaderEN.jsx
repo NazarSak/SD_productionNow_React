@@ -6,7 +6,7 @@ import ButtonClose from "../../assets/svg/emailPage/Close.svg";
 
 import {
   ChangeLanguage,
-  ChangeLanguageLi, 
+  ChangeLanguageLi,
   ChangeLanguageUl,
   Header,
   Navigator,
@@ -31,13 +31,14 @@ export const HeaderEN = ({ name }) => {
   };
 
   const handleMenuClose = () => {
-    setIsOpen(false);
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 0);
   };
 
   const handleListClick = (event) => {
-    event.stopPropagation(); 
+    event.stopPropagation();
   };
-
 
   const handleSvgClick = () => {
     if (!isClicked) setIsClicked(true);
@@ -86,40 +87,54 @@ export const HeaderEN = ({ name }) => {
           <HamburgerMenuNavButton onClick={handleMenuOpen}>
             <HamburgerMenuNavImg src={HamburgerMenu} alt="" />
           </HamburgerMenuNavButton>
-         
-            <HamburgerMenuWrapper onClick={handleMenuClose} isopen={isOpen ? "true" : "false"}>
-              <HamburgerMenuContent>
-                <Link to="/" >
-                  <img src={Logo} alt="logo" />
-                </Link>
-                <CloseButton>
-                  <ImgClose src={ButtonClose} alt="Button" />
-                </CloseButton>
-                <MenuList onClick={handleListClick}>
-                  <li>
-                    <StyledLink href="../../SD_productionNow_React/#projects" onClick={handleMenuClose}>
-                      Projects
-                    </StyledLink>
-                  </li>
-                  <li>
-                    <StyledLink href="../../SD_productionNow_React/#services" onClick={handleMenuClose}>
-                      Services
-                    </StyledLink>
-                  </li>
-                  <li>
-                    <StyledLink href="../../SD_productionNow_React/#team" onClick={handleMenuClose}>
-                      Team
-                    </StyledLink>
-                  </li>
-                  <li>
-                    <StyledLink href="../../SD_productionNow_React/#contactus" onClick={handleMenuClose}>
-                      Contact us
-                    </StyledLink>
-                  </li>
-                </MenuList>
-              </HamburgerMenuContent>
-            </HamburgerMenuWrapper>
-          
+
+          <HamburgerMenuWrapper
+            onClick={handleMenuClose}
+            isopen={isOpen ? "true" : "false"}
+          >
+            <HamburgerMenuContent>
+              <Link to="/">
+                <img src={Logo} alt="logo" />
+              </Link>
+              <CloseButton>
+                <ImgClose src={ButtonClose} alt="Button" />
+              </CloseButton>
+              <MenuList onClick={handleListClick}>
+                <li>
+                  <StyledLink
+                    href="../../SD_productionNow_React/#projects"
+                    onClick={handleMenuClose}
+                  >
+                    Projects
+                  </StyledLink>
+                </li>
+                <li>
+                  <StyledLink
+                    href="../../SD_productionNow_React/#services"
+                    onClick={handleMenuClose}
+                  >
+                    Services
+                  </StyledLink>
+                </li>
+                <li>
+                  <StyledLink
+                    href="../../SD_productionNow_React/#team"
+                    onClick={handleMenuClose}
+                  >
+                    Team
+                  </StyledLink>
+                </li>
+                <li>
+                  <StyledLink
+                    href="../../SD_productionNow_React/#contactus"
+                    onClick={handleMenuClose}
+                  >
+                    Contact us
+                  </StyledLink>
+                </li>
+              </MenuList>
+            </HamburgerMenuContent>
+          </HamburgerMenuWrapper>
         </HamburgerMenuNav>
         <svg
           xmlns="http://www.w3.org/2000/svg"
