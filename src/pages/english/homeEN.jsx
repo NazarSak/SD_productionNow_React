@@ -78,6 +78,7 @@ import {
   ServicesCardsContainer,
   ServicesFragment3,
   ServiceButton3,
+  ProjectContainerImg,
 } from "./../styles/home.styled";
 
 export const HomeEN = () => {
@@ -91,6 +92,20 @@ export const HomeEN = () => {
 		setImgArr(ImgBWDataExtended)
 	}, [])
   
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+       setWindowWidth(window.innerWidth);
+     };  
+ 
+     window.addEventListener('resize', handleResize);  
+ 
+     return () => {
+       window.removeEventListener('resize', handleResize);
+     };
+    }, []);
+
   const addImg = () => {
     if (displayImg >= 7) {
       setDisplayImg(0)
@@ -147,7 +162,6 @@ export const HomeEN = () => {
 						<p>Your goals are our execution</p>
 					</HeroContend>
 					<ButtonHeader to='/en/contactUs'>Lets go!</ButtonHeader>
-					
 				</HeroBlock>
 			</SectionHero>
 			<ImgHero src={ImageHero} alt='' />
@@ -162,10 +176,16 @@ export const HomeEN = () => {
 							<ProjectsFragmentInfo1>
 								<h4>Online Shop</h4>
 								<h3>Organic</h3>
-								<p>
-									Online store with organic fruits, vegetables and berries. A
-									England farmer wanted to sell organically grown produce.
-								</p>
+								{windowWidth > 1200 ? (
+									<p>
+										Online store with organic fruits, vegetables and berries. A
+										England farmer wanted to sell organically grown produce.
+									</p>
+								) : (
+									<p>
+										Online store with organic fruits, vegetables and berries.
+									</p>
+								)}
 								<ButtonProject1 to='/en/organicShop' onClick={handleClickTop}>
 									View
 								</ButtonProject1>
@@ -181,11 +201,18 @@ export const HomeEN = () => {
 						<ProjectsFragmentInfo2>
 							<h4>Business website</h4>
 							<h3>WhiteCollor</h3>
-							<p>
-								Develop and implement Agilic methods in the strategic management
-								of a corporation to ensure flexibility and adaptation to a
-								rapidly changing business environment.
-							</p>
+							{windowWidth > 1200 ? (
+								<p>
+									Develop and implement Agilic methods in the strategic
+									management of a corporation to ensure flexibility and
+									adaptation to a rapidly changing business environment.
+								</p>
+							) : (
+								<p>
+									Develop and implement Agilic methods in the strategic
+									management
+								</p>
+							)}
 							<ButtonProject2 to='/en/whiteCollar' onClick={handleClickTop}>
 								View
 							</ButtonProject2>
@@ -193,22 +220,31 @@ export const HomeEN = () => {
 					</ProjectsFragment2>
 
 					<ProjectContainer2>
+            <ProjectContainerImg>
 						<ProjectsFragment3>
 							<ProjectImage31 src={BriliniImg1} />
 							<ProjectImage32 src={BriliniImg2} />
 							<ProjectsFragmentInfo3>
 								<h4>Landing page</h4>
 								<h3>Brilini Studio</h3>
-								<p>
-									Studio of interior designers specializing in the furnishing
-									and design of rooms, apartments and houses in a modern and
-									austere style.
-								</p>
+								{windowWidth > 1200 ? (
+									<p>
+										Studio of interior designers specializing in the furnishing
+										and design of rooms, apartments and houses in a modern and
+										austere style.
+									</p>
+								) : (
+									<p>
+										Studio of interior designers specializing in the furnishing
+										and design of rooms
+									</p>
+								)}
 								<ButtonProject3 to='/en/briliniStudio' onClick={handleClickTop}>
 									View
 								</ButtonProject3>
 							</ProjectsFragmentInfo3>
 						</ProjectsFragment3>
+            </ProjectContainerImg>
 
 						<ProjectsFragment4>
 							<ProjectImage41 src={AbiImg1} />
@@ -235,69 +271,68 @@ export const HomeEN = () => {
 					Our <span>Services</span>
 				</h2>
 				<ServicesCards>
-          <ServicesCardsContainer>
-
-					<ToEmailLink to='en/email'>
-						<ServicesFragment>
-							<ServiceHeader1>Design</ServiceHeader1>
-							<ul>
-								<li>Motion Design</li>
-								<li>Logotype</li>
-								<li>Video Editing</li>
-								<li>3D models</li>
-								<li>Advertising Banners</li>
-							</ul>
-							<ServiceButton>
-								<p>Order service</p>
-								<svg
-									xmlns='http://www.w3.org/2000/svg'
-									width='16'
-									height='10'
-									viewBox='0 0 16 10'
-									fill='none'
-								>
-									<path
-										d='M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1'
-										stroke='#FCFCFC'
-										stroke-width='2'
-										stroke-linecap='round'
-										stroke-linejoin='round'
-									/>
-								</svg>
-							</ServiceButton>
-						</ServicesFragment>
-					</ToEmailLink>
-					<ToEmailLink to='en/email'>
-						<ServicesFragment>
-							<ServiceHeader2>Development</ServiceHeader2>
-							<ul>
-								<li>Landing Page</li>
-								<li>Corporate Website</li>
-								<li>Online Shop</li>
-								<li>Mobile App</li>
-								<li>Redesign Website</li>
-							</ul>
-							<ServiceButton>
-								<p>Order service</p>
-								<svg
-									xmlns='http://www.w3.org/2000/svg'
-									width='16'
-									height='10'
-									viewBox='0 0 16 10'
-									fill='none'
-								>
-									<path
-										d='M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1'
-										stroke='#FCFCFC'
-										stroke-width='2'
-										stroke-linecap='round'
-										stroke-linejoin='round'
-									/>
-								</svg>
-							</ServiceButton>
-						</ServicesFragment>
-					</ToEmailLink>
-          </ServicesCardsContainer>
+					<ServicesCardsContainer>
+						<ToEmailLink to='en/email'>
+							<ServicesFragment>
+								<ServiceHeader1>Design</ServiceHeader1>
+								<ul>
+									<li>Motion Design</li>
+									<li>Logotype</li>
+									<li>Video Editing</li>
+									<li>3D models</li>
+									<li>Advertising Banners</li>
+								</ul>
+								<ServiceButton>
+									<p>Order service</p>
+									<svg
+										xmlns='http://www.w3.org/2000/svg'
+										width='16'
+										height='10'
+										viewBox='0 0 16 10'
+										fill='none'
+									>
+										<path
+											d='M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1'
+											stroke='#FCFCFC'
+											strokeWidth='2'
+											strokeLinecap='round'
+											strokeLinejoin='round'
+										/>
+									</svg>
+								</ServiceButton>
+							</ServicesFragment>
+						</ToEmailLink>
+						<ToEmailLink to='en/email'>
+							<ServicesFragment>
+								<ServiceHeader2>Development</ServiceHeader2>
+								<ul>
+									<li>Landing Page</li>
+									<li>Corporate Website</li>
+									<li>Online Shop</li>
+									<li>Mobile App</li>
+									<li>Redesign Website</li>
+								</ul>
+								<ServiceButton>
+									<p>Order service</p>
+									<svg
+										xmlns='http://www.w3.org/2000/svg'
+										width='16'
+										height='10'
+										viewBox='0 0 16 10'
+										fill='none'
+									>
+										<path
+											d='M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1'
+											stroke='#FCFCFC'
+											strokeWidth='2'
+											strokeLinecap='round'
+											strokeLinejoin='round'
+										/>
+									</svg>
+								</ServiceButton>
+							</ServicesFragment>
+						</ToEmailLink>
+					</ServicesCardsContainer>
 					<ToEmailLink to='en/email'>
 						<ServicesFragment3>
 							<ServiceHeader3>Update</ServiceHeader3>
@@ -317,9 +352,9 @@ export const HomeEN = () => {
 									<path
 										d='M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1'
 										stroke='#FCFCFC'
-										stroke-width='2'
-										stroke-linecap='round'
-										stroke-linejoin='round'
+										strokeWidth='2'
+										strokeLinecap='round'
+										strokeLinejoin='round'
 									/>
 								</svg>
 							</ServiceButton3>
@@ -360,17 +395,14 @@ export const HomeEN = () => {
 					</SwiperWrapper>
 				</MySwiperBox>
 				<ContainerImg>
-					<ContainerImageBW style={{ marginLeft: `${containerClass}px` }}>
+					<ContainerImageBW>
 						{imgArr.map((slider, index) => (
-							<ImageBW
-								key={index}
-								src={slider.imgBW}
-							/>
+							<ImageBW key={index} src={slider.imgBW} />
 						))}
 					</ContainerImageBW>
 				</ContainerImg>
 			</OurTeam>
-			<ConectUsEN name="ConnectUS"/>
+			<ConectUsEN name='ConnectUS' />
 			<FooterEN />
 		</>
 	)
