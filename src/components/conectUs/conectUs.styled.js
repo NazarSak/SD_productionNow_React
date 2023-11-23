@@ -5,7 +5,7 @@ export const ContentUs = styled.section`
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-
+  display: none;
 `;
 
 export const AdoutUs = styled.div`
