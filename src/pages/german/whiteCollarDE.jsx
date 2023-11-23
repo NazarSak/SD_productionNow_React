@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderEN } from "../../components/header/HeaderEN";
+import { HeaderDE } from "../../components/header/HeaderDE";
 import { ConectUsDE } from "../../components/conectUs/conectUsDE";
 import { FooterDE } from "../../components/footer/FooterDE";
 import handshakes from "../../assets/img/whiteCollar/handshakes.png";
@@ -59,7 +59,7 @@ export const WhiteCollarDE = () => {
 
   return (
     <main>
-      <HeaderEN name={"/en/whiteCollar"} />
+      <HeaderDE name={"/en/whiteCollar"} />
 
       <FirstSection>
         <TitleHThree>Geschäftliche Website</TitleHThree>

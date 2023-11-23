@@ -34,6 +34,8 @@ export const HeaderDE = ({ name }) => {
     setIsOpen(false);
   };
 
+console.log(isOpen);
+
   const handleSvgClick = () => {
     if (!isClicked) setIsClicked(true);
     else setIsClicked(false);
@@ -42,9 +44,9 @@ export const HeaderDE = ({ name }) => {
   return (
     <Header>
       <div>
-        <StyledLink to="/de">
+        <Link to="/de">
           <img src={Logo} alt="logo" />
-        </StyledLink>
+        </Link>
       </div>
       <Navigator>
         <NavigatorLi>
@@ -82,7 +84,7 @@ export const HeaderDE = ({ name }) => {
             <HamburgerMenuNavImg src={HamburgerMenu} alt="" />
           </HamburgerMenuNavButton>
          
-            <HamburgerMenuWrapper isOpen={isOpen}>
+            <HamburgerMenuWrapper onClick={handleMenuClose} isopen={isOpen ? "true" : "false"} >
               <HamburgerMenuContent>
                 <StyledLink to="/">
                   <img src={Logo} alt="logo" />
@@ -92,22 +94,22 @@ export const HeaderDE = ({ name }) => {
                 </CloseButton>
                 <MenuList>
                   <li>
-                    <StyledLink href="../../SD_productionNow_React/#projects">
+                    <StyledLink href="../../SD_productionNow_React/#projects" onClick={handleMenuClose}>
                       Projekte
                     </StyledLink>
                   </li>
                   <li>
-                    <StyledLink href="../../SD_productionNow_React/#services">
+                    <StyledLink href="../../SD_productionNow_React/#services" onClick={handleMenuClose}>
                       Dienste
                     </StyledLink>
                   </li>
                   <li>
-                    <StyledLink href="../../SD_productionNow_React/#team">
+                    <StyledLink href="../../SD_productionNow_React/#team" onClick={handleMenuClose}>
                       Team
                     </StyledLink>
                   </li>
                   <li>
-                    <StyledLink href="../../SD_productionNow_React/#contactus">
+                    <StyledLink href="../../SD_productionNow_React/#contactus" onClick={handleMenuClose}>
                       Kontakt
                     </StyledLink>
                   </li>

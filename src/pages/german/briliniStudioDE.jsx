@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderEN } from "../../components/header/HeaderEN";
+import { HeaderDE } from "../../components/header/HeaderDE";
 import { ConectUsDE } from "../../components/conectUs/conectUsDE";
 import { FooterDE } from "../../components/footer/FooterDE";
 import house from "../../assets/img/briliniStudio/house.png";
@@ -46,7 +46,7 @@ export const BriliniStudioDE = () => {
 
   return (
     <main>
-      <HeaderEN name={"/en/briliniStudio"} />
+      <HeaderDE name={"/en/briliniStudio"} />
 
       <FirstSection>
         <TitleHThree>Landing page</TitleHThree>

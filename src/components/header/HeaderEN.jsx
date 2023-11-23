@@ -34,6 +34,11 @@ export const HeaderEN = ({ name }) => {
     setIsOpen(false);
   };
 
+  const handleListClick = (event) => {
+    event.stopPropagation(); 
+  };
+
+
   const handleSvgClick = () => {
     if (!isClicked) setIsClicked(true);
     else setIsClicked(false);
@@ -42,9 +47,9 @@ export const HeaderEN = ({ name }) => {
   return (
     <Header>
       <div>
-        <StyledLink to="/">
+        <Link to="/">
           <img src={Logo} alt="logo" />
-        </StyledLink>
+        </Link>
       </div>
       <Navigator>
         <NavigatorLi>
@@ -82,15 +87,15 @@ export const HeaderEN = ({ name }) => {
             <HamburgerMenuNavImg src={HamburgerMenu} alt="" />
           </HamburgerMenuNavButton>
          
-            <HamburgerMenuWrapper isOpen={isOpen}>
+            <HamburgerMenuWrapper onClick={handleMenuClose} isopen={isOpen ? "true" : "false"}>
               <HamburgerMenuContent>
-                <StyledLink to="/">
+                <Link to="/" >
                   <img src={Logo} alt="logo" />
-                </StyledLink>
-                <CloseButton onClick={handleMenuClose}>
+                </Link>
+                <CloseButton>
                   <ImgClose src={ButtonClose} alt="Button" />
                 </CloseButton>
-                <MenuList>
+                <MenuList onClick={handleListClick}>
                   <li>
                     <StyledLink href="../../SD_productionNow_React/#projects" onClick={handleMenuClose}>
                       Projects

@@ -201,7 +201,7 @@ export const HamburgerMenuWrapper = styled.div`
     overflow: auto;
     background: #000;
     transform: ${(props) =>
-      props.isOpen ? "translateX(0)" : "translateX(100%)"};
+      props.isopen === 'true' ? 'translateX(0)' : 'translateX(100%)'};
     transition: transform 1s ease-in-out;
   }
 `;
