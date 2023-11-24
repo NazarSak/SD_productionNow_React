@@ -30,6 +30,7 @@ import {
   TitlePage,
   TitleHTwo,
   TitleSpan,
+  TitleGoalsDE,
   ImageFirst,
   ParagraphAbProject,
   SvgImg,
@@ -89,9 +90,9 @@ export const OrganicShopDE = () => {
       </SecondSection>
 
       <ThirdSection>
-        <TitleHTwo>
+        <TitleGoalsDE>
           Ziele und<TitleSpan>Zielsetzungen</TitleSpan>
-        </TitleHTwo>
+        </TitleGoalsDE>
         <List>
           <Li>
             <NumberOfList>1</NumberOfList>

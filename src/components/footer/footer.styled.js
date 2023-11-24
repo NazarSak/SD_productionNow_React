@@ -60,6 +60,9 @@ export const List = styled.ul`
   display: flex;
   gap: 48px;
   margin-top: 48px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;
 
 export const SecondList = styled.ul`
@@ -67,6 +70,16 @@ export const SecondList = styled.ul`
   justify-content: center;
   gap: 48px;
   align-items: center;
+`;
+
+export const SecondListDE = styled.ul`
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  margin-top: 32px;
 `;
 
 export const Footer = styled.footer`
@@ -80,5 +93,11 @@ export const Footer = styled.footer`
     background-size: cover;
     width: 507px;
     height: 407px;
+  }
+`;
+
+export const LineTablet = styled.img`
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 `;

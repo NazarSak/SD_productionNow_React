@@ -9,6 +9,7 @@ import {
 	LinkToPrivacy,
 	Context,
 	SecondList,
+	LineTablet,
 } from './footer.styled'
 import Logo from '../../assets/svg/logo.svg'
 
@@ -16,7 +17,7 @@ export const FooterEN = ({ showImg }) => {
 	return (
 		<Section>
 			{!showImg && (
-				<img src={deviderLine} alt='deviderLine' height='165px' width='640px' />
+				<LineTablet src={deviderLine} alt='deviderLine' height='165px' width='640px' />
 			)}
 
 			<Footer>

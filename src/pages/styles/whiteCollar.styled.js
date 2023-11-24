@@ -8,12 +8,19 @@ export const TitleHThree = styled.h3`
 export const TitlePage = styled.h2`
   color: var(--02-dark-color-white, #fff);
   @media screen and (max-width: 1199px) {
-    text-align: center;
-    font-family: Montserrat;
     font-size: 64px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+  }
+`;
+
+export const TitleInTwoLine = styled.h2`
+  color: var(--02-dark-color-white, #fff);
+
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+    width: min-content;
   }
 `;
 
@@ -26,6 +33,12 @@ export const TitleSpan = styled.span`
   -webkit-text-fill-color: #000;
   -webkit-text-stroke: 1.5px #fff;
   font-weight: 600;
+`;
+
+export const TitleGoalsDE = styled.h2`
+  color: var(--02-dark-color-white, #fff);
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 export const ImageFirst = styled.img`
@@ -47,6 +60,9 @@ export const SvgImg = styled.img`
     width: 285px;
     height: 80px;
   }
+  @media screen and (max-width: 767px) {
+    width: 343px;
+  }
 `;
 
 export const ParagraphGoals = styled.p`
@@ -65,6 +81,10 @@ export const List = styled.ul`
   @media screen and (max-width: 1199px) {
     flex-wrap: wrap;
   }
+  @media screen and (max-width: 767px) {
+    gap: 24px;
+    justify-content: start;
+  }
 `;
 
 export const Li = styled.li`
@@ -72,6 +92,9 @@ export const Li = styled.li`
   align-items: center;
   @media screen and (max-width: 1199px) {
     width: 320px;
+  }
+  @media screen and (max-width: 767px) {
+    height: 78px;
   }
 `;
 
@@ -117,6 +140,15 @@ export const Line = styled.div`
     width: 1px;
     height: 250px;
   }
+  @media screen and (max-width: 767px) {
+    width: 343px;
+    height: 1px;
+    background: radial-gradient(
+      circle,
+      rgba(163, 163, 163, 0.7) 0%,
+      rgba(0, 0, 0, 0) 89.9%
+    );
+  }
 `;
 
 export const NaturalFoodImg = styled.img`
@@ -130,22 +162,32 @@ export const NaturalFoodImg = styled.img`
 
   @media screen and (max-width: 1199px) {
     width: 672px;
-    height: 350px;
-    border-radius: 40px;
+    height: 385px;
     border: 5px solid var(--grey-B, #595959);
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 343px;
+    height: 197px;
+    border-radius: 20px;
+    border: 3px solid var(--grey-B, #595959);
   }
 `;
 
 export const SecondNaturalFoodImg = styled.img`
   width: 815px;
   height: 4116px;
-  flex-shrink: 0;
   border-radius: 0px 0px 40px 40px;
 
   @media screen and (max-width: 1199px) {
     width: 464px;
-    height: 2160px;
+    height: 2344px;
     border-radius: 0px 0px 40px 40px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 237px;
+    height: 1196px;
+    border-radius: 0px 0px 40px 20px;
   }
 `;
 
@@ -165,6 +207,9 @@ export const SecondConatinerInternalImg = styled.div`
   @media screen and (max-width: 1199px) {
     gap: 48px;
   }
+  @media screen and (max-width: 767px) {
+    gap: 32px;
+  }
 `;
 
 export const InternalImgOne = styled.img`
@@ -181,6 +226,12 @@ export const InternalImgOne = styled.img`
     margin-top: 24px;
     border: 5px solid var(--grey-B, #595959);
   }
+  @media screen and (max-width: 767px) {
+    width: 145px;
+    height: 256px;
+    border-radius: 20px;
+    border: 1px solid var(--grey-B, #595959);
+  }
 `;
 
 export const InternalImgSecond = styled.img`
@@ -195,6 +246,13 @@ export const InternalImgSecond = styled.img`
     height: 636px;
     margin-top: 48px;
   }
+  @media screen and (max-width: 767px) {
+    width: 145px;
+    height: 300px;
+    border-radius: 20px;
+    margin-top: 32px;
+    border: 1px solid var(--grey-B, #595959);
+  }
 `;
 
 export const InternalImgThree = styled.img`
@@ -208,6 +266,13 @@ export const InternalImgThree = styled.img`
     height: 800px;
     margin-top: 80px;
   }
+  @media screen and (max-width: 767px) {
+    width: 145px;
+    height: 381px;
+    margin-top: 132px;
+    border-radius: 20px;
+    border: 1px solid var(--grey-B, #595959);
+  }
 `;
 
 export const InternalImgFour = styled.img`
@@ -220,6 +285,12 @@ export const InternalImgFour = styled.img`
     width: 302px;
     height: 283px;
   }
+  @media screen and (max-width: 767px) {
+    width: 145px;
+    height: 129px;
+    border-radius: 20px;
+    border: 1px solid var(--grey-B, #595959);
+  }
 `;
 
 export const InternalImgFive = styled.img`
@@ -231,6 +302,12 @@ export const InternalImgFive = styled.img`
   @media screen and (max-width: 1199px) {
     width: 302px;
     height: 418px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 145px;
+    height: 201px;
+    border-radius: 20px;
+    border: 1px solid var(--grey-B, #595959);
   }
 `;
 

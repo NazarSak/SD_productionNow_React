@@ -28,11 +28,17 @@ export const TitleHTwo = styled.h2`
   color: var(--02-dark-color-white, #fff);
 `;
 
-export const TitleSpan = styled.span`
+export const TitleSpan = styled.span` 
   font-family: "Poppins", sans-serif;
   -webkit-text-fill-color: #000;
   -webkit-text-stroke: 1.5px #fff;
   font-weight: 600;
+`;
+
+export const TitleGoalsDE = styled.h2`
+  color: var(--02-dark-color-white, #fff);
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 export const ImageFirst = styled.img`
@@ -203,7 +209,6 @@ export const SecondConatinerInternalImg = styled.div`
   }
   @media screen and (max-width: 767px) {
     gap: 32px;
-  
   }
 `;
 

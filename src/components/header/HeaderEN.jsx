@@ -5,6 +5,7 @@ import HamburgerMenu from "../../assets/svg/HamburgerMenu.svg";
 import ButtonClose from "../../assets/svg/emailPage/Close.svg";
 
 import {
+  ContainerLogo,
   ChangeLanguage,
   ChangeLanguageLi,
   ChangeLanguageUl,
@@ -18,6 +19,7 @@ import {
   HamburgerMenuNavImg,
   HamburgerMenuWrapper,
   HamburgerMenuContent,
+  ChangeLanguageMobile,
   ImgClose,
   CloseButton,
 } from "./Header.styled";
@@ -52,6 +54,7 @@ export const HeaderEN = ({ name }) => {
           <img src={Logo} alt="logo" />
         </Link>
       </div>
+
       <Navigator>
         <NavigatorLi>
           <StyledLink href="../../SD_productionNow_React/#projects">
@@ -93,9 +96,12 @@ export const HeaderEN = ({ name }) => {
             isopen={isOpen ? "true" : "false"}
           >
             <HamburgerMenuContent>
-              <Link to="/">
-                <img src={Logo} alt="logo" />
-              </Link>
+              <ContainerLogo>
+                <Link to="/">
+                  <img src={Logo} alt="logo" />
+                </Link>
+                <Link to="/">Hero</Link>
+              </ContainerLogo>
               <CloseButton>
                 <ImgClose src={ButtonClose} alt="Button" />
               </CloseButton>
@@ -131,6 +137,13 @@ export const HeaderEN = ({ name }) => {
                   >
                     Contact us
                   </StyledLink>
+                </li>
+                <li>
+                  <ChangeLanguageMobile>
+                    <Link  onClick={handleMenuClose}>EN</Link>
+                    <div />
+                    <Link to={name}>DE</Link>
+                  </ChangeLanguageMobile>
                 </li>
               </MenuList>
             </HamburgerMenuContent>

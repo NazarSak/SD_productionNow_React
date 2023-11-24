@@ -5,6 +5,7 @@ import HamburgerMenu from "../../assets/svg/HamburgerMenu.svg";
 import ButtonClose from "../../assets/svg/emailPage/Close.svg";
 
 import {
+  ContainerLogo,
   ChangeLanguage,
   ChangeLanguageLi,
   ChangeLanguageUl,
@@ -18,6 +19,7 @@ import {
   HamburgerMenuNavImg,
   HamburgerMenuWrapper,
   HamburgerMenuContent,
+  ChangeLanguageMobile,
   ImgClose,
   CloseButton,
 } from "./Header.styled";
@@ -36,7 +38,9 @@ export const HeaderDE = ({ name }) => {
     }, 0);
   };
 
-  console.log(isOpen);
+  const handleListClick = (event) => {
+    event.stopPropagation();
+  };
 
   const handleSvgClick = () => {
     if (!isClicked) setIsClicked(true);
@@ -50,6 +54,7 @@ export const HeaderDE = ({ name }) => {
           <img src={Logo} alt="logo" />
         </Link>
       </div>
+
       <Navigator>
         <NavigatorLi>
           <StyledLink href="../../SD_productionNow_React/#projects">
@@ -91,13 +96,16 @@ export const HeaderDE = ({ name }) => {
             isopen={isOpen ? "true" : "false"}
           >
             <HamburgerMenuContent>
-              <StyledLink to="/">
-                <img src={Logo} alt="logo" />
-              </StyledLink>
-              <CloseButton onClick={handleMenuClose}>
+              <ContainerLogo>
+                <Link to="/de">
+                  <img src={Logo} alt="logo" />
+                </Link>
+                <Link to="/de">Held</Link>
+              </ContainerLogo>
+              <CloseButton>
                 <ImgClose src={ButtonClose} alt="Button" />
               </CloseButton>
-              <MenuList>
+              <MenuList onClick={handleListClick}>
                 <li>
                   <StyledLink
                     href="../../SD_productionNow_React/#projects"
@@ -129,6 +137,13 @@ export const HeaderDE = ({ name }) => {
                   >
                     Kontakt
                   </StyledLink>
+                </li>
+                <li>
+                  <ChangeLanguageMobile>
+                    <Link onClick={handleMenuClose}>DE</Link>
+                    <div />
+                    <Link to={name}>EN</Link>
+                  </ChangeLanguageMobile>
                 </li>
               </MenuList>
             </HamburgerMenuContent>
