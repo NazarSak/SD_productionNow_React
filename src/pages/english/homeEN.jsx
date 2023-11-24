@@ -220,31 +220,34 @@ export const HomeEN = () => {
 					</ProjectsFragment2>
 
 					<ProjectContainer2>
-            <ProjectContainerImg>
-						<ProjectsFragment3>
-							<ProjectImage31 src={BriliniImg1} />
-							<ProjectImage32 src={BriliniImg2} />
-							<ProjectsFragmentInfo3>
-								<h4>Landing page</h4>
-								<h3>Brilini Studio</h3>
-								{windowWidth > 1200 ? (
-									<p>
-										Studio of interior designers specializing in the furnishing
-										and design of rooms, apartments and houses in a modern and
-										austere style.
-									</p>
-								) : (
-									<p>
-										Studio of interior designers specializing in the furnishing
-										and design of rooms
-									</p>
-								)}
-								<ButtonProject3 to='/en/briliniStudio' onClick={handleClickTop}>
-									View
-								</ButtonProject3>
-							</ProjectsFragmentInfo3>
-						</ProjectsFragment3>
-            </ProjectContainerImg>
+						<ProjectContainerImg>
+							<ProjectsFragment3>
+								<ProjectImage31 src={BriliniImg1} />
+								<ProjectImage32 src={BriliniImg2} />
+								<ProjectsFragmentInfo3>
+									<h4>Landing page</h4>
+									<h3>Brilini Studio</h3>
+									{windowWidth > 1200 ? (
+										<p>
+											Studio of interior designers specializing in the
+											furnishing and design of rooms, apartments and houses in a
+											modern and austere style.
+										</p>
+									) : (
+										<p>
+											Studio of interior designers specializing in the
+											furnishing and design of rooms
+										</p>
+									)}
+									<ButtonProject3
+										to='/en/briliniStudio'
+										onClick={handleClickTop}
+									>
+										View
+									</ButtonProject3>
+								</ProjectsFragmentInfo3>
+							</ProjectsFragment3>
+						</ProjectContainerImg>
 
 						<ProjectsFragment4>
 							<ProjectImage41 src={AbiImg1} />
@@ -252,11 +255,20 @@ export const HomeEN = () => {
 							<ProjectsFragmentInfo4>
 								<h4>Mobile App</h4>
 								<h3>Abi</h3>
+                {windowWidth > 1200 ?
+                (
 								<p>
 									Mobile application for creating presentations with ready-made
 									templates based on artificial intelligence. The application is
 									available on Play Market and App Store.
 								</p>
+                ) : (
+								<p>
+									Mobile application for creating presentations with ready-made
+									templates
+								</p>
+                )
+                }
 								<ButtonProject4 to='en/abi' onClick={handleClickTop}>
 									View
 								</ButtonProject4>
