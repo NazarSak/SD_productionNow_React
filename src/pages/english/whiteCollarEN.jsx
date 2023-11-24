@@ -7,7 +7,7 @@ import Logo from "../../assets/svg/whiteCollar/Logo.svg";
 import OptimisatorImg from "../../technical/OptimisatorImg";
 import ImagePeople from "../../assets/img/whiteCollar/ImagePeople.png";
 import Banner from "../../assets/img/whiteCollar/Banner.png";
-import screnshot from "../../assets/img/whiteCollar/screnshot.png";
+import screnshot from "../../assets/img/whiteCollar/screnshot.png"; 
 import Video from "../../assets/video/white_collar.mp4";
 import InternalOne from "../../assets/img/whiteCollar/internalOne.png";
 import InternalTwo from "../../assets/img/whiteCollar/internalTwo.png";

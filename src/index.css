@@ -18,7 +18,7 @@ body {
   display: flex;
   justify-content: center;
   margin: 0;
-  padding: 0;
+  padding: 15px 0;
 }
 
 main {
@@ -27,7 +27,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* padding: 0 15px; */
+  overflow: hidden;
 }
 
 section {
@@ -66,13 +66,19 @@ button {
   outline: none;
 }
 
-
-
 @media screen and (max-width: 1199px) {
   section {
-    width: 672px; 
+    width: 672px;
   }
   h2 {
     font-size: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  section {
+    width: 343px;
+  }
+  h2 {
+    font-size: 41px;
   }
 }

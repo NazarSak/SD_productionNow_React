@@ -22,6 +22,10 @@ export const Header = styled.header`
     padding: 0 48px;
     margin: 0;
   }
+  @media (max-width: 767px) {
+    width: 343px;
+    padding: 0 16px;
+  }
 `;
 
 export const Navigator = styled.ul`
@@ -93,6 +97,15 @@ export const ChangeLanguage = styled.div`
       margin: 8px 0 0 60px;
     }
   }
+  @media (max-width: 767px) {
+    & svg {
+      display: none;
+    }
+
+    & svg.open {
+      display: none;
+    }
+  }
 `;
 
 export const ChangeLanguageUl = styled.ul`
@@ -101,12 +114,14 @@ export const ChangeLanguageUl = styled.ul`
   padding: 12px 24px;
   gap: 16px;
   border-radius: 10px;
-  /* position: absolute; */
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   background: #000;
   transition: all 0.9s;
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 
 export const ChangeLanguageLi = styled.li`
@@ -181,6 +196,9 @@ export const HamburgerMenuNavButton = styled.button`
     border: none;
     margin-left: 30px;
   }
+  @media (max-width: 767px) {
+    margin-left: 125px;
+  }
 `;
 
 export const HamburgerMenuNavImg = styled.img`
@@ -201,7 +219,7 @@ export const HamburgerMenuWrapper = styled.div`
     overflow: auto;
     background: #000;
     transform: ${(props) =>
-      props.isopen === 'true' ? 'translateX(0)' : 'translateX(100%)'};
+      props.isopen === "true" ? "translateX(0)" : "translateX(100%)"};
     transition: transform 1s ease-in-out;
   }
 `;
@@ -213,12 +231,14 @@ export const HamburgerMenuContent = styled.div`
   flex-direction: column;
   gap: 64px;
   margin-top: 126px;
+  @media (max-width: 767px) {
+    margin-top: 69px;
+  }
 `;
 
 export const MenuList = styled.ul`
   @media (max-width: 1199px) {
     list-style: none;
-    padding: 0;
     background-color: black;
     padding: 10px;
     border-radius: 5px;
@@ -226,6 +246,10 @@ export const MenuList = styled.ul`
     flex-direction: column;
     gap: 48px;
     margin: 0;
+  }
+  @media (max-width: 767px) {
+    padding: 0;
+    gap: 64px;
   }
 `;
 
@@ -246,6 +270,10 @@ export const CloseButton = styled.button`
     &:hover {
       border-color: white;
     }
+    @media (max-width: 767px) {
+      top: 32px;
+      right: 16px;
+    }
   }
 `;
 
@@ -253,5 +281,63 @@ export const ImgClose = styled.img`
   @media (max-width: 1199px) {
     width: 24px;
     height: 24px;
+  }
+`;
+
+export const ContainerLogo = styled.div`
+  @media (max-width: 1199px) {
+    & p {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    & img {
+      display: none;
+    }
+    & a {
+      display: block;
+      transition: all 0.9s;
+      display: block;
+      text-align: center;
+      align-items: center;
+      margin: 0;
+      color: #fcfcfc;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      text-decoration: none;
+      &:hover {
+        color: #7d3bd1;
+      }
+    }
+  }
+`;
+
+export const ChangeLanguageMobile = styled.div`
+  display: none;
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    & a {
+      color: var(--02-dark-color-white, #fff);
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-decoration: none;
+    }
+
+    & div {
+      display: block;
+      width: 1px;
+      height: 20px;
+      background: #181818;
+    }
   }
 `;

@@ -28,6 +28,7 @@ import {
 import {
   TitleHThree,
   TitlePage,
+  TitleInTwoLine,
   TitleHTwo,
   TitleSpan,
   ImageFirst,
@@ -73,9 +74,9 @@ export const OrganicShopEN = () => {
 
       <SecondSection>
         <div>
-          <TitleHTwo>
+          <TitleInTwoLine>
             About <TitleSpan>Project</TitleSpan>
-          </TitleHTwo>
+          </TitleInTwoLine>
           <ParagraphAbProject>
             Organick is an online store of organic fruits, vegetables and
             berries. The customer is a farmer from England. Organick has its
@@ -147,9 +148,9 @@ export const OrganicShopEN = () => {
 
       <FifthSection>
         <FirstConatinerInternalImg>
-          <TitleHTwo>
+          <TitleInTwoLine>
             Internal <TitleSpan>Pages</TitleSpan>
-          </TitleHTwo>
+          </TitleInTwoLine>
 
           <OptimisatorImg
             src={InternalOne}

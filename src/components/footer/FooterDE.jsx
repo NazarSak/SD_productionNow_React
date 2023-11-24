@@ -9,6 +9,8 @@ import {
 	LinkToPrivacy,
 	Context,
 	SecondList,
+	LineTablet,
+	SecondListDE,
 } from './footer.styled'
 import Logo from '../../assets/svg/logo.svg'
 
@@ -16,7 +18,7 @@ export const FooterDE = ({ showImg }) => {
 	return (
 		<Section>
 			{!showImg && (
-				<img src={deviderLine} alt='deviderLine' height='165px' width='640px' />
+				<LineTablet src={deviderLine} alt='deviderLine' height='165px' width='640px' />
 			)}
 
 			<Footer>
@@ -36,7 +38,7 @@ export const FooterDE = ({ showImg }) => {
 					</li>
 				</List>
 
-				<SecondList>
+				<SecondListDE>
 					<li>
 						<LinkToPrivacy to='/de/privacy' onClick={handleClickTop}>
 							Datenschutzrichtlinie
@@ -45,7 +47,7 @@ export const FooterDE = ({ showImg }) => {
 					<li>
 						<Context>© 2023 Alle Rechte vorbehalten.</Context>
 					</li>
-				</SecondList>
+				</SecondListDE>
 			</Footer>
 		</Section>
 	)
