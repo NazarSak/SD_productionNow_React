@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React,{ useState, useEffect } from "react";
 import { ModalkaEN } from "../modalka/ModalkaEN";
 import CursorBlue from "../../assets/svg/contactUs/CursorBlue.svg";
 import CursorRed from "../../assets/svg/contactUs/CursorRed.svg";
@@ -26,6 +26,16 @@ import {
 export const ConectUsEN = () => {
 
   const [openModal, setOpenModal] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+	useEffect(() => {
+		const handleResize = () => {
+			setWindowWidth(window.innerWidth)
+		}
+		window.addEventListener('resize', handleResize)
+		return () => {
+			window.removeEventListener('resize', handleResize)
+		}
+	}, [])
 
   const handleOpenModal = () => {
     setOpenModal(true);
@@ -38,11 +48,18 @@ export const ConectUsEN = () => {
 				<h2>
 					Order <span>Your</span> Project Now
 				</h2>
-				<p>
-					We are a multi-disciplinary team creating the best websites for our
-					clients. Trust the future of your business to us and we will show you
-					how your business will grow!
-				</p>
+				{windowWidth > 1200 ? (
+					<p>
+						We are a multi-disciplinary team creating the best websites for our
+						clients. Trust the future of your business to us and we will show
+						you how your business will grow!
+					</p>
+				) : (
+					<p>
+						We are a multi-disciplinary team creating the best websites for our
+						clients.
+					</p>
+				)}
 				<ContentUsBtn onClick={handleOpenModal}>Contact</ContentUsBtn>
 				{openModal && <ModalkaEN setOpenModal={setOpenModal} />}
 			</AdoutUs>
