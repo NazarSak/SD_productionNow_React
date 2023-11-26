@@ -10,7 +10,7 @@ import {
 	Context,
 	SecondList,
 	LineTablet,
-} from './footer.styled'
+} from './footer.styled' 
 import Logo from '../../assets/svg/logo.svg'
 
 export const FooterEN = ({ showImg }) => {

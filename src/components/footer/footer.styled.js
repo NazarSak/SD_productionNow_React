@@ -94,6 +94,10 @@ export const Footer = styled.footer`
     width: 507px;
     height: 407px;
   }
+  @media screen and (max-width: 1199px) {
+    /* width: 343px;
+    height: 260px; */
+  }
 `;
 
 export const LineTablet = styled.img`

@@ -8,9 +8,11 @@ import {
   BackButton,
   Container,
   Paragraph,
+  ParagraphLine,
   ParagraphSpan,
   List,
   Section,
+  Br,
   Line,
   ParagraphSpanWithUnderLine,
   Li,
@@ -59,48 +61,48 @@ export const PrivacyEN = () => {
           <List>
             <Li>
               <Line />
-              <Paragraph>Full name, phone number, e-mail address.</Paragraph>
+              <ParagraphLine>Full name, phone number, e-mail address.</ParagraphLine>
             </Li>
 
             <Li>
               <Line />
-              <Paragraph>
+              <ParagraphLine>
                 User information when contracting services on the website.
-              </Paragraph>
+              </ParagraphLine>
             </Li>
 
             <Li>
               <Line />
-              <Paragraph>
+              <ParagraphLine>
                 Data on devices and their use: IP address, time, date of use of
                 the website by the user, software, as well as browser, operating
                 system and other data revealed by the user.
-              </Paragraph>
+              </ParagraphLine>
             </Li>
 
             <Li>
               <Line />
-              <Paragraph>
+              <ParagraphLine>
                 Data from surveys related to improving the provision of services
                 to users; information obtained by the website as a result of
                 marketing activities.
-              </Paragraph>
+              </ParagraphLine>
             </Li>
 
             <Li>
               <Line />
-              <Paragraph>
+              <ParagraphLine>
                 Information posted by users based on the results of their
                 service, feedback, comments, support requests, complaints,
                 grievances and other inquiries.
-              </Paragraph>
+              </ParagraphLine>
             </Li>
           </List>
         </Section>
         {/* 3 */}
         <Section>
           <TitleHTwo>
-            Use of cookies and
+            Use of <Br /> cookies and
             <TitleSpan>
               <br /> Other technology
             </TitleSpan>
@@ -193,19 +195,19 @@ export const PrivacyEN = () => {
             </Li>
             <Li>
               <Line />
-              <Paragraph>
+              <ParagraphLine>
                 Upon reasonable requests from public authorities authorized to
                 request and receive such data.
-              </Paragraph>
+              </ParagraphLine>
             </Li>
             <Li>
               <Line />
-              <Paragraph>
+              <ParagraphLine>
                 In case the user, in the opinion of the site administration,
                 violates the provisions of this policy or other contracts and
                 agreements concluded between the site and the user, as well as
                 the provisions of the user agreement.
-              </Paragraph>
+              </ParagraphLine>
             </Li>
             <Li>
               <Paragraph>

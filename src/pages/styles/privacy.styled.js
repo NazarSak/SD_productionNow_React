@@ -14,19 +14,33 @@ export const Container = styled.section`
   margin-top: 48px;
   @media screen and (max-width: 1199px) {
     width: 672px;
-  padding: 0 48px;
+    padding: 0 48px;
   }
-`; 
+  @media screen and (max-width: 767px) {
+    width: 343px;
+    padding: 0 16px;
+  }
+`;
 
 export const Section = styled.section`
   margin-top: 100px;
+  @media screen and (max-width: 767px) {
+    /* margin-top: 48px; */
+  }
 `;
 export const Line = styled.div`
   width: 12px;
   height: 1px;
   background: #cfcfcf;
+  position: absolute;
 `;
 
+export const Br = styled.br`
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+`;
 export const TitleSpan = styled.span`
   font-family: "Poppins", sans-serif;
   -webkit-text-fill-color: #000;
@@ -43,6 +57,18 @@ export const Paragraph = styled.p`
   line-height: 160%;
   letter-spacing: -0.4px;
   margin: 0;
+`;
+
+export const ParagraphLine = styled.p`
+  color: var(--grey-C, #cfcfcf);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: -0.4px;
+  margin: 0;
+  margin-left: 23px;
 `;
 
 export const ParagraphSpan = styled.span`
