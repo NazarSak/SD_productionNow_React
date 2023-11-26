@@ -6,6 +6,7 @@ import ButtonClose from "../../assets/svg/emailPage/Close.svg";
 
 import {
   ContainerLogo,
+  HeroLink,
   ChangeLanguage,
   ChangeLanguageLi,
   ChangeLanguageUl,
@@ -53,7 +54,7 @@ export const HeaderEN = ({ name }) => {
         <Link to="/">
           <img src={Logo} alt="logo" />
         </Link>
-      </div>
+      </div> 
 
       <Navigator>
         <NavigatorLi>
@@ -100,7 +101,7 @@ export const HeaderEN = ({ name }) => {
                 <Link to="/">
                   <img src={Logo} alt="logo" />
                 </Link>
-                <Link to="/">Hero</Link>
+                <HeroLink to="/">Hero</HeroLink>
               </ContainerLogo>
               <CloseButton>
                 <ImgClose src={ButtonClose} alt="Button" />

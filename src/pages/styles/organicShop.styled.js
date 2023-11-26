@@ -128,6 +128,14 @@ export const NumberOfList = styled.span`
   }
 `;
 
+export const ContainerLine = styled.div`
+  @media screen and (max-width: 767px) {
+    width: 343px;
+    display: flex;
+    justify-content: center;
+  }
+`;
+
 export const Line = styled.div`
   width: 1px;
   height: 200px;
@@ -141,7 +149,7 @@ export const Line = styled.div`
     height: 250px;
   }
   @media screen and (max-width: 767px) {
-    width: 343px;
+    width: 203px;
     height: 1px;
     background: radial-gradient(
       circle,

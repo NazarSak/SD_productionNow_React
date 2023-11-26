@@ -7,7 +7,7 @@ import Logo from "../../assets/svg/whiteCollar/Logo.svg";
 import OptimisatorImg from "../../technical/OptimisatorImg";
 import ImagePeople from "../../assets/img/whiteCollar/ImagePeople.png";
 import Banner from "../../assets/img/whiteCollar/Banner.png";
-import screnshot from "../../assets/img/whiteCollar/screnshot.png"; 
+import screnshot from "../../assets/img/whiteCollar/screnshot.png";
 import Video from "../../assets/video/white_collar.mp4";
 import InternalOne from "../../assets/img/whiteCollar/internalOne.png";
 import InternalTwo from "../../assets/img/whiteCollar/internalTwo.png";
@@ -26,17 +26,20 @@ import {
   SixthSection,
 } from "../styles/General/section.styled";
 import {
-  TitleHThree, 
+  TitleHThree,
   TitlePage,
+  TitleInTwoLine,
   TitleHTwo,
   TitleSpan,
   ImageFirst,
   ParagraphAbProject,
+  SvgImgContainer,
   SvgImg,
   ParagraphGoals,
   List,
   Li,
   NumberOfList,
+  ContainerLine,
   Line,
   NaturalFoodImg,
   SecondNaturalFoodImg,
@@ -72,9 +75,9 @@ export const WhiteCollarEN = () => {
 
       <SecondSection>
         <div>
-          <TitleHTwo>
+          <TitleInTwoLine>
             About <TitleSpan>Project</TitleSpan>
-          </TitleHTwo>
+          </TitleInTwoLine>
           <ParagraphAbProject>
             Developing and implementing Agile methods in the strategic
             management of a corporation is crucial in today's rapidly changing
@@ -84,9 +87,12 @@ export const WhiteCollarEN = () => {
           </ParagraphAbProject>
         </div>
 
-        <Line />
-
-        <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
+        <ContainerLine>
+          <Line />
+        </ContainerLine>
+        <SvgImgContainer>
+          <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
+        </SvgImgContainer>
       </SecondSection>
 
       <ThirdSection>

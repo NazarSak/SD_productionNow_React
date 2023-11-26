@@ -59,7 +59,8 @@ export const FifthSection = styled.section`
   }
   @media screen and (max-width: 767px) {
     margin-top: 48px;
-    gap: 15px;
+    gap: 28px;
+    justify-content: center;
   }
 `;
 

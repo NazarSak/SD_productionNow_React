@@ -55,13 +55,22 @@ export const ParagraphAbProject = styled.p`
   }
 `;
 
+export const SvgImgContainer = styled.div`
+  @media screen and (max-width: 767px) {
+    width: 343px;
+    display: flex;
+    justify-content: center;
+  }
+`;
+
 export const SvgImg = styled.img`
   @media screen and (max-width: 1199px) {
     width: 285px;
     height: 80px;
   }
   @media screen and (max-width: 767px) {
-    width: 343px;
+    width: 285px;
+    height: 55px;
   }
 `;
 
@@ -128,6 +137,14 @@ export const NumberOfList = styled.span`
   }
 `;
 
+export const ContainerLine = styled.div`
+  @media screen and (max-width: 767px) {
+    width: 343px;
+    display: flex;
+    justify-content: center;
+  }
+`;
+
 export const Line = styled.div`
   width: 1px;
   height: 200px;
@@ -141,7 +158,7 @@ export const Line = styled.div`
     height: 250px;
   }
   @media screen and (max-width: 767px) {
-    width: 343px;
+    width: 203px;
     height: 1px;
     background: radial-gradient(
       circle,
@@ -198,7 +215,11 @@ export const ConatinerImg = styled.div`
   align-items: center;
 `;
 
-export const FirstConatinerInternalImg = styled.div``;
+export const FirstConatinerInternalImg = styled.div`
+  @media screen and (max-width: 767px) {
+    width: 145px;
+  }
+`;
 
 export const SecondConatinerInternalImg = styled.div`
   display: flex;

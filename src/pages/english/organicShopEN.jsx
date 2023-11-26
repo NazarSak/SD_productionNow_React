@@ -38,6 +38,7 @@ import {
   List,
   Li,
   NumberOfList,
+  ContainerLine,
   Line,
   NaturalFoodImg,
   SecondNaturalFoodImg,
@@ -85,7 +86,9 @@ export const OrganicShopEN = () => {
           </ParagraphAbProject>
         </div>
 
-        <Line />
+        <ContainerLine>
+          <Line />
+        </ContainerLine>
 
         <OptimisatorImg src={OrganicSvg} alt="image" ImageType={SvgImg} />
       </SecondSection>

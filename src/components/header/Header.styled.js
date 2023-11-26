@@ -285,32 +285,31 @@ export const ImgClose = styled.img`
 `;
 
 export const ContainerLogo = styled.div`
-  @media (max-width: 1199px) {
-    & p {
-      display: none;
-    }
-  }
-
   @media (max-width: 767px) {
     & img {
       display: none;
     }
-    & a {
-      display: block;
-      transition: all 0.9s;
-      display: block;
-      text-align: center;
-      align-items: center;
-      margin: 0;
-      color: #fcfcfc;
-      font-family: Montserrat;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      text-decoration: none;
-      &:hover {
-        color: #7d3bd1;
-      }
+  }
+`;
+
+export const HeroLink = styled(Link)`
+  @media (max-width: 1199px) {
+    display: none;
+  }
+  @media (max-width: 767px) {
+    display: block;
+    transition: all 0.9s;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    color: #fcfcfc;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    text-decoration: none;
+    &:hover {
+      color: #7d3bd1;
     }
   }
 `;
