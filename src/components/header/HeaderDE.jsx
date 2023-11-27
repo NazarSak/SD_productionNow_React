@@ -6,6 +6,7 @@ import ButtonClose from "../../assets/svg/emailPage/Close.svg";
 
 import {
   ContainerLogo,
+  HeroLink,
   ChangeLanguage,
   ChangeLanguageLi,
   ChangeLanguageUl,
@@ -53,27 +54,27 @@ export const HeaderDE = ({ name }) => {
         <Link to="/de">
           <img src={Logo} alt="logo" />
         </Link>
-      </div>
+      </div> 
 
       <Navigator>
         <NavigatorLi>
           <StyledLink href="../../SD_productionNow_React/#projects">
-            Projekte
+          Projekte
           </StyledLink>
         </NavigatorLi>
         <NavigatorLi>
           <StyledLink href="../../SD_productionNow_React/#services">
-            Dienste
+          Dienste
           </StyledLink>
         </NavigatorLi>
         <NavigatorLi>
           <StyledLink href="../../SD_productionNow_React/#team">
-            Team
+          Team
           </StyledLink>
         </NavigatorLi>
         <NavigatorLi>
           <StyledLink href="../../SD_productionNow_React/#contactus">
-            Kontakt
+          Kontakt
           </StyledLink>
         </NavigatorLi>
       </Navigator>
@@ -100,7 +101,7 @@ export const HeaderDE = ({ name }) => {
                 <Link to="/de">
                   <img src={Logo} alt="logo" />
                 </Link>
-                <Link to="/de">Held</Link>
+                <HeroLink to="/de">Hero</HeroLink>
               </ContainerLogo>
               <CloseButton>
                 <ImgClose src={ButtonClose} alt="Button" />
@@ -140,7 +141,7 @@ export const HeaderDE = ({ name }) => {
                 </li>
                 <li>
                   <ChangeLanguageMobile>
-                    <Link onClick={handleMenuClose}>DE</Link>
+                    <Link  onClick={handleMenuClose}>DE</Link>
                     <div />
                     <Link to={name}>EN</Link>
                   </ChangeLanguageMobile>
