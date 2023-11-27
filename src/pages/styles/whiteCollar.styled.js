@@ -205,7 +205,7 @@ export const SecondNaturalFoodImg = styled.img`
     width: 237px;
     height: 1196px;
     border-radius: 0px 0px 40px 20px;
-  }
+  } 
 `;
 
 export const ConatinerImg = styled.div`
@@ -214,13 +214,13 @@ export const ConatinerImg = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-
+ 
 export const FirstConatinerInternalImg = styled.div`
   @media screen and (max-width: 767px) {
     width: 145px;
   }
 `;
-
+ 
 export const SecondConatinerInternalImg = styled.div`
   display: flex;
   flex-direction: column;

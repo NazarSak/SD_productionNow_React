@@ -29,6 +29,8 @@ import {
   TitleHThree,
   TitleHTwo,
   TitlePage,
+  InternalTitle,
+  SvgImgContainer,
   SvgImg,
   TitleSpan,
   ImageFirst,
@@ -37,6 +39,7 @@ import {
   List,
   Li,
   NumberOfList,
+  ContainerLine,
   Line,
   NaturalFoodImg,
   SecondNaturalFoodImg,
@@ -79,10 +82,12 @@ export const PagesShopDE = () => {
             Klassikern bis zu modernen Bestsellern.
           </ParagraphAbProject>
         </div>
-
-        <Line />
-
-        <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
+        <ContainerLine>
+          <Line />
+        </ContainerLine>
+        <SvgImgContainer>
+          <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
+        </SvgImgContainer>
       </SecondSection>
       <ThirdSection>
         <TitleHTwo>
@@ -140,9 +145,9 @@ export const PagesShopDE = () => {
       </video>
       <FifthSection>
         <FirstConatinerInternalImg>
-          <TitleHTwo>
+          <InternalTitle>
             Interne <TitleSpan>Seiten</TitleSpan>
-          </TitleHTwo>
+          </InternalTitle>
 
           <OptimisatorImg
             src={InternalOne}

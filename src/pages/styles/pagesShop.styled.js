@@ -8,12 +8,10 @@ export const TitleHThree = styled.h3`
 export const TitlePage = styled.h2`
   color: var(--02-dark-color-white, #fff);
   @media screen and (max-width: 1199px) {
-    text-align: center;
-    font-family: Montserrat;
     font-size: 64px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
   }
 `;
 
@@ -26,6 +24,13 @@ export const TitleSpan = styled.span`
   -webkit-text-fill-color: #000;
   -webkit-text-stroke: 1.5px #fff;
   font-weight: 600;
+`;
+
+export const InternalTitle = styled.h2`
+  color: var(--02-dark-color-white, #fff);
+  @media screen and (max-width: 767px) {
+    width: max-content;
+  }
 `;
 
 export const ImageFirst = styled.img`
@@ -46,10 +51,22 @@ export const ParagraphAbProject = styled.p`
   }
 `;
 
+export const SvgImgContainer = styled.div`
+  @media screen and (max-width: 767px) {
+    width: 343px;
+    display: flex;
+    justify-content: center;
+  }
+`;
+
 export const SvgImg = styled.img`
   @media screen and (max-width: 1199px) {
     width: 285px;
     height: 80px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 285px;
+    height: 85px;
   }
 `;
 
@@ -69,6 +86,10 @@ export const List = styled.ul`
   @media screen and (max-width: 1199px) {
     flex-wrap: wrap;
   }
+  @media screen and (max-width: 767px) {
+    gap: 24px;
+    justify-content: start;
+  }
 `;
 
 export const Li = styled.li`
@@ -76,6 +97,9 @@ export const Li = styled.li`
   align-items: center;
   @media screen and (max-width: 1199px) {
     width: 320px;
+  }
+  @media screen and (max-width: 767px) {
+    height: 78px;
   }
 `;
 
@@ -109,6 +133,14 @@ export const NumberOfList = styled.span`
   }
 `;
 
+export const ContainerLine = styled.div`
+  @media screen and (max-width: 767px) {
+    width: 343px;
+    display: flex;
+    justify-content: center;
+  }
+`;
+
 export const Line = styled.div`
   width: 1px;
   height: 200px;
@@ -120,6 +152,15 @@ export const Line = styled.div`
   @media screen and (max-width: 1199px) {
     width: 1px;
     height: 250px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 203px;
+    height: 1px;
+    background: radial-gradient(
+      circle,
+      rgba(163, 163, 163, 0.7) 0%,
+      rgba(0, 0, 0, 0) 89.9%
+    );
   }
 `;
 
@@ -138,6 +179,12 @@ export const NaturalFoodImg = styled.img`
     border-radius: 40px;
     border: 5px solid var(--grey-B, #595959);
   }
+  @media screen and (max-width: 767px) {
+    width: 343px;
+    height: 197px;
+    border-radius: 20px;
+    border: 3px solid var(--grey-B, #595959);
+  }
 `;
 
 export const SecondNaturalFoodImg = styled.img`
@@ -151,6 +198,11 @@ export const SecondNaturalFoodImg = styled.img`
     height: 2053px;
     border-radius: 0px 0px 40px 40px;
   }
+  @media screen and (max-width: 767px) {
+    width: 237px;
+    height: 1196px;
+    border-radius: 0px 0px 40px 20px;
+  }
 `;
 
 export const ConatinerImg = styled.div`
@@ -160,7 +212,11 @@ export const ConatinerImg = styled.div`
   align-items: center;
 `;
 
-export const FirstConatinerInternalImg = styled.div``;
+export const FirstConatinerInternalImg = styled.div`
+  @media screen and (max-width: 767px) {
+    width: 151px;
+  }
+`;
 
 export const SecondConatinerInternalImg = styled.div`
   display: flex;
@@ -169,12 +225,14 @@ export const SecondConatinerInternalImg = styled.div`
   @media screen and (max-width: 1199px) {
     gap: 48px;
   }
+  @media screen and (max-width: 767px) {
+    gap: 32px;
+  }
 `;
 
 export const InternalImgOne = styled.img`
   width: 490px;
   height: 714px;
-  flex-shrink: 0;
   border-radius: 40px;
   margin-top: 121px;
   border: 5px solid var(--grey-B, #595959);
@@ -183,12 +241,18 @@ export const InternalImgOne = styled.img`
     height: 412.312px;
     margin-top: 130px;
   }
+  @media screen and (max-width: 767px) {
+    width: 151px;
+    height: 270px;
+    margin-top: 45px;
+    border-radius: 20px;
+    border: 1px solid var(--grey-B, #595959);
+  }
 `;
 
 export const InternalImgSecond = styled.img`
   width: 490px;
   height: 931px;
-  flex-shrink: 0;
   margin-top: 180px;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
@@ -196,6 +260,12 @@ export const InternalImgSecond = styled.img`
     width: 274px;
     height: 525px;
     margin-top: 48px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 151px;
+    height: 350px;
+    border-radius: 20px;
+    border: 1px solid var(--grey-B, #595959);
   }
 `;
 
@@ -211,6 +281,12 @@ export const InternalImgThree = styled.img`
     margin-top: 48px;
     height: 310px;
   }
+  @media screen and (max-width: 767px) {
+    width: 151px;
+    height: 210px;
+    border-radius: 20px;
+    border: 1px solid var(--grey-B, #595959);
+  }
 `;
 
 export const InternalImgFour = styled.img`
@@ -224,17 +300,29 @@ export const InternalImgFour = styled.img`
     height: 808px;
     margin-top: 100px;
   }
+  @media screen and (max-width: 767px) {
+    width: 151px;
+    height: 535px;
+    border-radius: 20px;
+    border: 1px solid var(--grey-B, #595959);
+  }
 `;
 
 export const InternalImgFive = styled.img`
   width: 490px;
   height: 839px;
-  flex-shrink: 0;
+
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
   @media screen and (max-width: 1199px) {
     width: 274px;
     height: 473px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 151px;
+    height: 315px;
+    border-radius: 20px;
+    border: 1px solid var(--grey-B, #595959);
   }
 `;
 

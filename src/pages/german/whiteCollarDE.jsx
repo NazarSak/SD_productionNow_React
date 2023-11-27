@@ -32,11 +32,13 @@ import {
   TitleSpan,
   ImageFirst,
   ParagraphAbProject,
+  SvgImgContainer,
   SvgImg,
   ParagraphGoals,
   List,
   Li,
   NumberOfList,
+  ContainerLine,
   Line,
   NaturalFoodImg,
   SecondNaturalFoodImg,
@@ -84,10 +86,12 @@ export const WhiteCollarDE = () => {
             und den neuen Technologien Schritt zu halten.
           </ParagraphAbProject>
         </div>
-
-        <Line />
-
-        <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
+        <ContainerLine>
+          <Line />
+        </ContainerLine>
+        <SvgImgContainer>
+          <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
+        </SvgImgContainer>
       </SecondSection>
 
       <ThirdSection>

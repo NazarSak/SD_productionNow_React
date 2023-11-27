@@ -20,17 +20,19 @@ import {
   SixthSection,
 } from "../styles/General/section.styled";
 import {
-  TitleHThree, 
+  TitleHThree,
   TitlePage,
   TitleHTwo,
   TitleSpan,
   ImageFirst,
   ParagraphAbProject,
+  SvgImgContainer,
   SvgImg,
   ParagraphGoals,
   List,
   Li,
   NumberOfList,
+  ContainerLine,
   Line,
   NaturalFoodImg,
   SecondNaturalFoodImg,
@@ -67,10 +69,12 @@ export const BriliniStudioEN = () => {
             create.
           </ParagraphAbProject>
         </div>
-
-        <Line />
-
-        <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
+        <ContainerLine>
+          <Line />
+        </ContainerLine>
+        <SvgImgContainer>
+          <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
+        </SvgImgContainer>
       </SecondSection>
       <ThirdSection>
         <TitleHTwo>

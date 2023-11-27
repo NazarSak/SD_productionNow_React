@@ -8,12 +8,10 @@ export const TitleHThree = styled.h3`
 export const TitlePage = styled.h2`
   color: var(--02-dark-color-white, #fff);
   @media screen and (max-width: 1199px) {
-    text-align: center;
-    font-family: Montserrat;
     font-size: 64px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
   }
 `;
 
@@ -42,10 +40,22 @@ export const ParagraphAbProject = styled.p`
   }
 `;
 
+export const SvgImgContainer = styled.div`
+  @media screen and (max-width: 767px) {
+    width: 343px;
+    display: flex;
+    justify-content: center;
+  }
+`;
+
 export const SvgImg = styled.img`
   @media screen and (max-width: 1199px) {
     width: 285px;
     height: 80px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 285px;
+    height: 121px;
   }
 `;
 
@@ -65,6 +75,10 @@ export const List = styled.ul`
   @media screen and (max-width: 1199px) {
     flex-wrap: wrap;
   }
+  @media screen and (max-width: 767px) {
+    gap: 24px;
+    justify-content: start;
+  }
 `;
 
 export const Li = styled.li`
@@ -72,6 +86,9 @@ export const Li = styled.li`
   align-items: center;
   @media screen and (max-width: 1199px) {
     width: 320px;
+  }
+  @media screen and (max-width: 767px) {
+    height: 78px;
   }
 `;
 
@@ -105,6 +122,14 @@ export const NumberOfList = styled.span`
   }
 `;
 
+export const ContainerLine = styled.div`
+  @media screen and (max-width: 767px) {
+    width: 343px;
+    display: flex;
+    justify-content: center;
+  }
+`;
+
 export const Line = styled.div`
   width: 1px;
   height: 200px;
@@ -116,6 +141,15 @@ export const Line = styled.div`
   @media screen and (max-width: 1199px) {
     width: 1px;
     height: 250px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 203px;
+    height: 1px;
+    background: radial-gradient(
+      circle,
+      rgba(163, 163, 163, 0.7) 0%,
+      rgba(0, 0, 0, 0) 89.9%
+    );
   }
 `;
 export const NaturalFoodImg = styled.img`
@@ -133,18 +167,28 @@ export const NaturalFoodImg = styled.img`
     border-radius: 40px;
     border: 5px solid var(--grey-B, #595959);
   }
+  @media screen and (max-width: 767px) {
+    width: 343px;
+    height: 214px;
+    border-radius: 20px;
+    border: 3px solid var(--grey-B, #595959);
+  }
 `;
 
 export const SecondNaturalFoodImg = styled.img`
   width: 815px;
   height: 2667px;
-  flex-shrink: 0;
   border-radius: 0px 0px 40px 40px;
 
   @media screen and (max-width: 1199px) {
     width: 465px;
     height: 1520px;
     border-radius: 0px 0px 40px 40px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 237px;
+    height: 775px;
+    border-radius: 0px 0px 20px 20px;
   }
 `;
 export const Arrow = styled.img`

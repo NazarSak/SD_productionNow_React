@@ -23,19 +23,22 @@ import {
   SixthSection,
 } from "../styles/General/section.styled";
 import {
-  TitleHThree, 
+  TitleHThree,
   TitlePage,
   TitleHTwo,
   TitleSpan,
+  AppTitle,
   ImageFirst,
   ParagraphAbProject,
+  SvgImgContainer,
   SvgImg,
   ParagraphGoals,
   List,
   Li,
   NumberOfList,
   Line,
-FirstConatinerInternalImg,
+  ContainerLine,
+  FirstConatinerInternalImg,
   InternalImgOne,
   InternalImgSecond,
   InternalImgThree,
@@ -73,10 +76,12 @@ export const AbiDE = () => {
             von vorgefertigten Vorlagen zur Verfügung steht.
           </ParagraphAbProject>
         </div>
-
-        <Line />
-
-        <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
+        <ContainerLine>
+          <Line />
+        </ContainerLine>
+        <SvgImgContainer>
+          <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
+        </SvgImgContainer>
       </SecondSection>
       <ThirdSection>
         <TitleHTwo>
@@ -112,9 +117,9 @@ export const AbiDE = () => {
       <OptimisatorImg src={BackgroundTwo} alt="image" ImageType={ImageFirst} />
       <FifthSection>
         <FirstConatinerInternalImg>
-          <TitleHTwo>
+          <AppTitle>
             App <TitleSpan>Seiten</TitleSpan>
-          </TitleHTwo>
+          </AppTitle>
 
           <OptimisatorImg
             src={InternalOne}

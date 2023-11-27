@@ -5,13 +5,13 @@ export const ContentUs = styled.section`
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-  /* display: none; */
+  display: none;
 `;
 
 export const AdoutUs = styled.div`
   display: flex;
   max-width: 640px;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
   flex-direction: column;
   gap: 24px;

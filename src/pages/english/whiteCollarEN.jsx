@@ -64,7 +64,7 @@ export const WhiteCollarEN = () => {
     <main>
       <HeaderEN name={"/de/whiteCollar"} />
 
-      <FirstSection>
+      <FirstSection> 
         <TitleHThree>Business website</TitleHThree>
         <TitlePage>
           White <TitleSpan>Collar</TitleSpan>
@@ -87,7 +87,7 @@ export const WhiteCollarEN = () => {
           </ParagraphAbProject>
         </div>
 
-        <ContainerLine>
+        <ContainerLine> 
           <Line />
         </ContainerLine>
         <SvgImgContainer>

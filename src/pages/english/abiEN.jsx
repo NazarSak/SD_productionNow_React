@@ -23,19 +23,22 @@ import {
   SixthSection,
 } from "../styles/General/section.styled";
 import {
-  TitleHThree, 
+  TitleHThree,
   TitlePage,
   TitleHTwo,
   TitleSpan,
+  AppTitle,
   ImageFirst,
   ParagraphAbProject,
+  SvgImgContainer,
   SvgImg,
   ParagraphGoals,
   List,
   Li,
   NumberOfList,
+  ContainerLine,
   Line,
-FirstConatinerInternalImg,
+  FirstConatinerInternalImg,
   InternalImgOne,
   InternalImgSecond,
   InternalImgThree,
@@ -75,9 +78,12 @@ export const AbiEN = () => {
           </ParagraphAbProject>
         </div>
 
-        <Line />
-
-        <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
+        <ContainerLine>
+          <Line />
+        </ContainerLine>
+        <SvgImgContainer>
+          <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
+        </SvgImgContainer>
       </SecondSection>
 
       <ThirdSection>
@@ -110,9 +116,9 @@ export const AbiEN = () => {
 
       <FifthSection>
         <FirstConatinerInternalImg>
-          <TitleHTwo>
+          <AppTitle>
             App <TitleSpan>Pages</TitleSpan>
-          </TitleHTwo>
+          </AppTitle>
 
           <OptimisatorImg
             src={InternalOne}
