@@ -219,6 +219,10 @@ export const ProjectsCards = styled.div`
   @media screen and (max-width: 1199px) {
     gap: 80px;
   }
+  @media screen and (max-width: 767px) {
+    margin-top: 48px;
+    gap: 80px;
+  }
 `;
 
 export const ProjectsFragment1 = styled.div`
@@ -235,6 +239,12 @@ export const ProjectsFragment1 = styled.div`
   @media screen and (max-width: 1199px) {
     padding: 64px;
     height: 228px;
+  }
+  @media screen and (max-width: 767px) {
+    background: transparent;
+    border-radius: 0px;
+    padding: 0px;
+    margin-top: 0px;
   }
 `;
 
@@ -280,6 +290,14 @@ export const ProjectsFragmentInfo1 = styled.div`
       width: 182px;
     }
   }
+  @media screen and (max-width: 767px) {
+    & h4 {
+      margin-bottom: 16px;
+    }
+    & p {
+      width: 343px;
+    }
+  }
 `;
 
 export const ButtonProject1 = styled(Link)`
@@ -310,21 +328,28 @@ export const ProjectContainer = styled.div`
   @media screen and (max-width: 1199px) {
     height: 420px;
   }
+  @media screen and (max-width: 767px) {
+    border-radius: 0px;
+    height: 216px;
+  }
 `;
 
 export const ProjectImage1 = styled.img`
   width: 447px;
   top: 10px;
   right: -100px;
-  /* height: 440px; */
   position: absolute;
   border-radius: 20px;
   transform: rotate(-15.637deg);
-  /* background-image: url('../../assets/img/organicShop/main-page.png'); */
   background-size: cover;
   z-index: 1;
   @media screen and (max-width: 1199px) {
     width: 264px;
+  }
+  @media screen and (max-width: 767px) {
+    transform: rotate(15deg);
+    right: 50px;
+    width: 142px;
   }
 `;
 
@@ -713,11 +738,7 @@ export const Services = styled.section`
   & h2 {
     margin: 0;
     padding: 0;
-
-    text-align: start;
-
     color: #fff;
-    text-align: center;
     font-family: Montserrat;
     font-size: 64px;
     font-style: normal;
@@ -729,6 +750,14 @@ export const Services = styled.section`
     -webkit-text-fill-color: #000;
     -webkit-text-stroke: 1.5px #fff;
     letter-spacing: 2.5px;
+  }
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    & h2 {
+      font-size: 40px;
+    }
   }
 `;
 
@@ -743,6 +772,10 @@ export const ServicesCards = styled.div`
     flex-direction: column;
     gap: 20px;
   }
+  @media screen and (max-width: 767px) {
+    gap: 24px;
+    margin-top: 40px;
+  }
 `;
 
 export const ServicesCardsContainer = styled.div`
@@ -750,6 +783,9 @@ export const ServicesCardsContainer = styled.div`
   gap: 60px;
   @media screen and (max-width: 1199px) {
     gap: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
   }
 `;
 
@@ -816,6 +852,13 @@ export const ServicesFragment = styled.div`
     & li {
       font-size: 16px;
     }
+  }
+  @media screen and (max-width: 767px) {
+    width: 238px;
+    height: 327px;
+  }
+  & li {
+    font-size: 18px;
   }
 `;
 
@@ -885,6 +928,19 @@ export const ServicesFragment3 = styled.div`
     & li {
       width: auto;
       font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    width: 241px;
+    height: 186px;
+    & ul {
+      flex-direction: column;
+      align-items: start;
+      gap: 14px;
+    }
+
+    & li {
+      font-size: 18px;
     }
   }
 `;
@@ -969,6 +1025,10 @@ export const ServiceButton3 = styled.div`
     margin-top: 61.5px;
     right: 53px;
   }
+  @media screen and (max-width: 767px) {
+    right: 146px;
+    margin-top: 175px;
+  }
 `;
 
 export const ServiceHeader1 = styled.h3`
@@ -978,18 +1038,27 @@ export const ServiceHeader1 = styled.h3`
   font-weight: 600;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+  }
 `;
 export const ServiceHeader2 = styled.h3`
   background: linear-gradient(119deg, #bd00ff 21.38%, #3604c3 129.88%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+  }
 `;
 export const ServiceHeader3 = styled.h3`
   background: linear-gradient(119deg, #fc7057 21.38%, #f66e54 129.88%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+  }
 `;
 
 export const OurTeam = styled.section`
@@ -1015,7 +1084,7 @@ export const OurTeam = styled.section`
     -webkit-text-stroke: 1.5px #fff;
     letter-spacing: 2.5px;
   }
-  @media screen and (max-width: 1199px){
+  @media screen and (max-width: 1199px) {
     width: 672px;
   }
 `;
@@ -1126,7 +1195,7 @@ export const ContainerImageBW = styled.div`
   transition: all 0.5s ease 0s;
   margin-left: -10px;
   z-index: 2;
-  @media screen and (max-width: 1199px){
+  @media screen and (max-width: 1199px) {
     margin-left: 0;
   }
 `;

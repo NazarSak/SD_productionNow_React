@@ -17,7 +17,7 @@ export const TitleLink = styled(Link)`
   display: block;
   text-align: center;
   align-items: center;
-
+  width: max-content;
   color: #fcfcfc;
   font-family: Montserrat;
   font-size: 16px;
