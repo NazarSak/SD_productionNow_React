@@ -29,7 +29,7 @@ export const SectionHero = styled.section`
   align-items: center;
   &::before {
     position: absolute;
-    margin-top: -75px;
+    margin-top: -15px;
     margin-left: 350px;
     content: "";
     display: block;
@@ -41,6 +41,14 @@ export const SectionHero = styled.section`
     backdrop-filter: blur(10px);
     animation: 2s ease-in-out 2s infinite alternate ${sectionHeroAnimation};
   }
+  @media screen and (max-width: 767px) {
+    &::before {
+      width: 48px;
+      height: 48px;
+      margin-top: -120px;
+      margin-right: 550px;
+    }
+  }
 `;
 
 export const HeroBackground = styled.img`
@@ -49,6 +57,12 @@ export const HeroBackground = styled.img`
   width: 800px;
   height: 800px;
   z-index: -1;
+
+  @media screen and (max-width: 767px) {
+    width: 507px;
+    height: 507px;
+    top: 125px;
+  }
 `;
 export const HeroBlock = styled.div`
   margin-top: 152px;
@@ -64,7 +78,6 @@ export const HeroContend = styled.div`
   align-items: center;
   & h2 {
     width: 800px;
-
     color: #fff;
     font-family: Montserrat;
     font-size: 64px;
@@ -89,7 +102,28 @@ export const HeroContend = styled.div`
     -webkit-text-stroke: 1.5px #fff;
     letter-spacing: 2.5px;
   }
+  @media screen and (max-width: 767px) {
+    & h2 {
+      width: 379px;
+      font-size: 56px;
+    }
+  }
 `;
+
+export const ContainerPC = styled.div`
+  margin-right: auto;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+`;
+
+export const ContainerMobile = styled.div`
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+`;
+
 export const ButtonHeader = styled(Link)`
   text-decoration: none;
   padding: 16px 91px;
@@ -109,6 +143,20 @@ export const ButtonHeader = styled(Link)`
   &:hover {
     opacity: 0.6;
   }
+  @media screen and (max-width: 767px) {
+    display: flex;
+    width: 279px;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10000px;
+    background: var(
+      --purple-linear,
+      linear-gradient(90deg, #bd00ff -1.03%, #4200ff 98.22%)
+    );
+    margin-top: 108px;
+  }
 `;
 
 export const ImgHero = styled.img`
@@ -118,6 +166,9 @@ export const ImgHero = styled.img`
   width: 640px;
   height: auto;
   object-fit: cover;
+  @media screen and (max-width: 767px) {
+    width: 343px;
+  }
 `;
 export const Project = styled.section`
   margin-top: 118px;
@@ -144,6 +195,19 @@ export const Project = styled.section`
     -webkit-text-fill-color: #000;
     -webkit-text-stroke: 1.5px #fff;
   }
+  @media screen and (max-width: 767px) {
+    margin-top: 20px;
+
+    & h2 {
+      width: 343px;
+      color: var(--02-dark-color-white, #fff);
+      font-family: Montserrat;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
 `;
 
 export const ProjectsCards = styled.div`
@@ -152,62 +216,62 @@ export const ProjectsCards = styled.div`
   flex-direction: column;
   width: 100%;
   gap: 100px;
-  @media screen and (max-width: 1199px){
+  @media screen and (max-width: 1199px) {
     gap: 80px;
   }
 `;
 
 export const ProjectsFragment1 = styled.div`
-	margin-top: 70px;
-	border-radius: 40px;
-	background: var(--grey-A, #1c1c1c);
-	height: 280px;
-	overflow: hidden;
-	display: flex;
-	justify-content: space-between;
-	transition: all 0.9s;
-	padding: 80px;
-	overflow: hidden;
-	@media screen and (max-width: 1199px) {
+  margin-top: 70px;
+  border-radius: 40px;
+  background: var(--grey-A, #1c1c1c);
+  height: 280px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.9s;
+  padding: 80px;
+  overflow: hidden;
+  @media screen and (max-width: 1199px) {
     padding: 64px;
     height: 228px;
-	}
-`
+  }
+`;
 
 export const ProjectsFragmentInfo1 = styled.div`
-	width: 320px;
-	& h4 {
-		color: #50d13b;
-		color: #50d13b;
-		font-family: Montserrat;
-		font-size: 24px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
+  width: 320px;
+  & h4 {
+    color: #50d13b;
+    color: #50d13b;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     margin: 0;
     margin-bottom: 16px;
-	}
+  }
 
-	& h3 {
-		color: var(--white, #fcfcfc);
-		font-family: Montserrat;
-		font-size: 32px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: normal;
-	}
+  & h3 {
+    color: var(--white, #fcfcfc);
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
 
-	& p {
-		color: var(--grey-C, #cfcfcf);
-		font-family: Montserrat;
-		font-size: 16px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 160%;
-		letter-spacing: -0.4px;
-		margin: 32px 0;
-	}
-	@media screen and (max-width: 1199px) {
+  & p {
+    color: var(--grey-C, #cfcfcf);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: -0.4px;
+    margin: 32px 0;
+  }
+  @media screen and (max-width: 1199px) {
     & h4 {
       margin-bottom: 8px;
     }
@@ -215,29 +279,29 @@ export const ProjectsFragmentInfo1 = styled.div`
       margin: 16px 0;
       width: 182px;
     }
-	}
-`
+  }
+`;
 
 export const ButtonProject1 = styled(Link)`
-	display: flex;
-	width: 41px;
-	height: 20px;
-	padding: 16px 111px;
-	justify-content: center;
-	align-items: center;
-	text-decoration: none;
-	color: var(--02-dark-color-white, #fff);
-	font-family: Montserrat;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
-	border-radius: 10000px;
-	background: linear-gradient(119deg, #61b554 21.38%, #76a90a 129.88%);
-	@media screen and (max-width: 1199px) {
-		padding: 12px 78px;
-	}
-`
+  display: flex;
+  width: 41px;
+  height: 20px;
+  padding: 16px 111px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--02-dark-color-white, #fff);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 10000px;
+  background: linear-gradient(119deg, #61b554 21.38%, #76a90a 129.88%);
+  @media screen and (max-width: 1199px) {
+    padding: 12px 78px;
+  }
+`;
 export const ProjectContainer = styled.div`
   height: 510px;
   border-radius: 40px;
@@ -246,7 +310,7 @@ export const ProjectContainer = styled.div`
   @media screen and (max-width: 1199px) {
     height: 420px;
   }
-`
+`;
 
 export const ProjectImage1 = styled.img`
   width: 447px;
@@ -262,59 +326,59 @@ export const ProjectImage1 = styled.img`
   @media screen and (max-width: 1199px) {
     width: 264px;
   }
-`
+`;
 
 export const ProjectsFragment2 = styled.div`
-	border-radius: 20px;
-	background: var(--grey-A, #1c1c1c);
-	height: 330px;
-	overflow: hidden;
-	display: flex;
-	justify-content: space-between;
-	transition: all 0.9s;
-	padding: 55px;
-	overflow: hidden;
-	position: relative;
-	@media screen and (max-width: 1199px) {
-		padding: 64px;
-		height: 228px;
-	}
-`
+  border-radius: 20px;
+  background: var(--grey-A, #1c1c1c);
+  height: 330px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.9s;
+  padding: 55px;
+  overflow: hidden;
+  position: relative;
+  @media screen and (max-width: 1199px) {
+    padding: 64px;
+    height: 228px;
+  }
+`;
 
 export const ProjectsFragmentInfo2 = styled.div`
-	width: 320px;
+  width: 320px;
 
-	& h4 {
-		color: #fc7158;
-		font-family: Montserrat;
-		font-size: 24px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
+  & h4 {
+    color: #fc7158;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     margin: 0;
     margin-bottom: 16px;
-	}
+  }
 
-	& h3 {
-		color: var(--white, #fcfcfc);
-		font-family: Montserrat;
-		font-size: 32px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: normal;
-	}
+  & h3 {
+    color: var(--white, #fcfcfc);
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
 
-	& p {
-		color: var(--grey-C, #cfcfcf);
-		font-family: Montserrat;
-		font-size: 16px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 160%;
-		letter-spacing: -0.4px;
-		margin: 32px 0;
-	}
-	@media screen and (max-width: 1199px) {
+  & p {
+    color: var(--grey-C, #cfcfcf);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: -0.4px;
+    margin: 32px 0;
+  }
+  @media screen and (max-width: 1199px) {
     width: 182px;
     & h4 {
       font-size: 16px;
@@ -323,32 +387,32 @@ export const ProjectsFragmentInfo2 = styled.div`
     & h3 {
       font-size: 24px;
     }
-		& p {
-			margin: 16px 0;
-		}
-	}
-`
+    & p {
+      margin: 16px 0;
+    }
+  }
+`;
 
 export const ButtonProject2 = styled(Link)`
-	display: flex;
-	width: 41px;
-	height: 20px;
-	padding: 16px 111px;
-	justify-content: center;
-	align-items: center;
-	text-decoration: none;
-	color: var(--02-dark-color-white, #fff);
-	font-family: Montserrat;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
-	border-radius: 10000px;
-	background: linear-gradient(119deg, #fc7057 21.38%, #f66e54 129.88%);
-	@media screen and (max-width: 1199px) {
-		padding: 12px 78px;
-	}
-`
+  display: flex;
+  width: 41px;
+  height: 20px;
+  padding: 16px 111px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--02-dark-color-white, #fff);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 10000px;
+  background: linear-gradient(119deg, #fc7057 21.38%, #f66e54 129.88%);
+  @media screen and (max-width: 1199px) {
+    padding: 12px 78px;
+  }
+`;
 
 export const ProjectImageContainer1 = styled.div`
   display: flex;
@@ -356,102 +420,102 @@ export const ProjectImageContainer1 = styled.div`
 `;
 
 export const ProjectImage21 = styled.img`
-	position: absolute;
-	background-size: cover;
-	top: -1120px;
-	width: 329px;
-	left: -250px;
-	border-radius: 20px;
-	@media screen and (max-width: 1199px) {
+  position: absolute;
+  background-size: cover;
+  top: -1120px;
+  width: 329px;
+  left: -250px;
+  border-radius: 20px;
+  @media screen and (max-width: 1199px) {
     top: -550px;
     left: -280px;
-		width: 264px;
-	}
-`
+    width: 264px;
+  }
+`;
 export const ProjectImage22 = styled.img`
-	position: absolute;
-	top: -50px;
-	margin-left: 140px;
-	background-size: cover;
-	width: 329px;
-	border-radius: 20px;
-	@media screen and (max-width: 1199px) {
-		width: 264px;
+  position: absolute;
+  top: -50px;
+  margin-left: 140px;
+  background-size: cover;
+  width: 329px;
+  border-radius: 20px;
+  @media screen and (max-width: 1199px) {
+    width: 264px;
     margin-left: 20px;
-	}
-`
+  }
+`;
 
 export const ProjectsFragment3 = styled.div`
-	border-radius: 40px;
-	display: flex;
-	background: var(--grey-A, #1c1c1c);
-	width: 420px;
-	height: 654px;
-	display: flex;
-	justify-content: space-between;
-	transition: all 0.9s;
-	padding: 73px 60px;
-	overflow: hidden;
-	position: relative;
-	justify-content: space-between;
-	@media screen and (max-width: 1199px) {
-		margin: 0 auto;
+  border-radius: 40px;
+  display: flex;
+  background: var(--grey-A, #1c1c1c);
+  width: 420px;
+  height: 654px;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.9s;
+  padding: 73px 60px;
+  overflow: hidden;
+  position: relative;
+  justify-content: space-between;
+  @media screen and (max-width: 1199px) {
+    margin: 0 auto;
     margin-top: 40px;
-		height: 228px;
+    height: 228px;
     width: 544px;
     padding: 64px;
     position: unset;
-	}
-`
+  }
+`;
 
 export const ProjectsFragmentInfo3 = styled.div`
-	width: 420px;
-	margin-right: auto;
-	& h4 {
-		color: #dfb003;
-		font-family: Montserrat;
-		font-size: 24px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
-		margin: 0;
-		margin-bottom: 16px;
-	}
+  width: 420px;
+  margin-right: auto;
+  & h4 {
+    color: #dfb003;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    margin-bottom: 16px;
+  }
 
-	& h3 {
-		color: var(--white, #fcfcfc);
-		font-family: Montserrat;
-		font-size: 32px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: normal;
-	}
+  & h3 {
+    color: var(--white, #fcfcfc);
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
 
-	& p {
-		color: var(--grey-C, #cfcfcf);
-		font-family: Montserrat;
-		font-size: 16px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 160%;
-		letter-spacing: -0.4px;
-		margin: 32px 0 50px 0;
-	}
-	@media screen and (max-width: 1199px) {
+  & p {
+    color: var(--grey-C, #cfcfcf);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: -0.4px;
+    margin: 32px 0 50px 0;
+  }
+  @media screen and (max-width: 1199px) {
     width: 182px;
-		& h4 {
-			font-size: 16px;
-			margin-bottom: 8px;
-		}
-		& h3 {
-			font-size: 24px;
-		}
-		& p {
-			margin: 16px 0;
+    & h4 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    & h3 {
+      font-size: 24px;
+    }
+    & p {
+      margin: 16px 0;
       margin-bottom: 23px;
-		}
-	}
-`
+    }
+  }
+`;
 
 export const ButtonProject3 = styled(Link)`
   width: 41px;
@@ -468,153 +532,152 @@ export const ButtonProject3 = styled(Link)`
   line-height: normal;
   border-radius: 10000px;
   background: linear-gradient(88deg, #d5b105 0%, #f1ad00 93.39%);
-  @media screen and (max-width: 1199px){
+  @media screen and (max-width: 1199px) {
     padding: 12px 78px;
   }
 `;
 
 export const ProjectImage31 = styled.img`
-	position: absolute;
-	top: 424px;
-	background-size: cover;
-	width: 262px;
-	border-radius: 8px;
-	@media screen and (max-width: 1199px) {
-		width: 264px;
-		top: -40px;
-		left: 302px;
-		background-size: cover;
-    
-	}
-`
+  position: absolute;
+  top: 424px;
+  background-size: cover;
+  width: 262px;
+  border-radius: 8px;
+  @media screen and (max-width: 1199px) {
+    width: 264px;
+    top: -40px;
+    left: 302px;
+    background-size: cover;
+  }
+`;
 
 export const ProjectImage32 = styled.img`
-	position: absolute;
-	top: 312px;
-	margin-left: 307px;
-	background-size: cover;
-	width: 262px;
-	border-radius: 8px;
-	@media screen and (max-width: 1199px) {
-		width: 264px;
-		top: 40px;
-		left: 302px;
-	}
-`
+  position: absolute;
+  top: 312px;
+  margin-left: 307px;
+  background-size: cover;
+  width: 262px;
+  border-radius: 8px;
+  @media screen and (max-width: 1199px) {
+    width: 264px;
+    top: 40px;
+    left: 302px;
+  }
+`;
 
 export const ProjectContainerImg = styled.div`
-	@media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1199px) {
     margin-top: -40px;
-		height: 390px;
-		border-radius: 40px;
-		position: relative;
-		overflow: hidden;
-	}
-`
+    height: 390px;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+`;
 
 export const ProjectContainer2 = styled.div`
   display: flex;
   gap: 100px;
-  @media screen and (max-width: 1199px){
+  @media screen and (max-width: 1199px) {
     display: block;
   }
 `;
 
 export const ProjectsFragment4 = styled.div`
-	border-radius: 40px;
-	display: flex;
-	background: var(--grey-A, #1c1c1c);
-	width: 420px;
-	height: 654px;
-	display: flex;
-	justify-content: space-between;
-	transition: all 0.9s;
-	padding: 73px 60px;
-	overflow: hidden;
-	position: relative;
-	justify-content: space-between;
-	@media screen and (max-width: 1199px) {
-		margin: 0 auto;
-		margin-top: 80px;
+  border-radius: 40px;
+  display: flex;
+  background: var(--grey-A, #1c1c1c);
+  width: 420px;
+  height: 654px;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.9s;
+  padding: 73px 60px;
+  overflow: hidden;
+  position: relative;
+  justify-content: space-between;
+  @media screen and (max-width: 1199px) {
+    margin: 0 auto;
+    margin-top: 80px;
     margin-top: 40px;
     height: 228px;
     width: 544px;
     padding: 64px;
     position: relative;
-	}
-`
+  }
+`;
 
 export const ProjectsFragmentInfo4 = styled.div`
-	width: 420px;
-	margin-right: auto;
+  width: 420px;
+  margin-right: auto;
 
-	& h4 {
-		color: #4d83f0;
-		font-family: Montserrat;
-		font-size: 24px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
+  & h4 {
+    color: #4d83f0;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     margin: 0;
     margin-bottom: 16px;
-	}
+  }
 
-	& h3 {
-		color: var(--white, #fcfcfc);
-		font-family: Montserrat;
-		font-size: 32px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: normal;
-	}
+  & h3 {
+    color: var(--white, #fcfcfc);
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
 
-	& p {
-		color: var(--grey-C, #cfcfcf);
-		font-family: Montserrat;
-		font-size: 16px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 160%;
-		letter-spacing: -0.4px;
-		margin: 32px 0 50px 0;
-	}
-	@media screen and (max-width: 1199px) {
-		width: 182px;
+  & p {
+    color: var(--grey-C, #cfcfcf);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: -0.4px;
+    margin: 32px 0 50px 0;
+  }
+  @media screen and (max-width: 1199px) {
+    width: 182px;
     margin-right: unset;
     margin-left: auto;
-		& h4 {
-			font-size: 16px;
-			margin-bottom: 8px;
-		}
-		& h3 {
-			font-size: 24px;
-		}
-		& p {
-			margin: 16px 0;
-			margin-bottom: 23px;
-		}
-	}
-`
+    & h4 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    & h3 {
+      font-size: 24px;
+    }
+    & p {
+      margin: 16px 0;
+      margin-bottom: 23px;
+    }
+  }
+`;
 
 export const ButtonProject4 = styled(Link)`
-	width: 41px;
-	height: 20px;
-	padding: 16px 111px;
-	justify-content: center;
-	align-items: center;
-	text-decoration: none;
-	color: var(--02-dark-color-white, #fff);
-	font-family: Montserrat;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
-	border-radius: 10000px;
-	background: linear-gradient(88deg, #4d83f0 0%, #4d83f0 93.39%);
-	@media screen and (max-width: 1199px) {
-		padding: 12px 78px;
-	}
-`
+  width: 41px;
+  height: 20px;
+  padding: 16px 111px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--02-dark-color-white, #fff);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 10000px;
+  background: linear-gradient(88deg, #4d83f0 0%, #4d83f0 93.39%);
+  @media screen and (max-width: 1199px) {
+    padding: 12px 78px;
+  }
+`;
 
 export const ProjectImage41 = styled.img`
   position: absolute;
@@ -622,7 +685,7 @@ export const ProjectImage41 = styled.img`
   background-size: cover;
   width: 200px;
   border-radius: 8px;
-  @media screen and (max-width: 1199px){
+  @media screen and (max-width: 1199px) {
     width: 158px;
     top: 96px;
     left: 212px;
@@ -636,7 +699,7 @@ export const ProjectImage42 = styled.img`
   background-size: cover;
   width: 200px;
   border-radius: 8px;
-  @media screen and (max-width: 1199px){
+  @media screen and (max-width: 1199px) {
     width: 177px;
     top: 48px;
     left: 0;
@@ -670,243 +733,243 @@ export const Services = styled.section`
 `;
 
 export const ServicesCards = styled.div`
-	display: flex;
-	justify-content: space-between;
-	margin: 0;
-	margin-top: 100px;
-	padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  margin-top: 100px;
+  padding: 0;
   gap: 60px;
-	@media screen and (max-width: 1199px) {
-		flex-direction: column;
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
     gap: 20px;
-	}
-`
+  }
+`;
 
 export const ServicesCardsContainer = styled.div`
-	display: flex;
+  display: flex;
   gap: 60px;
-	@media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1199px) {
     gap: 20px;
-	}
-`
+  }
+`;
 
 export const ToEmailLink = styled(Link)`
   text-decoration: none;
 `;
 
 export const ServicesFragment = styled.div`
-	margin: 0;
-	padding: 0;
-	padding: 56px 65px;
+  margin: 0;
+  padding: 0;
+  padding: 56px 65px;
 
-	width: 223px;
-	height: 339px;
-	display: flex;
-	flex-direction: column;
-	transition: 0.5s;
-	border-radius: 40px;
-	border: 1px solid transparent;
-	background: #181818;
-	&:hover {
-		border: 1px solid #bd00ff;
-	}
-	& ul {
-		margin: 0;
-		padding: 0;
-		margin-top: 32px;
+  width: 223px;
+  height: 339px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s;
+  border-radius: 40px;
+  border: 1px solid transparent;
+  background: #181818;
+  &:hover {
+    border: 1px solid #bd00ff;
+  }
+  & ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 32px;
 
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-right: auto;
-		gap: 14px;
-	}
-	& li {
-		margin: 0;
-		padding: 0;
-		width: 220px;
-		height: 29px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: auto;
+    gap: 14px;
+  }
+  & li {
+    margin: 0;
+    padding: 0;
+    width: 220px;
+    height: 29px;
 
-		color: #cfcfcf;
-		list-style-type: none;
-		font-family: Montserrat;
-		font-size: 18px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 0;
-		letter-spacing: 0;
-		display: flex;
-		align-items: center;
-		&::before {
-			content: '';
-			display: inline-block;
-			width: 15px;
-			height: 1px;
-			background: #cfcfcf;
-			margin-right: 8px;
-		}
-	}
+    color: #cfcfcf;
+    list-style-type: none;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0;
+    letter-spacing: 0;
+    display: flex;
+    align-items: center;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 1px;
+      background: #cfcfcf;
+      margin-right: 8px;
+    }
+  }
 
-	@media screen and (max-width: 1199px) {
-		width: 223px;
-		padding: 56px 51.5px;
-		& li {
-			font-size: 16px;
-		}
-	}
-`
+  @media screen and (max-width: 1199px) {
+    width: 223px;
+    padding: 56px 51.5px;
+    & li {
+      font-size: 16px;
+    }
+  }
+`;
 
 export const ServicesFragment3 = styled.div`
-	margin: 0;
-	padding: 0;
-	padding: 56px 65px;
-	position: relative;
-	width: 223px;
-	height: 339px;
-	display: flex;
-	flex-direction: column;
-	transition: 0.5s;
-	border-radius: 40px;
-	border: 1px solid transparent;
-	background: #181818;
-	&:hover {
-		border: 1px solid #bd00ff;
-	}
-	& ul {
-		margin: 0;
-		padding: 0;
-		margin-top: 32px;
+  margin: 0;
+  padding: 0;
+  padding: 56px 65px;
+  position: relative;
+  width: 223px;
+  height: 339px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s;
+  border-radius: 40px;
+  border: 1px solid transparent;
+  background: #181818;
+  &:hover {
+    border: 1px solid #bd00ff;
+  }
+  & ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 32px;
 
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-right: auto;
-		gap: 14px;
-	}
-	& li {
-		margin: 0;
-		padding: 0;
-		width: 220px;
-		height: 29px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: auto;
+    gap: 14px;
+  }
+  & li {
+    margin: 0;
+    padding: 0;
+    width: 220px;
+    height: 29px;
 
-		color: #cfcfcf;
-		list-style-type: none;
-		font-family: Montserrat;
-		font-size: 18px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 0;
-		letter-spacing: 0;
-		display: flex;
-		align-items: center;
-		&::before {
-			content: '';
-			display: inline-block;
-			width: 15px;
-			height: 1px;
-			background: #cfcfcf;
-			margin-right: 8px;
-		}
-	}
-	@media screen and (max-width: 1199px) {
-		display: flex;
-		width: 572px;
-		height: 97px;
-		padding: 56px 50px;
-		flex-direction: column;
-		align-items: flex-start;
-		& ul {
-			flex-direction: row;
-			gap: 80px;
-		}
-		& li {
-			width: auto;
-			font-size: 16px;
-		}
-	}
-`
+    color: #cfcfcf;
+    list-style-type: none;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0;
+    letter-spacing: 0;
+    display: flex;
+    align-items: center;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 1px;
+      background: #cfcfcf;
+      margin-right: 8px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    width: 572px;
+    height: 97px;
+    padding: 56px 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    & ul {
+      flex-direction: row;
+      gap: 80px;
+    }
+    & li {
+      width: auto;
+      font-size: 16px;
+    }
+  }
+`;
 
 export const ServiceButton = styled.div`
-	margin-right: auto;
-	display: flex;
-	margin-top: auto;
-	align-items: center;
-	& p {
-		padding: 0;
-		margin: 0;
-		color: #ffffff;
-		list-style: none;
-		text-decoration: none;
-		font-size: 16px;
-		font-weight: 600;
-		font-family: 'Montserrat', sans-serif;
-		transition: all 0.5s;
-	}
+  margin-right: auto;
+  display: flex;
+  margin-top: auto;
+  align-items: center;
+  & p {
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    list-style: none;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.5s;
+  }
 
-	& svg {
-		margin-left: 12px;
-		height: 8px;
-		width: 20px;
-		transition: all 0.5s;
-	}
-	path {
-		transition: transform 0.5s, stroke 0.5s;
-	}
+  & svg {
+    margin-left: 12px;
+    height: 8px;
+    width: 20px;
+    transition: all 0.5s;
+  }
+  path {
+    transition: transform 0.5s, stroke 0.5s;
+  }
 
-	&:hover {
-		& p {
-			color: #bd00ff;
-		}
+  &:hover {
+    & p {
+      color: #bd00ff;
+    }
 
-		& svg path {
-			transform: translateX(5px);
-			stroke: #bd00ff;
-		}
-	}
-`
+    & svg path {
+      transform: translateX(5px);
+      stroke: #bd00ff;
+    }
+  }
+`;
 export const ServiceButton3 = styled.div`
-	margin-right: auto;
-	display: flex;
-	margin-top: auto;
-	align-items: center;
-	& p {
-		padding: 0;
-		margin: 0;
-		color: #ffffff;
-		list-style: none;
-		text-decoration: none;
-		font-size: 16px;
-		font-weight: 600;
-		font-family: 'Montserrat', sans-serif;
-		transition: all 0.5s;
-	}
+  margin-right: auto;
+  display: flex;
+  margin-top: auto;
+  align-items: center;
+  & p {
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    list-style: none;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.5s;
+  }
 
-	& svg {
-		margin-left: 12px;
-		height: 8px;
-		width: 20px;
-		transition: all 0.5s;
-	}
-	path {
-		transition: transform 0.5s, stroke 0.5s;
-	}
+  & svg {
+    margin-left: 12px;
+    height: 8px;
+    width: 20px;
+    transition: all 0.5s;
+  }
+  path {
+    transition: transform 0.5s, stroke 0.5s;
+  }
 
-	&:hover {
-		& p {
-			color: #bd00ff;
-		}
+  &:hover {
+    & p {
+      color: #bd00ff;
+    }
 
-		& svg path {
-			transform: translateX(5px);
-			stroke: #bd00ff;
-		}
-	}
+    & svg path {
+      transform: translateX(5px);
+      stroke: #bd00ff;
+    }
+  }
   @media screen and (max-width: 1199px) {
     position: absolute;
     margin-top: 61.5px;
     right: 53px;
   }
-`
+`;
 
 export const ServiceHeader1 = styled.h3`
   margin-right: auto;

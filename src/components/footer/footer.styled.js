@@ -95,8 +95,8 @@ export const Footer = styled.footer`
     height: 407px;
   }
   @media screen and (max-width: 1199px) {
-    /* width: 343px;
-    height: 260px; */
+    width: 343px;
+    height: 260px;
   }
 `;
 
