@@ -9,8 +9,8 @@ export const ModalWrapper = styled.div`
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
-  overflow: auto;
+  height: 100vh;
+  /* overflow: hidden; */
   background: #000;
   display: flex;
   justify-content: center;
