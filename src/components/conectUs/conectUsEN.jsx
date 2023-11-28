@@ -39,6 +39,7 @@ export const ConectUsEN = () => {
 
   const handleOpenModal = () => {
     setOpenModal(true);
+    document.body.style.position = 'fixed';
   };
 
 

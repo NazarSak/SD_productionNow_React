@@ -26,6 +26,7 @@ export const ModalkaEN = ({ setOpenModal }) => {
 
   const handleCloseModal = () => {
     setOpenModal(false);
+    document.body.style.position = 'unset'
     window.scrollTo(0, 0);
   };
 
@@ -82,7 +83,6 @@ export const ModalkaEN = ({ setOpenModal }) => {
           <Paragraph>
             We'll help you find the right plan and pricing for your business.
           </Paragraph>
-          return (
           <form onSubmit={handleSubmit} style={{ width: "545px" }}>
             <List>
               <li>

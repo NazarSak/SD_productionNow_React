@@ -952,6 +952,9 @@ export const OurTeam = styled.section`
     -webkit-text-stroke: 1.5px #fff;
     letter-spacing: 2.5px;
   }
+  @media screen and (max-width: 1199px){
+    width: 672px;
+  }
 `;
 
 export const SliderName = styled.div`
@@ -1058,8 +1061,11 @@ export const ContainerImageBW = styled.div`
   display: flex;
   width: 100%;
   transition: all 0.5s ease 0s;
-  margin-left: 40px;
+  margin-left: -10px;
   z-index: 2;
+  @media screen and (max-width: 1199px){
+    margin-left: 0;
+  }
 `;
 
 export const ImageBW = styled.img`
