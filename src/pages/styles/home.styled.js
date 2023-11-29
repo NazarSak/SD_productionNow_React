@@ -42,10 +42,12 @@ export const SectionHero = styled.section`
     animation: 2s ease-in-out 2s infinite alternate ${sectionHeroAnimation};
   }
   @media screen and (max-width: 767px) {
+    position: relative;
+    overflow: hidden;
     &::before {
       width: 48px;
       height: 48px;
-      margin-top: -120px;
+      margin-top: -227px;
       margin-right: 550px;
     }
   }
@@ -61,7 +63,8 @@ export const HeroBackground = styled.img`
   @media screen and (max-width: 767px) {
     width: 507px;
     height: 507px;
-    top: 125px;
+    position: absolute;
+    top: -10px;
   }
 `;
 export const HeroBlock = styled.div`
@@ -104,7 +107,7 @@ export const HeroContend = styled.div`
   }
   @media screen and (max-width: 767px) {
     & h2 {
-      width: 379px;
+      width: 343px;
       font-size: 56px;
     }
   }
@@ -114,6 +117,7 @@ export const ContainerPC = styled.div`
   margin-right: auto;
   @media screen and (max-width: 767px) {
     display: none;
+    overflow: hidden;
   }
 `;
 
@@ -156,6 +160,14 @@ export const ButtonHeader = styled(Link)`
       linear-gradient(90deg, #bd00ff -1.03%, #4200ff 98.22%)
     );
     margin-top: 108px;
+  }
+`;
+
+export const ImgHeroDiv = styled.div`
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-top: 30px;
   }
 `;
 
@@ -245,6 +257,7 @@ export const ProjectsFragment1 = styled.div`
     border-radius: 0px;
     padding: 0px;
     margin-top: 0px;
+    height: 508px;
   }
 `;
 
@@ -319,6 +332,12 @@ export const ButtonProject1 = styled(Link)`
   @media screen and (max-width: 1199px) {
     padding: 12px 78px;
   }
+  @media screen and (max-width: 767px) {
+    width: 279px;
+    padding: 16px 32px;
+    gap: 10px;
+    margin-top: 304px;
+  }
 `;
 export const ProjectContainer = styled.div`
   height: 510px;
@@ -330,7 +349,16 @@ export const ProjectContainer = styled.div`
   }
   @media screen and (max-width: 767px) {
     border-radius: 0px;
-    height: 216px;
+    height: 508px;
+  }
+`;
+
+export const ProjectImage1Container = styled.div`
+  @media screen and (max-width: 767px) {
+    height: 255px;
+    position: relative;
+    margin-top: -356px;
+    overflow: hidden;
   }
 `;
 
@@ -348,8 +376,9 @@ export const ProjectImage1 = styled.img`
   }
   @media screen and (max-width: 767px) {
     transform: rotate(15deg);
-    right: 50px;
-    width: 142px;
+    right: 178px;
+    top: 16px;
+    width: 240px;
   }
 `;
 
@@ -367,6 +396,13 @@ export const ProjectsFragment2 = styled.div`
   @media screen and (max-width: 1199px) {
     padding: 64px;
     height: 228px;
+  }
+  @media screen and (max-width: 1199px) {
+    background: transparent;
+    height: 508px;
+    padding: 0px;
+    border-radius: 0px;
+    justify-content: start;
   }
 `;
 
@@ -416,6 +452,15 @@ export const ProjectsFragmentInfo2 = styled.div`
       margin: 16px 0;
     }
   }
+  @media screen and (max-width: 767px) {
+    width: 285px;
+    & h4 {
+      font-size: 24px;
+    }
+    & h3 {
+      font-size: 32px;
+    }
+  }
 `;
 
 export const ButtonProject2 = styled(Link)`
@@ -437,11 +482,25 @@ export const ButtonProject2 = styled(Link)`
   @media screen and (max-width: 1199px) {
     padding: 12px 78px;
   }
+  @media screen and (max-width: 767px) {
+    margin-top: 300px;
+    width: 279px;
+    padding: 16px 32px;
+    gap: 10px;
+  }
 `;
 
 export const ProjectImageContainer1 = styled.div`
   display: flex;
   transform: rotate(15deg);
+  @media screen and (max-width: 1199px) {
+    height: 240px;
+    position: absolute;
+    top: 162px;
+    width: 100%;
+    overflow: hidden;
+    transform: rotate(0deg);
+  }
 `;
 
 export const ProjectImage21 = styled.img`
@@ -456,6 +515,12 @@ export const ProjectImage21 = styled.img`
     left: -280px;
     width: 264px;
   }
+  @media screen and (max-width: 767px) {
+    width: 200px;
+    transform: rotate(-15deg);
+    top: 0;
+    left: -40px;
+  }
 `;
 export const ProjectImage22 = styled.img`
   position: absolute;
@@ -467,6 +532,12 @@ export const ProjectImage22 = styled.img`
   @media screen and (max-width: 1199px) {
     width: 264px;
     margin-left: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    transform: rotate(-15deg);
+    width: 240px;
+    margin-left: 208px;
+    top: 8px;
   }
 `;
 
@@ -490,6 +561,13 @@ export const ProjectsFragment3 = styled.div`
     width: 544px;
     padding: 64px;
     position: unset;
+  }
+  @media screen and (max-width: 767px) {
+    background: transparent;
+    padding: 0;
+    border-radius: 0px;
+    height: 508px;
+    width: 100%;
   }
 `;
 
@@ -540,6 +618,15 @@ export const ProjectsFragmentInfo3 = styled.div`
       margin-bottom: 23px;
     }
   }
+  @media screen and (max-width: 767px) {
+    width: 285px;
+    & h4 {
+      font-size: 24px;
+    }
+    & h3 {
+      font-size: 32px;
+    }
+  }
 `;
 
 export const ButtonProject3 = styled(Link)`
@@ -560,6 +647,24 @@ export const ButtonProject3 = styled(Link)`
   @media screen and (max-width: 1199px) {
     padding: 12px 78px;
   }
+  @media screen and (max-width: 767px) {
+    display: flex;
+    margin-top: 274px;
+    width: 279px;
+    padding: 16px 32px;
+    gap: 10px;
+  }
+`;
+
+export const ProjectImage3Container = styled.div`
+  @media screen and (max-width: 767px) {
+    height: 230px;
+    width: 100%;
+    position: absolute;
+    top: 192px;
+    right: 0px;
+    overflow: hidden;
+  }
 `;
 
 export const ProjectImage31 = styled.img`
@@ -573,6 +678,12 @@ export const ProjectImage31 = styled.img`
     top: -40px;
     left: 302px;
     background-size: cover;
+  }
+  @media screen and (max-width: 767px) {
+    transform: rotate(15deg);
+    left: -45px;
+    top: 10px;
+    width: 240px;
   }
 `;
 
@@ -588,6 +699,9 @@ export const ProjectImage32 = styled.img`
     top: 40px;
     left: 302px;
   }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;
 
 export const ProjectContainerImg = styled.div`
@@ -597,6 +711,29 @@ export const ProjectContainerImg = styled.div`
     border-radius: 40px;
     position: relative;
     overflow: hidden;
+  }
+  @media screen and (max-width: 767px) {
+    height: 508px;
+    border-radius: 0px;
+  }
+`;
+
+export const ContainerMoreProject = styled.div`
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    margin-top: -76px;
+    & button {
+      color: var(--02-dark-color-white, #fff);
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      background: transparent;
+      border: none;
+    }
   }
 `;
 
@@ -629,6 +766,14 @@ export const ProjectsFragment4 = styled.div`
     width: 544px;
     padding: 64px;
     position: relative;
+  }
+  @media screen and (max-width: 767px) {
+    background: transparent;
+    border-radius: 0px;
+    height: 508px;
+    width: 100%;
+    padding: 0;
+    margin-top: 80px;
   }
 `;
 
@@ -682,6 +827,17 @@ export const ProjectsFragmentInfo4 = styled.div`
       margin-bottom: 23px;
     }
   }
+  @media screen and (max-width: 767px) {
+    margin-right: auto;
+    margin-left: initial;
+    width: 343px;
+    & h4 {
+      font-size: 24px;
+    }
+    & h3 {
+      font-size: 32px;
+    }
+  }
 `;
 
 export const ButtonProject4 = styled(Link)`
@@ -702,6 +858,23 @@ export const ButtonProject4 = styled(Link)`
   @media screen and (max-width: 1199px) {
     padding: 12px 78px;
   }
+  @media screen and (max-width: 767px) {
+    display: flex;
+    margin-top: 300px;
+    width: 279px;
+    padding: 16px 32px;
+    gap: 10px;
+  }
+`;
+
+export const ProjectImage4Container = styled.div`
+  @media screen and (max-width: 767px) {
+    height: 224px;
+    top: 175px;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+  }
 `;
 
 export const ProjectImage41 = styled.img`
@@ -714,6 +887,12 @@ export const ProjectImage41 = styled.img`
     width: 158px;
     top: 96px;
     left: 212px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 165px;
+    top: 29px;
+    left: 140px;
+    transform: rotate(15deg);
   }
 `;
 
@@ -729,6 +908,12 @@ export const ProjectImage42 = styled.img`
     top: 48px;
     left: 0;
     margin: 0;
+  }
+  @media screen and (max-width: 767px) {
+    width: 200px;
+    top: -135px;
+    left: -83px;
+    transform: rotate(15deg);
   }
 `;
 
@@ -755,6 +940,7 @@ export const Services = styled.section`
     display: flex;
     flex-direction: column;
     align-items: start;
+    margin: 25px;
     & h2 {
       font-size: 40px;
     }
@@ -1086,6 +1272,9 @@ export const OurTeam = styled.section`
   }
   @media screen and (max-width: 1199px) {
     width: 672px;
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 `;
 

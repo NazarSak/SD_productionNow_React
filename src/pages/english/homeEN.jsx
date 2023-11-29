@@ -1,21 +1,19 @@
 import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
 import { HeaderEN } from "../../components/header/HeaderEN";
 import { FooterEN } from "../../components/footer/FooterEN";
+import { SvgHome } from "../../helperFunction/svgHome/svgHome";
 import { sliderData } from "../../helperFunction/arrays/sliderData";
 import { handleClickTop } from "../../helperFunction/ScrollTop";
 import { ImgBWData } from "../../helperFunction/arrays/ImgBWData";
 import ImageHero from "../../assets/svg/deviderLine.svg";
 import { ConectUsEN } from "../../components/conectUs/conectUsEN";
 import Ellipse from "../../assets/svg/Ellipse.svg";
-// import CrlectImg from "../../assets/svg/Close.svg";
 import OrganicImg from "../../assets/img/5093ef757e18607302ebe57407fd1129.png";
 import WhiteImg1 from "../../assets/img/page2.png";
 import BriliniImg1 from "../../assets/img/page-3.png";
 import BriliniImg2 from "../../assets/img/page-4.png";
 import AbiImg1 from "../../assets/img/page4.png";
 import AbiImg2 from "../../assets/img/page4-1.png";
-// import LeftPurple from "../../assets/svg/left.svg";
 import Prev from "../../assets/svg/left1.svg";
 import Next from "../../assets/svg/right1.svg";
 import Social from "../../assets/svg/teams/socials.svg";
@@ -25,6 +23,7 @@ import {
   HeroBlock,
   HeroContend,
   SectionHero,
+  ImgHeroDiv,
   ImgHero,
   ContainerPC,
   ContainerMobile,
@@ -33,13 +32,15 @@ import {
   ProjectsFragment1,
   ProjectsFragmentInfo1,
   ButtonProject1,
+  ProjectImage1Container,
+  ProjectImage3Container,
   ProjectImage1,
   ProjectContainer,
   ProjectsFragment2,
   ProjectsFragmentInfo2,
   ButtonProject2,
-  ProjectImage2,
   ProjectImageContainer1,
+  ProjectImage4Container,
   ProjectImage21,
   ProjectImage22,
   ProjectsFragmentInfo3,
@@ -47,6 +48,7 @@ import {
   ButtonProject3,
   ProjectImage31,
   ProjectImage32,
+  ContainerMoreProject,
   ProjectContainer2,
   ProjectsFragment4,
   ProjectsFragmentInfo4,
@@ -67,7 +69,6 @@ import {
   SwiperButtonNext,
   SwiperImgContainer,
   SliderName,
-  SwiperBox,
   MySwiperBox,
   SocialImg,
   SwiperWrapper,
@@ -85,15 +86,17 @@ import {
 
 export const HomeEN = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [containerClass, setContainerClass] = useState(0);
   const [displayImg, setDisplayImg] = useState(3);
   const [displayImgPrev, setDisplayImgPrev] = useState(7);
   const [imgArr, setImgArr] = useState([]);
+  const [isOpenMoreProject, setIsOpenProject] = useState(false);
   let ImgBWDataExtended = ImgBWData.slice(0, 3);
+
+
   useEffect(() => {
     setImgArr(ImgBWDataExtended);
+    // eslint-disable-next-line
   }, []);
-
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -106,6 +109,14 @@ export const HomeEN = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % sliderData.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
   }, []);
 
   const addImg = () => {
@@ -141,14 +152,9 @@ export const HomeEN = () => {
     addImg();
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % sliderData.length);
-      // addImg()
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
+  const hadnleOpenProject = () => {
+    setIsOpenProject(true);
+  };
 
   return (
     <>
@@ -207,8 +213,11 @@ export const HomeEN = () => {
                 </ButtonProject1>
               </ProjectsFragmentInfo1>
             </ProjectsFragment1>
-            <ProjectImage1 src={OrganicImg} />
+            <ProjectImage1Container>
+              <ProjectImage1 src={OrganicImg} />
+            </ProjectImage1Container>
           </ProjectContainer>
+
           <ProjectsFragment2>
             <ProjectImageContainer1>
               <ProjectImage21 src={WhiteImg1} />
@@ -224,10 +233,7 @@ export const HomeEN = () => {
                   adaptation to a rapidly changing business environment.
                 </p>
               ) : (
-                <p>
-                  Develop and implement Agilic methods in the strategic
-                  management
-                </p>
+                <p>Adaptive Strategic Agile Management.</p>
               )}
               <ButtonProject2 to="/en/whiteCollar" onClick={handleClickTop}>
                 View
@@ -235,62 +241,84 @@ export const HomeEN = () => {
             </ProjectsFragmentInfo2>
           </ProjectsFragment2>
 
-          <ProjectContainer2>
-            <ProjectContainerImg>
-              <ProjectsFragment3>
-                <ProjectImage31 src={BriliniImg1} />
-                <ProjectImage32 src={BriliniImg2} />
-                <ProjectsFragmentInfo3>
-                  <h4>Landing page</h4>
-                  <h3>Brilini Studio</h3>
+          {!isOpenMoreProject ? (
+            <ContainerMoreProject>
+              <button onClick={hadnleOpenProject}>
+                Show more
+                <SvgHome />
+              </button>
+            </ContainerMoreProject>
+          ) : (
+            <ProjectContainer2>
+              <ProjectContainerImg>
+                <ProjectsFragment3>
+                  <ProjectImage3Container>
+                    <ProjectImage31 src={BriliniImg1} />
+                    <ProjectImage32 src={BriliniImg2} />
+                  </ProjectImage3Container>
+                  <ProjectsFragmentInfo3>
+                    <h4>Landing page</h4>
+                    <h3>Brilini Studio</h3>
+                    <ContainerPC>
+                      {windowWidth > 1200 ? (
+                        <p>
+                          Studio of interior designers specializing in the
+                          furnishing and design of rooms, apartments and houses
+                          in a modern and austere style.
+                        </p>
+                      ) : (
+                        <p>
+                          Studio of interior designers specializing in the
+                          furnishing and design of rooms
+                        </p>
+                      )}
+                    </ContainerPC>
+                    <ContainerMobile>
+                      <p>Modern austere interior design studio.</p>
+                    </ContainerMobile>
+                    <ButtonProject3
+                      to="/en/briliniStudio"
+                      onClick={handleClickTop}
+                    >
+                      View
+                    </ButtonProject3>
+                  </ProjectsFragmentInfo3>
+                </ProjectsFragment3>
+              </ProjectContainerImg>
+
+              <ProjectsFragment4>
+                <ProjectImage4Container>
+                  <ProjectImage41 src={AbiImg1} />
+                  <ProjectImage42 src={AbiImg2} />
+                </ProjectImage4Container>
+                <ProjectsFragmentInfo4>
+                  <h4>Mobile App</h4>
+                  <h3>Abi</h3>
                   {windowWidth > 1200 ? (
                     <p>
-                      Studio of interior designers specializing in the
-                      furnishing and design of rooms, apartments and houses in a
-                      modern and austere style.
+                      Mobile application for creating presentations with
+                      ready-made templates based on artificial intelligence. The
+                      application is available on Play Market and App Store.
                     </p>
                   ) : (
                     <p>
-                      Studio of interior designers specializing in the
-                      furnishing and design of rooms
+                      Mobile application for creating presentations with
+                      ready-made templates
                     </p>
                   )}
-                  <ButtonProject3
-                    to="/en/briliniStudio"
-                    onClick={handleClickTop}
-                  >
+                  <ButtonProject4 to="en/abi" onClick={handleClickTop}>
                     View
-                  </ButtonProject3>
-                </ProjectsFragmentInfo3>
-              </ProjectsFragment3>
-            </ProjectContainerImg>
-
-            <ProjectsFragment4>
-              <ProjectImage41 src={AbiImg1} />
-              <ProjectImage42 src={AbiImg2} />
-              <ProjectsFragmentInfo4>
-                <h4>Mobile App</h4>
-                <h3>Abi</h3>
-                {windowWidth > 1200 ? (
-                  <p>
-                    Mobile application for creating presentations with
-                    ready-made templates based on artificial intelligence. The
-                    application is available on Play Market and App Store.
-                  </p>
-                ) : (
-                  <p>
-                    Mobile application for creating presentations with
-                    ready-made templates
-                  </p>
-                )}
-                <ButtonProject4 to="en/abi" onClick={handleClickTop}>
-                  View
-                </ButtonProject4>
-              </ProjectsFragmentInfo4>
-            </ProjectsFragment4>
-          </ProjectContainer2>
+                  </ButtonProject4>
+                </ProjectsFragmentInfo4>
+              </ProjectsFragment4>
+            </ProjectContainer2>
+          )}
         </ProjectsCards>
       </Project>
+
+      <ImgHeroDiv>
+        <ImgHero src={ImageHero} alt="" />
+      </ImgHeroDiv>
 
       <Services id="services">
         <h2>
@@ -388,6 +416,7 @@ export const HomeEN = () => {
           </ToEmailLink>
         </ServicesCards>
       </Services>
+
       <OurTeam id="team">
         <SliderName>
           <h2>
