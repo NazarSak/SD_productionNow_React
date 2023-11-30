@@ -143,7 +143,6 @@ export const HomeEN = () => {
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % sliderData.length);
-    // setContainerClass((prevClass) => prevClass + 256);
     nextImg();
   };
 

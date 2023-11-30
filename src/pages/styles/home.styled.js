@@ -66,7 +66,7 @@ export const HeroBackground = styled.img`
     position: absolute;
     top: -10px;
   }
-`;
+`; 
 export const HeroBlock = styled.div`
   margin-top: 152px;
   margin-bottom: 117px;

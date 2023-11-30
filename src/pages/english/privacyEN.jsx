@@ -1,7 +1,7 @@
 import React from "react";
 import { HeaderEN } from "../../components/header/HeaderEN";
 import { FooterEN } from "../../components/footer/FooterEN";
-import LeftArrowPrivacy from '../../assets/svg/LeftArrowPrivacy.svg'
+import LeftArrowPrivacy from "../../assets/svg/LeftArrowPrivacy.svg";
 import {
   TitleHTwo,
   TitleSpan,
@@ -16,7 +16,7 @@ import {
   Line,
   ParagraphSpanWithUnderLine,
   Li,
-  FooterContainer
+  FooterContainer,
 } from "../styles/privacy.styled";
 
 export const PrivacyEN = () => {
@@ -25,8 +25,22 @@ export const PrivacyEN = () => {
       <HeaderEN name={"/de/privacy"} />
       <Container>
         <BackButton to="/">
-          <img src={LeftArrowPrivacy} alt="arrow" />
-          Back to home screen
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="10"
+            viewBox="0 0 16 10"
+            fill="none"
+          >
+            <path
+              d="M5.13115 1L1 4.76471M1 4.76471L5.13115 9M1 4.76471H15"
+              stroke="#FCFCFC"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <p> Back to home screen</p>
         </BackButton>
 
         <TitleHTwo>
@@ -46,7 +60,7 @@ export const PrivacyEN = () => {
           </Li>
           <Li>
             <Paragraph>
-              <ParagraphSpan class="colorSpan">Data</ParagraphSpan> is any
+              <ParagraphSpan >Data</ParagraphSpan> is any
               information that is directly or indirectly related to the users of
               the website.
             </Paragraph>
@@ -61,7 +75,9 @@ export const PrivacyEN = () => {
           <List>
             <Li>
               <Line />
-              <ParagraphLine>Full name, phone number, e-mail address.</ParagraphLine>
+              <ParagraphLine>
+                Full name, phone number, e-mail address.
+              </ParagraphLine>
             </Li>
 
             <Li>
@@ -110,8 +126,8 @@ export const PrivacyEN = () => {
           <List>
             <Li>
               <Paragraph>
-                <ParagraphSpan class="colorSpan">Cookies</ParagraphSpan> or
-                <ParagraphSpan class="colorSpan"> cookies</ParagraphSpan> are
+                <ParagraphSpan >Cookies</ParagraphSpan> or
+                <ParagraphSpan > cookies</ParagraphSpan> are
                 small pieces of data that are sent to the user's computer when
                 you visit a web page or view an advertising module on a web page
                 and are stored on the user's computer or mobile device.
@@ -119,8 +135,8 @@ export const PrivacyEN = () => {
             </Li>
             <Li>
               <Paragraph>
-                <ParagraphSpan class="colorSpan">Pixels</ParagraphSpan> or{" "}
-                <ParagraphSpan class="colorSpan">pixel tags </ParagraphSpan> are
+                <ParagraphSpan >Pixels</ParagraphSpan> or{" "}
+                <ParagraphSpan >pixel tags </ParagraphSpan> are
                 digital images, an element of the ad matrix that form the image.
                 They can be used to track how often a user uses a web page, to
                 identify the user's browser and provide services. For example,
@@ -314,7 +330,7 @@ export const PrivacyEN = () => {
           </List>
         </Section>
         <FooterContainer>
-          <FooterEN showImg/>
+          <FooterEN showImg />
         </FooterContainer>
       </Container>
     </>
