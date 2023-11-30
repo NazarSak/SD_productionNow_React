@@ -82,6 +82,8 @@ export const SixthSection = styled.section`
   }
   @media screen and (max-width: 767px) {
     margin-top: 48px;
+    margin-bottom: 0px;
+
     width: 343px;
   }
 `;

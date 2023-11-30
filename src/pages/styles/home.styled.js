@@ -397,7 +397,7 @@ export const ProjectsFragment2 = styled.div`
     padding: 64px;
     height: 228px;
   }
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
     background: transparent;
     height: 508px;
     padding: 0px;
@@ -493,7 +493,7 @@ export const ButtonProject2 = styled(Link)`
 export const ProjectImageContainer1 = styled.div`
   display: flex;
   transform: rotate(15deg);
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
     height: 240px;
     position: absolute;
     top: 162px;
@@ -940,7 +940,7 @@ export const Services = styled.section`
     display: flex;
     flex-direction: column;
     align-items: start;
-    margin: 25px;
+    margin-top: 25px;
     & h2 {
       font-size: 40px;
     }
@@ -1392,8 +1392,6 @@ export const ContainerImageBW = styled.div`
 export const ImageBW = styled.img`
   width: 256px;
   height: 256px;
-  /* position: absolute;
-  z-index: 1; */
 `;
 
 export const ImageC = styled.img`

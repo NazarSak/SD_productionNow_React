@@ -1,4 +1,5 @@
 import React from "react";
+// import { useHistory } from 'react-router-dom';
 import { HeaderEN } from "../../components/header/HeaderEN";
 import { FooterEN } from "../../components/footer/FooterEN";
 import { ConectUsEN } from "../../components/conectUs/conectUsEN";
@@ -55,6 +56,21 @@ import {
 } from "../styles/organicShop.styled";
 
 export const OrganicShopEN = () => {
+  // const history = useHistory();
+
+  // const handleDelayedNavigation = (destination) => (event) => {
+  //   event.preventDefault();
+
+  //   // Add your desired delay in milliseconds (e.g., 1000ms for 1 second)
+  //   const delayDuration = 1000;
+  //   window.scrollTo(0, 0);
+  //   // Simulate a delay before navigating to the specified destination
+  //   setTimeout(() => {
+  //     history.push(destination);
+      
+  //   }, delayDuration);
+  // };
+
 
   const handleClick = () => {
     window.scrollTo(0, 0);

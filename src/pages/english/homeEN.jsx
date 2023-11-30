@@ -92,7 +92,6 @@ export const HomeEN = () => {
   const [isOpenMoreProject, setIsOpenProject] = useState(false);
   let ImgBWDataExtended = ImgBWData.slice(0, 3);
 
-
   useEffect(() => {
     setImgArr(ImgBWDataExtended);
     // eslint-disable-next-line
@@ -104,12 +103,16 @@ export const HomeEN = () => {
       setWindowWidth(window.innerWidth);
     };
 
+    if (windowWidth >= 768) {
+      setIsOpenProject(true);
+    }
+
     window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [windowWidth]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -148,7 +151,6 @@ export const HomeEN = () => {
     setCurrentSlide((prevSlide) =>
       prevSlide === 0 ? sliderData.length - 1 : prevSlide - 1
     );
-    // setContainerClass((prevClass) => prevClass - 256);
     addImg();
   };
 
@@ -226,15 +228,23 @@ export const HomeEN = () => {
             <ProjectsFragmentInfo2>
               <h4>Business website</h4>
               <h3>WhiteCollor</h3>
-              {windowWidth > 1200 ? (
-                <p>
-                  Develop and implement Agilic methods in the strategic
-                  management of a corporation to ensure flexibility and
-                  adaptation to a rapidly changing business environment.
-                </p>
-              ) : (
+              <ContainerPC>
+                {windowWidth > 1200 ? (
+                  <p>
+                    Develop and implement Agilic methods in the strategic
+                    management of a corporation to ensure flexibility and
+                    adaptation to a rapidly changing business environment.
+                  </p>
+                ) : (
+                  <p>
+                    Develop and implement Agilic methods in the strategic
+                    management
+                  </p>
+                )}
+              </ContainerPC>
+              <ContainerMobile>
                 <p>Adaptive Strategic Agile Management.</p>
-              )}
+              </ContainerMobile>
               <ButtonProject2 to="/en/whiteCollar" onClick={handleClickTop}>
                 View
               </ButtonProject2>
