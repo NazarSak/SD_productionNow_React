@@ -17,10 +17,13 @@ import AbiImg2 from "../../assets/img/page4-1.png";
 import Prev from "../../assets/svg/left1.svg";
 import Next from "../../assets/svg/right1.svg";
 import Social from "../../assets/svg/teams/socials.svg";
+import Select from '../../assets/svg/select.svg'
+import selectMob from '../../assets/svg/selectMob.svg'
 import {
-  ButtonHeader,
+  ButtonHeader, 
   HeroBackground,
   HeroBlock,
+  SelectSvg,
   HeroContend,
   SectionHero,
   ImgHeroDiv,
@@ -168,13 +171,14 @@ export const HomeEN = () => {
               <h2>
                 Built the future <span>together </span> with us!
               </h2>
-              <img src="../img/select.svg" alt="" />
+              <SelectSvg src={Select} alt="Select" />
               <p>Your goals are our execution</p>
             </ContainerPC>
             <ContainerMobile>
               <h2>
                 Built the <span> future </span>together
               </h2>
+              <SelectSvg src={selectMob} alt="Select" />
             </ContainerMobile>
           </HeroContend>
           <ButtonHeader to="/en/contactUs">Lets go!</ButtonHeader>

@@ -53,6 +53,16 @@ export const SectionHero = styled.section`
   }
 `;
 
+export const SelectSvg = styled.img`
+  position: absolute;
+  top: -5px;
+  right: 130px;
+  @media screen and (max-width: 767px) {
+    top: 150px;
+    right: 11px;
+  }
+`;
+
 export const HeroBackground = styled.img`
   position: absolute;
   top: 40px;
@@ -66,7 +76,7 @@ export const HeroBackground = styled.img`
     position: absolute;
     top: -10px;
   }
-`; 
+`;
 export const HeroBlock = styled.div`
   margin-top: 152px;
   margin-bottom: 117px;
@@ -74,6 +84,7 @@ export const HeroBlock = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 `;
 export const HeroContend = styled.div`
   display: flex;
