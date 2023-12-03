@@ -1,7 +1,6 @@
 import React from "react";
 import { HeaderDE } from "../../components/header/HeaderDE";
 import { FooterDE } from "../../components/footer/FooterDE";
-import LeftArrowPrivacy from '../../assets/svg/LeftArrowPrivacy.svg'
 import {
   TitleHTwo,
   TitleSpan,

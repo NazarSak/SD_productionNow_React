@@ -8,7 +8,6 @@ import {
 	Footer,
 	LinkToPrivacy,
 	Context,
-	SecondList,
 	LineTablet,
 	SecondListDE,
 } from './footer.styled'

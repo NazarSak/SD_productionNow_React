@@ -1,7 +1,6 @@
 import React from "react";
 import { HeaderEN } from "../../components/header/HeaderEN";
 import { FooterEN } from "../../components/footer/FooterEN";
-import LeftArrowPrivacy from "../../assets/svg/LeftArrowPrivacy.svg";
 import {
   TitleHTwo,
   TitleSpan,
@@ -20,6 +19,7 @@ import {
 } from "../styles/privacy.styled";
 
 export const PrivacyEN = () => {
+
   return (
     <>
       <HeaderEN name={"/de/privacy"} />
