@@ -5,6 +5,7 @@ export const ContentUs = styled.section`
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
+  
   @media screen and (max-width: 767px) {
     margin-top: 250px;
     margin-bottom: 79px;
