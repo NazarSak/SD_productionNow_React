@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ScrollTrigger from 'react-scroll-trigger';
 import { Link } from "react-router-dom";
 import { HeaderEN } from "../../components/header/HeaderEN";
 import { FooterEN } from "../../components/footer/FooterEN";
@@ -87,16 +88,22 @@ export const HomeEN = () => {
   const [displayImg, setDisplayImg] = useState(3)
   const [displayImgPrev, setDisplayImgPrev] = useState(7)
   const [imgArr, setImgArr] = useState([])
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleEnterViewport = () => {
+    setIsVisible(true);
+  };
+  
   let ImgBWDataExtended = ImgBWData.slice(0, 3)
   useEffect(() => {
 		setImgArr(ImgBWDataExtended)
 	}, [])
   
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const handleResize = () => {
-       setWindowWidth(window.innerWidth);
+      setWindowWidth(window.innerWidth);
      };  
  
      window.addEventListener('resize', handleResize);  
@@ -171,53 +178,57 @@ export const HomeEN = () => {
 					Check our some of <span>our projects</span>
 				</h2>
 				<ProjectsCards>
-					<ProjectContainer>
-						<ProjectsFragment1>
-							<ProjectsFragmentInfo1>
-								<h4>Online Shop</h4>
-								<h3>Organic</h3>
+					<ScrollTrigger onEnter={handleEnterViewport}>
+						<ProjectContainer className={`${isVisible ? 'visible' : ''}`}>
+							<ProjectsFragment1>
+								<ProjectsFragmentInfo1>
+									<h4>Online Shop</h4>
+									<h3>Organic</h3>
+									{windowWidth > 1200 ? (
+										<p>
+											Online store with organic fruits, vegetables and berries.
+											A England farmer wanted to sell organically grown produce.
+										</p>
+									) : (
+										<p>
+											Online store with organic fruits, vegetables and berries.
+										</p>
+									)}
+									<ButtonProject1 to='/en/organicShop' onClick={handleClickTop}>
+										View
+									</ButtonProject1>
+								</ProjectsFragmentInfo1>
+							</ProjectsFragment1>
+							<ProjectImage1 src={OrganicImg} />
+						</ProjectContainer>
+					</ScrollTrigger>
+					<ScrollTrigger onEnter={handleEnterViewport}>
+						<ProjectsFragment2 onEnter={`${isVisible ? 'visible' : ''}`}>
+							<ProjectImageContainer1>
+								<ProjectImage21 src={WhiteImg1} />
+								<ProjectImage22 src={WhiteImg1} />
+							</ProjectImageContainer1>
+							<ProjectsFragmentInfo2>
+								<h4>Business website</h4>
+								<h3>WhiteCollor</h3>
 								{windowWidth > 1200 ? (
 									<p>
-										Online store with organic fruits, vegetables and berries. A
-										England farmer wanted to sell organically grown produce.
+										Develop and implement Agilic methods in the strategic
+										management of a corporation to ensure flexibility and
+										adaptation to a rapidly changing business environment.
 									</p>
 								) : (
 									<p>
-										Online store with organic fruits, vegetables and berries.
+										Develop and implement Agilic methods in the strategic
+										management
 									</p>
 								)}
-								<ButtonProject1 to='/en/organicShop' onClick={handleClickTop}>
+								<ButtonProject2 to='/en/whiteCollar' onClick={handleClickTop}>
 									View
-								</ButtonProject1>
-							</ProjectsFragmentInfo1>
-						</ProjectsFragment1>
-						<ProjectImage1 src={OrganicImg} />
-					</ProjectContainer>
-					<ProjectsFragment2>
-						<ProjectImageContainer1>
-							<ProjectImage21 src={WhiteImg1} />
-							<ProjectImage22 src={WhiteImg1} />
-						</ProjectImageContainer1>
-						<ProjectsFragmentInfo2>
-							<h4>Business website</h4>
-							<h3>WhiteCollor</h3>
-							{windowWidth > 1200 ? (
-								<p>
-									Develop and implement Agilic methods in the strategic
-									management of a corporation to ensure flexibility and
-									adaptation to a rapidly changing business environment.
-								</p>
-							) : (
-								<p>
-									Develop and implement Agilic methods in the strategic
-									management
-								</p>
-							)}
-							<ButtonProject2 to='/en/whiteCollar' onClick={handleClickTop}>
-								View
-							</ButtonProject2>
-						</ProjectsFragmentInfo2>
-					</ProjectsFragment2>
+								</ButtonProject2>
+							</ProjectsFragmentInfo2>
+						</ProjectsFragment2>
+					</ScrollTrigger>
 
 					<ProjectContainer2>
 						<ProjectContainerImg>
@@ -255,20 +266,18 @@ export const HomeEN = () => {
 							<ProjectsFragmentInfo4>
 								<h4>Mobile App</h4>
 								<h3>Abi</h3>
-                {windowWidth > 1200 ?
-                (
-								<p>
-									Mobile application for creating presentations with ready-made
-									templates based on artificial intelligence. The application is
-									available on Play Market and App Store.
-								</p>
-                ) : (
-								<p>
-									Mobile application for creating presentations with ready-made
-									templates
-								</p>
-                )
-                }
+								{windowWidth > 1200 ? (
+									<p>
+										Mobile application for creating presentations with
+										ready-made templates based on artificial intelligence. The
+										application is available on Play Market and App Store.
+									</p>
+								) : (
+									<p>
+										Mobile application for creating presentations with
+										ready-made templates
+									</p>
+								)}
 								<ButtonProject4 to='en/abi' onClick={handleClickTop}>
 									View
 								</ButtonProject4>

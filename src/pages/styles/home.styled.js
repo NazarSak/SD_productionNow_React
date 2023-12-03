@@ -169,9 +169,10 @@ export const ProjectsFragment1 = styled.div`
 	padding: 80px;
 	overflow: hidden;
 	@media screen and (max-width: 1199px) {
-    padding: 64px;
-    height: 228px;
+		padding: 64px;
+		height: 228px;
 	}
+
 `
 
 export const ProjectsFragmentInfo1 = styled.div`
@@ -239,13 +240,23 @@ export const ButtonProject1 = styled(Link)`
 	}
 `
 export const ProjectContainer = styled.div`
-  height: 510px;
-  border-radius: 40px;
-  position: relative;
-  overflow: hidden;
-  @media screen and (max-width: 1199px) {
-    height: 420px;
-  }
+	height: 510px;
+	border-radius: 40px;
+	position: relative;
+	overflow: hidden;
+	@media screen and (max-width: 1199px) {
+		height: 420px;
+	}
+
+	
+	opacity: 0;
+	transform: translateX(350px);
+	transition: opacity .9s ease, transform .9s ease;
+
+	&.visible {
+		opacity: 1;
+		transform: translateX(0);
+	}
 `
 
 export const ProjectImage1 = styled.img`
@@ -278,6 +289,14 @@ export const ProjectsFragment2 = styled.div`
 	@media screen and (max-width: 1199px) {
 		padding: 64px;
 		height: 228px;
+	}
+	opacity: 0;
+	transform: translateX(-350px);
+	transition: opacity 0.9s ease, transform 0.9s ease;
+
+	&.visible {
+		opacity: 1;
+		transform: translateX(0);
 	}
 `
 
