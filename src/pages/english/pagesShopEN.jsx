@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { HeaderEN } from "../../components/header/HeaderEN";
 import { FooterEN } from "../../components/footer/FooterEN";
 import { ConectUsEN } from "../../components/conectUs/conectUsEN";
@@ -56,6 +56,11 @@ import {
 } from "../styles/pagesShop.styled";
 
 export const PagesShopEN = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  },[])
+
   const handleClick = () => {
     window.scrollTo(0, 0);
   };

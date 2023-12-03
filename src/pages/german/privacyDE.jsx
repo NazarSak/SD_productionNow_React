@@ -15,7 +15,6 @@ import {
   ParagraphSpanWithUnderLine,
   Li,
   FooterContainer,
-  ArrowL,
 } from "../styles/privacy.styled";
 
 export const PrivacyDE = () => {
@@ -23,10 +22,25 @@ export const PrivacyDE = () => {
     <>
       <HeaderDE name={"/en/privacy"} />
       <Container>
-        <BackButton to="/">
-          <ArrowL src={LeftArrowPrivacy} alt="arrow" />
-          Zurück zum Startbildschirm
+        <BackButton to="/de">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="10"
+            viewBox="0 0 16 10"
+            fill="none"
+          >
+            <path
+              d="M5.13115 1L1 4.76471M1 4.76471L5.13115 9M1 4.76471H15"
+              stroke="#FCFCFC"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <p> Zurück zum Startbildschirm</p>
         </BackButton>
+
 
         <TitleHTwo>Datenschutz</TitleHTwo>
         <List>

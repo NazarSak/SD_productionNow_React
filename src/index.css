@@ -75,10 +75,16 @@ button {
   }
 }
 @media screen and (max-width: 767px) {
+  body {
+    width: 375px;
+  }
   section {
     width: 343px;
   }
   h2 {
     font-size: 41px;
+  }
+  #root {
+    width: 100%;
   }
 }

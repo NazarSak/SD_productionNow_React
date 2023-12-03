@@ -17,7 +17,7 @@ export const TitleLink = styled(Link)`
   display: block;
   text-align: center;
   align-items: center;
-
+  width: max-content;
   color: #fcfcfc;
   font-family: Montserrat;
   font-size: 16px;
@@ -95,8 +95,8 @@ export const Footer = styled.footer`
     height: 407px;
   }
   @media screen and (max-width: 1199px) {
-    /* width: 343px;
-    height: 260px; */
+    width: 343px;
+    height: 260px;
   }
 `;
 

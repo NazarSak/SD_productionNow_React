@@ -118,8 +118,45 @@ export const BackButton = styled(Link)`
   text-decoration: none;
   display: flex;
   align-items: center;
+  
   gap: 8px;
+  & p {
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s;
+  }
+  & svg {
+    transition: all 0.5s;
+  }
+  path {
+    transition: transform 0.5s, stroke 0.5s;
+  }
+
+  &:hover {
+    & p {
+      color: #bd00ff;
+    }
+
+    & svg path {
+      transform: translateX(-5px);
+      stroke: #bd00ff;
+
+    }
+  }
 `;
+
+export const BackButtonArrow = styled.img`
+&:hover {
+    & p {
+      color: #bd00ff;
+    }
+
+    & svg path {
+      transform: translateX(5px);
+      stroke: #bd00ff;
+    }
+  }
+`
 
 export const FooterContainer = styled.div`
   margin-top: 100px;
