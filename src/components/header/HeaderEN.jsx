@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ScrollTrigger from "react-scroll-trigger";
 import Logo from "../../assets/svg/logo.svg";
 import { Link } from "react-router-dom";
 import HamburgerMenu from "../../assets/svg/HamburgerMenu.svg";
@@ -28,6 +29,12 @@ import {
 export const HeaderEN = ({ name }) => {
   const [isClicked, setIsClicked] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleEnterViewport = () => {
+    setIsVisible(true);
+  };
+
 
   const handleMenuOpen = () => {
     setIsOpen(true);
@@ -49,12 +56,13 @@ export const HeaderEN = ({ name }) => {
   };
 
   return (
-    <Header>
+    <ScrollTrigger onEnter={handleEnterViewport}>
+    <Header className={`${isVisible ? "visible" : ""}`}>
       <div>
         <Link to="/">
           <img src={Logo} alt="logo" />
         </Link>
-      </div> 
+      </div>
 
       <Navigator>
         <NavigatorLi>
@@ -141,7 +149,7 @@ export const HeaderEN = ({ name }) => {
                 </li>
                 <li>
                   <ChangeLanguageMobile>
-                    <Link  onClick={handleMenuClose}>EN</Link>
+                    <Link onClick={handleMenuClose}>EN</Link>
                     <div />
                     <Link to={name}>DE</Link>
                   </ChangeLanguageMobile>
@@ -169,5 +177,6 @@ export const HeaderEN = ({ name }) => {
         </svg>
       </ChangeLanguage>
     </Header>
+    </ScrollTrigger>
   );
 };

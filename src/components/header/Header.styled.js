@@ -16,6 +16,16 @@ export const Header = styled.header`
   background: #181818;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
   position: relative;
+
+  opacity: 0;
+  transform: translateY(-350px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
   @media (max-width: 1199px) {
     width: 672px;
     background: transparent;
@@ -26,7 +36,6 @@ export const Header = styled.header`
     width: 343px;
     padding: 0 16px;
     margin: auto;
-
   }
 `;
 

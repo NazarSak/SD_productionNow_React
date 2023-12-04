@@ -21,7 +21,7 @@ import {
 export const PrivacyEN = () => {
 
   return (
-    <>
+    <> 
       <HeaderEN name={"/de/privacy"} />
       <Container>
         <BackButton to="/">
