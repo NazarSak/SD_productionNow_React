@@ -12,6 +12,12 @@ export const TitleHTwo = styled.h2`
 export const Container = styled.section`
   width: 1180px;
   margin-top: 48px;
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+
+  &.visible {
+    opacity: 1;
+  }
   @media screen and (max-width: 1199px) {
     width: 672px;
     padding: 0 48px;
@@ -118,7 +124,7 @@ export const BackButton = styled(Link)`
   text-decoration: none;
   display: flex;
   align-items: center;
-  
+
   gap: 8px;
   & p {
     margin: 0;
@@ -140,13 +146,12 @@ export const BackButton = styled(Link)`
     & svg path {
       transform: translateX(-5px);
       stroke: #bd00ff;
-
     }
   }
 `;
 
 export const BackButtonArrow = styled.img`
-&:hover {
+  &:hover {
     & p {
       color: #bd00ff;
     }
@@ -156,7 +161,7 @@ export const BackButtonArrow = styled.img`
       stroke: #bd00ff;
     }
   }
-`
+`;
 
 export const FooterContainer = styled.div`
   margin-top: 100px;

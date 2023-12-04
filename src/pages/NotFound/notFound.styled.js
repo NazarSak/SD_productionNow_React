@@ -8,6 +8,9 @@ export const Container = styled.div`
   align-items: center;
   gap: 80px;
   margin-top: 276px;
+  @media screen and (max-width: 767px) {
+    margin-top: 90px;
+  }
 `;
 
 export const Button = styled(Link)`
@@ -31,5 +34,11 @@ export const Button = styled(Link)`
   transition: all 0.5s;
   &:hover {
     opacity: 0.6;
+  }
+`;
+
+export const Img = styled.img`
+  @media screen and (max-width: 767px) {
+    width: 343px;
   }
 `;

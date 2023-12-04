@@ -45,6 +45,28 @@ export const ImageFirst = styled.img`
   width: 100%;
   max-height: 583px;
   object-fit: cover;
+
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+ 
+
+  &.visible {
+    opacity: 1;
+  }
+`;
+
+export const ImageHandshake = styled.img`
+  width: 100%;
+  max-height: 583px;
+  object-fit: cover;
+
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+ 
+
+  &.visible {
+    opacity: 1;
+  }
 `;
 
 export const ParagraphAbProject = styled.p`

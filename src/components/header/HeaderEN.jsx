@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ScrollTrigger from "react-scroll-trigger";
+import ScrollTrigger from "react-scroll-trigger"; 
 import Logo from "../../assets/svg/logo.svg";
 import { Link } from "react-router-dom";
 import HamburgerMenu from "../../assets/svg/HamburgerMenu.svg";

@@ -8,7 +8,7 @@ export const Header = styled.header`
   margin: 40px auto 0;
   padding: 10px 120px;
   justify-content: space-between;
-  flex-shrink: 0;
+  flex-shrink: 0; 
   z-index: 100;
   display: flex;
   align-items: center;
@@ -16,15 +16,14 @@ export const Header = styled.header`
   background: #181818;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
   position: relative;
-
   opacity: 0;
-  transform: translateY(-350px);
+  /* transform: translateY(-350px); */
   transition: opacity 0.9s ease, transform 0.9s ease;
-
+ 
 
   &.visible {
     opacity: 1;
-    transform: translateX(0);
+    /* transform: translateX(0); */
   }
   @media (max-width: 1199px) {
     width: 672px;

@@ -29,7 +29,7 @@ export const SectionHero = styled.section`
   align-items: center;
   &::before {
     position: absolute;
-    margin-top: -75px;
+    margin-top: -15px;
     margin-left: 350px;
     content: "";
     display: block;
@@ -41,6 +41,16 @@ export const SectionHero = styled.section`
     backdrop-filter: blur(10px);
     animation: 2s ease-in-out 2s infinite alternate ${sectionHeroAnimation};
   }
+  @media screen and (max-width: 767px) {
+    position: relative;
+    overflow: hidden;
+    &::before {
+      width: 48px;
+      height: 48px;
+      margin-top: -227px;
+      margin-right: 550px;
+    }
+  }
 `;
 
 export const HeroBackground = styled.img`
@@ -49,6 +59,13 @@ export const HeroBackground = styled.img`
   width: 800px;
   height: 800px;
   z-index: -1;
+
+  @media screen and (max-width: 767px) {
+    width: 507px;
+    height: 507px;
+    position: absolute;
+    top: -10px;
+  }
 `;
 export const HeroBlock = styled.div`
   margin-top: 152px;
@@ -64,7 +81,6 @@ export const HeroContend = styled.div`
   align-items: center;
   & h2 {
     width: 800px;
-
     color: #fff;
     font-family: Montserrat;
     font-size: 64px;
@@ -89,8 +105,30 @@ export const HeroContend = styled.div`
     -webkit-text-stroke: 1.5px #fff;
     letter-spacing: 2.5px;
   }
+  @media screen and (max-width: 767px) {
+    & h2 {
+      width: 343px;
+      font-size: 56px;
+    }
+  }
 `;
-export const ButtonHeader = styled.a`
+
+export const ContainerPC = styled.div`
+  margin-right: auto;
+  @media screen and (max-width: 767px) {
+    display: none;
+    overflow: hidden;
+  }
+`;
+
+export const ContainerMobile = styled.div`
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+`;
+
+export const ButtonHeader = styled(Link)`
   text-decoration: none;
   padding: 16px 91px;
   border-radius: 1000px;
@@ -109,6 +147,28 @@ export const ButtonHeader = styled.a`
   &:hover {
     opacity: 0.6;
   }
+  @media screen and (max-width: 767px) {
+    display: flex;
+    width: 279px;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10000px;
+    background: var(
+      --purple-linear,
+      linear-gradient(90deg, #bd00ff -1.03%, #4200ff 98.22%)
+    );
+    margin-top: 108px;
+  }
+`;
+
+export const ImgHeroDiv = styled.div`
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-top: 30px;
+  }
 `;
 
 export const ImgHero = styled.img`
@@ -118,6 +178,9 @@ export const ImgHero = styled.img`
   width: 640px;
   height: auto;
   object-fit: cover;
+  @media screen and (max-width: 767px) {
+    width: 343px;
+  }
 `;
 export const Project = styled.section`
   margin-top: 118px;
@@ -144,6 +207,19 @@ export const Project = styled.section`
     -webkit-text-fill-color: #000;
     -webkit-text-stroke: 1.5px #fff;
   }
+  @media screen and (max-width: 767px) {
+    margin-top: 20px;
+
+    & h2 {
+      width: 343px;
+      color: var(--02-dark-color-white, #fff);
+      font-family: Montserrat;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
 `;
 
 export const ProjectsCards = styled.div`
@@ -154,7 +230,10 @@ export const ProjectsCards = styled.div`
   gap: 100px;
   @media screen and (max-width: 1199px) {
     gap: 80px;
-    margin-top: 0px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 48px;
+    gap: 80px;
   }
 `;
 
@@ -172,6 +251,13 @@ export const ProjectsFragment1 = styled.div`
   @media screen and (max-width: 1199px) {
     padding: 64px;
     height: 228px;
+  }
+  @media screen and (max-width: 767px) {
+    background: transparent;
+    border-radius: 0px;
+    padding: 0px;
+    margin-top: 0px;
+    height: 508px;
   }
 `;
 
@@ -217,6 +303,14 @@ export const ProjectsFragmentInfo1 = styled.div`
       width: 182px;
     }
   }
+  @media screen and (max-width: 767px) {
+    & h4 {
+      margin-bottom: 16px;
+    }
+    & p {
+      width: 343px;
+    }
+  }
 `;
 
 export const ButtonProject1 = styled(Link)`
@@ -238,6 +332,12 @@ export const ButtonProject1 = styled(Link)`
   @media screen and (max-width: 1199px) {
     padding: 12px 78px;
   }
+  @media screen and (max-width: 767px) {
+    width: 279px;
+    padding: 16px 32px;
+    gap: 10px;
+    margin-top: 304px;
+  }
 `;
 export const ProjectContainer = styled.div`
   height: 510px;
@@ -247,14 +347,18 @@ export const ProjectContainer = styled.div`
   @media screen and (max-width: 1199px) {
     height: 420px;
   }
+  @media screen and (max-width: 767px) {
+    border-radius: 0px;
+    height: 508px;
+  }
+`;
 
-  opacity: 0;
-  transform: translateX(350px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
-
-  &.visible {
-    opacity: 1;
-    transform: translateX(0);
+export const ProjectImage1Container = styled.div`
+  @media screen and (max-width: 767px) {
+    height: 255px;
+    position: relative;
+    margin-top: -356px;
+    overflow: hidden;
   }
 `;
 
@@ -269,6 +373,12 @@ export const ProjectImage1 = styled.img`
   z-index: 1;
   @media screen and (max-width: 1199px) {
     width: 264px;
+  }
+  @media screen and (max-width: 767px) {
+    transform: rotate(15deg);
+    right: 178px;
+    top: 16px;
+    width: 240px;
   }
 `;
 
@@ -287,13 +397,12 @@ export const ProjectsFragment2 = styled.div`
     padding: 64px;
     height: 228px;
   }
-  opacity: 0;
-  transform: translateX(-350px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
-
-  &.visible {
-    opacity: 1;
-    transform: translateX(0);
+  @media screen and (max-width: 1199px) {
+    background: transparent;
+    height: 508px;
+    padding: 0px;
+    border-radius: 0px;
+    justify-content: start;
   }
 `;
 
@@ -343,6 +452,15 @@ export const ProjectsFragmentInfo2 = styled.div`
       margin: 16px 0;
     }
   }
+  @media screen and (max-width: 767px) {
+    width: 285px;
+    & h4 {
+      font-size: 24px;
+    }
+    & h3 {
+      font-size: 32px;
+    }
+  }
 `;
 
 export const ButtonProject2 = styled(Link)`
@@ -364,11 +482,25 @@ export const ButtonProject2 = styled(Link)`
   @media screen and (max-width: 1199px) {
     padding: 12px 78px;
   }
+  @media screen and (max-width: 767px) {
+    margin-top: 300px;
+    width: 279px;
+    padding: 16px 32px;
+    gap: 10px;
+  }
 `;
 
 export const ProjectImageContainer1 = styled.div`
   display: flex;
   transform: rotate(15deg);
+  @media screen and (max-width: 1199px) {
+    height: 240px;
+    position: absolute;
+    top: 162px;
+    width: 100%;
+    overflow: hidden;
+    transform: rotate(0deg);
+  }
 `;
 
 export const ProjectImage21 = styled.img`
@@ -383,6 +515,12 @@ export const ProjectImage21 = styled.img`
     left: -280px;
     width: 264px;
   }
+  @media screen and (max-width: 767px) {
+    width: 200px;
+    transform: rotate(-15deg);
+    top: 0;
+    left: -40px;
+  }
 `;
 export const ProjectImage22 = styled.img`
   position: absolute;
@@ -394,6 +532,12 @@ export const ProjectImage22 = styled.img`
   @media screen and (max-width: 1199px) {
     width: 264px;
     margin-left: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    transform: rotate(-15deg);
+    width: 240px;
+    margin-left: 208px;
+    top: 8px;
   }
 `;
 
@@ -417,6 +561,13 @@ export const ProjectsFragment3 = styled.div`
     width: 544px;
     padding: 64px;
     position: unset;
+  }
+  @media screen and (max-width: 767px) {
+    background: transparent;
+    padding: 0;
+    border-radius: 0px;
+    height: 508px;
+    width: 100%;
   }
 `;
 
@@ -467,6 +618,15 @@ export const ProjectsFragmentInfo3 = styled.div`
       margin-bottom: 23px;
     }
   }
+  @media screen and (max-width: 767px) {
+    width: 285px;
+    & h4 {
+      font-size: 24px;
+    }
+    & h3 {
+      font-size: 32px;
+    }
+  }
 `;
 
 export const ButtonProject3 = styled(Link)`
@@ -487,6 +647,24 @@ export const ButtonProject3 = styled(Link)`
   @media screen and (max-width: 1199px) {
     padding: 12px 78px;
   }
+  @media screen and (max-width: 767px) {
+    display: flex;
+    margin-top: 274px;
+    width: 279px;
+    padding: 16px 32px;
+    gap: 10px;
+  }
+`;
+
+export const ProjectImage3Container = styled.div`
+  @media screen and (max-width: 767px) {
+    height: 230px;
+    width: 100%;
+    position: absolute;
+    top: 192px;
+    right: 0px;
+    overflow: hidden;
+  }
 `;
 
 export const ProjectImage31 = styled.img`
@@ -500,6 +678,12 @@ export const ProjectImage31 = styled.img`
     top: -40px;
     left: 302px;
     background-size: cover;
+  }
+  @media screen and (max-width: 767px) {
+    transform: rotate(15deg);
+    left: -45px;
+    top: 10px;
+    width: 240px;
   }
 `;
 
@@ -515,6 +699,9 @@ export const ProjectImage32 = styled.img`
     top: 40px;
     left: 302px;
   }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;
 
 export const ProjectContainerImg = styled.div`
@@ -524,6 +711,29 @@ export const ProjectContainerImg = styled.div`
     border-radius: 40px;
     position: relative;
     overflow: hidden;
+  }
+  @media screen and (max-width: 767px) {
+    height: 508px;
+    border-radius: 0px;
+  }
+`;
+
+export const ContainerMoreProject = styled.div`
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    margin-top: -76px;
+    & button {
+      color: var(--02-dark-color-white, #fff);
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      background: transparent;
+      border: none;
+    }
   }
 `;
 
@@ -556,6 +766,14 @@ export const ProjectsFragment4 = styled.div`
     width: 544px;
     padding: 64px;
     position: relative;
+  }
+  @media screen and (max-width: 767px) {
+    background: transparent;
+    border-radius: 0px;
+    height: 508px;
+    width: 100%;
+    padding: 0;
+    margin-top: 80px;
   }
 `;
 
@@ -609,6 +827,17 @@ export const ProjectsFragmentInfo4 = styled.div`
       margin-bottom: 23px;
     }
   }
+  @media screen and (max-width: 767px) {
+    margin-right: auto;
+    margin-left: initial;
+    width: 343px;
+    & h4 {
+      font-size: 24px;
+    }
+    & h3 {
+      font-size: 32px;
+    }
+  }
 `;
 
 export const ButtonProject4 = styled(Link)`
@@ -629,6 +858,23 @@ export const ButtonProject4 = styled(Link)`
   @media screen and (max-width: 1199px) {
     padding: 12px 78px;
   }
+  @media screen and (max-width: 767px) {
+    display: flex;
+    margin-top: 300px;
+    width: 279px;
+    padding: 16px 32px;
+    gap: 10px;
+  }
+`;
+
+export const ProjectImage4Container = styled.div`
+  @media screen and (max-width: 767px) {
+    height: 224px;
+    top: 175px;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+  }
 `;
 
 export const ProjectImage41 = styled.img`
@@ -641,6 +887,12 @@ export const ProjectImage41 = styled.img`
     width: 158px;
     top: 96px;
     left: 212px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 165px;
+    top: 29px;
+    left: 140px;
+    transform: rotate(15deg);
   }
 `;
 
@@ -657,6 +909,12 @@ export const ProjectImage42 = styled.img`
     left: 0;
     margin: 0;
   }
+  @media screen and (max-width: 767px) {
+    width: 200px;
+    top: -135px;
+    left: -83px;
+    transform: rotate(15deg);
+  }
 `;
 
 export const Services = styled.section`
@@ -665,11 +923,7 @@ export const Services = styled.section`
   & h2 {
     margin: 0;
     padding: 0;
-
-    text-align: start;
-
     color: #fff;
-    text-align: center;
     font-family: Montserrat;
     font-size: 64px;
     font-style: normal;
@@ -681,6 +935,15 @@ export const Services = styled.section`
     -webkit-text-fill-color: #000;
     -webkit-text-stroke: 1.5px #fff;
     letter-spacing: 2.5px;
+  }
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 25px;
+    & h2 {
+      font-size: 40px;
+    }
   }
 `;
 
@@ -695,6 +958,10 @@ export const ServicesCards = styled.div`
     flex-direction: column;
     gap: 20px;
   }
+  @media screen and (max-width: 767px) {
+    gap: 24px;
+    margin-top: 40px;
+  }
 `;
 
 export const ServicesCardsContainer = styled.div`
@@ -702,6 +969,9 @@ export const ServicesCardsContainer = styled.div`
   gap: 60px;
   @media screen and (max-width: 1199px) {
     gap: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
   }
 `;
 
@@ -768,6 +1038,13 @@ export const ServicesFragment = styled.div`
     & li {
       font-size: 16px;
     }
+  }
+  @media screen and (max-width: 767px) {
+    width: 238px;
+    height: 327px;
+  }
+  & li {
+    font-size: 18px;
   }
 `;
 
@@ -837,6 +1114,19 @@ export const ServicesFragment3 = styled.div`
     & li {
       width: auto;
       font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    width: 241px;
+    height: 186px;
+    & ul {
+      flex-direction: column;
+      align-items: start;
+      gap: 14px;
+    }
+
+    & li {
+      font-size: 18px;
     }
   }
 `;
@@ -921,6 +1211,10 @@ export const ServiceButton3 = styled.div`
     margin-top: 61.5px;
     right: 53px;
   }
+  @media screen and (max-width: 767px) {
+    right: 146px;
+    margin-top: 175px;
+  }
 `;
 
 export const ServiceHeader1 = styled.h3`
@@ -930,18 +1224,27 @@ export const ServiceHeader1 = styled.h3`
   font-weight: 600;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+  }
 `;
 export const ServiceHeader2 = styled.h3`
   background: linear-gradient(119deg, #bd00ff 21.38%, #3604c3 129.88%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+  }
 `;
 export const ServiceHeader3 = styled.h3`
   background: linear-gradient(119deg, #fc7057 21.38%, #f66e54 129.88%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+  }
 `;
 
 export const OurTeam = styled.section`
@@ -970,6 +1273,12 @@ export const OurTeam = styled.section`
   @media screen and (max-width: 1199px) {
     width: 672px;
   }
+  @media screen and (max-width: 767px) {
+    /* display: none; */
+    & h2 {
+      font-size: 40px;
+    }
+  }
 `;
 
 export const SliderName = styled.div`
@@ -978,11 +1287,18 @@ export const SliderName = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 140px;
+  @media screen and (max-width: 767px) {
+  }
 `;
 
 export const SwiperButtonContainer = styled.div`
   display: flex;
   gap: 44px;
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 110%;
+    left: 17%;
+  }
 `;
 
 export const SwiperImgContainer = styled.div`
@@ -1018,6 +1334,9 @@ export const MySwiperBox = styled.div`
   border-radius: 32px;
   background: linear-gradient(119deg, #bd00ff 21.38%, #3604c3 129.88%);
   padding: 40px 28px;
+  @media screen and (max-width: 767px) {
+    margin-left: initial;
+  }
 `;
 
 export const SocialImg = styled.img``;
@@ -1095,6 +1414,10 @@ export const ImageC = styled.img`
   margin-left: -60px;
   width: 343px;
   height: 343px;
+  @media screen and (max-width: 767px) {
+    width: 256px;
+    height: 384px;
+  }
 `;
 
 export const ContainerImg = styled.div`
@@ -1102,4 +1425,7 @@ export const ContainerImg = styled.div`
   top: 300px;
   overflow: hidden;
   position: absolute;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;

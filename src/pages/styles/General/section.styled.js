@@ -4,6 +4,15 @@ export const FirstSection = styled.section`
   margin-top: 49px;
   margin-bottom: 72px;
 
+  opacity: 0;
+  transform: translateX(-350px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
   @media screen and (max-width: 1199px) {
     margin-bottom: 48px;
     display: flex;
@@ -17,6 +26,15 @@ export const SecondSection = styled.section`
   display: flex;
   align-items: center;
   gap: 113px;
+
+  opacity: 0;
+  transform: translateX(350px);
+  transition: opacity 1s ease, transform 1s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 
   @media screen and (max-width: 1199px) {
     gap: 50px;
@@ -32,6 +50,15 @@ export const SecondSection = styled.section`
 
 export const ThirdSection = styled.section`
   margin-bottom: 144px;
+
+  opacity: 0;
+  transform: translateX(-350px);
+  transition: opacity 1s ease, transform 1s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0px);
+  }
   @media screen and (max-width: 1199px) {
     margin-bottom: 120px;
   }
