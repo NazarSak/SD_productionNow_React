@@ -17,6 +17,8 @@ import AbiImg2 from "../../assets/img/page4-1.png";
 import Prev from "../../assets/svg/left1.svg";
 import Next from "../../assets/svg/right1.svg";
 import Social from "../../assets/svg/teams/socials.svg";
+import Select from '../../assets/svg/select.svg'
+import selectMob from '../../assets/svg/selectMob.svg'
 import {
   ButtonHeader,
   HeroBackground,
@@ -24,6 +26,7 @@ import {
   HeroContend,
   SectionHero,
   ImgHeroDiv,
+  ImgOurTeamDiv,
   ImgHero,
   ContainerPC,
   ContainerMobile,
@@ -92,7 +95,6 @@ export const HomeEN = () => {
   const [isOpenMoreProject, setIsOpenProject] = useState(false);
   let ImgBWDataExtended = ImgBWData.slice(0, 3);
 
-
   useEffect(() => {
     setImgArr(ImgBWDataExtended);
     // eslint-disable-next-line
@@ -104,12 +106,16 @@ export const HomeEN = () => {
       setWindowWidth(window.innerWidth);
     };
 
+    if (windowWidth >= 768) {
+      setIsOpenProject(true);
+    }
+
     window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [windowWidth]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -226,15 +232,23 @@ export const HomeEN = () => {
             <ProjectsFragmentInfo2>
               <h4>Business website</h4>
               <h3>WhiteCollor</h3>
-              {windowWidth > 1200 ? (
-                <p>
-                  Develop and implement Agilic methods in the strategic
-                  management of a corporation to ensure flexibility and
-                  adaptation to a rapidly changing business environment.
-                </p>
-              ) : (
+              <ContainerPC>
+                {windowWidth > 1200 ? (
+                  <p>
+                    Develop and implement Agilic methods in the strategic
+                    management of a corporation to ensure flexibility and
+                    adaptation to a rapidly changing business environment.
+                  </p>
+                ) : (
+                  <p>
+                    Develop and implement Agilic methods in the strategic
+                    management
+                  </p>
+                )}
+              </ContainerPC>
+              <ContainerMobile>
                 <p>Adaptive Strategic Agile Management.</p>
-              )}
+              </ContainerMobile>
               <ButtonProject2 to="/en/whiteCollar" onClick={handleClickTop}>
                 View
               </ButtonProject2>
@@ -416,6 +430,9 @@ export const HomeEN = () => {
           </ToEmailLink>
         </ServicesCards>
       </Services>
+      <ImgOurTeamDiv>
+        <ImgHero src={ImageHero} alt="" />
+      </ImgOurTeamDiv>
 
       <OurTeam id="team">
         <SliderName>
@@ -457,6 +474,11 @@ export const HomeEN = () => {
           </ContainerImageBW>
         </ContainerImg>
       </OurTeam>
+      
+      <ImgOurTeamDiv>
+        <ImgHero src={ImageHero} alt="" />
+      </ImgOurTeamDiv>
+
       <ConectUsEN name="ConnectUS" />
       <FooterEN />
     </>

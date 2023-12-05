@@ -55,10 +55,14 @@ export const SectionHero = styled.section`
 
 export const HeroBackground = styled.img`
   position: absolute;
-  top: 40px;
+  top: 60px;
   width: 800px;
   height: 800px;
   z-index: -1;
+
+  @media screen and (max-width: 1199px) {
+    width: 768px;
+  }
 
   @media screen and (max-width: 767px) {
     width: 507px;
@@ -104,6 +108,11 @@ export const HeroContend = styled.div`
     -webkit-text-fill-color: #000;
     -webkit-text-stroke: 1.5px #fff;
     letter-spacing: 2.5px;
+  }
+  @media screen and (max-width: 1199px) {
+    & h2 {
+      width: 768px;
+    }
   }
   @media screen and (max-width: 767px) {
     & h2 {
@@ -164,6 +173,14 @@ export const ButtonHeader = styled(Link)`
 `;
 
 export const ImgHeroDiv = styled.div`
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-top: 30px;
+  }
+`;
+
+export const ImgOurTeamDiv = styled.div`
   display: none;
   @media screen and (max-width: 767px) {
     display: block;
@@ -397,7 +414,7 @@ export const ProjectsFragment2 = styled.div`
     padding: 64px;
     height: 228px;
   }
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
     background: transparent;
     height: 508px;
     padding: 0px;
@@ -493,7 +510,7 @@ export const ButtonProject2 = styled(Link)`
 export const ProjectImageContainer1 = styled.div`
   display: flex;
   transform: rotate(15deg);
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
     height: 240px;
     position: absolute;
     top: 162px;
@@ -1272,9 +1289,12 @@ export const OurTeam = styled.section`
   }
   @media screen and (max-width: 1199px) {
     width: 672px;
+    margin-top: 162px;
   }
   @media screen and (max-width: 767px) {
-    /* display: none; */
+    width: 343px;
+    margin-top: 22px;
+    margin-bottom: 115px;
     & h2 {
       font-size: 40px;
     }
@@ -1288,6 +1308,8 @@ export const SliderName = styled.div`
   justify-content: space-between;
   margin-bottom: 140px;
   @media screen and (max-width: 767px) {
+    justify-content: center;
+    margin-bottom: 40px;
   }
 `;
 
@@ -1297,7 +1319,7 @@ export const SwiperButtonContainer = styled.div`
   @media screen and (max-width: 767px) {
     position: absolute;
     top: 110%;
-    left: 17%;
+    left: 29%;
   }
 `;
 
@@ -1336,6 +1358,8 @@ export const MySwiperBox = styled.div`
   padding: 40px 28px;
   @media screen and (max-width: 767px) {
     margin-left: initial;
+    width: 287px;
+    overflow: hidden;
   }
 `;
 
@@ -1405,8 +1429,6 @@ export const ContainerImageBW = styled.div`
 export const ImageBW = styled.img`
   width: 256px;
   height: 256px;
-  /* position: absolute;
-  z-index: 1; */
 `;
 
 export const ImageC = styled.img`
@@ -1415,8 +1437,10 @@ export const ImageC = styled.img`
   width: 343px;
   height: 343px;
   @media screen and (max-width: 767px) {
-    width: 256px;
-    height: 384px;
+    width: 303px;
+    height: 320px;
+    margin-top: -40px;
+    margin-left: -67px;
   }
 `;
 

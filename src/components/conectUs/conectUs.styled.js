@@ -153,7 +153,7 @@ export const PeopleBlue = styled.div`
     font-weight: 600;
     line-height: 24px;
     display: inline-flex;
-    padding: 8px 16px;
+    padding: 6px 13px;
     align-items: flex-start;
     gap: var(--Spacing---lg, 8px);
     flex-shrink: 0;
@@ -221,7 +221,7 @@ export const PeopleRed = styled.div`
     font-weight: 600;
     line-height: 24px;
     display: inline-flex;
-    padding: 8px 16px;
+    padding: 6px 11px;
     align-items: flex-start;
     gap: var(--Spacing---lg, 8px);
     flex-shrink: 0;
@@ -291,7 +291,7 @@ export const PeopleGreen = styled.div`
     font-weight: 600;
     line-height: 24px;
     display: inline-flex;
-    padding: 8px 16px;
+    padding: 6px 13px;
     align-items: flex-start;
     gap: var(--Spacing---lg, 8px);
     flex-shrink: 0;
@@ -373,7 +373,7 @@ export const PeoplePink = styled.div`
     font-weight: 600;
     line-height: 24px;
     display: inline-flex;
-    padding: 8px 16px;
+    padding: 6px 11px;
     align-items: flex-start;
     gap: var(--Spacing---lg, 8px);
     flex-shrink: 0;
@@ -456,7 +456,7 @@ export const PeopleBlueLight = styled.div`
     font-weight: 600;
     line-height: 24px;
     display: inline-flex;
-    padding: 8px 16px;
+    padding: 6px 13px;
     align-items: flex-start;
     gap: var(--Spacing---lg, 8px);
     flex-shrink: 0;
@@ -538,7 +538,7 @@ export const PeopleOrange = styled.div`
     font-weight: 600;
     line-height: 24px;
     display: inline-flex;
-    padding: 8px 16px;
+    padding: 6px 12px;
     align-items: flex-start;
     gap: var(--Spacing---lg, 8px);
     flex-shrink: 0;
@@ -621,7 +621,7 @@ export const PeopleLightPink = styled.div`
     font-weight: 600;
     line-height: 24px;
     display: inline-flex;
-    padding: 8px 16px;
+    padding: 6px 13px;
     align-items: flex-start;
     gap: var(--Spacing---lg, 8px);
     flex-shrink: 0;
@@ -704,7 +704,7 @@ export const PeopleYellow = styled.div`
     font-weight: 600;
     line-height: 24px;
     display: inline-flex;
-    padding: 8px 16px;
+    padding: 6px 13px;
     align-items: flex-start;
     gap: var(--Spacing---lg, 8px);
     flex-shrink: 0;

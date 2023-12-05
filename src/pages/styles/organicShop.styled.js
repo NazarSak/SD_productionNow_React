@@ -28,7 +28,7 @@ export const TitleHTwo = styled.h2`
   color: var(--02-dark-color-white, #fff);
 `;
 
-export const TitleSpan = styled.span` 
+export const TitleSpan = styled.span`
   font-family: "Poppins", sans-serif;
   -webkit-text-fill-color: #000;
   -webkit-text-stroke: 1.5px #fff;
@@ -48,7 +48,6 @@ export const ImageFirst = styled.img`
 
   opacity: 0;
   transition: opacity 1.5s ease, transform 1.5s ease;
- 
 
   &.visible {
     opacity: 1;
@@ -62,7 +61,6 @@ export const ImageHandshake = styled.img`
 
   opacity: 0;
   transition: opacity 1.5s ease, transform 1.5s ease;
- 
 
   &.visible {
     opacity: 1;
@@ -244,7 +242,7 @@ export const SecondConatinerInternalImg = styled.div`
 
 export const InternalImgOne = styled.img`
   width: 490px;
-  height: 1020px;
+  height: 1010px;
   flex-shrink: 0;
   border-radius: 40px;
   margin-top: 121px;
@@ -265,7 +263,7 @@ export const InternalImgOne = styled.img`
 
 export const InternalImgSecond = styled.img`
   width: 490px;
-  height: 1020px;
+  height: 1010px;
   flex-shrink: 0;
   margin-top: 180px;
   border-radius: 40px;
@@ -287,7 +285,7 @@ export const InternalImgSecond = styled.img`
 
 export const InternalImg = styled.img`
   width: 490px;
-  height: 1020px;
+  height: 1010px;
   flex-shrink: 0;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
@@ -307,7 +305,7 @@ export const InternalImg = styled.img`
 
 export const InternalImgFour = styled.img`
   width: 490px;
-  height: 1020px;
+  height: 1010px;
   flex-shrink: 0;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
@@ -325,7 +323,7 @@ export const InternalImgFour = styled.img`
 
 export const InternalImgLast = styled.img`
   width: 490px;
-  height: 455px;
+  height: 445px;
   flex-shrink: 0;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
