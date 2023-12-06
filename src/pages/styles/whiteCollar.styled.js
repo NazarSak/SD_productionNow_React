@@ -28,6 +28,23 @@ export const TitleHTwo = styled.h2`
   color: var(--02-dark-color-white, #fff);
 `;
 
+export const TitleInternal = styled.h2`
+  color: var(--02-dark-color-white, #fff);
+
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(-350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+    width: min-content;
+  }
+`;
+
 export const TitleMain = styled.h2`
   color: var(--02-dark-color-white, #fff);
   opacity: 0;
@@ -236,7 +253,7 @@ export const SecondNaturalFoodImg = styled.img`
     width: 237px;
     height: 1196px;
     border-radius: 0px 0px 40px 20px;
-  } 
+  }
 `;
 
 export const ConatinerImg = styled.div`
@@ -244,14 +261,21 @@ export const ConatinerImg = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateY(-350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
 `;
- 
+
 export const FirstConatinerInternalImg = styled.div`
   @media screen and (max-width: 767px) {
     width: 145px;
   }
 `;
- 
+
 export const SecondConatinerInternalImg = styled.div`
   display: flex;
   flex-direction: column;
@@ -271,6 +295,15 @@ export const InternalImgOne = styled.img`
   border-radius: 40px;
   margin-top: 121px;
   border: 5px solid var(--grey-B, #595959);
+
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(-350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
   @media screen and (max-width: 1199px) {
     width: 302px;
     height: 611.52px;

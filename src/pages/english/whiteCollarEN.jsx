@@ -32,6 +32,7 @@ import {
   TitlePage,
   TitleInTwoLine,
   TitleHTwo,
+  TitleInternal,
   TitleMain,
   TitleSpan,
   ImageFirst,
@@ -182,14 +183,21 @@ export const WhiteCollarEN = () => {
             Main <TitleSpan>Page</TitleSpan>
           </TitleMain>
         </ScrollTrigger>
-        <ConatinerImg>
-          <OptimisatorImg src={Banner} alt="image" ImageType={NaturalFoodImg} />
-          <OptimisatorImg
-            src={screnshot}
-            alt="image"
-            ImageType={SecondNaturalFoodImg}
-          />
-        </ConatinerImg>
+
+        <ScrollTrigger onEnter={handleEnterViewportSix}>
+          <ConatinerImg className={`${isVisibleSix ? "visible" : ""}`}>
+            <OptimisatorImg
+              src={Banner}
+              alt="image"
+              ImageType={NaturalFoodImg}
+            />
+            <OptimisatorImg
+              src={screnshot}
+              alt="image"
+              ImageType={SecondNaturalFoodImg}
+            />
+          </ConatinerImg>
+        </ScrollTrigger>
       </FourthSection>
 
       <video width="100%" autoPlay muted loop>
@@ -198,15 +206,19 @@ export const WhiteCollarEN = () => {
 
       <FifthSection>
         <FirstConatinerInternalImg>
-          <TitleHTwo>
+          <ScrollTrigger onEnter={handleEnterViewportSeven}>
+          <TitleInternal className={`${isVisibleSeven ? "visible" : ""}`}>
             Internal <TitleSpan>Pages</TitleSpan>
-          </TitleHTwo>
+          </TitleInternal>
+          </ScrollTrigger>
 
-          <OptimisatorImg
+          <ScrollTrigger onEnter={handleEnterViewportEight}>
+          <InternalImgOne
+          className={`${isVisibleSeven ? "visible" : ""}`}
             src={InternalOne}
             alt="image"
-            ImageType={InternalImgOne}
           />
+          </ScrollTrigger>
           <OptimisatorImg
             src={InternalTwo}
             alt="image"
