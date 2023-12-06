@@ -17,11 +17,11 @@ import AbiImg2 from "../../assets/img/page4-1.png";
 import Prev from "../../assets/svg/left1.svg";
 import Next from "../../assets/svg/right1.svg";
 import Social from "../../assets/svg/teams/socials.svg";
-import Select from '../../assets/svg/select.svg'
-import selectMob from '../../assets/svg/selectMob.svg'
+// import Select from '../../assets/svg/select.svg'
+// import selectMob from '../../assets/svg/selectMob.svg'
 import {
   ButtonHeader,
-  HeroBackground,
+  HeroBackground, 
   HeroBlock,
   HeroContend,
   SectionHero,

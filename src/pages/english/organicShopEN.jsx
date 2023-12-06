@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ScrollTrigger from "react-scroll-trigger";
+import AnimationState from "../../helperFunction/animationState/animationState";
 import { HeaderEN } from "../../components/header/HeaderEN";
 import { FooterEN } from "../../components/footer/FooterEN";
 import { ConectUsEN } from "../../components/conectUs/conectUsEN";
@@ -30,6 +31,7 @@ import {
   TitleHThree,
   TitlePage,
   TitleInTwoLine,
+  TitleMain,
   TitleHTwo,
   TitleSpan,
   ImageFirst,
@@ -57,12 +59,34 @@ import {
 } from "../styles/organicShop.styled";
 
 export const OrganicShopEN = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-
-  const handleEnterViewport = () => {
-    setIsVisible(true);
-  };
+  const {
+    isVisible,
+    isVisibleOne,
+    isVisibleTwo,
+    isVisibleThree,
+    isVisibleFour,
+    isVisibleFive,
+    isVisibleSix,
+    isVisibleSeven,
+    isVisibleEight,
+    isVisibleNine,
+    isVisibleTen,
+    isVisiblePartOne,
+    isVisiblePartTwo,
+    handleEnterViewport,
+    handleEnterViewportOne,
+    handleEnterViewportTwo,
+    handleEnterViewportThree,
+    handleEnterViewportFour,
+    handleEnterViewportFive,
+    handleEnterViewportSix,
+    handleEnterViewportSeven,
+    handleEnterViewportEight,
+    handleEnterViewportNine,
+    handleEnterViewportTen,
+    handleEnterViewportPartOne,
+    handleEnterViewportPartTwo,
+  } = AnimationState();
 
   const handleClick = () => {
     window.scrollTo(0, 0);
@@ -79,15 +103,15 @@ export const OrganicShopEN = () => {
           </TitlePage>
         </FirstSection>
       </ScrollTrigger>
-      <ScrollTrigger onEnter={handleEnterViewport}>
+      <ScrollTrigger onEnter={handleEnterViewportOne}>
         <ImageFirst
-          className={`${isVisible ? "visible" : ""}`}
+          className={`${isVisibleOne ? "visible" : ""}`}
           src={ImgPictire}
           alt="image"
         />
       </ScrollTrigger>
-      <ScrollTrigger onEnter={handleEnterViewport}>
-        <SecondSection className={`${isVisible ? "visible" : ""}`}>
+      <ScrollTrigger onEnter={handleEnterViewportTwo}>
+        <SecondSection className={`${isVisibleTwo ? "visible" : ""}`}>
           <div>
             <TitleInTwoLine>
               About <TitleSpan>Project</TitleSpan>
@@ -108,8 +132,8 @@ export const OrganicShopEN = () => {
           <OptimisatorImg src={OrganicSvg} alt="image" ImageType={SvgImg} />
         </SecondSection>
       </ScrollTrigger>
-      <ScrollTrigger onEnter={handleEnterViewport}>
-        <ThirdSection className={`${isVisible ? "visible" : ""}`}>
+      <ScrollTrigger onEnter={handleEnterViewportThree}>
+        <ThirdSection className={`${isVisibleThree ? "visible" : ""}`}>
           <TitleHTwo>
             Goals and <TitleSpan>Objectives</TitleSpan>
           </TitleHTwo>
@@ -142,18 +166,18 @@ export const OrganicShopEN = () => {
         </ThirdSection>
       </ScrollTrigger>
 
-      <ScrollTrigger onEnter={handleEnterViewport}>
+      <ScrollTrigger onEnter={handleEnterViewportFour}>
         <ImageHandshake
-          className={`${isVisible ? "visible" : ""}`}
+          className={`${isVisibleFour ? "visible" : ""}`}
           src={handshake}
           alt="image"
         />
       </ScrollTrigger>
       <FourthSection>
-        <ScrollTrigger onEnter={handleEnterViewport}>
-          <TitleHTwo>
+        <ScrollTrigger onEnter={handleEnterViewportFive}>
+          <TitleMain className={`${isVisibleFive ? "visible" : ""}`}>
             Main <TitleSpan>Page</TitleSpan>
-          </TitleHTwo>
+          </TitleMain>
         </ScrollTrigger>
         <ConatinerImg>
           <OptimisatorImg

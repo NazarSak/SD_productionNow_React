@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { handleClickTop } from "../../helperFunction/ScrollTop";
 import ButtonClose from "../../assets/svg/emailPage/Close.svg";
 import {
   TitleHTwo,
@@ -12,7 +11,7 @@ import {
   ImgContainer,
   CloseButton,
   ModalWrapper,
-  ModalContent,
+  // ModalContent,
 } from "./modalka.styled";
 
 export const ModalkaEN = ({ setOpenModal }) => {
