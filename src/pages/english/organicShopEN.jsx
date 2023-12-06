@@ -72,7 +72,7 @@ export const OrganicShopEN = () => {
     <main>
       <HeaderEN name={"/de/organicShop"} />
       <ScrollTrigger onEnter={handleEnterViewport}>
-        <FirstSection className={`${isVisible ? "visible" : ""}`}>
+        <FirstSection>
           <TitleHThree>Online Shop</TitleHThree>
           <TitlePage>
             Organic <TitleSpan>shop</TitleSpan>
