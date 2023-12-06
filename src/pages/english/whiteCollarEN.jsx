@@ -32,8 +32,10 @@ import {
   TitlePage,
   TitleInTwoLine,
   TitleHTwo,
+  TitleMain,
   TitleSpan,
   ImageFirst,
+  ImageFirstHandShake,
   ParagraphAbProject,
   SvgImgContainer,
   SvgImg,
@@ -167,12 +169,19 @@ export const WhiteCollarEN = () => {
           </List>
         </ThirdSection>
       </ScrollTrigger>
-      <OptimisatorImg src={ImagePeople} alt="image" ImageType={ImageFirst} />
-
+      <ScrollTrigger onEnter={handleEnterViewportFour}>
+        <ImageFirstHandShake
+          className={`${isVisibleTwo ? "visible" : ""}`}
+          src={ImagePeople}
+          alt="image"
+        />
+      </ScrollTrigger>
       <FourthSection>
-        <TitleHTwo>
-          Main <TitleSpan>Page</TitleSpan>
-        </TitleHTwo>
+        <ScrollTrigger onEnter={handleEnterViewportFive}>
+          <TitleMain className={`${isVisibleTwo ? "visible" : ""}`}>
+            Main <TitleSpan>Page</TitleSpan>
+          </TitleMain>
+        </ScrollTrigger>
         <ConatinerImg>
           <OptimisatorImg src={Banner} alt="image" ImageType={NaturalFoodImg} />
           <OptimisatorImg

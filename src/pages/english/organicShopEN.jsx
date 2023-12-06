@@ -174,6 +174,7 @@ export const OrganicShopEN = () => {
           alt="image"
         />
       </ScrollTrigger>
+      
       <FourthSection>
         <ScrollTrigger onEnter={handleEnterViewportFive}>
           <TitleMain className={`${isVisibleFive ? "visible" : ""}`}>

@@ -28,6 +28,17 @@ export const TitleHTwo = styled.h2`
   color: var(--02-dark-color-white, #fff);
 `;
 
+export const TitleMain = styled.h2`
+  color: var(--02-dark-color-white, #fff);
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(-350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
 export const TitleSpan = styled.span`
   font-family: "Poppins", sans-serif;
   -webkit-text-fill-color: #000;
@@ -42,6 +53,19 @@ export const TitleGoalsDE = styled.h2`
 `;
 
 export const ImageFirst = styled.img`
+  width: 100%;
+  max-height: 583px;
+  object-fit: cover;
+
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+
+  &.visible {
+    opacity: 1;
+  }
+`;
+
+export const ImageFirstHandShake = styled.img`
   width: 100%;
   max-height: 583px;
   object-fit: cover;
