@@ -83,22 +83,18 @@ export const SecondListDE = styled.ul`
 `;
 
 export const Footer = styled.footer`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  @media screen and (max-width: 1199px) {
-    background-image: url(${BackgroundCircle});
-    background-position: center;
-    background-size: cover;
-    width: 507px;
-    height: 407px;
-  }
-  @media screen and (max-width: 1199px) {
-    width: 343px;
-    height: 260px;
-  }
-`;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	@media screen and (max-width: 1199px) {
+		background-image: url(${BackgroundCircle});
+		background-position: center;
+		background-size: cover;
+		width: 343px;
+		height: 343px;
+	}
+`
 
 export const LineTablet = styled.img`
   @media screen and (max-width: 767px) {

@@ -480,7 +480,7 @@ export const HomeEN = () => {
       </ImgOurTeamDiv>
 
       <ConectUsEN name="ConnectUS" />
-      <FooterEN />
+      <FooterEN showImg={ImageHero}/>
     </>
   );
 };
