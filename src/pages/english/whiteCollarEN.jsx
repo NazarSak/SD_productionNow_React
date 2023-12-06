@@ -1,4 +1,6 @@
 import React from "react";
+import ScrollTrigger from "react-scroll-trigger";
+import AnimationState from "../../helperFunction/animationState/animationState";
 import { HeaderEN } from "../../components/header/HeaderEN";
 import { FooterEN } from "../../components/footer/FooterEN";
 import { ConectUsEN } from "../../components/conectUs/conectUsEN";
@@ -56,6 +58,35 @@ import {
 } from "../styles/whiteCollar.styled";
 
 export const WhiteCollarEN = () => {
+  const {
+    isVisible,
+    isVisibleOne,
+    isVisibleTwo,
+    isVisibleThree,
+    isVisibleFour,
+    isVisibleFive,
+    isVisibleSix,
+    isVisibleSeven,
+    isVisibleEight,
+    isVisibleNine,
+    isVisibleTen,
+    isVisiblePartOne,
+    isVisiblePartTwo,
+    handleEnterViewport,
+    handleEnterViewportOne,
+    handleEnterViewportTwo,
+    handleEnterViewportThree,
+    handleEnterViewportFour,
+    handleEnterViewportFive,
+    handleEnterViewportSix,
+    handleEnterViewportSeven,
+    handleEnterViewportEight,
+    handleEnterViewportNine,
+    handleEnterViewportTen,
+    handleEnterViewportPartOne,
+    handleEnterViewportPartTwo,
+  } = AnimationState();
+
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
@@ -63,71 +94,79 @@ export const WhiteCollarEN = () => {
   return (
     <main>
       <HeaderEN name={"/de/whiteCollar"} />
+      <ScrollTrigger onEnter={handleEnterViewport}>
+        <FirstSection className={`${isVisible ? "visible" : ""}`}>
+          <TitleHThree>Business website</TitleHThree>
+          <TitlePage>
+            White <TitleSpan>Collar</TitleSpan>
+          </TitlePage>
+        </FirstSection>
+      </ScrollTrigger>
+      <ScrollTrigger onEnter={handleEnterViewportOne}>
+        <ImageFirst
+          className={`${isVisibleOne ? "visible" : ""}`}
+          src={handshakes}
+          alt="image"
+        />
+      </ScrollTrigger>
+      <ScrollTrigger onEnter={handleEnterViewportTwo}>
+        <SecondSection className={`${isVisibleTwo ? "visible" : ""}`}>
+          <div>
+            <TitleInTwoLine>
+              About <TitleSpan>Project</TitleSpan>
+            </TitleInTwoLine>
+            <ParagraphAbProject>
+              Developing and implementing Agile methods in the strategic
+              management of a corporation is crucial in today's rapidly changing
+              business environment. Traditional strategic management approaches
+              often struggle to keep pace with the dynamic nature of markets,
+              customer preferences, and emerging technologies.
+            </ParagraphAbProject>
+          </div>
 
-      <FirstSection> 
-        <TitleHThree>Business website</TitleHThree>
-        <TitlePage>
-          White <TitleSpan>Collar</TitleSpan>
-        </TitlePage>
-      </FirstSection>
-
-      <OptimisatorImg src={handshakes} alt="image" ImageType={ImageFirst} />
-
-      <SecondSection>
-        <div>
-          <TitleInTwoLine>
-            About <TitleSpan>Project</TitleSpan>
-          </TitleInTwoLine>
-          <ParagraphAbProject>
-            Developing and implementing Agile methods in the strategic
-            management of a corporation is crucial in today's rapidly changing
-            business environment. Traditional strategic management approaches
-            often struggle to keep pace with the dynamic nature of markets,
-            customer preferences, and emerging technologies.
-          </ParagraphAbProject>
-        </div>
-
-        <ContainerLine> 
-          <Line />
-        </ContainerLine>
-        <SvgImgContainer>
-          <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
-        </SvgImgContainer>
-      </SecondSection>
-
-      <ThirdSection>
-        <TitleHTwo>
-          Goals and <TitleSpan>Objectives</TitleSpan>
-        </TitleHTwo>
-        <List>
-          <Li>
-            <NumberOfList>1</NumberOfList>
-            <ParagraphGoals>
-              Consider website architecture for maximum conversion.
-            </ParagraphGoals>
-          </Li>
-          <Li>
-            <NumberOfList>2</NumberOfList>
-            <ParagraphGoals>
-              Properly arrange content on the site for easy perception by the
-              user.
-            </ParagraphGoals>
-          </Li>
-          <Li>
-            <NumberOfList>3</NumberOfList>
-            <ParagraphGoals>
-              Select high-quality visual and text content.
-            </ParagraphGoals>
-          </Li>
-          <Li>
-            <NumberOfList>4</NumberOfList>
-            <ParagraphGoals>
-              Increase the number of new users of the product using the website.
-            </ParagraphGoals>
-          </Li>
-        </List>
-      </ThirdSection>
-
+          <ContainerLine>
+            <Line />
+          </ContainerLine>
+          <SvgImgContainer>
+            <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
+          </SvgImgContainer>
+        </SecondSection>
+      </ScrollTrigger>
+      <ScrollTrigger onEnter={handleEnterViewportThree}>
+        <ThirdSection className={`${isVisibleThree ? "visible" : ""}`}>
+          <TitleHTwo>
+            Goals and <TitleSpan>Objectives</TitleSpan>
+          </TitleHTwo>
+          <List>
+            <Li>
+              <NumberOfList>1</NumberOfList>
+              <ParagraphGoals>
+                Consider website architecture for maximum conversion.
+              </ParagraphGoals>
+            </Li>
+            <Li>
+              <NumberOfList>2</NumberOfList>
+              <ParagraphGoals>
+                Properly arrange content on the site for easy perception by the
+                user.
+              </ParagraphGoals>
+            </Li>
+            <Li>
+              <NumberOfList>3</NumberOfList>
+              <ParagraphGoals>
+                Select high-quality visual and text content.
+              </ParagraphGoals>
+            </Li>
+            <Li>
+              <NumberOfList>4</NumberOfList>
+              <ParagraphGoals>
+                Increase the number of new users of the product using the
+                website.
+              </ParagraphGoals>
+            </Li>
+          </List>
+        </ThirdSection>
+      </ScrollTrigger>
       <OptimisatorImg src={ImagePeople} alt="image" ImageType={ImageFirst} />
 
       <FourthSection>

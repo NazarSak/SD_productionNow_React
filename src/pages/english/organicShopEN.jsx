@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ScrollTrigger from "react-scroll-trigger";
 import AnimationState from "../../helperFunction/animationState/animationState";
 import { HeaderEN } from "../../components/header/HeaderEN";
@@ -31,6 +31,7 @@ import {
   TitleHThree,
   TitlePage,
   TitleInTwoLine,
+  TitleInternal,
   TitleMain,
   TitleHTwo,
   TitleSpan,
@@ -96,7 +97,7 @@ export const OrganicShopEN = () => {
     <main>
       <HeaderEN name={"/de/organicShop"} />
       <ScrollTrigger onEnter={handleEnterViewport}>
-        <FirstSection>
+        <FirstSection className={`${isVisible ? "visible" : ""}`}>
           <TitleHThree>Online Shop</TitleHThree>
           <TitlePage>
             Organic <TitleSpan>shop</TitleSpan>
@@ -179,18 +180,20 @@ export const OrganicShopEN = () => {
             Main <TitleSpan>Page</TitleSpan>
           </TitleMain>
         </ScrollTrigger>
-        <ConatinerImg>
-          <OptimisatorImg
-            src={PageOne}
-            alt="image"
-            ImageType={NaturalFoodImg}
-          />
-          <OptimisatorImg
-            src={PageTwo}
-            alt="image"
-            ImageType={SecondNaturalFoodImg}
-          />
-        </ConatinerImg>
+        <ScrollTrigger onEnter={handleEnterViewportSix}>
+          <ConatinerImg className={`${isVisibleSix ? "visible" : ""}`}>
+            <OptimisatorImg
+              src={PageOne}
+              alt="image"
+              ImageType={NaturalFoodImg}
+            />
+            <OptimisatorImg
+              src={PageTwo}
+              alt="image"
+              ImageType={SecondNaturalFoodImg}
+            />
+          </ConatinerImg>
+        </ScrollTrigger>
       </FourthSection>
 
       <video width="100%" autoPlay muted loop>
@@ -199,38 +202,53 @@ export const OrganicShopEN = () => {
 
       <FifthSection>
         <FirstConatinerInternalImg>
-          <TitleInTwoLine>
-            Internal <TitleSpan>Pages</TitleSpan>
-          </TitleInTwoLine>
+          <ScrollTrigger onEnter={handleEnterViewportSeven}>
+            <TitleInternal className={`${isVisibleSeven ? "visible" : ""}`}>
+              Internal <TitleSpan>Pages</TitleSpan>
+            </TitleInternal>
+          </ScrollTrigger>
 
-          <OptimisatorImg
-            src={InternalOne}
-            alt="image"
-            ImageType={InternalImgOne}
-          />
-          <OptimisatorImg
-            src={InternalTwo}
-            alt="image"
-            ImageType={InternalImgSecond}
-          />
+          <ScrollTrigger onEnter={handleEnterViewportEight}>
+            <InternalImgOne
+              className={`${isVisibleEight ? "visible" : ""}`}
+              src={InternalOne}
+              alt="image"
+            />
+          </ScrollTrigger>
+
+          <ScrollTrigger onEnter={handleEnterViewportNine}>
+            <InternalImgSecond
+              className={`${isVisibleNine ? "visible" : ""}`}
+              src={InternalTwo}
+              alt="image"
+            />
+          </ScrollTrigger>
         </FirstConatinerInternalImg>
 
         <SecondConatinerInternalImg>
-          <OptimisatorImg
-            src={InternalThree}
-            alt="image"
-            ImageType={InternalImg}
-          />
-          <OptimisatorImg
-            src={InternalFour}
-            alt="image"
-            ImageType={InternalImgFour}
-          />
-          <OptimisatorImg
-            src={InternalFive}
-            alt="image"
-            ImageType={InternalImgLast}
-          />
+          <ScrollTrigger onEnter={handleEnterViewportTen}>
+            <InternalImg
+              className={`${isVisibleTen ? "visible" : ""}`}
+              src={InternalThree}
+              alt="image"
+            />
+          </ScrollTrigger>
+
+          <ScrollTrigger onEnter={handleEnterViewportPartOne}>
+            <InternalImgFour
+              className={`${isVisiblePartOne ? "visible" : ""}`}
+              src={InternalFour}
+              alt="image"
+            />
+          </ScrollTrigger>
+
+          <ScrollTrigger onEnter={handleEnterViewportPartTwo}>
+            <InternalImgLast
+              className={`${isVisiblePartTwo ? "visible" : ""}`}
+              src={InternalFive}
+              alt="image"
+            />
+          </ScrollTrigger>
         </SecondConatinerInternalImg>
       </FifthSection>
 

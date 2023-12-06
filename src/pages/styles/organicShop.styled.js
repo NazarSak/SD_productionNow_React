@@ -24,6 +24,23 @@ export const TitleInTwoLine = styled.h2`
   }
 `;
 
+export const TitleInternal = styled.h2`
+  color: var(--02-dark-color-white, #fff);
+
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(-350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+    width: min-content;
+  }
+`; 
+
 export const TitleHTwo = styled.h2`
   color: var(--02-dark-color-white, #fff);
 `;
@@ -199,14 +216,6 @@ export const NaturalFoodImg = styled.img`
   border-radius: 40px;
   border: 10px solid var(--grey-B, #595959);
 
-  opacity: 0;
-  transition: opacity 1.5s ease, transform 1.5s ease;
-  transform: translateX(-350px);
-  &.visible {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
   @media screen and (max-width: 1199px) {
     width: 672px;
     height: 385px;
@@ -243,6 +252,13 @@ export const ConatinerImg = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateY(-350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
 `;
 
 export const FirstConatinerInternalImg = styled.div``;
@@ -267,6 +283,14 @@ export const InternalImgOne = styled.img`
   margin-top: 121px;
   border: 5px solid var(--grey-B, #595959);
 
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(-350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
   @media screen and (max-width: 1199px) {
     width: 312px;
     height: 636px;
@@ -287,6 +311,15 @@ export const InternalImgSecond = styled.img`
   margin-top: 180px;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
+
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(-350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
   @media screen and (max-width: 1199px) {
     width: 312px;
     height: 636px;
@@ -308,6 +341,15 @@ export const InternalImg = styled.img`
   flex-shrink: 0;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
+
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
   @media screen and (max-width: 1199px) {
     width: 312px;
     height: 604px;
@@ -328,6 +370,15 @@ export const InternalImgFour = styled.img`
   flex-shrink: 0;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
+
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
   @media screen and (max-width: 1199px) {
     width: 312px;
     height: 604px;
@@ -346,6 +397,15 @@ export const InternalImgLast = styled.img`
   flex-shrink: 0;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
+
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
   @media screen and (max-width: 1199px) {
     width: 312px;
     height: 283px;
