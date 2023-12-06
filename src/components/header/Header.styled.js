@@ -82,41 +82,41 @@ export const StyledLink = styled.a`
 `;
 
 export const ChangeLanguage = styled.div`
-  height: auto;
-  width: 58px;
-  transition: all 0.9s;
-  display: flex;
+	height: auto;
+	width: 58px;
+	transition: all 0.9s;
+	display: flex;
 
-  & svg {
-    position: absolute;
-    transition: all 0.9s;
-    margin: 11px 0 0 60px;
-    cursor: pointer;
-  }
+	& svg {
+		position: absolute;
+		transition: all 0.9s;
+		margin: 11px 0 0 60px;
+		cursor: pointer;
+		transform: rotate(180deg);
+	}
 
-  & svg.open {
-    transform: rotate(180deg);
-  }
-  @media (max-width: 1199px) {
-    width: 180px;
-    & svg {
-      margin: 15px 0 0 60px;
-    }
-    & svg.open {
-      transform: rotate(180deg);
-      margin: 8px 0 0 60px;
-    }
-  }
-  @media (max-width: 767px) {
-    & svg {
-      display: none;
-    }
+	& svg.open {
+		transform: rotate(0deg);
+	}
+	@media (max-width: 1199px) {
+		width: 180px;
+		& svg {
+			margin: 15px 0 0 60px;
+		}
+		& svg.open {
+			margin: 8px 0 0 60px;
+		}
+	}
+	@media (max-width: 767px) {
+		& svg {
+			display: none;
+		}
 
-    & svg.open {
-      display: none;
-    }
-  }
-`;
+		& svg.open {
+			display: none;
+		}
+	}
+`
 
 export const ChangeLanguageUl = styled.ul`
   margin: 0;
@@ -228,8 +228,7 @@ export const HamburgerMenuWrapper = styled.div`
     height: 100%;
     overflow: auto;
     background: #000;
-    transform: ${(props) =>
-      props.isopen === "true" ? "translateX(0)" : "translateX(100%)"};
+    transform: ${(props) => props.isopen === "true" ? "translateX(0)" : "translateX(100%)"};
     transition: transform 1s ease-in-out;
   }
 `;

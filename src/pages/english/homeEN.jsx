@@ -90,12 +90,12 @@ import { ModalkaEN } from "../../components/modalka/ModalkaEN";
 
 export const HomeEN = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [displayImg, setDisplayImg] = useState(3);
+  const [displayImg, setDisplayImg] = useState(4);
   const [displayImgPrev, setDisplayImgPrev] = useState(7);
   const [imgArr, setImgArr] = useState([]);
   const [openModal, setOpenModal] = useState(false)
   const [isOpenMoreProject, setIsOpenProject] = useState(false);
-  let ImgBWDataExtended = ImgBWData.slice(0, 3);
+  let ImgBWDataExtended = ImgBWData.slice(0, 4);
 
   useEffect(() => {
     setImgArr(ImgBWDataExtended);
@@ -341,7 +341,6 @@ export const HomeEN = () => {
 			<ImgHeroDiv>
 				<ImgHero src={ImageHero} alt='' />
 			</ImgHeroDiv>
-
 			<Services id='services'>
 				<h2>
 					Our <span>Services</span>
