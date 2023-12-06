@@ -27,7 +27,7 @@ export const SecondSection = styled.section`
   align-items: center;
   gap: 113px;
 
-  opacity: 0;
+  /* opacity: 0; */
   transform: translateX(350px);
   transition: opacity 1s ease, transform 1s ease;
 

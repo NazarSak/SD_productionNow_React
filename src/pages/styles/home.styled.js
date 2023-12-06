@@ -65,10 +65,9 @@ export const HeroBackground = styled.img`
   }
 
   @media screen and (max-width: 767px) {
-    width: 507px;
-    height: 507px;
-    position: absolute;
-    top: -10px;
+    width: 407px;
+    height: 407px;
+    top: 40px;
   }
 `;
 export const HeroBlock = styled.div`
