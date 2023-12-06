@@ -4,7 +4,8 @@ import BackgroundCircle from "../../assets/img/backgroundCircle.png";
 
 
 export const ModalWrapper = styled.div`
-  position: fixed;
+  /* position: fixed; */
+  position: absolute;
   z-index: 999;
   left: 0;
   top: 0;
@@ -14,7 +15,10 @@ export const ModalWrapper = styled.div`
   background: #000;
   display: flex;
   justify-content: center;
-`; 
+  @media (max-width: 1199px) {
+    
+  }    
+` 
 
 export const ModalContent = styled.div`
   background-color: white;
@@ -56,34 +60,41 @@ export const Paragraph = styled.p`
 `;
 
 export const Input = styled.input`
-  display: flex;
-  width: 495px;
-  color: white;
-  padding: 16px 24px;
-  align-items: center;
-  gap: 10px;
-  border-radius: 20px;
-  border: 1px solid var(--grey-C, #cfcfcf);
-  background-color: transparent;
-  outline: none;
-`;
+	display: flex;
+	width: 495px;
+	color: white;
+	padding: 16px 24px;
+	align-items: center;
+	gap: 10px;
+	border-radius: 20px;
+	border: 1px solid var(--grey-C, #cfcfcf);
+	background-color: transparent;
+	outline: none;
+	@media (max-width: 768px) {
+    width: 295px;
+	}
+`
 
 export const InputComment = styled.input`
-  display: flex;
-  width: 495px;
-  color: white;
-  padding: 16px 24px 100px 24px;
-  align-items: center;
-  gap: 10px;
-  border-radius: 26px;
-  border: 1px solid var(--grey-C, #cfcfcf);
-  background-color: transparent;
-  outline: none;
-`;
+	display: flex;
+	width: 495px;
+	color: white;
+	padding: 16px 24px 100px 24px;
+	align-items: center;
+	gap: 10px;
+	border-radius: 26px;
+	border: 1px solid var(--grey-C, #cfcfcf);
+	background-color: transparent;
+	outline: none;
+	@media (max-width: 768px) {
+		width: 295px;
+	}
+`
 
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 24px;
   padding: 0;
 `;
@@ -118,11 +129,12 @@ export const ImgContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-position: center;
   background-size: cover;
-  width: 800px;
-  height: 800px;
-`;
+  width: 500px;
+  height: 500px;
+	@media (max-width: 768px) {
+  }
+`
 
 export const CloseButton = styled(Link)`
   display: flex;
@@ -143,6 +155,6 @@ export const CloseButton = styled(Link)`
   @media (max-width: 1199px) {
     top: 48px;
     margin: 0;
-    right: 48px;
+    right: -20px;
   }
 `;

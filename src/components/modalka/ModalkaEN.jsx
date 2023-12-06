@@ -82,7 +82,7 @@ export const ModalkaEN = ({ setOpenModal }) => {
           <Paragraph>
             We'll help you find the right plan and pricing for your business.
           </Paragraph>
-          <form onSubmit={handleSubmit} style={{ width: "545px" }}>
+          <form onSubmit={handleSubmit} >
             <List>
               <li>
                 <Input
