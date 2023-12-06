@@ -155,6 +155,6 @@ export const CloseButton = styled(Link)`
   @media (max-width: 1199px) {
     top: 48px;
     margin: 0;
-    right: -20px;
+    right: 10px;
   }
 `;
