@@ -326,6 +326,15 @@ export const InternalImgSecond = styled.img`
   margin-top: 180px;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
+
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(-350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
   @media screen and (max-width: 1199px) {
     width: 302px;
     height: 636px;
@@ -346,6 +355,13 @@ export const InternalImgThree = styled.img`
   flex-shrink: 0;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
   @media screen and (max-width: 1199px) {
     width: 302px;
     height: 800px;
@@ -359,13 +375,20 @@ export const InternalImgThree = styled.img`
     border: 1px solid var(--grey-B, #595959);
   }
 `;
-
+ 
 export const InternalImgFour = styled.img`
   width: 490px;
   height: 435px;
   flex-shrink: 0;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
   @media screen and (max-width: 1199px) {
     width: 302px;
     height: 283px;
@@ -384,6 +407,13 @@ export const InternalImgFive = styled.img`
   flex-shrink: 0;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
   @media screen and (max-width: 1199px) {
     width: 302px;
     height: 418px;

@@ -435,3 +435,4 @@ export const LinkArrow = styled(Link)`
   font-weight: 400;
   line-height: 160%;
 `;
+ 

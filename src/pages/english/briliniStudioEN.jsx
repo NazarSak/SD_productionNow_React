@@ -1,4 +1,6 @@
 import React from "react";
+import ScrollTrigger from "react-scroll-trigger";
+import AnimationState from "../../helperFunction/animationState/animationState";
 import { HeaderEN } from "../../components/header/HeaderEN";
 import { FooterEN } from "../../components/footer/FooterEN";
 import { ConectUsEN } from "../../components/conectUs/conectUsEN";
@@ -23,8 +25,10 @@ import {
   TitleHThree,
   TitlePage,
   TitleHTwo,
+  TitleMain,
   TitleSpan,
   ImageFirst,
+  ImageFirstHandShake,
   ParagraphAbProject,
   SvgImgContainer,
   SvgImg,
@@ -42,6 +46,23 @@ import {
 } from "../styles/briliniStudio.styled";
 
 export const BriliniStudioEN = () => {
+  const {
+    isVisible,
+    isVisibleOne,
+    isVisibleTwo,
+    isVisibleThree,
+    isVisibleFour,
+    isVisibleFive,
+    isVisibleSix,
+    handleEnterViewport,
+    handleEnterViewportOne,
+    handleEnterViewportTwo,
+    handleEnterViewportThree,
+    handleEnterViewportFour,
+    handleEnterViewportFive,
+    handleEnterViewportSix,
+  } = AnimationState();
+
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
@@ -49,71 +70,93 @@ export const BriliniStudioEN = () => {
   return (
     <main>
       <HeaderEN name={"/de/briliniStudio"} />
-      <FirstSection>
-        <TitleHThree>Landing page</TitleHThree>
-        <TitlePage>
-          Brilini <TitleSpan>Studio</TitleSpan>
-        </TitlePage>
-      </FirstSection>
-      <OptimisatorImg src={house} alt="image" ImageType={ImageFirst} />
-      <SecondSection>
-        <div>
+      <ScrollTrigger onEnter={handleEnterViewport}>
+        <FirstSection className={`${isVisible ? "visible" : ""}`}>
+          <TitleHThree>Landing page</TitleHThree>
+          <TitlePage>
+            Brilini <TitleSpan>Studio</TitleSpan>
+          </TitlePage>
+        </FirstSection>
+      </ScrollTrigger>
+      <ScrollTrigger onEnter={handleEnterViewportOne}>
+        <ImageFirst
+          className={`${isVisibleOne ? "visible" : ""}`}
+          src={house}
+          alt="image"
+        />
+      </ScrollTrigger>
+      <ScrollTrigger onEnter={handleEnterViewportTwo}>
+        <SecondSection className={`${isVisibleTwo ? "visible" : ""}`}>
+          <div>
+            <TitleHTwo>
+              About <TitleSpan>Project</TitleSpan>
+            </TitleHTwo>
+            <ParagraphAbProject>
+              The interior design studio specializes in creating modern and
+              laconic interiors for residential premises, apartments and houses.
+              Brilini Studio pays special attention to detail and functionality
+              to ensure clients feel comfortable and practical in every space we
+              create.
+            </ParagraphAbProject>
+          </div>
+          <ContainerLine>
+            <Line />
+          </ContainerLine>
+          <SvgImgContainer>
+            <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
+          </SvgImgContainer>
+        </SecondSection>
+      </ScrollTrigger>
+      <ScrollTrigger onEnter={handleEnterViewportThree}>
+        <ThirdSection className={`${isVisibleThree ? "visible" : ""}`}>
           <TitleHTwo>
-            About <TitleSpan>Project</TitleSpan>
+            Goals and <TitleSpan>Objectives</TitleSpan>
           </TitleHTwo>
-          <ParagraphAbProject>
-            The interior design studio specializes in creating modern and
-            laconic interiors for residential premises, apartments and houses.
-            Brilini Studio pays special attention to detail and functionality to
-            ensure clients feel comfortable and practical in every space we
-            create.
-          </ParagraphAbProject>
-        </div>
-        <ContainerLine>
-          <Line />
-        </ContainerLine>
-        <SvgImgContainer>
-          <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
-        </SvgImgContainer>
-      </SecondSection>
-      <ThirdSection>
-        <TitleHTwo>
-          Goals and <TitleSpan>Objectives</TitleSpan>
-        </TitleHTwo>
-        <List>
-          <Li>
-            <NumberOfList>1</NumberOfList>
-            <ParagraphGoals>
-              Create a stylish and consistent website design.
-            </ParagraphGoals>
-          </Li>
-          <Li>
-            <NumberOfList>2</NumberOfList>
-            <ParagraphGoals>
-              Increase the number of new customers through the website.
-            </ParagraphGoals>
-          </Li>
-          <Li>
-            <NumberOfList>3</NumberOfList>
-            <ParagraphGoals>
-              Develop a convenient adaptive version of the website.
-            </ParagraphGoals>
-          </Li>
-          <Li>
-            <NumberOfList>4</NumberOfList>
-            <ParagraphGoals>
-              Create a convenient and understandable website for customers of
-              different ages.
-            </ParagraphGoals>
-          </Li>
-        </List>
-      </ThirdSection>
-      <OptimisatorImg src={cafe} alt="image" ImageType={ImageFirst} />
+          <List>
+            <Li>
+              <NumberOfList>1</NumberOfList>
+              <ParagraphGoals>
+                Create a stylish and consistent website design.
+              </ParagraphGoals>
+            </Li>
+            <Li>
+              <NumberOfList>2</NumberOfList>
+              <ParagraphGoals>
+                Increase the number of new customers through the website.
+              </ParagraphGoals>
+            </Li>
+            <Li>
+              <NumberOfList>3</NumberOfList>
+              <ParagraphGoals>
+                Develop a convenient adaptive version of the website.
+              </ParagraphGoals>
+            </Li>
+            <Li>
+              <NumberOfList>4</NumberOfList>
+              <ParagraphGoals>
+                Create a convenient and understandable website for customers of
+                different ages.
+              </ParagraphGoals>
+            </Li>
+          </List>
+        </ThirdSection>
+      </ScrollTrigger>
+      <ScrollTrigger onEnter={handleEnterViewportFour}>
+        <ImageFirstHandShake
+          className={`${isVisibleFour ? "visible" : ""}`}
+          src={cafe}
+          alt="image"
+        />
+      </ScrollTrigger>
       <FourthSection>
-        <TitleHTwo>
-          Main <TitleSpan>Page</TitleSpan>
-        </TitleHTwo>
-        <ConatinerImg>
+
+        <ScrollTrigger onEnter={handleEnterViewportFive}>
+        <TitleMain className={`${isVisibleFive ? "visible" : ""}`}>
+            Main <TitleSpan>Page</TitleSpan>
+          </TitleMain>
+        </ScrollTrigger>
+                <ScrollTrigger onEnter={handleEnterViewportSix}>
+        <ConatinerImg className={`${isVisibleSix ? "visible" : ""}`}>
           <OptimisatorImg src={Group} alt="image" ImageType={NaturalFoodImg} />
           <OptimisatorImg
             src={landing}
@@ -121,6 +164,7 @@ export const BriliniStudioEN = () => {
             ImageType={SecondNaturalFoodImg}
           />
         </ConatinerImg>
+                </ScrollTrigger>
       </FourthSection>
       <video width="100%" autoPlay muted loop>
         <source src={Video} type="video/mp4" />

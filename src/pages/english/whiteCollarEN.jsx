@@ -207,41 +207,52 @@ export const WhiteCollarEN = () => {
       <FifthSection>
         <FirstConatinerInternalImg>
           <ScrollTrigger onEnter={handleEnterViewportSeven}>
-          <TitleInternal className={`${isVisibleSeven ? "visible" : ""}`}>
-            Internal <TitleSpan>Pages</TitleSpan>
-          </TitleInternal>
+            <TitleInternal className={`${isVisibleSeven ? "visible" : ""}`}>
+              Internal <TitleSpan>Pages</TitleSpan>
+            </TitleInternal>
           </ScrollTrigger>
 
           <ScrollTrigger onEnter={handleEnterViewportEight}>
-          <InternalImgOne
-          className={`${isVisibleSeven ? "visible" : ""}`}
-            src={InternalOne}
-            alt="image"
-          />
+            <InternalImgOne
+              className={`${isVisibleSeven ? "visible" : ""}`}
+              src={InternalOne}
+              alt="image"
+            />
           </ScrollTrigger>
-          <OptimisatorImg
-            src={InternalTwo}
-            alt="image"
-            ImageType={InternalImgSecond}
-          />
+
+          <ScrollTrigger onEnter={handleEnterViewportNine}>
+            <InternalImgSecond
+              className={`${isVisibleNine ? "visible" : ""}`}
+              src={InternalTwo}
+              alt="image"
+            />
+          </ScrollTrigger>
         </FirstConatinerInternalImg>
 
         <SecondConatinerInternalImg>
-          <OptimisatorImg
-            src={InternalThree}
-            alt="image"
-            ImageType={InternalImgThree}
-          />
-          <OptimisatorImg
-            src={InternalFour}
-            alt="image"
-            ImageType={InternalImgFour}
-          />
-          <OptimisatorImg
-            src={InternalFive}
-            alt="image"
-            ImageType={InternalImgFive}
-          />
+          <ScrollTrigger onEnter={handleEnterViewportTen}>
+            <InternalImgThree
+              className={`${isVisibleTen ? "visible" : ""}`}
+              src={InternalThree}
+              alt="image"
+            />
+          </ScrollTrigger>
+
+          <ScrollTrigger onEnter={handleEnterViewportPartOne}>
+            <InternalImgFour
+              className={`${isVisiblePartOne ? "visible" : ""}`}
+              src={InternalFour}
+              alt="image"
+            />
+          </ScrollTrigger>
+
+          <ScrollTrigger onEnter={handleEnterViewportPartTwo}>
+            <InternalImgFive
+              className={`${isVisiblePartTwo ? "visible" : ""}`}
+              src={InternalFive}
+              alt="image"
+            />
+          </ScrollTrigger>
         </SecondConatinerInternalImg>
       </FifthSection>
 

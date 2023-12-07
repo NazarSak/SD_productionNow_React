@@ -30,6 +30,37 @@ export const ImageFirst = styled.img`
   width: 100%;
   max-height: 583px;
   object-fit: cover;
+
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+
+  &.visible {
+    opacity: 1;
+  }
+`;
+
+export const ImageFirstHandShake = styled.img`
+  width: 100%;
+  max-height: 583px;
+  object-fit: cover;
+
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+
+  &.visible {
+    opacity: 1;
+  }
+`;
+
+export const TitleMain = styled.h2`
+  color: var(--02-dark-color-white, #fff);
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(-350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
 `;
 
 export const ParagraphAbProject = styled.p`
@@ -213,4 +244,11 @@ export const ConatinerImg = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateY(-350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
 `;

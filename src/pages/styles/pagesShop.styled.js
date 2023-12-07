@@ -28,6 +28,14 @@ export const TitleSpan = styled.span`
 
 export const InternalTitle = styled.h2`
   color: var(--02-dark-color-white, #fff);
+
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(-350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
   @media screen and (max-width: 767px) {
     width: max-content;
   }
@@ -38,8 +46,35 @@ export const ImageFirst = styled.img`
   max-height: 583px;
   object-fit: cover;
 
-  @media screen and (max-width: 1199px) {
-    max-height: 200px;
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+
+  &.visible {
+    opacity: 1;
+  }
+`;
+
+export const TitleMain = styled.h2`
+  color: var(--02-dark-color-white, #fff);
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(-350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+export const ImageHandshake = styled.img`
+  width: 100%;
+  max-height: 583px;
+  object-fit: cover;
+
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+
+  &.visible {
+    opacity: 1;
   }
 `;
 
@@ -210,6 +245,13 @@ export const ConatinerImg = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateY(-350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
 `;
 
 export const FirstConatinerInternalImg = styled.div`
@@ -236,6 +278,15 @@ export const InternalImgOne = styled.img`
   border-radius: 40px;
   margin-top: 121px;
   border: 5px solid var(--grey-B, #595959);
+
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(-350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
   @media screen and (max-width: 1199px) {
     width: 284.746px;
     height: 412.312px;
@@ -256,6 +307,13 @@ export const InternalImgSecond = styled.img`
   margin-top: 180px;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(-350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
   @media screen and (max-width: 1199px) {
     width: 274px;
     height: 525px;
@@ -276,6 +334,13 @@ export const InternalImgThree = styled.img`
   border-radius: 40px;
   margin-top: 121px;
   border: 5px solid var(--grey-B, #595959);
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(-350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
   @media screen and (max-width: 1199px) {
     width: 274px;
     margin-top: 48px;
@@ -295,6 +360,13 @@ export const InternalImgFour = styled.img`
   flex-shrink: 0;
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
   @media screen and (max-width: 1199px) {
     width: 274px;
     height: 808px;
@@ -311,9 +383,15 @@ export const InternalImgFour = styled.img`
 export const InternalImgFive = styled.img`
   width: 490px;
   height: 839px;
-
   border-radius: 40px;
   border: 5px solid var(--grey-B, #595959);
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
   @media screen and (max-width: 1199px) {
     width: 274px;
     height: 473px;

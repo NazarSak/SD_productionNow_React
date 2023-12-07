@@ -1,4 +1,6 @@
 import React from "react";
+import ScrollTrigger from "react-scroll-trigger";
+import AnimationState from "../../helperFunction/animationState/animationState";
 import { HeaderEN } from "../../components/header/HeaderEN";
 import { FooterEN } from "../../components/footer/FooterEN";
 import { ConectUsEN } from "../../components/conectUs/conectUsEN";
@@ -29,6 +31,7 @@ import {
   TitleSpan,
   AppTitle,
   ImageFirst,
+  ImageFirstHandShake,
   ParagraphAbProject,
   SvgImgContainer,
   SvgImg,
@@ -51,6 +54,35 @@ import {
 } from "../styles/abi.styled";
 
 export const AbiEN = () => {
+  const {
+    isVisible,
+    isVisibleOne,
+    isVisibleTwo,
+    isVisibleThree,
+    isVisibleFour,
+    isVisibleFive,
+    isVisibleSix,
+    isVisibleSeven,
+    isVisibleEight,
+    isVisibleNine,
+    isVisibleTen,
+    isVisiblePartOne,
+    isVisiblePartTwo,
+    handleEnterViewport,
+    handleEnterViewportOne,
+    handleEnterViewportTwo,
+    handleEnterViewportThree,
+    handleEnterViewportFour,
+    handleEnterViewportFive,
+    handleEnterViewportSix,
+    handleEnterViewportSeven,
+    handleEnterViewportEight,
+    handleEnterViewportNine,
+    handleEnterViewportTen,
+    handleEnterViewportPartOne,
+    handleEnterViewportPartTwo,
+  } = AnimationState();
+
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
@@ -58,96 +90,124 @@ export const AbiEN = () => {
   return (
     <main>
       <HeaderEN name={"/de/abi"} />
-      <FirstSection>
-        <TitleHThree>Mobile App</TitleHThree>
-        <TitlePage>Abi</TitlePage>
-      </FirstSection>
+      <ScrollTrigger onEnter={handleEnterViewport}>
+        <FirstSection className={`${isVisible ? "visible" : ""}`}>
+          <TitleHThree>Mobile App</TitleHThree>
+          <TitlePage>Abi</TitlePage>
+        </FirstSection>
+      </ScrollTrigger>
+      <ScrollTrigger onEnter={handleEnterViewportOne}>
+        <ImageFirst
+          className={`${isVisibleOne ? "visible" : ""}`}
+          src={BackgroundOne}
+          alt="image"
+        />
+      </ScrollTrigger>
+      <ScrollTrigger onEnter={handleEnterViewportTwo}>
+        <SecondSection className={`${isVisibleTwo ? "visible" : ""}`}>
+          <div>
+            <TitleHTwo>
+              About <TitleSpan>Project</TitleSpan>
+            </TitleHTwo>
+            <ParagraphAbProject>
+              The mobile presentation app, enriched with AI capabilities,
+              provides a unique experience in designing perfect presentations.
+              You no longer need to spend a lot of time creating slides from
+              scratch, as a rich collection of ready-made templates is provided.
+            </ParagraphAbProject>
+          </div>
 
-      <OptimisatorImg src={BackgroundOne} alt="image" ImageType={ImageFirst} />
-
-      <SecondSection>
-        <div>
+          <ContainerLine>
+            <Line />
+          </ContainerLine>
+          <SvgImgContainer>
+            <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
+          </SvgImgContainer>
+        </SecondSection>
+      </ScrollTrigger>
+      <ScrollTrigger onEnter={handleEnterViewportThree}>
+        <ThirdSection className={`${isVisibleThree ? "visible" : ""}`}>
           <TitleHTwo>
-            About <TitleSpan>Project</TitleSpan>
+            Goals and <TitleSpan>Objectives</TitleSpan>
           </TitleHTwo>
-          <ParagraphAbProject>
-            The mobile presentation app, enriched with AI capabilities, provides
-            a unique experience in designing perfect presentations. You no
-            longer need to spend a lot of time creating slides from scratch, as
-            a rich collection of ready-made templates is provided.
-          </ParagraphAbProject>
-        </div>
-
-        <ContainerLine>
-          <Line />
-        </ContainerLine>
-        <SvgImgContainer>
-          <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
-        </SvgImgContainer>
-      </SecondSection>
-
-      <ThirdSection>
-        <TitleHTwo>
-          Goals and <TitleSpan>Objectives</TitleSpan>
-        </TitleHTwo>
-        <List>
-          <Li>
-            <NumberOfList>1</NumberOfList>
-            <ParagraphGoals>Create a stylish application.</ParagraphGoals>
-          </Li>
-          <Li>
-            <NumberOfList>2</NumberOfList>
-            <ParagraphGoals>Develop presentation templates.</ParagraphGoals>
-          </Li>
-          <Li>
-            <NumberOfList>3</NumberOfList>
-            <ParagraphGoals>Create an easy-to-use product.</ParagraphGoals>
-          </Li>
-          <Li>
-            <NumberOfList>4</NumberOfList>
-            <ParagraphGoals>
-              Develop themes for any user request.
-            </ParagraphGoals>
-          </Li>
-        </List>
-      </ThirdSection>
-
-      <OptimisatorImg src={BackgroundTwo} alt="image" ImageType={ImageFirst} />
-
+          <List>
+            <Li>
+              <NumberOfList>1</NumberOfList>
+              <ParagraphGoals>Create a stylish application.</ParagraphGoals>
+            </Li>
+            <Li>
+              <NumberOfList>2</NumberOfList>
+              <ParagraphGoals>Develop presentation templates.</ParagraphGoals>
+            </Li>
+            <Li>
+              <NumberOfList>3</NumberOfList>
+              <ParagraphGoals>Create an easy-to-use product.</ParagraphGoals>
+            </Li>
+            <Li>
+              <NumberOfList>4</NumberOfList>
+              <ParagraphGoals>
+                Develop themes for any user request.
+              </ParagraphGoals>
+            </Li>
+          </List>
+        </ThirdSection>
+      </ScrollTrigger>
+      <ScrollTrigger onEnter={handleEnterViewportFour}>
+        <ImageFirstHandShake
+          className={`${isVisibleTwo ? "visible" : ""}`}
+          src={BackgroundTwo}
+          alt="image"
+        />
+      </ScrollTrigger>
       <FifthSection>
         <FirstConatinerInternalImg>
-          <AppTitle>
-            App <TitleSpan>Pages</TitleSpan>
-          </AppTitle>
+          <ScrollTrigger onEnter={handleEnterViewportFive}>
+            <AppTitle className={`${isVisibleTwo ? "visible" : ""}`}>
+              App <TitleSpan>Pages</TitleSpan>
+            </AppTitle>
+          </ScrollTrigger>
 
-          <OptimisatorImg
-            src={InternalOne}
-            alt="image"
-            ImageType={InternalImgOne}
-          />
-          <OptimisatorImg
-            src={InternalTwo}
-            alt="image"
-            ImageType={InternalImgSecond}
-          />
+          <ScrollTrigger onEnter={handleEnterViewportSix}>
+            <InternalImgOne
+              className={`${isVisibleSix ? "visible" : ""}`}
+              src={InternalOne}
+              alt="image"
+            />
+          </ScrollTrigger>
+
+          <ScrollTrigger onEnter={handleEnterViewportSeven}>
+            <InternalImgSecond
+              className={`${isVisibleSeven ? "visible" : ""}`}
+              src={InternalTwo}
+              alt="image"
+            />
+          </ScrollTrigger>
         </FirstConatinerInternalImg>
 
         <SecondConatinerInternalImg>
-          <OptimisatorImg
-            src={InternalThree}
-            alt="image"
-            ImageType={InternalImgThree}
-          />
-          <OptimisatorImg
-            src={InternalFour}
-            alt="image"
-            ImageType={InternalImgFour}
-          />
-          <OptimisatorImg
-            src={InternalFive}
-            alt="image"
-            ImageType={InternalImgFive}
-          />
+          <ScrollTrigger onEnter={handleEnterViewportEight}>
+            <InternalImgThree
+              className={`${isVisibleEight ? "visible" : ""}`}
+              src={InternalThree}
+              alt="image"
+            />
+          </ScrollTrigger>
+
+          <ScrollTrigger onEnter={handleEnterViewportNine}>
+            <InternalImgFour
+              className={`${isVisibleNine ? "visible" : ""}`}
+              src={InternalFour}
+              alt="image"
+            />
+          </ScrollTrigger>
+
+          <ScrollTrigger onEnter={handleEnterViewportTen}>
+            <InternalImgFive
+              className={`${isVisibleTen ? "visible" : ""}`}
+              src={InternalFive}
+              alt="image"
+            />
+          </ScrollTrigger>
         </SecondConatinerInternalImg>
       </FifthSection>
 
