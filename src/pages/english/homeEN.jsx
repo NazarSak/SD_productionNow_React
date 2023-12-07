@@ -86,12 +86,14 @@ import {
   ServiceButton3,
   ProjectContainerImg,
 } from "./../styles/home.styled";
+import { ModalkaEN } from "../../components/modalka/ModalkaEN";
 
 export const HomeEN = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [displayImg, setDisplayImg] = useState(3);
   const [displayImgPrev, setDisplayImgPrev] = useState(7);
   const [imgArr, setImgArr] = useState([]);
+  const [openModal, setOpenModal] = useState(false)
   const [isOpenMoreProject, setIsOpenProject] = useState(false);
   let ImgBWDataExtended = ImgBWData.slice(0, 3);
 
@@ -162,325 +164,331 @@ export const HomeEN = () => {
     setIsOpenProject(true);
   };
 
+  const handleOpenModal = () => {
+		setOpenModal(true)
+		document.body.style.position = 'fixed'
+	}
+
   return (
-    <>
-      <HeaderEN />
-      <SectionHero>
-        <HeroBackground src={Ellipse} alt="" />
-        <HeroBlock>
-          <HeroContend>
-            <ContainerPC>
-              <h2>
-                Built the future <span>together </span> with us!
-              </h2>
-              <img src="../img/select.svg" alt="" />
-              <p>Your goals are our execution</p>
-            </ContainerPC>
-            <ContainerMobile>
-              <h2>
-                Built the <span> future </span>together
-              </h2>
-            </ContainerMobile>
-          </HeroContend>
-          <ButtonHeader to="/en/contactUs">Lets go!</ButtonHeader>
-        </HeroBlock>
-      </SectionHero>
-      <ImgHero src={ImageHero} alt="" />
+		<>
+			{openModal && <ModalkaEN setOpenModal={setOpenModal} />}
+			<HeaderEN />
+			<SectionHero>
+				<HeroBackground src={Ellipse} alt='' />
+				<HeroBlock>
+					<HeroContend>
+						<ContainerPC>
+							<h2>
+								Built the future <span>together </span> with us!
+							</h2>
+							<img src='../img/select.svg' alt='' />
+							<p>Your goals are our execution</p>
+						</ContainerPC>
+						<ContainerMobile>
+							<h2>
+								Built the <span> future </span>together
+							</h2>
+						</ContainerMobile>
+					</HeroContend>
+					<ButtonHeader onClick={handleOpenModal}>Lets go!</ButtonHeader>
+				</HeroBlock>
+			</SectionHero>
+			<ImgHero src={ImageHero} alt='' />
 
-      <Project id="projects">
-        <ContainerPC>
-          <h2>
-            Check our some of <span>our projects</span>
-          </h2>
-        </ContainerPC>
-        <ContainerMobile>
-          <h2>
-            Some of our <span> projects</span>
-          </h2>
-        </ContainerMobile>
-        <ProjectsCards>
-          <ProjectContainer>
-            <ProjectsFragment1>
-              <ProjectsFragmentInfo1>
-                <h4>Online Shop</h4>
-                <h3>Organic</h3>
-                {windowWidth > 1200 ? (
-                  <p>
-                    Online store with organic fruits, vegetables and berries. A
-                    England farmer wanted to sell organically grown produce.
-                  </p>
-                ) : (
-                  <p>
-                    Online store with organic fruits, vegetables and berries.
-                  </p>
-                )}
-                <ButtonProject1 to="/en/organicShop" onClick={handleClickTop}>
-                  View
-                </ButtonProject1>
-              </ProjectsFragmentInfo1>
-            </ProjectsFragment1>
-            <ProjectImage1Container>
-              <ProjectImage1 src={OrganicImg} />
-            </ProjectImage1Container>
-          </ProjectContainer>
+			<Project id='projects'>
+				<ContainerPC>
+					<h2>
+						Check our some of <span>our projects</span>
+					</h2>
+				</ContainerPC>
+				<ContainerMobile>
+					<h2>
+						Some of our <span> projects</span>
+					</h2>
+				</ContainerMobile>
+				<ProjectsCards>
+					<ProjectContainer>
+						<ProjectsFragment1>
+							<ProjectsFragmentInfo1>
+								<h4>Online Shop</h4>
+								<h3>Organic</h3>
+								{windowWidth > 1200 ? (
+									<p>
+										Online store with organic fruits, vegetables and berries. A
+										England farmer wanted to sell organically grown produce.
+									</p>
+								) : (
+									<p>
+										Online store with organic fruits, vegetables and berries.
+									</p>
+								)}
+								<ButtonProject1 to='/en/organicShop' onClick={handleClickTop}>
+									View
+								</ButtonProject1>
+							</ProjectsFragmentInfo1>
+						</ProjectsFragment1>
+						<ProjectImage1Container>
+							<ProjectImage1 src={OrganicImg} />
+						</ProjectImage1Container>
+					</ProjectContainer>
 
-          <ProjectsFragment2>
-            <ProjectImageContainer1>
-              <ProjectImage21 src={WhiteImg1} />
-              <ProjectImage22 src={WhiteImg1} />
-            </ProjectImageContainer1>
-            <ProjectsFragmentInfo2>
-              <h4>Business website</h4>
-              <h3>WhiteCollor</h3>
-              <ContainerPC>
-                {windowWidth > 1200 ? (
-                  <p>
-                    Develop and implement Agilic methods in the strategic
-                    management of a corporation to ensure flexibility and
-                    adaptation to a rapidly changing business environment.
-                  </p>
-                ) : (
-                  <p>
-                    Develop and implement Agilic methods in the strategic
-                    management
-                  </p>
-                )}
-              </ContainerPC>
-              <ContainerMobile>
-                <p>Adaptive Strategic Agile Management.</p>
-              </ContainerMobile>
-              <ButtonProject2 to="/en/whiteCollar" onClick={handleClickTop}>
-                View
-              </ButtonProject2>
-            </ProjectsFragmentInfo2>
-          </ProjectsFragment2>
+					<ProjectsFragment2>
+						<ProjectImageContainer1>
+							<ProjectImage21 src={WhiteImg1} />
+							<ProjectImage22 src={WhiteImg1} />
+						</ProjectImageContainer1>
+						<ProjectsFragmentInfo2>
+							<h4>Business website</h4>
+							<h3>WhiteCollor</h3>
+							<ContainerPC>
+								{windowWidth > 1200 ? (
+									<p>
+										Develop and implement Agilic methods in the strategic
+										management of a corporation to ensure flexibility and
+										adaptation to a rapidly changing business environment.
+									</p>
+								) : (
+									<p>
+										Develop and implement Agilic methods in the strategic
+										management
+									</p>
+								)}
+							</ContainerPC>
+							<ContainerMobile>
+								<p>Adaptive Strategic Agile Management.</p>
+							</ContainerMobile>
+							<ButtonProject2 to='/en/whiteCollar' onClick={handleClickTop}>
+								View
+							</ButtonProject2>
+						</ProjectsFragmentInfo2>
+					</ProjectsFragment2>
 
-          {!isOpenMoreProject ? (
-            <ContainerMoreProject>
-              <button onClick={hadnleOpenProject}>
-                Show more
-                <SvgHome />
-              </button>
-            </ContainerMoreProject>
-          ) : (
-            <ProjectContainer2>
-              <ProjectContainerImg>
-                <ProjectsFragment3>
-                  <ProjectImage3Container>
-                    <ProjectImage31 src={BriliniImg1} />
-                    <ProjectImage32 src={BriliniImg2} />
-                  </ProjectImage3Container>
-                  <ProjectsFragmentInfo3>
-                    <h4>Landing page</h4>
-                    <h3>Brilini Studio</h3>
-                    <ContainerPC>
-                      {windowWidth > 1200 ? (
-                        <p>
-                          Studio of interior designers specializing in the
-                          furnishing and design of rooms, apartments and houses
-                          in a modern and austere style.
-                        </p>
-                      ) : (
-                        <p>
-                          Studio of interior designers specializing in the
-                          furnishing and design of rooms
-                        </p>
-                      )}
-                    </ContainerPC>
-                    <ContainerMobile>
-                      <p>Modern austere interior design studio.</p>
-                    </ContainerMobile>
-                    <ButtonProject3
-                      to="/en/briliniStudio"
-                      onClick={handleClickTop}
-                    >
-                      View
-                    </ButtonProject3>
-                  </ProjectsFragmentInfo3>
-                </ProjectsFragment3>
-              </ProjectContainerImg>
+					{!isOpenMoreProject ? (
+						<ContainerMoreProject>
+							<button onClick={hadnleOpenProject}>
+								Show more
+								<SvgHome />
+							</button>
+						</ContainerMoreProject>
+					) : (
+						<ProjectContainer2>
+							<ProjectContainerImg>
+								<ProjectsFragment3>
+									<ProjectImage3Container>
+										<ProjectImage31 src={BriliniImg1} />
+										<ProjectImage32 src={BriliniImg2} />
+									</ProjectImage3Container>
+									<ProjectsFragmentInfo3>
+										<h4>Landing page</h4>
+										<h3>Brilini Studio</h3>
+										<ContainerPC>
+											{windowWidth > 1200 ? (
+												<p>
+													Studio of interior designers specializing in the
+													furnishing and design of rooms, apartments and houses
+													in a modern and austere style.
+												</p>
+											) : (
+												<p>
+													Studio of interior designers specializing in the
+													furnishing and design of rooms
+												</p>
+											)}
+										</ContainerPC>
+										<ContainerMobile>
+											<p>Modern austere interior design studio.</p>
+										</ContainerMobile>
+										<ButtonProject3
+											to='/en/briliniStudio'
+											onClick={handleClickTop}
+										>
+											View
+										</ButtonProject3>
+									</ProjectsFragmentInfo3>
+								</ProjectsFragment3>
+							</ProjectContainerImg>
 
-              <ProjectsFragment4>
-                <ProjectImage4Container>
-                  <ProjectImage41 src={AbiImg1} />
-                  <ProjectImage42 src={AbiImg2} />
-                </ProjectImage4Container>
-                <ProjectsFragmentInfo4>
-                  <h4>Mobile App</h4>
-                  <h3>Abi</h3>
-                  {windowWidth > 1200 ? (
-                    <p>
-                      Mobile application for creating presentations with
-                      ready-made templates based on artificial intelligence. The
-                      application is available on Play Market and App Store.
-                    </p>
-                  ) : (
-                    <p>
-                      Mobile application for creating presentations with
-                      ready-made templates
-                    </p>
-                  )}
-                  <ButtonProject4 to="en/abi" onClick={handleClickTop}>
-                    View
-                  </ButtonProject4>
-                </ProjectsFragmentInfo4>
-              </ProjectsFragment4>
-            </ProjectContainer2>
-          )}
-        </ProjectsCards>
-      </Project>
+							<ProjectsFragment4>
+								<ProjectImage4Container>
+									<ProjectImage41 src={AbiImg1} />
+									<ProjectImage42 src={AbiImg2} />
+								</ProjectImage4Container>
+								<ProjectsFragmentInfo4>
+									<h4>Mobile App</h4>
+									<h3>Abi</h3>
+									{windowWidth > 1200 ? (
+										<p>
+											Mobile application for creating presentations with
+											ready-made templates based on artificial intelligence. The
+											application is available on Play Market and App Store.
+										</p>
+									) : (
+										<p>
+											Mobile application for creating presentations with
+											ready-made templates
+										</p>
+									)}
+									<ButtonProject4 to='en/abi' onClick={handleClickTop}>
+										View
+									</ButtonProject4>
+								</ProjectsFragmentInfo4>
+							</ProjectsFragment4>
+						</ProjectContainer2>
+					)}
+				</ProjectsCards>
+			</Project>
 
-      <ImgHeroDiv>
-        <ImgHero src={ImageHero} alt="" />
-      </ImgHeroDiv>
+			<ImgHeroDiv>
+				<ImgHero src={ImageHero} alt='' />
+			</ImgHeroDiv>
 
-      <Services id="services">
-        <h2>
-          Our <span>Services</span>
-        </h2>
-        <ServicesCards>
-          <ServicesCardsContainer>
-            <ToEmailLink to="en/email">
-              <ServicesFragment>
-                <ServiceHeader1>Design</ServiceHeader1>
-                <ul>
-                  <li>Motion Design</li>
-                  <li>Logotype</li>
-                  <li>Video Editing</li>
-                  <li>3D models</li>
-                  <li>Advertising Banners</li>
-                </ul>
-                <ServiceButton>
-                  <p>Order service</p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="10"
-                    viewBox="0 0 16 10"
-                    fill="none"
-                  >
-                    <path
-                      d="M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1"
-                      stroke="#FCFCFC"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </ServiceButton>
-              </ServicesFragment>
-            </ToEmailLink>
-            <ToEmailLink to="en/email">
-              <ServicesFragment>
-                <ServiceHeader2>Development</ServiceHeader2>
-                <ul>
-                  <li>Landing Page</li>
-                  <li>Corporate Website</li>
-                  <li>Online Shop</li>
-                  <li>Mobile App</li>
-                  <li>Redesign Website</li>
-                </ul>
-                <ServiceButton>
-                  <p>Order service</p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="10"
-                    viewBox="0 0 16 10"
-                    fill="none"
-                  >
-                    <path
-                      d="M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1"
-                      stroke="#FCFCFC"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </ServiceButton>
-              </ServicesFragment>
-            </ToEmailLink>
-          </ServicesCardsContainer>
-          <ToEmailLink to="en/email">
-            <ServicesFragment3>
-              <ServiceHeader3>Update</ServiceHeader3>
-              <ul>
-                <li>SEO optimisation</li>
-                <li>Multilingual</li>
-              </ul>
-              <ServiceButton3>
-                <p>Order service</p>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="10"
-                  viewBox="0 0 16 10"
-                  fill="none"
-                >
-                  <path
-                    d="M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1"
-                    stroke="#FCFCFC"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </ServiceButton3>
-            </ServicesFragment3>
-          </ToEmailLink>
-        </ServicesCards>
-      </Services>
-      <ImgOurTeamDiv>
-        <ImgHero src={ImageHero} alt="" />
-      </ImgOurTeamDiv>
+			<Services id='services'>
+				<h2>
+					Our <span>Services</span>
+				</h2>
+				<ServicesCards>
+					<ServicesCardsContainer>
+						<ToEmailLink onClick={handleOpenModal}>
+							<ServicesFragment>
+								<ServiceHeader1>Design</ServiceHeader1>
+								<ul>
+									<li>Motion Design</li>
+									<li>Logotype</li>
+									<li>Video Editing</li>
+									<li>3D models</li>
+									<li>Advertising Banners</li>
+								</ul>
+								<ServiceButton>
+									<p>Order service</p>
+									<svg
+										xmlns='http://www.w3.org/2000/svg'
+										width='16'
+										height='10'
+										viewBox='0 0 16 10'
+										fill='none'
+									>
+										<path
+											d='M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1'
+											stroke='#FCFCFC'
+											strokeWidth='2'
+											strokeLinecap='round'
+											strokeLinejoin='round'
+										/>
+									</svg>
+								</ServiceButton>
+							</ServicesFragment>
+						</ToEmailLink>
+						<ToEmailLink onClick={handleOpenModal}>
+							<ServicesFragment>
+								<ServiceHeader2>Development</ServiceHeader2>
+								<ul>
+									<li>Landing Page</li>
+									<li>Corporate Website</li>
+									<li>Online Shop</li>
+									<li>Mobile App</li>
+									<li>Redesign Website</li>
+								</ul>
+								<ServiceButton>
+									<p>Order service</p>
+									<svg
+										xmlns='http://www.w3.org/2000/svg'
+										width='16'
+										height='10'
+										viewBox='0 0 16 10'
+										fill='none'
+									>
+										<path
+											d='M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1'
+											stroke='#FCFCFC'
+											strokeWidth='2'
+											strokeLinecap='round'
+											strokeLinejoin='round'
+										/>
+									</svg>
+								</ServiceButton>
+							</ServicesFragment>
+						</ToEmailLink>
+					</ServicesCardsContainer>
+					<ToEmailLink onClick={handleOpenModal}>
+						<ServicesFragment3>
+							<ServiceHeader3>Update</ServiceHeader3>
+							<ul>
+								<li>SEO optimisation</li>
+								<li>Multilingual</li>
+							</ul>
+							<ServiceButton3>
+								<p>Order service</p>
+								<svg
+									xmlns='http://www.w3.org/2000/svg'
+									width='16'
+									height='10'
+									viewBox='0 0 16 10'
+									fill='none'
+								>
+									<path
+										d='M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1'
+										stroke='#FCFCFC'
+										strokeWidth='2'
+										strokeLinecap='round'
+										strokeLinejoin='round'
+									/>
+								</svg>
+							</ServiceButton3>
+						</ServicesFragment3>
+					</ToEmailLink>
+				</ServicesCards>
+			</Services>
+			<ImgOurTeamDiv>
+				<ImgHero src={ImageHero} alt='' />
+			</ImgOurTeamDiv>
 
-      <OurTeam id="team">
-        <SliderName>
-          <h2>
-            Our <span>Team</span>
-          </h2>
-          <SwiperButtonContainer>
-            <SwiperImgContainer>
-              <SwiperButtonPrev src={Prev} onClick={nextSlide} />
-            </SwiperImgContainer>
-            <SwiperImgContainer>
-              <SwiperButtonNext src={Next} onClick={prevSlide} />
-            </SwiperImgContainer>
-          </SwiperButtonContainer>
-        </SliderName>
+			<OurTeam id='team'>
+				<SliderName>
+					<h2>
+						Our <span>Team</span>
+					</h2>
+					<SwiperButtonContainer>
+						<SwiperImgContainer>
+							<SwiperButtonPrev src={Prev} onClick={nextSlide} />
+						</SwiperImgContainer>
+						<SwiperImgContainer>
+							<SwiperButtonNext src={Next} onClick={prevSlide} />
+						</SwiperImgContainer>
+					</SwiperButtonContainer>
+				</SliderName>
 
-        <MySwiperBox>
-          <SwiperWrapper>
-            {sliderData.map((slider, index) => (
-              <SwiperSlide
-                key={index}
-                className={index === currentSlide ? "active" : ""}
-              >
-                <Contend>
-                  <SocialImg src={Social} />
-                  <h2>{slider.name}</h2>
-                  <h3>{slider.description}</h3>
-                </Contend>
-                <ImageC src={slider.img} />
-              </SwiperSlide>
-            ))}
-          </SwiperWrapper>
-        </MySwiperBox>
-        <ContainerImg>
-          <ContainerImageBW>
-            {imgArr.map((slider, index) => (
-              <ImageBW key={index} src={slider.imgBW} />
-            ))}
-          </ContainerImageBW>
-        </ContainerImg>
-      </OurTeam>
-      
-      <ImgOurTeamDiv>
-        <ImgHero src={ImageHero} alt="" />
-      </ImgOurTeamDiv>
+				<MySwiperBox>
+					<SwiperWrapper>
+						{sliderData.map((slider, index) => (
+							<SwiperSlide
+								key={index}
+								className={index === currentSlide ? 'active' : ''}
+							>
+								<Contend>
+									<SocialImg src={Social} />
+									<h2>{slider.name}</h2>
+									<h3>{slider.description}</h3>
+								</Contend>
+								<ImageC src={slider.img} />
+							</SwiperSlide>
+						))}
+					</SwiperWrapper>
+				</MySwiperBox>
+				<ContainerImg>
+					<ContainerImageBW>
+						{imgArr.map((slider, index) => (
+							<ImageBW key={index} src={slider.imgBW} />
+						))}
+					</ContainerImageBW>
+				</ContainerImg>
+			</OurTeam>
 
-      <ConectUsEN name="ConnectUS" />
-      <FooterEN showImg={ImageHero}/>
-    </>
-  );
+			<ImgOurTeamDiv>
+				<ImgHero src={ImageHero} alt='' />
+			</ImgOurTeamDiv>
+
+			<ConectUsEN name='ConnectUS' />
+			<FooterEN showImg={ImageHero} />
+		</>
+	)
 };
