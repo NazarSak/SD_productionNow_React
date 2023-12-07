@@ -16,7 +16,7 @@ import InternalFour from "../../assets/img/abi/InternalFour.png";
 import InternalFive from "../../assets/img/abi/InternalFive.png";
 import RightArrow from "../../assets/img/rightArrow.png";
 import LeftArrow from "../../assets/img/leftArrow.png";
-
+ 
 import {
   FirstSection,
   SecondSection,
@@ -125,6 +125,7 @@ export const AbiEN = () => {
           </SvgImgContainer>
         </SecondSection>
       </ScrollTrigger>
+
       <ScrollTrigger onEnter={handleEnterViewportThree}>
         <ThirdSection className={`${isVisibleThree ? "visible" : ""}`}>
           <TitleHTwo>
@@ -152,6 +153,7 @@ export const AbiEN = () => {
           </List>
         </ThirdSection>
       </ScrollTrigger>
+
       <ScrollTrigger onEnter={handleEnterViewportFour}>
         <ImageFirstHandShake
           className={`${isVisibleTwo ? "visible" : ""}`}
@@ -159,6 +161,7 @@ export const AbiEN = () => {
           alt="image"
         />
       </ScrollTrigger>
+      
       <FifthSection>
         <FirstConatinerInternalImg>
           <ScrollTrigger onEnter={handleEnterViewportFive}>

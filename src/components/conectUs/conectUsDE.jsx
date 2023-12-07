@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ModalkaDE } from "../modalka/ModalkaDE";
 import CursorBlue from "../../assets/svg/contactUs/CursorBlue.svg";
 import CursorRed from "../../assets/svg/contactUs/CursorRed.svg";
@@ -11,6 +11,8 @@ import CursorOrange from "../../assets/svg/contactUs/CursorOrange.svg";
 import {
   ContentUs,
   AdoutUs,
+  ContainerPC,
+  ContainerMobile,
   ContentUsBtn,
   Peoples,
   PeopleBlue,
@@ -25,23 +27,46 @@ import {
 
 export const ConectUsDE = () => {
   const [openModal, setOpenModal] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleOpenModal = () => {
     setOpenModal(true);
+    document.body.style.position = "fixed";
   };
 
   return (
-    <ContentUs>
+    <ContentUs id="contactus">
       <AdoutUs>
-        <h2>
+        <ContainerPC>
+          <h2>
           Bestellen <span>Sie Ihr</span> Projekt jetzt
-        </h2>
-        <p>
-          Wir sind ein multidisziplinäres Team, das die besten Websites für
-          unsere Kunden erstellt. Vertrauen Sie uns die Zukunft Ihres
-          Unternehmens an und wir werden Ihnen zeigen, wie Ihr Unternehmen
-          wachsen wird!
-        </p>
+          </h2>
+        </ContainerPC>
+        <ContainerMobile>
+          <h2>Order your Project Now</h2>
+        </ContainerMobile>
+        {windowWidth > 1200 ? (
+          <p>
+             Wir sind ein multidisziplinäres Team, das die besten Websites für
+            unsere Kunden erstellt. Vertrauen Sie uns die Zukunft Ihres
+            Unternehmens an und wir werden Ihnen zeigen, wie Ihr Unternehmen
+            wachsen wird!
+          </p>
+        ) : (
+          <p>
+                     Wir sind ein multidisziplinäres Team, das die besten Websites für
+            unsere Kunden erstellt.
+          </p>
+        )}
         <ContentUsBtn onClick={handleOpenModal}>Kontakt</ContentUsBtn>
         {openModal && <ModalkaDE setOpenModal={setOpenModal} />}
       </AdoutUs>

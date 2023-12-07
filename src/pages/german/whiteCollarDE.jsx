@@ -1,4 +1,6 @@
 import React from "react";
+import ScrollTrigger from "react-scroll-trigger";
+import AnimationState from "../../helperFunction/animationState/animationState";
 import { HeaderDE } from "../../components/header/HeaderDE";
 import { ConectUsDE } from "../../components/conectUs/conectUsDE";
 import { FooterDE } from "../../components/footer/FooterDE";
@@ -29,8 +31,11 @@ import {
   TitleHThree,
   TitlePage,
   TitleHTwo,
+  TitleMain,
   TitleSpan,
+  TitleInternal,
   ImageFirst,
+  ImageFirstHandShake,
   ParagraphAbProject,
   SvgImgContainer,
   SvgImg,
@@ -55,6 +60,34 @@ import {
 } from "../styles/whiteCollar.styled";
 
 export const WhiteCollarDE = () => {
+  const {
+    isVisible,
+    isVisibleOne,
+    isVisibleTwo,
+    isVisibleThree,
+    isVisibleFour,
+    isVisibleFive,
+    isVisibleSix,
+    isVisibleSeven,
+    isVisibleEight,
+    isVisibleNine,
+    isVisibleTen,
+    isVisiblePartOne,
+    isVisiblePartTwo,
+    handleEnterViewport,
+    handleEnterViewportOne,
+    handleEnterViewportTwo,
+    handleEnterViewportThree,
+    handleEnterViewportFour,
+    handleEnterViewportFive,
+    handleEnterViewportSix,
+    handleEnterViewportSeven,
+    handleEnterViewportEight,
+    handleEnterViewportNine,
+    handleEnterViewportTen,
+    handleEnterViewportPartOne,
+    handleEnterViewportPartTwo,
+  } = AnimationState();
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
@@ -62,86 +95,109 @@ export const WhiteCollarDE = () => {
   return (
     <main>
       <HeaderDE name={"/en/whiteCollar"} />
+      <ScrollTrigger onEnter={handleEnterViewport}>
+        <FirstSection className={`${isVisible ? "visible" : ""}`}>
+          <TitleHThree>Geschäftliche Website</TitleHThree>
+          <TitlePage>
+            White <TitleSpan>Collar</TitleSpan>
+          </TitlePage>
+        </FirstSection>
+      </ScrollTrigger>
 
-      <FirstSection>
-        <TitleHThree>Geschäftliche Website</TitleHThree>
-        <TitlePage>
-          White <TitleSpan>Collar</TitleSpan>
-        </TitlePage>
-      </FirstSection>
-
-      <OptimisatorImg src={handshakes} alt="image" ImageType={ImageFirst} />
-
-      <SecondSection>
-        <div>
+      <ScrollTrigger onEnter={handleEnterViewportOne}>
+        <ImageFirst
+          className={`${isVisibleOne ? "visible" : ""}`}
+          src={handshakes}
+          alt="image"
+        />
+      </ScrollTrigger>
+      <ScrollTrigger onEnter={handleEnterViewportTwo}>
+        <SecondSection className={`${isVisibleTwo ? "visible" : ""}`}>
+          <div>
+            <TitleHTwo>
+              Über <TitleSpan>Projekt</TitleSpan>
+            </TitleHTwo>
+            <ParagraphAbProject>
+              Die Entwicklung und Umsetzung agiler Methoden für das strategische
+              Management eines Unternehmens ist in der heutigen, sich schnell
+              verändernden Geschäftswelt von entscheidender Bedeutung.
+              Traditionelle strategische Managementansätze haben oft
+              Schwierigkeiten, mit der Dynamik der Märkte, den Kundenpräferenzen
+              und den neuen Technologien Schritt zu halten.
+            </ParagraphAbProject>
+          </div>
+          <ContainerLine>
+            <Line />
+          </ContainerLine>
+          <SvgImgContainer>
+            <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
+          </SvgImgContainer>
+        </SecondSection>
+      </ScrollTrigger>
+      <ScrollTrigger onEnter={handleEnterViewportThree}>
+        <ThirdSection className={`${isVisibleThree ? "visible" : ""}`}>
           <TitleHTwo>
-            Über <TitleSpan>Projekt</TitleSpan>
+            Ziele und <TitleSpan>Zielsetzungen</TitleSpan>
           </TitleHTwo>
-          <ParagraphAbProject>
-            Die Entwicklung und Umsetzung agiler Methoden für das strategische
-            Management eines Unternehmens ist in der heutigen, sich schnell
-            verändernden Geschäftswelt von entscheidender Bedeutung.
-            Traditionelle strategische Managementansätze haben oft
-            Schwierigkeiten, mit der Dynamik der Märkte, den Kundenpräferenzen
-            und den neuen Technologien Schritt zu halten.
-          </ParagraphAbProject>
-        </div>
-        <ContainerLine>
-          <Line />
-        </ContainerLine>
-        <SvgImgContainer>
-          <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
-        </SvgImgContainer>
-      </SecondSection>
+          <List>
+            <Li>
+              <NumberOfList>1</NumberOfList>
+              <ParagraphGoals>
+                Berücksichtigen Sie die Website-Architektur für eine maximale
+                Konversion.
+              </ParagraphGoals>
+            </Li>
+            <Li>
+              <NumberOfList>2</NumberOfList>
+              <ParagraphGoals>
+                Ordnen Sie die Inhalte auf der Website so an, dass sie für den
+                Nutzer leicht zu erkennen sind.
+              </ParagraphGoals>
+            </Li>
+            <Li>
+              <NumberOfList>3</NumberOfList>
+              <ParagraphGoals>
+                Wählen Sie hochwertige Bild- und Textinhalte aus.
+              </ParagraphGoals>
+            </Li>
+            <Li>
+              <NumberOfList>4</NumberOfList>
+              <ParagraphGoals>
+                Erhöhung der Zahl der neuen Nutzer des Produkts auf der Website.
+              </ParagraphGoals>
+            </Li>
+          </List>
+        </ThirdSection>
+      </ScrollTrigger>
 
-      <ThirdSection>
-        <TitleHTwo>
-          Ziele und <TitleSpan>Zielsetzungen</TitleSpan>
-        </TitleHTwo>
-        <List>
-          <Li>
-            <NumberOfList>1</NumberOfList>
-            <ParagraphGoals>
-              Berücksichtigen Sie die Website-Architektur für eine maximale
-              Konversion.
-            </ParagraphGoals>
-          </Li>
-          <Li>
-            <NumberOfList>2</NumberOfList>
-            <ParagraphGoals>
-              Ordnen Sie die Inhalte auf der Website so an, dass sie für den
-              Nutzer leicht zu erkennen sind.
-            </ParagraphGoals>
-          </Li>
-          <Li>
-            <NumberOfList>3</NumberOfList>
-            <ParagraphGoals>
-              Wählen Sie hochwertige Bild- und Textinhalte aus.
-            </ParagraphGoals>
-          </Li>
-          <Li>
-            <NumberOfList>4</NumberOfList>
-            <ParagraphGoals>
-              Erhöhung der Zahl der neuen Nutzer des Produkts auf der Website.
-            </ParagraphGoals>
-          </Li>
-        </List>
-      </ThirdSection>
-
-      <OptimisatorImg src={ImagePeople} alt="image" ImageType={ImageFirst} />
-
+      <ScrollTrigger onEnter={handleEnterViewportFour}>
+        <ImageFirstHandShake
+          className={`${isVisibleTwo ? "visible" : ""}`}
+          src={ImagePeople}
+          alt="image"
+        />
+      </ScrollTrigger>
       <FourthSection>
-        <TitleHTwo>
-          Haupt <TitleSpan>Seite</TitleSpan>
-        </TitleHTwo>
-        <ConatinerImg>
-          <OptimisatorImg src={Banner} alt="image" ImageType={NaturalFoodImg} />
-          <OptimisatorImg
-            src={screnshot}
-            alt="image"
-            ImageType={SecondNaturalFoodImg}
-          />
-        </ConatinerImg>
+        <ScrollTrigger onEnter={handleEnterViewportFive}>
+          <TitleMain className={`${isVisibleTwo ? "visible" : ""}`}>
+            Haupt <TitleSpan>Seite</TitleSpan>
+          </TitleMain>
+        </ScrollTrigger>
+
+        <ScrollTrigger onEnter={handleEnterViewportSix}>
+          <ConatinerImg className={`${isVisibleSix ? "visible" : ""}`}>
+            <OptimisatorImg
+              src={Banner}
+              alt="image"
+              ImageType={NaturalFoodImg}
+            />
+            <OptimisatorImg
+              src={screnshot}
+              alt="image"
+              ImageType={SecondNaturalFoodImg}
+            />
+          </ConatinerImg>
+        </ScrollTrigger>
       </FourthSection>
 
       <video width="100%" autoPlay muted loop>
@@ -150,38 +206,53 @@ export const WhiteCollarDE = () => {
 
       <FifthSection>
         <FirstConatinerInternalImg>
-          <TitleHTwo>
-            Interne <TitleSpan>Seiten</TitleSpan>
-          </TitleHTwo>
+          <ScrollTrigger onEnter={handleEnterViewportSeven}>
+            <TitleInternal className={`${isVisibleSeven ? "visible" : ""}`}>
+              Interne <TitleSpan>Seiten</TitleSpan>
+            </TitleInternal>
+          </ScrollTrigger>
 
-          <OptimisatorImg
-            src={InternalOne}
-            alt="image"
-            ImageType={InternalImgOne}
-          />
-          <OptimisatorImg
-            src={InternalTwo}
-            alt="image"
-            ImageType={InternalImgSecond}
-          />
+          <ScrollTrigger onEnter={handleEnterViewportEight}>
+            <InternalImgOne
+              className={`${isVisibleSeven ? "visible" : ""}`}
+              src={InternalOne}
+              alt="image"
+            />
+          </ScrollTrigger>
+
+          <ScrollTrigger onEnter={handleEnterViewportNine}>
+            <InternalImgSecond
+              className={`${isVisibleNine ? "visible" : ""}`}
+              src={InternalTwo}
+              alt="image"
+            />
+          </ScrollTrigger>
         </FirstConatinerInternalImg>
 
         <SecondConatinerInternalImg>
-          <OptimisatorImg
-            src={InternalThree}
-            alt="image"
-            ImageType={InternalImgThree}
-          />
-          <OptimisatorImg
-            src={InternalFour}
-            alt="image"
-            ImageType={InternalImgFour}
-          />
-          <OptimisatorImg
-            src={InternalFive}
-            alt="image"
-            ImageType={InternalImgFive}
-          />
+          <ScrollTrigger onEnter={handleEnterViewportTen}>
+            <InternalImgThree
+              className={`${isVisibleTen ? "visible" : ""}`}
+              src={InternalThree}
+              alt="image"
+            />
+          </ScrollTrigger>
+
+          <ScrollTrigger onEnter={handleEnterViewportPartOne}>
+            <InternalImgFour
+              className={`${isVisiblePartOne ? "visible" : ""}`}
+              src={InternalFour}
+              alt="image"
+            />
+          </ScrollTrigger>
+
+          <ScrollTrigger onEnter={handleEnterViewportPartTwo}>
+            <InternalImgFive
+              className={`${isVisiblePartTwo ? "visible" : ""}`}
+              src={InternalFive}
+              alt="image"
+            />
+          </ScrollTrigger>
         </SecondConatinerInternalImg>
       </FifthSection>
 

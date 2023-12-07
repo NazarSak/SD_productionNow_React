@@ -65,7 +65,7 @@ export const TitleSpan = styled.span`
 
 export const TitleGoalsDE = styled.h2`
   color: var(--02-dark-color-white, #fff);
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
 `;
 

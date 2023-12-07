@@ -41,6 +41,12 @@ export const TitleHTwo = styled.h2`
   font-weight: 700;
 `;
 
+export const TitleHTwoDE = styled.h2`
+  color: var(--02-dark-color-white, #fff);
+  font-weight: 700;
+width: max-content;
+`;
+
 export const TitleSpan = styled.span`
   font-family: "Poppins", sans-serif;
   -webkit-text-fill-color: #000;

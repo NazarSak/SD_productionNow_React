@@ -18,7 +18,7 @@ import {
   PeopleBlue,
   PeopleRed,
   PeopleGreen,
-  PeoplePink,
+  PeoplePink, 
   PeopleBlueLight,
   PeopleOrange,
   PeopleLightPink,

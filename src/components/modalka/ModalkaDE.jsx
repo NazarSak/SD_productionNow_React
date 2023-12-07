@@ -9,7 +9,10 @@ import {
   List,
   SubmitButton,
   ImgContainer,
+  TitleHTwoDE,
   CloseButton,
+  ModalWrapper,
+  // ModalContent,
 } from "./modalka.styled";
 
 export const ModalkaDE = ({ setOpenModal }) => {
@@ -23,6 +26,7 @@ export const ModalkaDE = ({ setOpenModal }) => {
 
   const handleCloseModal = () => {
     setOpenModal(false);
+    document.body.style.position = 'unset'
     window.scrollTo(0, 0);
   };
 
@@ -68,56 +72,57 @@ export const ModalkaDE = ({ setOpenModal }) => {
 
   return (
     <main>
-      <ImgContainer>
-        <CloseButton to="/de" onClick={handleCloseModal}>
-          <img src={ButtonClose} alt="Button" />
-        </CloseButton>
-        <TitleHTwo>
+      <ModalWrapper>
+        <ImgContainer> 
+          <CloseButton to="/de" onClick={handleCloseModal}>
+            <img src={ButtonClose} alt="Button" />
+          </CloseButton>
+          <TitleHTwoDE>
           Kontaktiere <TitleSpan>Uns</TitleSpan>
-        </TitleHTwo>
-        <Paragraph>
+          </TitleHTwoDE>
+          <Paragraph>
           Wir helfen Ihnen, den richtigen Plan und Preis für Ihr Unternehmen zu
           finden.
-        </Paragraph>
-        return (
-        <form onSubmit={handleSubmit} style={{ width: "545px" }}>
-          <List>
-            <li>
-              <Input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Name *"
-                value={formData.name}
-                onChange={handleInputChange}
-                required
-              />
-            </li>
-            <li>
-              <Input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Email *"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-              />
-            </li>
-            <li>
-              <InputComment
-                id="comment"
-                name="comment"
-                placeholder="Comment"
-                value={formData.comment}
-                onChange={handleInputChange}
-                required
-              />
-            </li>
-          </List>
-          <SubmitButton type="submit">Schicken</SubmitButton>
-        </form>
-      </ImgContainer>
+          </Paragraph>
+          <form onSubmit={handleSubmit} >
+            <List>
+              <li>
+                <Input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Name *"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                />
+              </li>
+              <li>
+                <Input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email *"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                />
+              </li>
+              <li>
+                <InputComment
+                  id="comment"
+                  name="comment"
+                  placeholder="Comment"
+                  value={formData.comment}
+                  onChange={handleInputChange}
+                  required
+                />
+              </li>
+            </List>
+            <SubmitButton type="submit">Schicken</SubmitButton>
+          </form>
+        </ImgContainer>
+      </ModalWrapper>
     </main>
   );
 };

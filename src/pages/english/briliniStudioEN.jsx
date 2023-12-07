@@ -149,22 +149,25 @@ export const BriliniStudioEN = () => {
         />
       </ScrollTrigger>
       <FourthSection>
-
         <ScrollTrigger onEnter={handleEnterViewportFive}>
-        <TitleMain className={`${isVisibleFive ? "visible" : ""}`}>
+          <TitleMain className={`${isVisibleFive ? "visible" : ""}`}>
             Main <TitleSpan>Page</TitleSpan>
           </TitleMain>
         </ScrollTrigger>
-                <ScrollTrigger onEnter={handleEnterViewportSix}>
-        <ConatinerImg className={`${isVisibleSix ? "visible" : ""}`}>
-          <OptimisatorImg src={Group} alt="image" ImageType={NaturalFoodImg} />
-          <OptimisatorImg
-            src={landing}
-            alt="image"
-            ImageType={SecondNaturalFoodImg}
-          />
-        </ConatinerImg>
-                </ScrollTrigger>
+        <ScrollTrigger onEnter={handleEnterViewportSix}>
+          <ConatinerImg className={`${isVisibleSix ? "visible" : ""}`}>
+            <OptimisatorImg
+              src={Group}
+              alt="image"
+              ImageType={NaturalFoodImg}
+            />
+            <OptimisatorImg
+              src={landing}
+              alt="image"
+              ImageType={SecondNaturalFoodImg}
+            />
+          </ConatinerImg>
+        </ScrollTrigger>
       </FourthSection>
       <video width="100%" autoPlay muted loop>
         <source src={Video} type="video/mp4" />

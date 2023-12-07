@@ -77,24 +77,26 @@ export const SecondListDE = styled.ul`
   justify-content: center;
   gap: 16px;
   align-items: center;
-  flex-direction: column;
   padding: 0;
   margin-top: 32px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
 `;
 
 export const Footer = styled.footer`
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	@media screen and (max-width: 1199px) {
-		background-image: url(${BackgroundCircle});
-		background-position: center;
-		background-size: cover;
-		width: 343px;
-		height: 343px;
-	}
-`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 1199px) {
+    background-image: url(${BackgroundCircle});
+    background-position: center;
+    background-size: cover;
+    width: 343px;
+    height: 343px;
+  }
+`;
 
 export const LineTablet = styled.img`
   @media screen and (max-width: 767px) {

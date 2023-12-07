@@ -1,4 +1,6 @@
 import React from "react";
+import ScrollTrigger from "react-scroll-trigger";
+import AnimationState from "../../helperFunction/animationState/animationState";
 import { HeaderDE } from "../../components/header/HeaderDE";
 import { ConectUsDE } from "../../components/conectUs/conectUsDE";
 import { FooterDE } from "../../components/footer/FooterDE";
@@ -29,11 +31,13 @@ import {
   TitleHThree,
   TitleHTwo,
   TitlePage,
+  TitleMain,
   InternalTitle,
   SvgImgContainer,
   SvgImg,
   TitleSpan,
   ImageFirst,
+  ImageHandshake,
   ParagraphAbProject,
   ParagraphGoals,
   List,
@@ -56,6 +60,35 @@ import {
 } from "../styles/pagesShop.styled";
 
 export const PagesShopDE = () => {
+  const {
+    isVisible,
+    isVisibleOne,
+    isVisibleTwo,
+    isVisibleThree,
+    isVisibleFour,
+    isVisibleFive,
+    isVisibleSix,
+    isVisibleSeven,
+    isVisibleEight,
+    isVisibleNine,
+    isVisibleTen,
+    isVisiblePartOne,
+    isVisiblePartTwo,
+    handleEnterViewport,
+    handleEnterViewportOne,
+    handleEnterViewportTwo,
+    handleEnterViewportThree,
+    handleEnterViewportFour,
+    handleEnterViewportFive,
+    handleEnterViewportSix,
+    handleEnterViewportSeven,
+    handleEnterViewportEight,
+    handleEnterViewportNine,
+    handleEnterViewportTen,
+    handleEnterViewportPartOne,
+    handleEnterViewportPartTwo,
+  } = AnimationState();
+
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
@@ -63,120 +96,157 @@ export const PagesShopDE = () => {
   return (
     <main>
       <HeaderDE name={"/en/pagesShop"} />
-      <FirstSection>
-        <TitleHThree>Online Geschäft</TitleHThree>
-        <TitlePage>
-          Pages <TitleSpan>shop</TitleSpan>
-        </TitlePage>
-      </FirstSection>
-      <OptimisatorImg src={homeOne} alt="image" ImageType={ImageFirst} />
-      <SecondSection>
-        <div>
+      <ScrollTrigger onEnter={handleEnterViewport}>
+        <FirstSection className={`${isVisible ? "visible" : ""}`}>
+          <TitleHThree>Online Geschäft</TitleHThree>
+          <TitlePage>
+            Pages <TitleSpan>shop</TitleSpan>
+          </TitlePage>
+        </FirstSection>
+      </ScrollTrigger>
+      <ScrollTrigger onEnter={handleEnterViewportOne}>
+        <ImageFirst
+          className={`${isVisibleOne ? "visible" : ""}`}
+          src={homeOne}
+          alt="image"
+        />
+      </ScrollTrigger>
+      <ScrollTrigger onEnter={handleEnterViewportTwo}>
+        <SecondSection className={`${isVisibleTwo ? "visible" : ""}`}>
+          <div>
+            <TitleHTwo>
+              Über <TitleSpan>Projekt</TitleSpan>
+            </TitleHTwo>
+            <ParagraphAbProject>
+              Das literarische Paradies in der Online-Welt! Das Unternehmen ist
+              auf den Verkauf von Büchern aller Genres und Gattungen
+              spezialisiert. Die Sammlung umfasst Tausende von Werken, von
+              Klassikern bis zu modernen Bestsellern.
+            </ParagraphAbProject>
+          </div>
+          <ContainerLine>
+            <Line />
+          </ContainerLine>
+          <SvgImgContainer>
+            <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
+          </SvgImgContainer>
+        </SecondSection>
+      </ScrollTrigger>
+      <ScrollTrigger onEnter={handleEnterViewportThree}>
+        <ThirdSection className={`${isVisibleThree ? "visible" : ""}`}>
           <TitleHTwo>
-            Über <TitleSpan>Projekt</TitleSpan>
+            Ziele und <TitleSpan>Zielsetzungen</TitleSpan>
           </TitleHTwo>
-          <ParagraphAbProject>
-            Das literarische Paradies in der Online-Welt! Das Unternehmen ist
-            auf den Verkauf von Büchern aller Genres und Gattungen
-            spezialisiert. Die Sammlung umfasst Tausende von Werken, von
-            Klassikern bis zu modernen Bestsellern.
-          </ParagraphAbProject>
-        </div>
-        <ContainerLine>
-          <Line />
-        </ContainerLine>
-        <SvgImgContainer>
-          <OptimisatorImg src={Logo} alt="image" ImageType={SvgImg} />
-        </SvgImgContainer>
-      </SecondSection>
-      <ThirdSection>
-        <TitleHTwo>
-          Ziele und <TitleSpan>Zielsetzungen</TitleSpan>
-        </TitleHTwo>
-        <List>
-          <Li>
-            <NumberOfList>1</NumberOfList>
-            <ParagraphGoals>
-              Erstellen Sie ein stilvolles und werbewirksames Website-Design im
-              IKEA-Stil.
-            </ParagraphGoals>
-          </Li>
-          <Li>
-            <NumberOfList>2</NumberOfList>
-            <ParagraphGoals>
-              Steigerung der Zahl der Neukunden, die die Website nutzen.
-            </ParagraphGoals>
-          </Li>
-          <Li>
-            <NumberOfList>3</NumberOfList>
-            <ParagraphGoals>
-              Hervorhebung des hohen Niveaus der Marke auf der Website
-            </ParagraphGoals>
-          </Li>
-          <Li>
-            <NumberOfList>4</NumberOfList>
-            <ParagraphGoals>
-              Entwicklung einer angepassten Version für die Bestellung über ein
-              Smartphone.
-            </ParagraphGoals>
-          </Li>
-        </List>
-      </ThirdSection>
-      <OptimisatorImg src={homeTwo} alt="image" ImageType={ImageFirst} />
+          <List>
+            <Li>
+              <NumberOfList>1</NumberOfList>
+              <ParagraphGoals>
+                Erstellen Sie ein stilvolles und werbewirksames Website-Design
+                im IKEA-Stil.
+              </ParagraphGoals>
+            </Li>
+            <Li>
+              <NumberOfList>2</NumberOfList>
+              <ParagraphGoals>
+                Steigerung der Zahl der Neukunden, die die Website nutzen.
+              </ParagraphGoals>
+            </Li>
+            <Li>
+              <NumberOfList>3</NumberOfList>
+              <ParagraphGoals>
+                Hervorhebung des hohen Niveaus der Marke auf der Website
+              </ParagraphGoals>
+            </Li>
+            <Li>
+              <NumberOfList>4</NumberOfList>
+              <ParagraphGoals>
+                Entwicklung einer angepassten Version für die Bestellung über
+                ein Smartphone.
+              </ParagraphGoals>
+            </Li>
+          </List>
+        </ThirdSection>
+      </ScrollTrigger>
+      <ScrollTrigger onEnter={handleEnterViewportFour}>
+        <ImageHandshake
+          className={`${isVisibleFour ? "visible" : ""}`}
+          src={homeTwo}
+          alt="image"
+        />
+      </ScrollTrigger>
       <FourthSection>
-        <TitleHTwo>
-          Haupt <TitleSpan>Seite</TitleSpan>
-        </TitleHTwo>
-        <ConatinerImg>
-          <OptimisatorImg
-            src={imageOne}
-            alt="image"
-            ImageType={NaturalFoodImg}
-          />
-          <OptimisatorImg
-            src={imageTwo}
-            alt="image"
-            ImageType={SecondNaturalFoodImg}
-          />
-        </ConatinerImg>
+        <ScrollTrigger onEnter={handleEnterViewportFive}>
+          <TitleMain className={`${isVisibleFive ? "visible" : ""}`}>
+            Haupt <TitleSpan>Seite</TitleSpan>
+          </TitleMain>
+        </ScrollTrigger>
+
+        <ScrollTrigger onEnter={handleEnterViewportSix}>
+          <ConatinerImg className={`${isVisibleSix ? "visible" : ""}`}>
+            <OptimisatorImg
+              src={imageOne}
+              alt="image"
+              ImageType={NaturalFoodImg}
+            />
+            <OptimisatorImg
+              src={imageTwo}
+              alt="image"
+              ImageType={SecondNaturalFoodImg}
+            />
+          </ConatinerImg>
+        </ScrollTrigger>
       </FourthSection>
       <video width="100%" autoPlay muted loop>
         <source src={Video} type="video/mp4" />
       </video>
       <FifthSection>
         <FirstConatinerInternalImg>
-          <InternalTitle>
-            Interne <TitleSpan>Seiten</TitleSpan>
-          </InternalTitle>
+          <ScrollTrigger onEnter={handleEnterViewportSeven}>
+            <InternalTitle className={`${isVisibleSeven ? "visible" : ""}`}>
+              Interne <TitleSpan>Seiten</TitleSpan>
+            </InternalTitle>
+          </ScrollTrigger>
 
-          <OptimisatorImg
-            src={InternalOne}
-            alt="image"
-            ImageType={InternalImgOne}
-          />
-          <OptimisatorImg
-            src={InternalTwo}
-            alt="image"
-            ImageType={InternalImgSecond}
-          />
-          <OptimisatorImg
-            src={InternalThree}
-            alt="image"
-            ImageType={InternalImgThree}
-          />
+          <ScrollTrigger onEnter={handleEnterViewportEight}>
+            <InternalImgOne
+              className={`${isVisibleEight ? "visible" : ""}`}
+              src={InternalOne}
+              alt="image"
+            />
+          </ScrollTrigger>
+          <ScrollTrigger onEnter={handleEnterViewportNine}>
+            <InternalImgSecond
+              className={`${isVisibleNine ? "visible" : ""}`}
+              src={InternalTwo}
+              alt="image"
+            />
+          </ScrollTrigger>
+
+          <ScrollTrigger onEnter={handleEnterViewportTen}>
+            <InternalImgThree
+              className={`${isVisibleTen ? "visible" : ""}`}
+              src={InternalThree}
+              alt="image"
+            />
+          </ScrollTrigger>
         </FirstConatinerInternalImg>
 
         <SecondConatinerInternalImg>
-          <OptimisatorImg
-            src={InternalFour}
-            alt="image"
-            ImageType={InternalImgFour}
-          />
-          <OptimisatorImg
-            src={InternalFive}
-            alt="image"
-            ImageType={InternalImgFive}
-          />
+          <ScrollTrigger onEnter={handleEnterViewportPartOne}>
+            <InternalImgFour
+              className={`${isVisiblePartOne ? "visible" : ""}`}
+              src={InternalFour}
+              alt="image"
+            />
+          </ScrollTrigger>
+
+          <ScrollTrigger onEnter={handleEnterViewportPartTwo}>
+            <InternalImgFive
+              className={`${isVisiblePartTwo ? "visible" : ""}`}
+              src={InternalFive}
+              alt="image"
+            />
+          </ScrollTrigger>
         </SecondConatinerInternalImg>
       </FifthSection>
       <SixthSection>

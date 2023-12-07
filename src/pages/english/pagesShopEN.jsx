@@ -166,6 +166,7 @@ export const PagesShopEN = () => {
           </List>
         </ThirdSection>
       </ScrollTrigger>
+
       <ScrollTrigger onEnter={handleEnterViewportFour}>
         <ImageHandshake
           className={`${isVisibleFour ? "visible" : ""}`}
@@ -173,6 +174,7 @@ export const PagesShopEN = () => {
           alt="image"
         />
       </ScrollTrigger>
+      
       <FourthSection>
         <ScrollTrigger onEnter={handleEnterViewportFive}>
           <TitleMain className={`${isVisibleFive ? "visible" : ""}`}>
