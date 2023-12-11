@@ -27,6 +27,15 @@ export const SectionHero = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  /* transform: translateX(-350px); */
+  &.visible {
+    opacity: 1;
+    /* transform: translateX(0); */
+  }
+
   &::before {
     position: absolute;
     margin-top: -15px;
@@ -201,7 +210,9 @@ export const ImgHero = styled.img`
 export const Project = styled.section`
   margin-top: 118px;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  align-items: start;
+
   flex-direction: column;
   & h2 {
     width: 494px;
@@ -216,6 +227,13 @@ export const Project = styled.section`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    opacity: 0;
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    transform: translateX(-350px);
+    &.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
   & span {
     font-weight: 800;
@@ -360,6 +378,13 @@ export const ProjectContainer = styled.div`
   border-radius: 40px;
   position: relative;
   overflow: hidden;
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
   @media screen and (max-width: 1199px) {
     height: 420px;
   }
@@ -409,6 +434,13 @@ export const ProjectsFragment2 = styled.div`
   padding: 55px;
   overflow: hidden;
   position: relative;
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(-350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
   @media screen and (max-width: 1199px) {
     padding: 64px;
     height: 228px;
@@ -509,6 +541,7 @@ export const ButtonProject2 = styled(Link)`
 export const ProjectImageContainer1 = styled.div`
   display: flex;
   transform: rotate(15deg);
+
   @media screen and (max-width: 767px) {
     height: 240px;
     position: absolute;
@@ -570,6 +603,13 @@ export const ProjectsFragment3 = styled.div`
   overflow: hidden;
   position: relative;
   justify-content: space-between;
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(-350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
   @media screen and (max-width: 1199px) {
     margin: 0 auto;
     margin-top: 40px;
@@ -674,10 +714,10 @@ export const ButtonProject3 = styled(Link)`
 
 export const ProjectImage3Container = styled.div`
   @media screen and (max-width: 767px) {
-    height: 230px;
+    height: 225px;
     width: 100%;
     position: absolute;
-    top: 192px;
+    top: 158px;
     right: 0px;
     overflow: hidden;
   }
@@ -774,6 +814,13 @@ export const ProjectsFragment4 = styled.div`
   overflow: hidden;
   position: relative;
   justify-content: space-between;
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
   @media screen and (max-width: 1199px) {
     margin: 0 auto;
     margin-top: 80px;
@@ -996,162 +1043,162 @@ export const ToEmailLink = styled(Link)`
 `;
 
 export const ServicesFragment = styled.div`
-	margin: 0;
-	padding: 0;
-	padding: 56px 65px;
+  margin: 0;
+  padding: 0;
+  padding: 56px 65px;
 
-	width: 223px;
-	height: 339px;
-	display: flex;
-	flex-direction: column;
-	transition: 0.5s;
-	border-radius: 40px;
-	border: 1px solid transparent;
-	background: #181818;
-	&:hover {
-		border: 1px solid #bd00ff;
-	}
-	& h3 {
-		font-weight: 600;
-	}
-	& ul {
-		margin: 0;
-		padding: 0;
-		margin-top: 32px;
+  width: 223px;
+  height: 339px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s;
+  border-radius: 40px;
+  border: 1px solid transparent;
+  background: #181818;
+  &:hover {
+    border: 1px solid #bd00ff;
+  }
+  & h3 {
+    font-weight: 600;
+  }
+  & ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 32px;
 
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-right: auto;
-		gap: 14px;
-	}
-	& li {
-		margin: 0;
-		padding: 0;
-		width: 220px;
-		height: 29px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: auto;
+    gap: 14px;
+  }
+  & li {
+    margin: 0;
+    padding: 0;
+    width: 220px;
+    height: 29px;
 
-		color: #cfcfcf;
-		list-style-type: none;
-		font-family: Montserrat;
-		font-size: 18px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 0;
-		letter-spacing: 0;
-		display: flex;
-		align-items: center;
-		&::before {
-			content: '';
-			display: inline-block;
-			width: 15px;
-			height: 1px;
-			background: #cfcfcf;
-			margin-right: 8px;
-		}
-	}
+    color: #cfcfcf;
+    list-style-type: none;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0;
+    letter-spacing: 0;
+    display: flex;
+    align-items: center;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 1px;
+      background: #cfcfcf;
+      margin-right: 8px;
+    }
+  }
 
-	@media screen and (max-width: 1199px) {
-		width: 223px;
-		padding: 56px 51.5px;
-		& li {
-			font-size: 16px;
-		}
-	}
-	@media screen and (max-width: 767px) {
-		width: 238px;
-		height: 327px;
-	}
-	& li {
-		font-size: 18px;
-	}
-`
+  @media screen and (max-width: 1199px) {
+    width: 223px;
+    padding: 56px 51.5px;
+    & li {
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    width: 238px;
+    height: 327px;
+  }
+  & li {
+    font-size: 18px;
+  }
+`;
 
 export const ServicesFragment3 = styled.div`
-	margin: 0;
-	padding: 0;
-	padding: 56px 65px;
-	position: relative;
-	width: 223px;
-	height: 339px;
-	display: flex;
-	flex-direction: column;
-	transition: 0.5s;
-	border-radius: 40px;
-	border: 1px solid transparent;
-	background: #181818;
-	&:hover {
-		border: 1px solid #bd00ff;
-	}
-	& h3 {
-		font-weight: 600;
-	}
-	& ul {
-		margin: 0;
-		padding: 0;
-		margin-top: 32px;
+  margin: 0;
+  padding: 0;
+  padding: 56px 65px;
+  position: relative;
+  width: 223px;
+  height: 339px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s;
+  border-radius: 40px;
+  border: 1px solid transparent;
+  background: #181818;
+  &:hover {
+    border: 1px solid #bd00ff;
+  }
+  & h3 {
+    font-weight: 600;
+  }
+  & ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 32px;
 
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-right: auto;
-		gap: 14px;
-	}
-	& li {
-		margin: 0;
-		padding: 0;
-		width: 220px;
-		height: 29px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: auto;
+    gap: 14px;
+  }
+  & li {
+    margin: 0;
+    padding: 0;
+    width: 220px;
+    height: 29px;
 
-		color: #cfcfcf;
-		list-style-type: none;
-		font-family: Montserrat;
-		font-size: 18px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 0;
-		letter-spacing: 0;
-		display: flex;
-		align-items: center;
-		&::before {
-			content: '';
-			display: inline-block;
-			width: 15px;
-			height: 1px;
-			background: #cfcfcf;
-			margin-right: 8px;
-		}
-	}
-	@media screen and (max-width: 1199px) {
-		display: flex;
-		width: 572px;
-		height: 97px;
-		padding: 56px 50px;
-		flex-direction: column;
-		align-items: flex-start;
-		& ul {
-			flex-direction: row;
-			gap: 80px;
-		}
-		& li {
-			width: auto;
-			font-size: 16px;
-		}
-	}
-	@media screen and (max-width: 767px) {
-		width: 241px;
-		height: 186px;
-		& ul {
-			flex-direction: column;
-			align-items: start;
-			gap: 14px;
-		}
+    color: #cfcfcf;
+    list-style-type: none;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0;
+    letter-spacing: 0;
+    display: flex;
+    align-items: center;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 1px;
+      background: #cfcfcf;
+      margin-right: 8px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    width: 572px;
+    height: 97px;
+    padding: 56px 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    & ul {
+      flex-direction: row;
+      gap: 80px;
+    }
+    & li {
+      width: auto;
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    width: 241px;
+    height: 186px;
+    & ul {
+      flex-direction: column;
+      align-items: start;
+      gap: 14px;
+    }
 
-		& li {
-			font-size: 18px;
-		}
-	}
-`
+    & li {
+      font-size: 18px;
+    }
+  }
+`;
 
 export const ServiceButton = styled.div`
   margin-right: auto;
