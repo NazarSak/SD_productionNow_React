@@ -99,7 +99,6 @@ export const HomeEN = () => {
   const [isOpenMoreProject, setIsOpenProject] = useState(false);
 
   const {
-    isVisible,
     isVisibleOne,
     isVisibleTwo,
     isVisibleThree,
@@ -108,11 +107,6 @@ export const HomeEN = () => {
     isVisibleSix,
     isVisibleSeven,
     isVisibleEight,
-    isVisibleNine,
-    isVisibleTen,
-    isVisiblePartOne,
-    isVisiblePartTwo,
-    handleEnterViewport,
     handleEnterViewportOne,
     handleEnterViewportTwo,
     handleEnterViewportThree,
@@ -121,10 +115,6 @@ export const HomeEN = () => {
     handleEnterViewportSix,
     handleEnterViewportSeven,
     handleEnterViewportEight,
-    handleEnterViewportNine,
-    handleEnterViewportTen,
-    handleEnterViewportPartOne,
-    handleEnterViewportPartTwo,
   } = AnimationState();
 
   let ImgBWDataExtended = ImgBWData.slice(0, 3);
@@ -245,8 +235,6 @@ export const HomeEN = () => {
         <ProjectsCards>
           <ScrollTrigger onEnter={handleEnterViewportThree}>
             <ProjectContainer className={`${isVisibleThree ? "visible" : ""}`}>
-              {/* <ScrollTrigger onEnter={handleEnterViewportTwo}>  */}
-
               <ProjectsFragment1>
                 <ProjectsFragmentInfo1>
                   <h4>Online Shop</h4>
@@ -277,9 +265,6 @@ export const HomeEN = () => {
                 <ProjectImage21 src={WhiteImg1} />
                 <ProjectImage22 src={WhiteImg1} />
               </ProjectImageContainer1>
-
-              {/* <ScrollTrigger onEnter={handleEnterViewportFive}> */}
-              {/* className={`${isVisibleFive ? "visible" : ""}`} */}
               <ProjectsFragmentInfo2>
                 <h4>Business website</h4>
                 <h3>WhiteCollor</h3>
@@ -304,7 +289,6 @@ export const HomeEN = () => {
                   View
                 </ButtonProject2>
               </ProjectsFragmentInfo2>
-              {/* </ScrollTrigger> */}
             </ProjectsFragment2>
           </ScrollTrigger>
           {!isOpenMoreProject ? (
@@ -395,22 +379,83 @@ export const HomeEN = () => {
       </ImgHeroDiv>
 
       <Services id="services">
-        <h2>
-          Our <span>Services</span>
-        </h2>
-        <ServicesCards>
-          <ServicesCardsContainer>
+        <ScrollTrigger onEnter={handleEnterViewportSeven}>
+          <h2 className={`${isVisibleSeven ? "visible" : ""}`}>
+            Our <span>Services</span>
+          </h2>
+        </ScrollTrigger>
+        <ScrollTrigger onEnter={handleEnterViewportEight}>
+          <ServicesCards className={`${isVisibleEight ? "visible" : ""}`}>
+            <ServicesCardsContainer>
+              <ToEmailLink onClick={handleOpenModal}>
+                <ServicesFragment>
+                  <ServiceHeader1>Design</ServiceHeader1>
+                  <ul>
+                    <li>Motion Design</li>
+                    <li>Logotype</li>
+                    <li>Video Editing</li>
+                    <li>3D models</li>
+                    <li>Advertising Banners</li>
+                  </ul>
+                  <ServiceButton>
+                    <p>Order service</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="10"
+                      viewBox="0 0 16 10"
+                      fill="none"
+                    >
+                      <path
+                        d="M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1"
+                        stroke="#FCFCFC"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </ServiceButton>
+                </ServicesFragment>
+              </ToEmailLink>
+              <ToEmailLink onClick={handleOpenModal}>
+                <ServicesFragment>
+                  <ServiceHeader2>Development</ServiceHeader2>
+                  <ul>
+                    <li>Landing Page</li>
+                    <li>Corporate Website</li>
+                    <li>Online Shop</li>
+                    <li>Mobile App</li>
+                    <li>Redesign Website</li>
+                  </ul>
+                  <ServiceButton>
+                    <p>Order service</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="10"
+                      viewBox="0 0 16 10"
+                      fill="none"
+                    >
+                      <path
+                        d="M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1"
+                        stroke="#FCFCFC"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </ServiceButton>
+                </ServicesFragment>
+              </ToEmailLink>
+            </ServicesCardsContainer>
             <ToEmailLink onClick={handleOpenModal}>
-              <ServicesFragment>
-                <ServiceHeader1>Design</ServiceHeader1>
+              <ServicesFragment3>
+                <ServiceHeader3>Update</ServiceHeader3>
                 <ul>
-                  <li>Motion Design</li>
-                  <li>Logotype</li>
-                  <li>Video Editing</li>
-                  <li>3D models</li>
-                  <li>Advertising Banners</li>
+                  <li>SEO optimisation</li>
+                  <li>Multilingual</li>
                 </ul>
-                <ServiceButton>
+                <ServiceButton3>
                   <p>Order service</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -427,68 +472,11 @@ export const HomeEN = () => {
                       strokeLinejoin="round"
                     />
                   </svg>
-                </ServiceButton>
-              </ServicesFragment>
+                </ServiceButton3>
+              </ServicesFragment3>
             </ToEmailLink>
-            <ToEmailLink onClick={handleOpenModal}>
-              <ServicesFragment>
-                <ServiceHeader2>Development</ServiceHeader2>
-                <ul>
-                  <li>Landing Page</li>
-                  <li>Corporate Website</li>
-                  <li>Online Shop</li>
-                  <li>Mobile App</li>
-                  <li>Redesign Website</li>
-                </ul>
-                <ServiceButton>
-                  <p>Order service</p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="10"
-                    viewBox="0 0 16 10"
-                    fill="none"
-                  >
-                    <path
-                      d="M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1"
-                      stroke="#FCFCFC"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </ServiceButton>
-              </ServicesFragment>
-            </ToEmailLink>
-          </ServicesCardsContainer>
-          <ToEmailLink onClick={handleOpenModal}>
-            <ServicesFragment3>
-              <ServiceHeader3>Update</ServiceHeader3>
-              <ul>
-                <li>SEO optimisation</li>
-                <li>Multilingual</li>
-              </ul>
-              <ServiceButton3>
-                <p>Order service</p>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="10"
-                  viewBox="0 0 16 10"
-                  fill="none"
-                >
-                  <path
-                    d="M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1"
-                    stroke="#FCFCFC"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </ServiceButton3>
-            </ServicesFragment3>
-          </ToEmailLink>
-        </ServicesCards>
+          </ServicesCards>
+        </ScrollTrigger>
       </Services>
       <ImgOurTeamDiv>
         <ImgHero src={ImageHero} alt="" />
@@ -540,7 +528,7 @@ export const HomeEN = () => {
       </ImgOurTeamDiv>
 
       <ConectUsEN name="ConnectUS" />
-      <FooterEN showImg={ImageHero} />
+      <FooterEN  />
     </>
   );
 };

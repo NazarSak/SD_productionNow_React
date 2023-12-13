@@ -25,7 +25,7 @@ export const TitleInTwoLine = styled.h2`
 `;
 
 export const TitleInternal = styled.h2`
-  color: var(--02-dark-color-white, #fff);
+  color: var(--02-dark-color-white, #fff); 
 
   opacity: 0;
   transition: opacity 1.5s ease, transform 1.5s ease;

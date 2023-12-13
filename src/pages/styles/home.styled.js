@@ -30,10 +30,8 @@ export const SectionHero = styled.section`
 
   opacity: 0;
   transition: opacity 1.5s ease, transform 1.5s ease;
-  /* transform: translateX(-350px); */
   &.visible {
     opacity: 1;
-    /* transform: translateX(0); */
   }
 
   &::before {
@@ -159,11 +157,13 @@ export const ButtonHeader = styled(Link)`
   font-weight: 600;
   line-height: normal;
   background: linear-gradient(119deg, #bd00ff 21.38%, #3604c3 129.88%);
+  /*  */
   animation: ${fadeIn} 0.5s ease-in-out;
   transition: all 0.5s;
   &:hover {
     opacity: 0.6;
   }
+  /*  */
   @media screen and (max-width: 767px) {
     display: flex;
     width: 279px;
@@ -363,6 +363,11 @@ export const ButtonProject1 = styled(Link)`
   line-height: normal;
   border-radius: 10000px;
   background: linear-gradient(119deg, #61b554 21.38%, #76a90a 129.88%);
+  animation: ${fadeIn} 0.5s ease-in-out;
+  transition: all 0.5s;
+  &:hover {
+    opacity: 0.6;
+  }
   @media screen and (max-width: 1199px) {
     padding: 12px 78px;
   }
@@ -527,6 +532,11 @@ export const ButtonProject2 = styled(Link)`
   line-height: normal;
   border-radius: 10000px;
   background: linear-gradient(119deg, #fc7057 21.38%, #f66e54 129.88%);
+  animation: ${fadeIn} 0.5s ease-in-out;
+  transition: all 0.5s;
+  &:hover {
+    opacity: 0.6;
+  }
   @media screen and (max-width: 1199px) {
     padding: 12px 78px;
   }
@@ -700,6 +710,11 @@ export const ButtonProject3 = styled(Link)`
   line-height: normal;
   border-radius: 10000px;
   background: linear-gradient(88deg, #d5b105 0%, #f1ad00 93.39%);
+  animation: ${fadeIn} 0.5s ease-in-out;
+  transition: all 0.5s;
+  &:hover {
+    opacity: 0.6;
+  }
   @media screen and (max-width: 1199px) {
     padding: 12px 78px;
   }
@@ -918,6 +933,11 @@ export const ButtonProject4 = styled(Link)`
   line-height: normal;
   border-radius: 10000px;
   background: linear-gradient(88deg, #4d83f0 0%, #4d83f0 93.39%);
+  animation: ${fadeIn} 0.5s ease-in-out;
+  transition: all 0.5s;
+  &:hover {
+    opacity: 0.6;
+  }
   @media screen and (max-width: 1199px) {
     padding: 12px 78px;
   }
@@ -991,6 +1011,13 @@ export const Services = styled.section`
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
+    opacity: 0;
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    transform: translateX(-350px);
+    &.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
   & span {
     font-weight: 800;
@@ -1017,6 +1044,13 @@ export const ServicesCards = styled.div`
   margin-top: 100px;
   padding: 0;
   gap: 60px;
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateX(350px);
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
   @media screen and (max-width: 1199px) {
     flex-direction: column;
     gap: 20px;
