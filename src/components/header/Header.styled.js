@@ -90,12 +90,14 @@ export const ChangeLanguage = styled.div`
   & svg {
     position: absolute;
     transition: all 0.9s;
-    margin: 11px 0 0 60px;
+    margin: 9px 0 0 60px;
     cursor: pointer;
+    transform: rotate(180deg);
   }
 
   & svg.open {
-    transform: rotate(180deg);
+    transform: rotate(0deg);
+
   }
   @media (max-width: 1199px) {
     width: 180px;
@@ -103,7 +105,6 @@ export const ChangeLanguage = styled.div`
       margin: 15px 0 0 60px;
     }
     & svg.open {
-      transform: rotate(180deg);
       margin: 8px 0 0 60px;
     }
   }
@@ -229,7 +230,7 @@ export const HamburgerMenuWrapper = styled.div`
     overflow: auto;
     background: #000;
     transform: ${(props) =>
-      props.isopen === "true" ? "translateX(0)" : "translateX(100%)"};
+      props.isopen === "true" ? "translateX(0%)" : "translateX(100%)"};
     transition: transform 1s ease-in-out;
   }
 `;

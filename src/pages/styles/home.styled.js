@@ -357,7 +357,7 @@ export const ButtonProject1 = styled(Link)`
   text-decoration: none;
   color: var(--02-dark-color-white, #fff);
   font-family: Montserrat;
-  font-size: 16px;
+  font-size: 11px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -376,6 +376,7 @@ export const ButtonProject1 = styled(Link)`
     padding: 16px 32px;
     gap: 10px;
     margin-top: 304px;
+    font-size: 16px;
   }
 `;
 export const ProjectContainer = styled.div`
@@ -437,7 +438,6 @@ export const ProjectsFragment2 = styled.div`
   justify-content: space-between;
   transition: all 0.9s;
   padding: 55px;
-  overflow: hidden;
   position: relative;
   opacity: 0;
   transition: opacity 1.5s ease, transform 1.5s ease;
@@ -526,7 +526,7 @@ export const ButtonProject2 = styled(Link)`
   text-decoration: none;
   color: var(--02-dark-color-white, #fff);
   font-family: Montserrat;
-  font-size: 16px;
+  font-size: 11px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -542,6 +542,7 @@ export const ButtonProject2 = styled(Link)`
   }
   @media screen and (max-width: 767px) {
     margin-top: 300px;
+    font-size: 16px;
     width: 279px;
     padding: 16px 32px;
     gap: 10px;
@@ -610,12 +611,12 @@ export const ProjectsFragment3 = styled.div`
   justify-content: space-between;
   transition: all 0.9s;
   padding: 73px 60px;
-  overflow: hidden;
   position: relative;
   justify-content: space-between;
   opacity: 0;
   transition: opacity 1.5s ease, transform 1.5s ease;
   transform: translateX(-350px);
+  overflow: hidden;
   &.visible {
     opacity: 1;
     transform: translateX(0);
@@ -704,7 +705,7 @@ export const ButtonProject3 = styled(Link)`
   text-decoration: none;
   color: var(--02-dark-color-white, #fff);
   font-family: Montserrat;
-  font-size: 16px;
+  font-size: 11px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -721,6 +722,7 @@ export const ButtonProject3 = styled(Link)`
   @media screen and (max-width: 767px) {
     display: flex;
     margin-top: 274px;
+    font-size: 16px;
     width: 279px;
     padding: 16px 32px;
     gap: 10px;
@@ -781,7 +783,6 @@ export const ProjectContainerImg = styled.div`
     height: 390px;
     border-radius: 40px;
     position: relative;
-    overflow: hidden;
   }
   @media screen and (max-width: 767px) {
     height: 508px;
@@ -927,7 +928,7 @@ export const ButtonProject4 = styled(Link)`
   text-decoration: none;
   color: var(--02-dark-color-white, #fff);
   font-family: Montserrat;
-  font-size: 16px;
+  font-size: 11px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -944,6 +945,7 @@ export const ButtonProject4 = styled(Link)`
   @media screen and (max-width: 767px) {
     display: flex;
     margin-top: 300px;
+    font-size: 16px;
     width: 279px;
     padding: 16px 32px;
     gap: 10px;
@@ -1445,7 +1447,6 @@ export const MySwiperBox = styled.div`
   @media screen and (max-width: 767px) {
     margin-left: initial;
     width: 287px;
-    overflow: hidden;
   }
 `;
 

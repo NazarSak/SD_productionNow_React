@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import BackgroundCircle from "../../assets/img/backgroundCircle.png";
 
-
 export const ModalWrapper = styled.div`
   /* position: fixed; */
   position: absolute;
@@ -16,9 +15,8 @@ export const ModalWrapper = styled.div`
   display: flex;
   justify-content: center;
   @media (max-width: 1199px) {
-    
-  }    
-` 
+  }
+`;
 
 export const ModalContent = styled.div`
   background-color: white;
@@ -30,7 +28,6 @@ export const ModalContent = styled.div`
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 `;
-
 
 export const TitleHThree = styled.h3`
   color: #50d13b;
@@ -44,7 +41,7 @@ export const TitleHTwo = styled.h2`
 export const TitleHTwoDE = styled.h2`
   color: var(--02-dark-color-white, #fff);
   font-weight: 700;
-width: max-content;
+  width: max-content;
 `;
 
 export const TitleSpan = styled.span`
@@ -66,36 +63,36 @@ export const Paragraph = styled.p`
 `;
 
 export const Input = styled.input`
-	display: flex;
-	width: 495px;
-	color: white;
-	padding: 16px 24px;
-	align-items: center;
-	gap: 10px;
-	border-radius: 20px;
-	border: 1px solid var(--grey-C, #cfcfcf);
-	background-color: transparent;
-	outline: none;
-	@media (max-width: 768px) {
+  display: flex;
+  width: 495px;
+  color: white;
+  padding: 16px 24px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--grey-C, #cfcfcf);
+  background-color: transparent;
+  outline: none;
+  @media (max-width: 768px) {
     width: 295px;
-	}
-`
+  }
+`;
 
 export const InputComment = styled.input`
-	display: flex;
-	width: 495px;
-	color: white;
-	padding: 16px 24px 100px 24px;
-	align-items: center;
-	gap: 10px;
-	border-radius: 26px;
-	border: 1px solid var(--grey-C, #cfcfcf);
-	background-color: transparent;
-	outline: none;
-	@media (max-width: 768px) {
-		width: 295px;
-	}
-`
+  display: flex;
+  width: 495px;
+  color: white;
+  padding: 16px 24px 100px 24px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 26px;
+  border: 1px solid var(--grey-C, #cfcfcf);
+  background-color: transparent;
+  outline: none;
+  @media (max-width: 768px) {
+    width: 295px;
+  }
+`;
 
 export const List = styled.ul`
   display: flex;
@@ -127,6 +124,10 @@ export const SubmitButton = styled.button`
   text-transform: uppercase;
   border: none;
   margin-top: 32px;
+
+  @media (max-width: 768px) {
+    width: 379px;
+  }
 `;
 
 export const ImgContainer = styled.div`
@@ -138,9 +139,10 @@ export const ImgContainer = styled.div`
   background-size: cover;
   width: 500px;
   height: 500px;
-	@media (max-width: 768px) {
+  @media (max-width: 768px) {
+    position: absolute;
   }
-`
+`;
 
 export const CloseButton = styled(Link)`
   display: flex;
@@ -162,5 +164,10 @@ export const CloseButton = styled(Link)`
     top: 48px;
     margin: 0;
     right: 10px;
+  }
+  @media (max-width: 767px) {
+    top: -60px;
+    margin: 0;
+    right: 75px;
   }
 `;

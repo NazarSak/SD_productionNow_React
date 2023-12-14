@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import ScrollTrigger from "react-scroll-trigger";
 import AnimationState from "../../helperFunction/animationState/animationState";
 import { HeaderEN } from "../../components/header/HeaderEN";
@@ -97,6 +98,8 @@ export const HomeEN = () => {
   const [imgArr, setImgArr] = useState([]);
   const [openModal, setOpenModal] = useState(false);
   const [isOpenMoreProject, setIsOpenProject] = useState(false);
+  const projectsRef = useRef(null);
+  const projectsRef1 = useRef(null);
 
   const {
     isVisibleOne,
@@ -116,6 +119,25 @@ export const HomeEN = () => {
     handleEnterViewportSeven,
     handleEnterViewportEight,
   } = AnimationState();
+
+  const location = useLocation();
+  
+  const currentURL = location.pathname;
+
+  useEffect(() => {
+    const scrollToHash = () => {
+      if (window.location.hash) {
+        const element = document.getElementById(
+          window.location.hash.substring(1)
+        );
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    };
+
+    scrollToHash();
+  }, []);
 
   let ImgBWDataExtended = ImgBWData.slice(0, 3);
 
@@ -219,7 +241,7 @@ export const HomeEN = () => {
       </ScrollTrigger>
       <ImgHero src={ImageHero} alt="" />
 
-      <Project id="projects">
+      <Project id="projects" ref={projectsRef}>
         <ScrollTrigger onEnter={handleEnterViewportTwo}>
           <ContainerPC>
             <h2 className={`${isVisibleTwo ? "visible" : ""}`}>
@@ -378,7 +400,7 @@ export const HomeEN = () => {
         <ImgHero src={ImageHero} alt="" />
       </ImgHeroDiv>
 
-      <Services id="services">
+      <Services id="services" ref={projectsRef1}>
         <ScrollTrigger onEnter={handleEnterViewportSeven}>
           <h2 className={`${isVisibleSeven ? "visible" : ""}`}>
             Our <span>Services</span>
@@ -528,7 +550,7 @@ export const HomeEN = () => {
       </ImgOurTeamDiv>
 
       <ConectUsEN name="ConnectUS" />
-      <FooterEN  />
+      <FooterEN />
     </>
   );
 };

@@ -60,6 +60,8 @@ import {
 } from "../styles/organicShop.styled";
 
 export const OrganicShopEN = () => {
+
+
   const {
     isVisible,
     isVisibleOne,
