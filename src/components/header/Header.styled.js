@@ -60,7 +60,7 @@ export const NavigatorLi = styled.li`
   }
 `;
 
-export const StyledLink = styled.a`
+export const StyledLink = styled(Link)`
   text-decoration: none;
   color: inherit;
   transition: all 0.9s;
@@ -76,9 +76,6 @@ export const StyledLink = styled.a`
   &:hover {
     color: #7d3bd1;
   }
-  /* &.active {
-		font-weight: 700;
-	} */
 `;
 
 export const ChangeLanguage = styled.div`

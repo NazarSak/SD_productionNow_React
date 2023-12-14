@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom";
 import ScrollTrigger from "react-scroll-trigger";
 import AnimationState from "../../helperFunction/animationState/animationState";
 import { HeaderEN } from "../../components/header/HeaderEN";
@@ -20,8 +19,6 @@ import AbiImg2 from "../../assets/img/page4-1.png";
 import Prev from "../../assets/svg/left1.svg";
 import Next from "../../assets/svg/right1.svg";
 import Social from "../../assets/svg/teams/socials.svg";
-// import Select from '../../assets/svg/select.svg'
-// import selectMob from '../../assets/svg/selectMob.svg'
 import {
   ButtonHeader,
   HeroBackground,
@@ -120,23 +117,16 @@ export const HomeEN = () => {
     handleEnterViewportEight,
   } = AnimationState();
 
-  const location = useLocation();
-  
-  const currentURL = location.pathname;
-
   useEffect(() => {
-    const scrollToHash = () => {
-      if (window.location.hash) {
-        const element = document.getElementById(
-          window.location.hash.substring(1)
-        );
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
+    if (window.location.hash) {
+      const element = document.getElementById(
+        window.location.hash.substring(1)
+      );
+      console.log(element);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
       }
-    };
-
-    scrollToHash();
+    }
   }, []);
 
   let ImgBWDataExtended = ImgBWData.slice(0, 3);

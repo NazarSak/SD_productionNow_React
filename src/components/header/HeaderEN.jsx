@@ -42,7 +42,16 @@ export const HeaderEN = ({ name }) => {
   const handleMenuClose = () => {
     setTimeout(() => {
       setIsOpen(false);
+      const element = document.getElementById(window.location.hash.substring(1));
+
+      if (window.location.hash) {
+        console.log(element);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
     }, 0);
+
   };
 
   const handleListClick = (event) => {
@@ -53,6 +62,18 @@ export const HeaderEN = ({ name }) => {
     if (!isClicked) setIsClicked(true);
     else setIsClicked(false);
   };
+
+  const handle = () => {
+    const element = document.getElementById(window.location.hash.substring(1));
+
+    if (window.location.hash) {
+      console.log(element);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <ScrollTrigger onEnter={handleEnterViewport}>
       <Header className={`${isVisible ? "visible" : ""}`}>
@@ -64,13 +85,12 @@ export const HeaderEN = ({ name }) => {
 
         <Navigator>
           <NavigatorLi>
-            <StyledLink to="/#projects">Projects</StyledLink>
+            <StyledLink onClick={handle} to="/#projects">
+              Projects
+            </StyledLink>
           </NavigatorLi>
           <NavigatorLi>
-            <StyledLink
-              // href="../../SD_productionNow_React/#services"
-              href="../../SD_productionNow_React/#services"
-            >
+            <StyledLink onClick={handle} to="/#services">
               Services
             </StyledLink>
           </NavigatorLi>
@@ -116,7 +136,8 @@ export const HeaderEN = ({ name }) => {
                 <MenuList onClick={handleListClick}>
                   <li>
                     <StyledLink
-                      href="../../SD_productionNow_React/#projects"
+                      // href="../../SD_productionNow_React/#projects"
+                      to="/#projects"
                       onClick={handleMenuClose}
                     >
                       Projects

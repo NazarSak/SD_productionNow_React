@@ -357,7 +357,7 @@ export const ButtonProject1 = styled(Link)`
   text-decoration: none;
   color: var(--02-dark-color-white, #fff);
   font-family: Montserrat;
-  font-size: 11px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -526,7 +526,7 @@ export const ButtonProject2 = styled(Link)`
   text-decoration: none;
   color: var(--02-dark-color-white, #fff);
   font-family: Montserrat;
-  font-size: 11px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -705,7 +705,7 @@ export const ButtonProject3 = styled(Link)`
   text-decoration: none;
   color: var(--02-dark-color-white, #fff);
   font-family: Montserrat;
-  font-size: 11px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -928,7 +928,7 @@ export const ButtonProject4 = styled(Link)`
   text-decoration: none;
   color: var(--02-dark-color-white, #fff);
   font-family: Montserrat;
-  font-size: 11px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
