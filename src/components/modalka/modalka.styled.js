@@ -73,7 +73,7 @@ export const Input = styled.input`
   border: 1px solid var(--grey-C, #cfcfcf);
   background-color: transparent;
   outline: none;
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     width: 295px;
   }
 `;
@@ -89,7 +89,7 @@ export const InputComment = styled.input`
   border: 1px solid var(--grey-C, #cfcfcf);
   background-color: transparent;
   outline: none;
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     width: 295px;
   }
 `;
@@ -125,8 +125,8 @@ export const SubmitButton = styled.button`
   border: none;
   margin-top: 32px;
 
-  @media (max-width: 768px) {
-    width: 379px;
+  @media (max-width: 767px) {
+    width: 350px;
   }
 `;
 
@@ -139,7 +139,7 @@ export const ImgContainer = styled.div`
   background-size: cover;
   width: 500px;
   height: 500px;
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     position: absolute;
   }
 `;

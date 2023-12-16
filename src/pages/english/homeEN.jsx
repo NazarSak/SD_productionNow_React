@@ -124,9 +124,9 @@ export const HomeEN = () => {
       const element = document.getElementById(
         window.location.hash.substring(1)
       );
-      console.log(element);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        element.scrollIntoView({
+           behavior: "smooth" });
       }
     }
   }, []);
@@ -233,185 +233,255 @@ export const HomeEN = () => {
       </ScrollTrigger>
       <ImgHero src={ImageHero} alt="" />
 
-      <Project id="projects" ref={projectsRef}>
-        <ScrollTrigger onEnter={handleEnterViewportTwo}>
-          <ContainerPC>
-            <h2 className={`${isVisibleTwo ? "visible" : ""}`}>
-              Check our some of <span>our projects</span>
-            </h2>
-          </ContainerPC>
-          <ContainerMobile>
-            <h2 className={`${isVisibleTwo ? "visible" : ""}`}>
-              Some of our <span> projects</span>
-            </h2>
-          </ContainerMobile>
-        </ScrollTrigger>
-        <ProjectsCards>
-          <ScrollTrigger onEnter={handleEnterViewportThree}>
-            <ProjectContainer className={`${isVisibleThree ? "visible" : ""}`}>
-              <ProjectsFragment1>
-                <ProjectsFragmentInfo1>
-                  <h4>Online Shop</h4>
-                  <h3>Organic</h3>
-                  {windowWidth > 1200 ? (
-                    <p>
-                      Online store with organic fruits, vegetables and berries.
-                      A England farmer wanted to sell organically grown produce.
-                    </p>
-                  ) : (
-                    <p>
-                      Online store with organic fruits, vegetables and berries.
-                    </p>
-                  )}
-                  <ButtonProject1 to="/en/organicShop" onClick={handleClickTop}>
-                    View
-                  </ButtonProject1>
-                </ProjectsFragmentInfo1>
-              </ProjectsFragment1>
-              <ProjectImage1Container>
-                <ProjectImage1 src={OrganicImg} />
-              </ProjectImage1Container>
-            </ProjectContainer>
+      <Project id="projects">
+        <div ref={projectsRef}>
+          <ScrollTrigger onEnter={handleEnterViewportTwo}>
+            <ContainerPC>
+              <h2 className={`${isVisibleTwo ? "visible" : ""}`}>
+                Check our some of <span>our projects</span>
+              </h2>
+            </ContainerPC>
+            <ContainerMobile>
+              <h2 className={`${isVisibleTwo ? "visible" : ""}`}>
+                Some of our <span> projects</span>
+              </h2>
+            </ContainerMobile>
           </ScrollTrigger>
-          <ScrollTrigger onEnter={handleEnterViewportFour}>
-            <ProjectsFragment2 className={`${isVisibleFour ? "visible" : ""}`}>
-              <ProjectImageContainer1>
-                <ProjectImage21 src={WhiteImg1} />
-                <ProjectImage22 src={WhiteImg1} />
-              </ProjectImageContainer1>
-              <ProjectsFragmentInfo2>
-                <h4>Business website</h4>
-                <h3>WhiteCollor</h3>
-                <ContainerPC>
-                  {windowWidth > 1200 ? (
-                    <p>
-                      Develop and implement Agilic methods in the strategic
-                      management of a corporation to ensure flexibility and
-                      adaptation to a rapidly changing business environment.
-                    </p>
-                  ) : (
-                    <p>
-                      Develop and implement Agilic methods in the strategic
-                      management
-                    </p>
-                  )}
-                </ContainerPC>
-                <ContainerMobile>
-                  <p>Adaptive Strategic Agile Management.</p>
-                </ContainerMobile>
-                <ButtonProject2 to="/en/whiteCollar" onClick={handleClickTop}>
-                  View
-                </ButtonProject2>
-              </ProjectsFragmentInfo2>
-            </ProjectsFragment2>
-          </ScrollTrigger>
-          {!isOpenMoreProject ? (
-            <ContainerMoreProject>
-              <button onClick={hadnleOpenProject}>
-                Show more
-                <SvgHome />
-              </button>
-            </ContainerMoreProject>
-          ) : (
-            <ProjectContainer2>
-              <ProjectContainerImg>
-                <ScrollTrigger onEnter={handleEnterViewportFive}>
-                  <ProjectsFragment3
-                    className={`${isVisibleFive ? "visible" : ""}`}
-                  >
-                    <ProjectImage3Container>
-                      <ProjectImage31 src={BriliniImg1} />
-                      <ProjectImage32 src={BriliniImg2} />
-                    </ProjectImage3Container>
-                    <ProjectsFragmentInfo3>
-                      <h4>Landing page</h4>
-                      <h3>Brilini Studio</h3>
-                      <ContainerPC>
-                        {windowWidth > 1200 ? (
-                          <p>
-                            Studio of interior designers specializing in the
-                            furnishing and design of rooms, apartments and
-                            houses in a modern and austere style.
-                          </p>
-                        ) : (
-                          <p>
-                            Studio of interior designers specializing in the
-                            furnishing and design of rooms
-                          </p>
-                        )}
-                      </ContainerPC>
-                      <ContainerMobile>
-                        <p>Modern austere interior design studio.</p>
-                      </ContainerMobile>
-                      <ButtonProject3
-                        to="/en/briliniStudio"
-                        onClick={handleClickTop}
-                      >
-                        View
-                      </ButtonProject3>
-                    </ProjectsFragmentInfo3>
-                  </ProjectsFragment3>
-                </ScrollTrigger>
-              </ProjectContainerImg>
-              <ScrollTrigger onEnter={handleEnterViewportSix}>
-                <ProjectsFragment4
-                  className={`${isVisibleSix ? "visible" : ""}`}
-                >
-                  <ProjectImage4Container>
-                    <ProjectImage41 src={AbiImg1} />
-                    <ProjectImage42 src={AbiImg2} />
-                  </ProjectImage4Container>
-                  <ProjectsFragmentInfo4>
-                    <h4>Mobile App</h4>
-                    <h3>Abi</h3>
+          <ProjectsCards>
+            <ScrollTrigger onEnter={handleEnterViewportThree}>
+              <ProjectContainer
+                className={`${isVisibleThree ? "visible" : ""}`}
+              >
+                <ProjectsFragment1>
+                  <ProjectsFragmentInfo1>
+                    <h4>Online Shop</h4>
+                    <h3>Organic</h3>
                     {windowWidth > 1200 ? (
                       <p>
-                        Mobile application for creating presentations with
-                        ready-made templates based on artificial intelligence.
-                        The application is available on Play Market and App
-                        Store.
+                        Online store with organic fruits, vegetables and
+                        berries. A England farmer wanted to sell organically
+                        grown produce.
                       </p>
                     ) : (
                       <p>
-                        Mobile application for creating presentations with
-                        ready-made templates
+                        Online store with organic fruits, vegetables and
+                        berries.
                       </p>
                     )}
-                    <ButtonProject4 to="en/abi" onClick={handleClickTop}>
+                    <ButtonProject1
+                      to="/en/organicShop"
+                      onClick={handleClickTop}
+                    >
                       View
-                    </ButtonProject4>
-                  </ProjectsFragmentInfo4>
-                </ProjectsFragment4>
-              </ScrollTrigger>
-            </ProjectContainer2>
-          )}
-        </ProjectsCards>
+                    </ButtonProject1>
+                  </ProjectsFragmentInfo1>
+                </ProjectsFragment1>
+                <ProjectImage1Container>
+                  <ProjectImage1 src={OrganicImg} />
+                </ProjectImage1Container>
+              </ProjectContainer>
+            </ScrollTrigger>
+            <ScrollTrigger onEnter={handleEnterViewportFour}>
+              <ProjectsFragment2
+                className={`${isVisibleFour ? "visible" : ""}`}
+              >
+                <ProjectImageContainer1>
+                  <ProjectImage21 src={WhiteImg1} />
+                  <ProjectImage22 src={WhiteImg1} />
+                </ProjectImageContainer1>
+                <ProjectsFragmentInfo2>
+                  <h4>Business website</h4>
+                  <h3>WhiteCollor</h3>
+                  <ContainerPC>
+                    {windowWidth > 1200 ? (
+                      <p>
+                        Develop and implement Agilic methods in the strategic
+                        management of a corporation to ensure flexibility and
+                        adaptation to a rapidly changing business environment.
+                      </p>
+                    ) : (
+                      <p>
+                        Develop and implement Agilic methods in the strategic
+                        management
+                      </p>
+                    )}
+                  </ContainerPC>
+                  <ContainerMobile>
+                    <p>Adaptive Strategic Agile Management.</p>
+                  </ContainerMobile>
+                  <ButtonProject2 to="/en/whiteCollar" onClick={handleClickTop}>
+                    View
+                  </ButtonProject2>
+                </ProjectsFragmentInfo2>
+              </ProjectsFragment2>
+            </ScrollTrigger>
+            {!isOpenMoreProject ? (
+              <ContainerMoreProject>
+                <button onClick={hadnleOpenProject}>
+                  Show more
+                  <SvgHome />
+                </button>
+              </ContainerMoreProject>
+            ) : (
+              <ProjectContainer2>
+                <ProjectContainerImg>
+                  <ScrollTrigger onEnter={handleEnterViewportFive}>
+                    <ProjectsFragment3
+                      className={`${isVisibleFive ? "visible" : ""}`}
+                    >
+                      <ProjectImage3Container>
+                        <ProjectImage31 src={BriliniImg1} />
+                        <ProjectImage32 src={BriliniImg2} />
+                      </ProjectImage3Container>
+                      <ProjectsFragmentInfo3>
+                        <h4>Landing page</h4>
+                        <h3>Brilini Studio</h3>
+                        <ContainerPC>
+                          {windowWidth > 1200 ? (
+                            <p>
+                              Studio of interior designers specializing in the
+                              furnishing and design of rooms, apartments and
+                              houses in a modern and austere style.
+                            </p>
+                          ) : (
+                            <p>
+                              Studio of interior designers specializing in the
+                              furnishing and design of rooms
+                            </p>
+                          )}
+                        </ContainerPC>
+                        <ContainerMobile>
+                          <p>Modern austere interior design studio.</p>
+                        </ContainerMobile>
+                        <ButtonProject3
+                          to="/en/briliniStudio"
+                          onClick={handleClickTop}
+                        >
+                          View
+                        </ButtonProject3>
+                      </ProjectsFragmentInfo3>
+                    </ProjectsFragment3>
+                  </ScrollTrigger>
+                </ProjectContainerImg>
+                <ScrollTrigger onEnter={handleEnterViewportSix}>
+                  <ProjectsFragment4
+                    className={`${isVisibleSix ? "visible" : ""}`}
+                  >
+                    <ProjectImage4Container>
+                      <ProjectImage41 src={AbiImg1} />
+                      <ProjectImage42 src={AbiImg2} />
+                    </ProjectImage4Container>
+                    <ProjectsFragmentInfo4>
+                      <h4>Mobile App</h4>
+                      <h3>Abi</h3>
+                      {windowWidth > 1200 ? (
+                        <p>
+                          Mobile application for creating presentations with
+                          ready-made templates based on artificial intelligence.
+                          The application is available on Play Market and App
+                          Store.
+                        </p>
+                      ) : (
+                        <p>
+                          Mobile application for creating presentations with
+                          ready-made templates
+                        </p>
+                      )}
+                      <ButtonProject4 to="en/abi" onClick={handleClickTop}>
+                        View
+                      </ButtonProject4>
+                    </ProjectsFragmentInfo4>
+                  </ProjectsFragment4>
+                </ScrollTrigger>
+              </ProjectContainer2>
+            )}
+          </ProjectsCards>
+        </div>
       </Project>
 
       <ImgHeroDiv>
         <ImgHero src={ImageHero} alt="" />
       </ImgHeroDiv>
 
-      <Services id="services" ref={servicesRef}>
-        <ScrollTrigger onEnter={handleEnterViewportSeven}>
-          <h2 className={`${isVisibleSeven ? "visible" : ""}`}>
-            Our <span>Services</span>
-          </h2>
-        </ScrollTrigger>
-        <ScrollTrigger onEnter={handleEnterViewportEight}>
-          <ServicesCards className={`${isVisibleEight ? "visible" : ""}`}>
-            <ServicesCardsContainer>
+      <Services id="services">
+        <div ref={servicesRef}>
+          <ScrollTrigger onEnter={handleEnterViewportSeven}>
+            <h2 className={`${isVisibleSeven ? "visible" : ""}`}>
+              Our <span>Services</span>
+            </h2>
+          </ScrollTrigger>
+          <ScrollTrigger onEnter={handleEnterViewportEight}>
+            <ServicesCards className={`${isVisibleEight ? "visible" : ""}`}>
+              <ServicesCardsContainer>
+                <ToEmailLink onClick={handleOpenModal}>
+                  <ServicesFragment>
+                    <ServiceHeader1>Design</ServiceHeader1>
+                    <ul>
+                      <li>Motion Design</li>
+                      <li>Logotype</li>
+                      <li>Video Editing</li>
+                      <li>3D models</li>
+                      <li>Advertising Banners</li>
+                    </ul>
+                    <ServiceButton>
+                      <p>Order service</p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="10"
+                        viewBox="0 0 16 10"
+                        fill="none"
+                      >
+                        <path
+                          d="M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1"
+                          stroke="#FCFCFC"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </ServiceButton>
+                  </ServicesFragment>
+                </ToEmailLink>
+                <ToEmailLink onClick={handleOpenModal}>
+                  <ServicesFragment>
+                    <ServiceHeader2>Development</ServiceHeader2>
+                    <ul>
+                      <li>Landing Page</li>
+                      <li>Corporate Website</li>
+                      <li>Online Shop</li>
+                      <li>Mobile App</li>
+                      <li>Redesign Website</li>
+                    </ul>
+                    <ServiceButton>
+                      <p>Order service</p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="10"
+                        viewBox="0 0 16 10"
+                        fill="none"
+                      >
+                        <path
+                          d="M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1"
+                          stroke="#FCFCFC"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </ServiceButton>
+                  </ServicesFragment>
+                </ToEmailLink>
+              </ServicesCardsContainer>
               <ToEmailLink onClick={handleOpenModal}>
-                <ServicesFragment>
-                  <ServiceHeader1>Design</ServiceHeader1>
+                <ServicesFragment3>
+                  <ServiceHeader3>Update</ServiceHeader3>
                   <ul>
-                    <li>Motion Design</li>
-                    <li>Logotype</li>
-                    <li>Video Editing</li>
-                    <li>3D models</li>
-                    <li>Advertising Banners</li>
+                    <li>SEO optimisation</li>
+                    <li>Multilingual</li>
                   </ul>
-                  <ServiceButton>
+                  <ServiceButton3>
                     <p>Order service</p>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -428,120 +498,66 @@ export const HomeEN = () => {
                         strokeLinejoin="round"
                       />
                     </svg>
-                  </ServiceButton>
-                </ServicesFragment>
+                  </ServiceButton3>
+                </ServicesFragment3>
               </ToEmailLink>
-              <ToEmailLink onClick={handleOpenModal}>
-                <ServicesFragment>
-                  <ServiceHeader2>Development</ServiceHeader2>
-                  <ul>
-                    <li>Landing Page</li>
-                    <li>Corporate Website</li>
-                    <li>Online Shop</li>
-                    <li>Mobile App</li>
-                    <li>Redesign Website</li>
-                  </ul>
-                  <ServiceButton>
-                    <p>Order service</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="10"
-                      viewBox="0 0 16 10"
-                      fill="none"
-                    >
-                      <path
-                        d="M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1"
-                        stroke="#FCFCFC"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </ServiceButton>
-                </ServicesFragment>
-              </ToEmailLink>
-            </ServicesCardsContainer>
-            <ToEmailLink onClick={handleOpenModal}>
-              <ServicesFragment3>
-                <ServiceHeader3>Update</ServiceHeader3>
-                <ul>
-                  <li>SEO optimisation</li>
-                  <li>Multilingual</li>
-                </ul>
-                <ServiceButton3>
-                  <p>Order service</p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="10"
-                    viewBox="0 0 16 10"
-                    fill="none"
-                  >
-                    <path
-                      d="M10.8689 1L15 4.76471M15 4.76471L10.8689 9M15 4.76471H1"
-                      stroke="#FCFCFC"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </ServiceButton3>
-              </ServicesFragment3>
-            </ToEmailLink>
-          </ServicesCards>
-        </ScrollTrigger>
+            </ServicesCards>
+          </ScrollTrigger>
+        </div>
       </Services>
-      <ImgOurTeamDiv>
-        <ImgHero src={ImageHero} alt="" />
-      </ImgOurTeamDiv>
-
-      <OurTeam id="team" ref={teamRef}>
-        <SliderName>
-          <h2>
-            Our <span>Team</span>
-          </h2>
-          <SwiperButtonContainer>
-            <SwiperImgContainer>
-              <SwiperButtonPrev src={Prev} onClick={nextSlide} />
-            </SwiperImgContainer>
-            <SwiperImgContainer>
-              <SwiperButtonNext src={Next} onClick={prevSlide} />
-            </SwiperImgContainer>
-          </SwiperButtonContainer>
-        </SliderName>
-
-        <MySwiperBox>
-          <SwiperWrapper>
-            {sliderData.map((slider, index) => (
-              <SwiperSlide
-                key={index}
-                className={index === currentSlide ? "active" : ""}
-              >
-                <Contend>
-                  <SocialImg src={Social} />
-                  <h2>{slider.name}</h2>
-                  <h3>{slider.description}</h3>
-                </Contend>
-                <ImageC src={slider.img} />
-              </SwiperSlide>
-            ))}
-          </SwiperWrapper>
-        </MySwiperBox>
-        <ContainerImg>
-          <ContainerImageBW>
-            {imgArr.map((slider, index) => (
-              <ImageBW key={index} src={slider.imgBW} />
-            ))}
-          </ContainerImageBW>
-        </ContainerImg>
-      </OurTeam>
 
       <ImgOurTeamDiv>
         <ImgHero src={ImageHero} alt="" />
       </ImgOurTeamDiv>
+      <div ref={teamRef}>
+        <OurTeam id="team">
+          <SliderName>
+            <h2>
+              Our <span>Team</span>
+            </h2>
+            <SwiperButtonContainer>
+              <SwiperImgContainer>
+                <SwiperButtonPrev src={Prev} onClick={nextSlide} />
+              </SwiperImgContainer>
+              <SwiperImgContainer>
+                <SwiperButtonNext src={Next} onClick={prevSlide} />
+              </SwiperImgContainer>
+            </SwiperButtonContainer>
+          </SliderName>
 
-      <ConectUsEN name="ConnectUS" ref={conectRef} />
+          <MySwiperBox>
+            <SwiperWrapper>
+              {sliderData.map((slider, index) => (
+                <SwiperSlide
+                  key={index}
+                  className={index === currentSlide ? "active" : ""}
+                >
+                  <Contend>
+                    <SocialImg src={Social} />
+                    <h2>{slider.name}</h2>
+                    <h3>{slider.description}</h3>
+                  </Contend>
+                  <ImageC src={slider.img} />
+                </SwiperSlide>
+              ))}
+            </SwiperWrapper>
+          </MySwiperBox>
+          <ContainerImg>
+            <ContainerImageBW>
+              {imgArr.map((slider, index) => (
+                <ImageBW key={index} src={slider.imgBW} />
+              ))}
+            </ContainerImageBW>
+          </ContainerImg>
+        </OurTeam>
+      </div>
+      <ImgOurTeamDiv>
+        <ImgHero src={ImageHero} alt="" />
+      </ImgOurTeamDiv>
+      <div ref={conectRef}>
+        <ConectUsEN name="ConnectUS" />
+      </div>
+
       <FooterEN />
     </>
   );

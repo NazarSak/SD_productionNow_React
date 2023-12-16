@@ -55,11 +55,9 @@ export const HeaderEN = ({ name }) => {
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
         }
-  
-        // Construct the new path by appending the hash to the base path
         const basePath = window.location.pathname.split(
           "/SD_productionNow_React"
-        )[0]; // Get the base path
+        )[0]; 
         const newPath = `${basePath}/#${hash}`;
   
         navigate(newPath);
