@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ScrollTrigger from "react-scroll-trigger";
 import Logo from "../../assets/svg/logo.svg";
 import { Link } from "react-router-dom";
@@ -31,6 +32,8 @@ export const HeaderEN = ({ name }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
+  const navigate = useNavigate();
+
   const handleEnterViewport = () => {
     setIsVisible(true);
   };
@@ -39,19 +42,37 @@ export const HeaderEN = ({ name }) => {
     setIsOpen(true);
   };
 
-  const handleMenuClose = () => {
+  const handleMenuClose = (hash,e) => {
+    if (e && e.target instanceof HTMLAnchorElement) { 
+    e.preventDefault();
+    e.stopPropagation();
     setTimeout(() => {
       setIsOpen(false);
-      const element = document.getElementById(window.location.hash.substring(1));
-
-      if (window.location.hash) {
-        console.log(element);
+   
+      if (hash) {
+        const element = document.getElementById(hash);
+  
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
         }
+  
+        // Construct the new path by appending the hash to the base path
+        const basePath = window.location.pathname.split(
+          "/SD_productionNow_React"
+        )[0]; // Get the base path
+        const newPath = `${basePath}/#${hash}`;
+  
+        navigate(newPath);
       }
+   
     }, 0);
+  }
+  };
 
+  const handleClose = () => {
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 0);
   };
 
   const handleListClick = (event) => {
@@ -63,14 +84,13 @@ export const HeaderEN = ({ name }) => {
     else setIsClicked(false);
   };
 
-  const handle = () => {
-    const element = document.getElementById(window.location.hash.substring(1));
+  const handle = (hash) => {
+    const element = document.getElementById(hash);
 
-    if (window.location.hash) {
-      console.log(element);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+    if (hash && element) {
+      element.scrollIntoView({ behavior: "smooth" });
+
+      navigate(window.location.pathname);
     }
   };
 
@@ -85,22 +105,22 @@ export const HeaderEN = ({ name }) => {
 
         <Navigator>
           <NavigatorLi>
-            <StyledLink onClick={handle} to="/#projects">
+            <StyledLink onClick={() => handle("projects")} to="/#projects">
               Projects
             </StyledLink>
           </NavigatorLi>
           <NavigatorLi>
-            <StyledLink onClick={handle} to="/#services">
+            <StyledLink onClick={() => handle("services")} to="/#services">
               Services
             </StyledLink>
           </NavigatorLi>
           <NavigatorLi>
-            <StyledLink href="../../SD_productionNow_React/#team">
+            <StyledLink onClick={() => handle("team")} to="/#team">
               Team
             </StyledLink>
           </NavigatorLi>
           <NavigatorLi>
-            <StyledLink href="../../SD_productionNow_React/#contactus">
+            <StyledLink onClick={() => handle("contactus")} to="/#contactus">
               Contact us
             </StyledLink>
           </NavigatorLi>
@@ -130,39 +150,35 @@ export const HeaderEN = ({ name }) => {
                   </Link>
                   <HeroLink to="/">Hero</HeroLink>
                 </ContainerLogo>
-                <CloseButton>
+                <CloseButton onClick={handleClose}>
                   <ImgClose src={ButtonClose} alt="Button" />
                 </CloseButton>
                 <MenuList onClick={handleListClick}>
                   <li>
                     <StyledLink
-                      // href="../../SD_productionNow_React/#projects"
-                      to="/#projects"
-                      onClick={handleMenuClose}
+                      onClick={(e) => handleMenuClose("projects",e)}
+                      to="/"
                     >
                       Projects
                     </StyledLink>
                   </li>
                   <li>
                     <StyledLink
-                      href="../../SD_productionNow_React/#services"
-                      onClick={handleMenuClose}
+                      onClick={(e) => handleMenuClose("services",e)}
+                      to="/"
                     >
                       Services
                     </StyledLink>
                   </li>
                   <li>
-                    <StyledLink
-                      href="../../SD_productionNow_React/#team"
-                      onClick={handleMenuClose}
-                    >
+                    <StyledLink onClick={(e) => handleMenuClose("team",e)} to="/">
                       Team
                     </StyledLink>
                   </li>
                   <li>
                     <StyledLink
-                      href="../../SD_productionNow_React/#contactus"
-                      onClick={handleMenuClose}
+                      onClick={(e) => handleMenuClose("contactus",e)}
+                      to="/"
                     >
                       Contact us
                     </StyledLink>

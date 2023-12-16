@@ -96,7 +96,9 @@ export const HomeEN = () => {
   const [openModal, setOpenModal] = useState(false);
   const [isOpenMoreProject, setIsOpenProject] = useState(false);
   const projectsRef = useRef(null);
-  const projectsRef1 = useRef(null);
+  const servicesRef = useRef(null);
+  const teamRef = useRef(null);
+  const conectRef = useRef(null);
 
   const {
     isVisibleOne,
@@ -390,7 +392,7 @@ export const HomeEN = () => {
         <ImgHero src={ImageHero} alt="" />
       </ImgHeroDiv>
 
-      <Services id="services" ref={projectsRef1}>
+      <Services id="services" ref={servicesRef}>
         <ScrollTrigger onEnter={handleEnterViewportSeven}>
           <h2 className={`${isVisibleSeven ? "visible" : ""}`}>
             Our <span>Services</span>
@@ -494,7 +496,7 @@ export const HomeEN = () => {
         <ImgHero src={ImageHero} alt="" />
       </ImgOurTeamDiv>
 
-      <OurTeam id="team">
+      <OurTeam id="team" ref={teamRef}>
         <SliderName>
           <h2>
             Our <span>Team</span>
@@ -539,7 +541,7 @@ export const HomeEN = () => {
         <ImgHero src={ImageHero} alt="" />
       </ImgOurTeamDiv>
 
-      <ConectUsEN name="ConnectUS" />
+      <ConectUsEN name="ConnectUS" ref={conectRef} />
       <FooterEN />
     </>
   );
