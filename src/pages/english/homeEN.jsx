@@ -90,7 +90,7 @@ import { ModalkaEN } from "../../components/modalka/ModalkaEN";
 
 export const HomeEN = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [displayImg, setDisplayImg] = useState(3);
+  const [displayImg, setDisplayImg] = useState(0);
   const [displayImgPrev, setDisplayImgPrev] = useState(7);
   const [imgArr, setImgArr] = useState([]);
   const [openModal, setOpenModal] = useState(false);
@@ -131,7 +131,7 @@ export const HomeEN = () => {
     }
   }, []);
 
-  let ImgBWDataExtended = ImgBWData.slice(0, 3);
+  let ImgBWDataExtended = ImgBWData.slice(5, 8);
 
   useEffect(() => {
     setImgArr(ImgBWDataExtended);
@@ -155,17 +155,17 @@ export const HomeEN = () => {
     };
   }, [windowWidth]);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % sliderData.length);
-    }, 3000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentSlide((prevSlide) => (prevSlide + 1) % sliderData.length);
+  //   }, 3000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   const addImg = () => {
     if (displayImg >= 7) {
-      setDisplayImg(0);
+      setDisplayImg(-1);
     }
     setDisplayImg((preveCount) => preveCount + 1);
     imgArr.shift();
@@ -183,16 +183,14 @@ export const HomeEN = () => {
   };
 
   const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % sliderData.length);
-    // setContainerClass((prevClass) => prevClass + 256);
-    nextImg();
-  };
-
-  const prevSlide = () => {
     setCurrentSlide((prevSlide) =>
       prevSlide === 0 ? sliderData.length - 1 : prevSlide - 1
     );
-    // setContainerClass((prevClass) => prevClass - 256);
+    nextImg();
+  };
+  
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % sliderData.length);
     addImg();
   };
 
