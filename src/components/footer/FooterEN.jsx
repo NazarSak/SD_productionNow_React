@@ -41,7 +41,7 @@ export const FooterEN = ({ showImg }) => {
       <Footer>
         <img src={Logo} alt="Logo" />
         <List>
-          <li>
+          <li> 
             <TitleLink onClick={() => handle("projects")} to="/#projects">
               Projects
             </TitleLink>

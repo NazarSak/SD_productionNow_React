@@ -58,7 +58,7 @@ export const ModalkaDE = ({ setOpenModal }) => {
         console.log("Form data:", userData);
 
         setFormData({
-          name: "",
+          name: "", 
           email: "",
           comment: "",
         });

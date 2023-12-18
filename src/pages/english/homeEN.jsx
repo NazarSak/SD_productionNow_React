@@ -126,7 +126,8 @@ export const HomeEN = () => {
       );
       if (element) {
         element.scrollIntoView({
-           behavior: "smooth" });
+          behavior: "smooth",
+        });
       }
     }
   }, []);
@@ -155,14 +156,6 @@ export const HomeEN = () => {
     };
   }, [windowWidth]);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentSlide((prevSlide) => (prevSlide + 1) % sliderData.length);
-  //   }, 3000);
-
-  //   return () => clearInterval(interval);
-  // }, []);
-
   const addImg = () => {
     if (displayImg >= 7) {
       setDisplayImg(-1);
@@ -188,7 +181,7 @@ export const HomeEN = () => {
     );
     nextImg();
   };
-  
+
   const prevSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % sliderData.length);
     addImg();
@@ -206,7 +199,7 @@ export const HomeEN = () => {
   return (
     <>
       {openModal && <ModalkaEN setOpenModal={setOpenModal} />}
-      <HeaderEN />
+      <HeaderEN name={"/de"}/>
       <ScrollTrigger onEnter={handleEnterViewportOne}>
         <SectionHero className={`${isVisibleOne ? "visible" : ""}`}>
           <HeroBackground src={Ellipse} alt="" />
