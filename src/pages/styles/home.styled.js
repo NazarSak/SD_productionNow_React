@@ -1501,6 +1501,10 @@ export const Contend = styled.div`
     font-weight: 500;
     line-height: 140%;
   }
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    right: 218px;
+  }
 `;
 export const ContainerImageBW = styled.div`
   display: flex;
@@ -1527,7 +1531,7 @@ export const ImageC = styled.img`
     width: 303px;
     height: 320px;
     margin-top: -40px;
-    margin-left: -67px;
+    margin-left: 63px;
   }
 `;
 

@@ -76,7 +76,7 @@ export const ModalkaDE = ({ setOpenModal }) => {
         <ImgContainer> 
           <CloseButton to="/de" onClick={handleCloseModal}>
             <img src={ButtonClose} alt="Button" />
-          </CloseButton>
+          </CloseButton> 
           <TitleHTwoDE>
           Kontaktiere <TitleSpan>Uns</TitleSpan>
           </TitleHTwoDE>
