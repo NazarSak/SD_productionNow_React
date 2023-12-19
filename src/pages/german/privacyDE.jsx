@@ -16,6 +16,7 @@ import {
   Li,
   FooterContainer,
 } from "../styles/privacy.styled";
+import useSmoothScroll from "../../components/smoooth-scroll/smoth-scroll";
 
 export const PrivacyDE = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,6 +24,9 @@ export const PrivacyDE = () => {
   const handleEnterViewport = () => {
     setIsVisible(true);
   };
+
+  useSmoothScroll()
+  
   return (
     <>
       <HeaderDE name={"/en/privacy"} />

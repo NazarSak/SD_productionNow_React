@@ -58,6 +58,7 @@ import {
   Arrow,
   LinkArrow,
 } from "../styles/organicShop.styled";
+import useSmoothScroll from "../../components/smoooth-scroll/smoth-scroll";
 
 export const OrganicShopEN = () => {
 
@@ -94,6 +95,8 @@ export const OrganicShopEN = () => {
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
+
+  useSmoothScroll()
 
   return (
     <main>

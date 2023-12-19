@@ -58,6 +58,7 @@ import {
   Arrow,
   LinkArrow,
 } from "../styles/pagesShop.styled";
+import useSmoothScroll from "../../components/smoooth-scroll/smoth-scroll";
 
 export const PagesShopDE = () => {
   const {
@@ -92,6 +93,8 @@ export const PagesShopDE = () => {
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
+
+  useSmoothScroll()
 
   return (
     <main>

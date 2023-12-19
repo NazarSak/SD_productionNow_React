@@ -44,6 +44,7 @@ import {
   Arrow,
   LinkArrow,
 } from "../styles/briliniStudio.styled";
+import useSmoothScroll from "../../components/smoooth-scroll/smoth-scroll";
 
 export const BriliniStudioDE = () => {
   const {
@@ -66,6 +67,8 @@ export const BriliniStudioDE = () => {
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
+
+  useSmoothScroll()
 
   return (
     <main>

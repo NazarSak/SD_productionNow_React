@@ -58,6 +58,7 @@ import {
   Arrow,
   LinkArrow,
 } from "../styles/whiteCollar.styled";
+import useSmoothScroll from "../../components/smoooth-scroll/smoth-scroll";
 
 export const WhiteCollarDE = () => {
   const {
@@ -92,6 +93,8 @@ export const WhiteCollarDE = () => {
     window.scrollTo(0, 0);
   };
 
+  useSmoothScroll()
+  
   return (
     <main>
       <HeaderDE name={"/en/whiteCollar"} />

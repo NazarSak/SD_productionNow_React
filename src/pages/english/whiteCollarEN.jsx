@@ -59,6 +59,7 @@ import {
   Arrow,
   LinkArrow,
 } from "../styles/whiteCollar.styled";
+import useSmoothScroll from "../../components/smoooth-scroll/smoth-scroll";
 
 export const WhiteCollarEN = () => {
   const {
@@ -93,6 +94,8 @@ export const WhiteCollarEN = () => {
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
+
+  useSmoothScroll()
 
   return (
     <main>
