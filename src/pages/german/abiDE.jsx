@@ -52,6 +52,7 @@ import {
   LinkArrow,
   VideoContainer,
 } from "../styles/abi.styled";
+import useSmoothScroll from "../../components/smoooth-scroll/smoth-scroll";
 
 export const AbiDE = () => {
   const {
@@ -86,6 +87,7 @@ export const AbiDE = () => {
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
+  useSmoothScroll()
 
   return (
     <main>

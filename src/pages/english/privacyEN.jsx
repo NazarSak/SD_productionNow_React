@@ -18,6 +18,7 @@ import {
   Li,
   FooterContainer,
 } from "../styles/privacy.styled";
+import useSmoothScroll from "../../components/smoooth-scroll/smoth-scroll";
 
 export const PrivacyEN = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,6 +26,8 @@ export const PrivacyEN = () => {
   const handleEnterViewport = () => {
     setIsVisible(true);
   };
+
+  useSmoothScroll()
   return (
     <>
       <HeaderEN name={"/de/privacy"} />
