@@ -100,7 +100,7 @@ export const HeaderEN = ({ name }) => {
             <img src={Logo} alt="logo" />
           </Link>
         </div>
-
+ 
         <Navigator>
           <NavigatorLi>
             <StyledLink onClick={() => handle("projects")} to="/#projects">

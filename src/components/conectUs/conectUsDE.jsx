@@ -23,7 +23,7 @@ import {
   PeopleOrange,
   PeopleLightPink,
   PeopleYellow,
-} from "./conectUs.styled";
+} from "./conectUs.styled"; 
 
 export const ConectUsDE = () => {
   const [openModal, setOpenModal] = useState(false);

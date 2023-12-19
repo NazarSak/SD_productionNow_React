@@ -60,6 +60,9 @@ export const Paragraph = styled.p`
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
+  @media (max-width: 767px) {
+    width: 343px;
+  }
 `;
 
 export const Input = styled.input`
