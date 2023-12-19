@@ -28,14 +28,6 @@ const useSmoothScroll = () => {
 			window.removeEventListener('scroll', handleScroll)
 		}
 	}, [scrollY])
-
-	const scrollToElement = ref => {
-		if (ref.current) {
-			ref.current.scrollIntoView({ behavior: 'smooth' })
-		}
-	}
-
-	return { scrollToElement }
 }
 
 export default useSmoothScroll
