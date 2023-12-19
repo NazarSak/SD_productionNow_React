@@ -11,9 +11,13 @@ const useSmoothScroll = () => {
 	const handleScroll = () => {
 		const currentScrollY = window.scrollY
 
-		if (Math.abs(scrollY - currentScrollY) > 75) {
-			// Тут можна додати логіку для плавної прокрутки
-		}
+  
+  if (Math.abs(scrollY - currentScrollY) > 75) {
+  	 window.scrollTo({
+				top: currentScrollY,
+				behavior: 'smooth',
+			})
+  }
 
 		setScrollY(currentScrollY)
 	}
