@@ -21,21 +21,19 @@ const useSmoothScroll = () => {
     setScrollY(currentScrollY);
   };
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [scrollY]);
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll)
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, [scrollY])
 
-  const scrollToElement = (ref) => {
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+	const scrollToElement = ref => {
+		if (ref.current) {
+			ref.current.scrollIntoView({ behavior: 'smooth' })
+		}
+	}
 
-  return { scrollToElement };
-};
-
-export default useSmoothScroll;
+	return { scrollToElement }
+}
 

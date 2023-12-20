@@ -87,13 +87,13 @@ import {
   ProjectContainerImg,
 } from "./../styles/home.styled";
 import { ModalkaEN } from "../../components/modalka/ModalkaEN";
-// import smoothScroll from "../../components/smoooth-scroll/smoth-scroll";
+import smoothScroll from "../../components/smoooth-scroll/smoth-scroll";
 import useSmoothScroll from "../../components/smoooth-scroll/smoth-scroll";
 
 export const HomeEN = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [displayImg, setDisplayImg] = useState(0);
-  const [displayImgPrev, setDisplayImgPrev] = useState(7);
+  // const [displayImgPrev, setDisplayImgPrev] = useState(1);
   const [imgArr, setImgArr] = useState([]);
   const [openModal, setOpenModal] = useState(false);
   const [isOpenMoreProject, setIsOpenProject] = useState(false);
@@ -168,12 +168,12 @@ export const HomeEN = () => {
   };
 
   const nextImg = () => {
-    if (displayImgPrev <= 0) {
-      setDisplayImgPrev(7);
+    if (displayImg <= 0) {
+      setDisplayImg(8);
     }
-    setDisplayImgPrev((preveCount) => preveCount - 1);
+    setDisplayImg((preveCount) => preveCount - 1);
     imgArr.pop();
-    setImgArr((prevArr) => [ImgBWData[displayImgPrev], ...prevArr]);
+    setImgArr((prevArr) => [ImgBWData[displayImg], ...prevArr]);
     console.log(displayImg);
   };
 
