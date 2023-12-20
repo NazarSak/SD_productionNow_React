@@ -91,7 +91,7 @@ export const HeaderEN = ({ name }) => {
       navigate(window.location.pathname);
     }
   };
-
+ 
   return (
     <ScrollTrigger onEnter={handleEnterViewport}>
       <Header className={`${isVisible ? "visible" : ""}`}>

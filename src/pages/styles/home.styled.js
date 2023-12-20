@@ -1489,6 +1489,7 @@ export const Contend = styled.div`
     font-weight: 700;
     line-height: 140%;
     text-align: left;
+    
   }
 
   & h3 {
@@ -1501,6 +1502,7 @@ export const Contend = styled.div`
     font-weight: 500;
     line-height: 140%;
   }
+  
   @media screen and (max-width: 767px) {
     position: absolute;
     right: 218px;
@@ -1524,7 +1526,7 @@ export const ImageBW = styled.img`
 
 export const ImageC = styled.img`
   margin-top: -63px;
-  margin-left: -60px;
+  margin-left: -45px;
   width: 343px;
   height: 343px;
   @media screen and (max-width: 767px) {

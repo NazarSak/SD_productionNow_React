@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import SmoothScroll from 'smooth-scroll';
 import ScrollTrigger from "react-scroll-trigger";
 import AnimationState from "../../helperFunction/animationState/animationState";
 import { HeaderEN } from "../../components/header/HeaderEN";
@@ -12,11 +13,11 @@ import Video from "../../assets/video/abi.mp4";
 import InternalOne from "../../assets/img/abi/InternalOne.png";
 import InternalTwo from "../../assets/img/abi/InternalTwo.png";
 import InternalThree from "../../assets/img/abi/InternalThree.png";
-import InternalFour from "../../assets/img/abi/InternalFour.png";
+import InternalFour from "../../assets/img/abi/InternalFour.png"; 
 import InternalFive from "../../assets/img/abi/InternalFive.png";
 import RightArrow from "../../assets/img/rightArrow.png";
 import LeftArrow from "../../assets/img/leftArrow.png";
- 
+
 import {
   FirstSection,
   SecondSection,
@@ -54,7 +55,45 @@ import {
 } from "../styles/abi.styled";
 import useSmoothScroll from "../../components/smoooth-scroll/smoth-scroll";
 
+
 export const AbiEN = () => {
+  
+  useEffect(() => {
+    const smoothScroll = new SmoothScroll({
+      // Время скролла 1000 = 1 секунда
+      animationTime: 1000,
+      // Размер шага в пикселях
+      stepSize: 75,
+
+      // Дополнительные настройки:
+
+      // Ускорение
+      accelerationDelta: 30,
+      // Максимальное ускорение
+      accelerationMax: 2,
+
+      // Поддержка клавиатуры
+      keyboardSupport: true,
+      // Шаг скролла стрелками на клавиатуре в пикселях
+      arrowScroll: 50,
+
+      // Pulse (less tweakable)
+      // ratio of "tail" to "acceleration"
+      pulseAlgorithm: true,
+      pulseScale: 4,
+      pulseNormalize: 1,
+
+      // Поддержка тачпада
+      touchpadSupport: true,
+    });
+
+    return () => {
+      // Зупиняємо прокрутку при видаленні компонента (чистка пам'яті)
+      smoothScroll.destroy();
+    };
+  }, []);
+  
+  
   const {
     isVisible,
     isVisibleOne,
@@ -88,10 +127,12 @@ export const AbiEN = () => {
     window.scrollTo(0, 0);
   };
 
-  useSmoothScroll()
+  
+
+
 
   return (
-    <main>
+    <main onEnter={useSmoothScroll()}>
       <HeaderEN name={"/de/abi"} />
       <ScrollTrigger onEnter={handleEnterViewport}>
         <FirstSection className={`${isVisible ? "visible" : ""}`}>
@@ -164,7 +205,7 @@ export const AbiEN = () => {
           alt="image"
         />
       </ScrollTrigger>
-      
+
       <FifthSection>
         <FirstConatinerInternalImg>
           <ScrollTrigger onEnter={handleEnterViewportFive}>

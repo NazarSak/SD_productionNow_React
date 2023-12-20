@@ -87,7 +87,7 @@ import {
   ProjectContainerImg,
 } from "./../styles/home.styled";
 import { ModalkaEN } from "../../components/modalka/ModalkaEN";
-import smoothScroll from "../../components/smoooth-scroll/smoth-scroll";
+// import smoothScroll from "../../components/smoooth-scroll/smoth-scroll";
 import useSmoothScroll from "../../components/smoooth-scroll/smoth-scroll";
 
 export const HomeEN = () => {
@@ -200,7 +200,7 @@ export const HomeEN = () => {
 
   useSmoothScroll()
   
-  return (
+  return ( 
     <>
       {openModal && <ModalkaEN setOpenModal={setOpenModal} />}
       <HeaderEN name={"/de"}/>
