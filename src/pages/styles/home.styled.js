@@ -1313,7 +1313,7 @@ export const ServiceButton3 = styled.div`
   }
   @media screen and (max-width: 1199px) {
     position: absolute;
-    margin-top: 61.5px;
+    margin-top: 73.5px;
     right: 53px;
   }
   @media screen and (max-width: 767px) {
@@ -1489,7 +1489,6 @@ export const Contend = styled.div`
     font-weight: 700;
     line-height: 140%;
     text-align: left;
-    
   }
 
   & h3 {
@@ -1502,7 +1501,7 @@ export const Contend = styled.div`
     font-weight: 500;
     line-height: 140%;
   }
-  
+
   @media screen and (max-width: 767px) {
     position: absolute;
     right: 218px;

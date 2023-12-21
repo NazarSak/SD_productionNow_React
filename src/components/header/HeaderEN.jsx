@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ScrollTrigger from "react-scroll-trigger";
 import Logo from "../../assets/svg/logo.svg";
@@ -34,6 +34,19 @@ export const HeaderEN = ({ name }) => {
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.position = 'fixed';
+      document.body.style.overflowY = 'hidden';
+    } 
+    return () => {
+      document.body.style.position = 'unset';
+      document.body.style.overflowY = 'unset';
+    };
+  }, [isOpen]);
+
+
+
   const handleEnterViewport = () => {
     setIsVisible(true);
   };
@@ -65,9 +78,11 @@ export const HeaderEN = ({ name }) => {
    
     }, 0);
   }
+      document.body.style.position = 'unset';
+      document.body.style.overflowY = 'unset';
   };
 
-  const handleClose = () => {
+  const handleClose = () => { 
     setTimeout(() => {
       setIsOpen(false);
     }, 0);

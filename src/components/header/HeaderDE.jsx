@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ScrollTrigger from "react-scroll-trigger";
 import Logo from "../../assets/svg/logo.svg";
@@ -34,6 +34,17 @@ export const HeaderDE = ({ name }) => {
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.position = "fixed";
+      document.body.style.overflowY = "hidden";
+    }
+    return () => {
+      document.body.style.position = "unset";
+      document.body.style.overflowY = "unset";
+    };
+  }, [isOpen]);
+
   const handleEnterViewport = () => {
     setIsVisible(true);
   };
@@ -42,29 +53,30 @@ export const HeaderDE = ({ name }) => {
     setIsOpen(true);
   };
 
-  const handleMenuClose = (hash,e) => {
-    if (e && e.target instanceof HTMLAnchorElement) { 
-    e.preventDefault();
-    e.stopPropagation();
-    setTimeout(() => {
-      setIsOpen(false);
-   
-      if (hash) {
-        const element = document.getElementById(hash);
-  
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+  const handleMenuClose = (hash, e) => {
+    if (e && e.target instanceof HTMLAnchorElement) {
+      document.body.style.position = "unset";
+      document.body.style.overflowY = "unset";
+      e.preventDefault();
+      e.stopPropagation();
+      setTimeout(() => {
+        setIsOpen(false);
+
+        if (hash) {
+          const element = document.getElementById(hash);
+
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+          const basePath = window.location.pathname.split(
+            "/SD_productionNow_React"
+          )[0];
+          const newPath = `${basePath}/de/#${hash}`;
+
+          navigate(newPath);
         }
-        const basePath = window.location.pathname.split(
-          "/SD_productionNow_React"
-        )[0]; 
-        const newPath = `${basePath}/de/#${hash}`;
-  
-        navigate(newPath);
-      }
-   
-    }, 0);
-  }
+      }, 0);
+    }
   };
 
   const handleClose = () => {
@@ -104,12 +116,12 @@ export const HeaderDE = ({ name }) => {
         <Navigator>
           <NavigatorLi>
             <StyledLink onClick={() => handle("projects")} to="/de/#projects">
-            Projekte
+              Projekte
             </StyledLink>
           </NavigatorLi>
           <NavigatorLi>
             <StyledLink onClick={() => handle("services")} to="/de/#services">
-            Dienste
+              Dienste
             </StyledLink>
           </NavigatorLi>
           <NavigatorLi>
@@ -119,7 +131,7 @@ export const HeaderDE = ({ name }) => {
           </NavigatorLi>
           <NavigatorLi>
             <StyledLink onClick={() => handle("contactus")} to="/de/#contactus">
-            Kontakt
+              Kontakt
             </StyledLink>
           </NavigatorLi>
         </Navigator>
@@ -154,7 +166,7 @@ export const HeaderDE = ({ name }) => {
                 <MenuList onClick={handleListClick}>
                   <li>
                     <StyledLink
-                      onClick={(e) => handleMenuClose("projects",e)}
+                      onClick={(e) => handleMenuClose("projects", e)}
                       to="/"
                     >
                       Projekte
@@ -162,20 +174,23 @@ export const HeaderDE = ({ name }) => {
                   </li>
                   <li>
                     <StyledLink
-                      onClick={(e) => handleMenuClose("services",e)}
+                      onClick={(e) => handleMenuClose("services", e)}
                       to="/"
                     >
                       Dienste
                     </StyledLink>
                   </li>
                   <li>
-                    <StyledLink onClick={(e) => handleMenuClose("team",e)} to="/">
+                    <StyledLink
+                      onClick={(e) => handleMenuClose("team", e)}
+                      to="/"
+                    >
                       Team
                     </StyledLink>
                   </li>
                   <li>
                     <StyledLink
-                      onClick={(e) => handleMenuClose("contactus",e)}
+                      onClick={(e) => handleMenuClose("contactus", e)}
                       to="/"
                     >
                       Kontakt

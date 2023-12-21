@@ -87,8 +87,6 @@ import {
   ProjectContainerImg,
 } from "./../styles/home.styled";
 import { ModalkaEN } from "../../components/modalka/ModalkaEN";
-import smoothScroll from "../../components/smoooth-scroll/smoth-scroll";
-import useSmoothScroll from "../../components/smoooth-scroll/smoth-scroll";
 
 export const HomeEN = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -198,10 +196,9 @@ export const HomeEN = () => {
     document.body.style.position = "fixed";
   };
 
-  useSmoothScroll()
-  
   return ( 
     <>
+    
       {openModal && <ModalkaEN setOpenModal={setOpenModal} />}
       <HeaderEN name={"/de"}/>
       <ScrollTrigger onEnter={handleEnterViewportOne}>

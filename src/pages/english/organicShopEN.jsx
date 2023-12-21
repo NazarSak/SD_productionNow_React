@@ -18,6 +18,7 @@ import InternalFour from "../../assets/img/organicShop/InternalFour.png";
 import InternalFive from "../../assets/img/organicShop/InternalFive.png";
 import RightArrow from "../../assets/img/rightArrow.png";
 import LeftArrow from "../../assets/img/leftArrow.png";
+// import SmoothScrollToTop from "../../components/smooth-scrollbar/smooth-scrollbar";
 
 import {
   FirstSection,
@@ -62,6 +63,7 @@ import useSmoothScroll from "../../components/smoooth-scroll/smoth-scroll";
 
 export const OrganicShopEN = () => {
 
+  useSmoothScroll()
 
   const {
     isVisible,
@@ -96,10 +98,14 @@ export const OrganicShopEN = () => {
     window.scrollTo(0, 0);
   };
 
-  useSmoothScroll()
+
 
   return (
+    <>
+    {/* <SmoothScrollToTop /> */}
+
     <main>
+      
       <HeaderEN name={"/de/organicShop"} />
       <ScrollTrigger onEnter={handleEnterViewport}>
         <FirstSection className={`${isVisible ? "visible" : ""}`}>
@@ -272,5 +278,6 @@ export const OrganicShopEN = () => {
       <ConectUsEN />
       <FooterEN />
     </main>
+    </>
   );
 };

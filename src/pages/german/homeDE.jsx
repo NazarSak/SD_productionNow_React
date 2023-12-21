@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import ScrollTrigger from "react-scroll-trigger";
 import AnimationState from "../../helperFunction/animationState/animationState";
 import { HeaderDE } from "../../components/header/HeaderDE";
-import useSmoothScroll from "../../components/smoooth-scroll/smoth-scroll"
 import { FooterDE } from "../../components/footer/FooterDE";
 import { SvgHome } from "../../helperFunction/svgHome/svgHome";
 import { sliderDataDE } from "../../helperFunction/arrays/sliderDataDE";
@@ -196,9 +195,7 @@ export const HomeDE = () => {
     setOpenModal(true);
     document.body.style.position = "fixed";
   };
-  
-  useSmoothScroll()
-  
+
   return (
     <>
       {openModal && <ModalkaDE setOpenModal={setOpenModal} />}

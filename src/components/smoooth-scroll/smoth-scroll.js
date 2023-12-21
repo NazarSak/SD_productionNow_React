@@ -1,25 +1,26 @@
-import { useEffect, useState } from 'react';
-import smoothscroll from 'smoothscroll-polyfill';
+import { useState, useEffect } from 'react'
+import smoothscroll from 'smoothscroll-polyfill'
 
 const useSmoothScroll = () => {
-  const [scrollY, setScrollY] = useState(0);
+	const [scrollY, setScrollY] = useState(0)
 
-  useEffect(() => {
-    smoothscroll.polyfill();
-  }, []);
+	useEffect(() => {
+		smoothscroll.polyfill()
+	}, [])
 
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY || window.pageYOffset;
+	const handleScroll = () => {
+		const currentScrollY = window.scrollY
 
-    if (Math.abs(scrollY - currentScrollY) > 75) {
-      window.scrollTo({
-        top: currentScrollY,
-        behavior: 'smooth',
-      });
-    }
+  
+  if (Math.abs(scrollY - currentScrollY) > 75) {
+  	 window.scrollTo({
+				top: currentScrollY,
+				behavior: 'smooth',
+			})
+  }
 
-    setScrollY(currentScrollY);
-  };
+		setScrollY(currentScrollY)
+	}
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll)
@@ -27,13 +28,6 @@ const useSmoothScroll = () => {
 			window.removeEventListener('scroll', handleScroll)
 		}
 	}, [scrollY])
-
-	const scrollToElement = ref => {
-		if (ref.current) {
-			ref.current.scrollIntoView({ behavior: 'smooth' })
-		}
-	}
-
-	return { scrollToElement }
 }
 
+export default useSmoothScroll
